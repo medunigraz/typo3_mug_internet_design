@@ -1,0 +1,254 @@
+.burgerBTNOpen, .burgerBTNClose,.btn-toggle {
+  display:none;
+  cursor:pointer;
+}
+/* ...........................................................................  1350 px */
+@media screen and (max-width: 1350px) {
+  .main-menu .hero-menu .nav-item .dropdown-wrap-level0 {
+    width: 100%;
+  }
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 104px;
+  }
+}
+/* ...........................................................................  1215 px */
+@media screen and (max-width: 1215px) {
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 70px;
+  }
+}
+
+/* ...........................................................................  1024 px */
+@media screen and (max-width: 1024px) {
+
+
+  .hero-menu-closeframe {
+    display:none
+  }
+
+  .main-menu .menu-link-level0::after {
+    width: auto;
+  }
+
+  .main-menu .menu-link-level1::after {
+    right: 0;
+  }
+  .btn-toggle {
+    z-index:99999;
+    display: block;
+    position: absolute;
+    left: 100%;
+    width: 40%;
+    height: 47px;
+    top: -10px;
+    z-index: 99999;
+  }
+  .btn-toggle-quicklink {
+    left:0px;
+    width: 140px;
+    height: 47px;
+    top: 0px;
+  }
+  .hero-menu { display:none}
+  .mobnavOn .hero-menu { display:block}
+  .burgerBTNOpen {
+    display:block;
+  }
+  .burgerBTN {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+  }
+
+  .mobnavOn   .burgerBTNOpen {
+    display:none;
+  }
+  .mobnavOn   .burgerBTNClose {
+    display:block;
+    right: 5px;
+  }
+  .main-menu {
+    width: 100%;
+    float: left;
+  }
+  .main-menu .hero-menu {
+    width: 100%;
+    float:left;
+    margin: 30px 0 0 0;
+    padding: 0px;
+
+  }
+  .main-menu .hero-menu:after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    -webkit-box-shadow: 2px 45px 40px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 2px 45px 40px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 2px 45px 40px 0px rgba(50, 50, 50, 0.2);
+    position: absolute;
+    bottom: 0px;
+    background: none;
+    left: 0px;
+  }
+  .main-menu .menu-link {
+    max-width: 70%;
+    display: block;
+  }
+  .main-menu .hero-menu .nav-item-level-0  {
+    width: 100%;
+    margin: 0px;
+    padding: 15px 0 15px 0;
+    border-top:0.5px solid $grey;
+    position:relative;
+    z-index: 999;
+  }
+
+  .main-menu .hero-menu .nav-item-level-0::after {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+  }
+  .main-menu .hero-menu .nav-item-level-0.open0::after {
+    background-image: url("img/icon-x-green.svg");
+    margin: -5px 0 0 0;
+  }
+
+  .main-menu .hero-menu .nav-item .dropdown-wrap-level0 {
+    display: none;
+    position: relative;
+    background: none;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    min-height: 1px;
+    opacity: 1;
+    z-index: 1;
+    margin: 15px 0 0 0;
+    top: 0;
+  }
+  .main-menu .hero-menu .nav-item.open0 .dropdown-wrap-level0 {
+    display: block;
+    z-index: 9999;
+
+  }
+  .main-menu .quicklinks {
+    position: relative;
+    right: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    padding: 20px;
+    display: block;
+    float: left;
+    top: 0px;
+  }
+
+  .main-menu .quicklinks::before {
+    content: "";
+    position: absolute;
+    background-image: url("img/icon-burgerbtn.svg");
+    width: 22px;
+    height: 40px;
+    left: 10px;
+    top: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .main-menu .hero-menu .nav-item-quicklink {
+    display: none;
+    width: 100%;
+    font-size: 16px;
+    border-bottom: 1px solid $grey;
+    padding: 5px 0 5px 0;
+    float: left;
+  }
+  .main-menu .hero-menu .openQuick .nav-item-quicklink {
+    display: block;
+  }
+  .main-menu .hero-menu .nav-item-quicklink:last-child {
+    border-bottom: 0px solid $grey;
+
+  }
+  .main-menu .hero-menu .nav-item.nav-item-level-1 {
+    height: auto;
+    background:$green-dark;
+    font-size: 14px;
+    padding: 10px 0 0px 0px;
+    border-bottom: 0.5px solid $withe;
+    position:relative;
+  }
+  .main-menu .menu-link-level1 {
+    opacity: 1;
+    text-align: left;
+    z-index: 1;
+    font-size: 18px;
+    padding: 0 0 10px 10px;
+    width: 70%;
+  }
+  .main-menu .quicklinks .quicklinksHL {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+  }
+  .main-menu .quicklinks .quicklinks-wrap {
+
+    width: calc(100% - 80px);
+    margin: 15px 0 0 40px;
+    float: left;
+  }
+
+  .main-menu .nav-item-level-1::after {
+    content: "";
+    position: absolute;
+    background-image: url("img/icon-arrow-withe-down.svg");
+    width: 22px;
+    height: 40px;
+    right: 10px;
+    top: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .main-menu .nav-item-level-1.open1::after {
+    background-image: url("img/icon-x-white.svg");
+    margin: -6px 0 0 0;
+  }
+
+  .main-menu .hero-menu .nav-item .dropdown-wrap.dropdown-wrap-level1 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    left: 0;
+    padding: 0px 0 0px 0;
+    display:none;
+    float: left;
+  }
+  .main-menu .hero-menu .nav-item .open1 .dropdown-wrap.dropdown-wrap-level1 {
+    display: block;
+  }
+  .main-menu .hero-menu .nav-item.nav-item-level-2 {
+    width: 100%;
+    margin: 0px 0 0px 0%;
+    height: auto;
+    position: relative;
+    padding: 0px 0 0px 0;
+  }
+  .main-menu .menu-link-level2 {
+    font-size: 16px;
+    color: $green-dark;
+    border-bottom: 0.5px solid $green-dark;
+    display: block;
+    width: 100%;
+    float: left;
+    line-height: 16px;
+    padding: 15px 0 15px 10px;
+    max-width: 100%;
+  }
+
+}
+
+/* ...........................................................................  767 px */
+@media screen and (max-width: 767px) {
+.main-menu {
+  margin: 55px 0 0 0;
+}
+}

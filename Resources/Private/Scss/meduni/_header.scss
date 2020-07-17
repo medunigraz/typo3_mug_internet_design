@@ -1,0 +1,168 @@
+.metaline {
+  position: absolute;
+  right: 0px;
+
+  ul {
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+  }
+
+}
+
+.meta-nav {
+  float: left;
+    li {
+      float:left;
+      margin: 0 25px 0 0;
+      a { color:#A2A2A2;}
+      a:hover { color:$green-dark;}
+    }
+}
+.metasettings {
+  float: left;
+  margin: 0 25px 0 20px;
+  color:#A2A2A2;
+  a { color:#A2A2A2;}
+  a:hover { color:$green-dark;}
+  b { color:$green-dark; }
+}
+
+.i-am-nav {
+  float:left;
+  width: 190px;
+  ul {display:none;}
+  .caption {
+    display: block;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    top: 27px;
+    left: 55px;
+  }
+  .caption:after {content:"..."  }
+}
+.iam-btn {
+  width: 190px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  height: 117px;
+  margin: -31px -20px 0 0;
+  cursor: pointer;
+}
+.iambgbtn {
+  display:block;
+  position:absolute;
+  bottom:2px;
+  left:0px;
+  width:100%;
+}
+
+.iamlinkbox {
+  position: absolute;
+  z-index: 99999;
+overflow:hidden;
+  right: -1500px;
+  width: 430px;
+  top: -30px;
+  height:600px;
+  -webkit-transition: right 550ms ;
+  -moz-transition:right 550ms ;
+  -o-transition:right 550ms ;
+  transition: right 550ms ;
+}
+.iam-nav-On .iamlinkbox   {
+  right: 0px;
+  width: 430px;
+  z-index: 99999;
+  top: -30px;
+  opacity:1;
+  height:600px;
+}
+.iam-btn-listheader {
+  width: 440px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  height: 260px;
+  margin: 0px -20px 0 0;
+    .caption {
+      display: block;
+      position: absolute;
+      z-index: 99;
+      width: 100%;
+      font-size: 16px;
+      text-transform: uppercase;
+      top: 27px;
+      left: 55px;
+    }
+    .caption:after {content:"..."  }
+  }
+.iambgbtn-open {
+  display: block;
+  position: absolute;
+  top: -136px;
+  left: 0px;
+  width: 606px;
+  max-width: 999999px;
+  height: auto;
+  margin: 0 0 0 -0.5px;
+}
+.iamlinksitelist {
+  width: 440px;
+  float: left;
+  background:  $green-dark;
+  position: absolute;
+  left: 0px;
+  top: 75px;
+  -webkit-box-shadow: -6px 8px 15px 0px rgba(50, 50, 50, 0.14);
+  -moz-box-shadow:    -6px 8px 15px 0px rgba(50, 50, 50, 0.14);
+  box-shadow:         -6px 8px 15px 0px rgba(50, 50, 50, 0.14);
+
+  .nav-item {
+    color: #E6FFED;
+    width: 80%;
+    float: left;
+    margin: 10px 0 0px 53px;
+    border-bottom: 0.5px #83B691 solid;
+    padding: 10px 0 20px 0;
+  }
+  .nav-item:last-child {  border-bottom:0px;}
+  a  {
+    opacity:0.8;
+    color:#ffffff
+  }
+  a:hover  {
+    opacity:1;
+    color:#ffffff
+  }
+}
+.iambgbtn-close {
+  position: absolute;
+  display: block;
+  z-index: 999999;
+  right: 20px;
+  top: 22px;
+  cursor:pointer;
+  padding: 0px 20px 0px 20px;
+  -webkit-transition: right 350ms;
+  -moz-transition:right 350ms;
+  -o-transition:right 350ms;
+  transition: right 350ms;
+}
+
+.iambgbtn-close:hover {right: 17px; }
+
+
+.meta-nav li {
+  margin: 0 20px 0 0;
+}
+.meta-nav li:last-child {margin-right:0px; }
+
+
+

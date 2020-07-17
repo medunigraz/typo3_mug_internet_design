@@ -1,0 +1,21 @@
+<div id="mainMenu" class="main-menu">
+  <div class="burgerBTN burgerBTNOpen"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-burgerbtn.svg')}" alt="" class="icon-burgerbtn"></div>
+  <div class="burgerBTN burgerBTNClose"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-x-green.svg')}" alt="" class="icon-burgerbtnx"></div>
+  <ul class="hero-menu">
+    <div class="hero-menu-closeframe"></div>
+    <f:for each="{menu}" as="item" iteration="iterator">
+      <f:if condition="{item.doktype}!=42">
+        {v:variable.set(name:'hasSub',value:'{v:condition.page.hasSubpages(then: "TRUE", else: "FALSE", pageUid: "{item.uid}", includeHidden: 0, showHiddenInMenu: 0)}')}
+        <li class="nav-item animateAll nav-item-level-0 {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
+          <f:link.typolink parameter="{item.link}" class="menu-link menu-link-level0 animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
+            {item.linktext}<span class="btn-toggle btn-toggle-0"></span>
+          </f:link.typolink>
+          <f:if condition='{hasSub} == "TRUE"'>
+            <f:render partial="MainMenuL2" arguments="{uid: item.uid}"/>
+          </f:if>
+        </li>
+      </f:if>
+    </f:for>
+  </ul>
+</div>
+

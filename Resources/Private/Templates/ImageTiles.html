@@ -1,0 +1,30 @@
+
+
+<div class="row content-block">
+    <div class="content-part ce-link-tile">
+        <f:if condition="{data.subheader}">
+            <div class="section-name text-bold trans">
+                <div class="section-name-Inner"><span class="section-line-top"></span>{data.subheader}<span class="section-line-bottom"></span></div>
+            </div>
+        </f:if>
+        <div class="container">
+            <div class="row ">
+                <div class="box-balken blend">
+                    <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green-dark.png')}" alt="" class="blend">
+                </div>
+                <f:if condition="{data.header}">
+                     <div class="headline text-center trans">
+                      <h2 class="text-bold hl-big">{data.header}</h2>
+                    </div>
+                </f:if>
+                <f:for each="{elements}" as="element">
+                    <v:content.render contentUids="{0: element.data.uid}" limit="1" render="1" as="content">
+                        {content.0 -> f:format.raw()}
+                    </v:content.render>
+                </f:for>
+            </div>
+            <div class="bgbox bg-grey-light"></div>
+        </div>
+    </div>
+</div>
+

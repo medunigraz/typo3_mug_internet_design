@@ -1,0 +1,20 @@
+
+
+<div class="row content-block bg-grey-light">
+  <div class="container">
+    <div class="content-part ce-offers">
+      <div class="box-balken blend"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green-dark.png')}" alt="" class="blend"></div>
+      <div class="headline text-center trans">
+        <h2 class="text-bold hl-big">{data.header}</h2>
+      </div>
+      <div class="elements row">
+        <f:for each="{elements}" as="element">
+          <v:content.render contentUids="{0: element.data.uid}" limit="1" render="1" as="content">
+            {content.0 -> f:format.raw()}
+          </v:content.render>
+        </f:for>
+      </div>
+    </div>
+  </div>
+</div>
+

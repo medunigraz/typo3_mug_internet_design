@@ -1,0 +1,17 @@
+$withe : #ffffff;
+$black : #000000;
+$green-dark : #006A23;
+$green-light : #31972A;
+$grey : #cccccc;
+$grey-light : #eeeeee;
+$orange : #EF783D;
+
+.bg-green-dark {background:$green-dark ;}
+.bg-grey-light {background:$grey-light ;}
+
+.bg-grey-gradiant {
+  background: -moz-linear-gradient(top,  rgba(102,102,102,0) 0%, rgba(102,102,102,0.65) 100%);
+  background: -webkit-linear-gradient(top,  rgba(102,102,102,0) 0%,rgba(102,102,102,0.65) 100%);
+  background: linear-gradient(to bottom,  rgba(102,102,102,0) 0%,rgba(102,102,102,0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00666666', endColorstr='#a6666666',GradientType=0 );
+}

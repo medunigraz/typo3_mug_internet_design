@@ -1,0 +1,57 @@
+/* ...........................................................................  1023 px */
+@media screen and (max-width: 1023px) {
+  #logo-page {
+    margin: 50px 0 0 0;
+  }
+  .i-am-nav {
+    width: 150px;
+  }
+}
+/* ...........................................................................  767 px */
+@media screen and (max-width: 767px) {
+  .header-line {
+    margin: 30px 0 0 0;
+  }
+  .metaline{
+  width: 100%;
+}
+.metaline .meta-nav {display:none;}
+  .mobnavOn .metaline .meta-nav {
+    display: block;
+    position: absolute;
+    top: 170px;
+    background: #F8F8F8;
+    border-top: 0.5px solid #cccccc;
+    border-tbottom: 0.5px solid #cccccc;
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+  .i-am-nav {
+    width: 130px;
+    margin: -10px 0 0 0;
+    float: right;
+  }
+  .iambgbtn {
+    bottom: 13px;
+    left: 33px;
+  }
+  .metasettings {
+    margin: -12px 0px 0 10px;
+  }
+  .iam-nav-On .iamlinkbox {
+    width: 360px;
+  }
+  .iam-btn-listheader {
+    width: 360px;
+  }
+
+  .meta-nav li {
+    margin: 0 0px 0 6px;
+}
+  .meta-nav li a:hover {  color: $orange;  }
+  .meta-nav li a:before {
+    color: $orange;
+    content:">";
+    font-size: 11px;
+  }
+}

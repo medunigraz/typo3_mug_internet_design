@@ -1,0 +1,35 @@
+/* ....................................................................................... 1492 */
+@media screen and (max-width: 1492px) {
+.hl-big {
+  font-size: 45px;
+  line-height: 55px;
+}
+}
+
+/* ....................................................................................... 1240 */
+@media screen and (max-width: 1240px) {
+  .hl-big {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .hl-big {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  h1, .h1 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  h2, .h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .text-mega {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}

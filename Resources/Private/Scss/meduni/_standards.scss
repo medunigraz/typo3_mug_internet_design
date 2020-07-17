@@ -1,0 +1,124 @@
+*:focus, *:active  {
+  outline: none !important;
+}
+.text-bold {font-family: 'Ubuntu', sans-serif; font-weight:700;}
+.text-center {text-align:center;}
+.text-left {text-align:left;}
+.text-right {text-align:right;}
+.uppercase {text-transform:uppercase}
+.content-block {width:100%;max-width:1720px; margin:0 auto;
+  .container {
+    width: 1200px;
+    max-width: 1200px;
+    margin:0px auto;
+    padding:0px;
+    position:relative;
+  }
+
+}
+.content-part {position:relative; float:left; width:100%; }
+a {color:$black; text-decoration:none;}
+a:hover {color:#333333; text-decoration:none;}
+img {border:0px; max-width:100%; height:auto;}
+.trans {opacity:0;}
+.animateAll {
+  -webkit-transition: all 350ms;
+  -moz-transition:all 350ms;
+  -o-transition:all 350ms;
+  transition: all 350ms;
+}
+.animateAll-s  {
+  -webkit-transition: all 850ms;
+  -moz-transition:all 850ms;
+  -o-transition:all 850ms;
+  transition: all 850ms;
+}
+.blend {
+  mix-blend-mode: multiply;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    opacity: 0.8;
+  }
+}
+
+.blend-full {position:absolute; width:100%; height:100%; left:0px; top:0px;}
+.logoimg {
+  width: 120px;
+  display: block;
+}
+
+.rowborder-bottom {border-bottom:2px solid $black;}
+
+
+
+.section-name {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}
+
+.section-name-Inner {width:150px; text-align:center; position:relative; color:$grey ;}
+.section-line-top {
+  display:block;
+   position:absolute;
+   width:1px;
+   background:$grey;
+   height:170px;
+   bottom:100%;
+   left:50%;  marggin:0 0 5px -0.5px;
+ }
+.section-line-bottom {
+  display:block;
+  position:absolute;
+  width:1px;
+  background:$grey;
+  height:90px;
+  top:100%;
+  left:50%;  marggin:5px 0 0px -0.5px;
+}
+
+
+.morelink-arrow {
+  display: block;
+  float: right;
+  margin: 0 0 0 20px;
+  right: 0px;
+  position: relative;
+}
+a:hover .morelink-arrow {
+  right: -10px;
+}
+.box-balken {
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  z-index: 99;
+  pointer-events: none;
+  text-align: center;
+  top: -7%;
+  margin: 0 0 0 0;
+
+  img {
+    position:relative;
+    width:20px;
+    margin: 0 auto;
+    display:inline;
+  }
+}
+.bgbox {
+  position: absolute;
+  width: 75%;
+  height: 110%;
+  top: -5%;
+  z-index: -1;
+}
+
+.bgbox.bg-grey-light::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 100%;
+  background:$grey-light ;
+}

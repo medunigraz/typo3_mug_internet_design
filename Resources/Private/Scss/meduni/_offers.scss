@@ -1,0 +1,49 @@
+.ce-offers {
+.box-balken {
+  top: -23px;
+}
+.headline {
+  display: block;
+  width: 100%;
+  margin: 50px 0 80px 0;
+
+}
+  .ce-offer {
+    margin: 0 0 80px 0;
+  }
+  .ce-offer  .headline {
+    border-bottom: 2px solid $black;
+    width: 100%;
+    margin: 0px 0 12px 0;
+  }
+ .col-img .img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+.elements .ce-offer col {display:block; float:left;}
+  .elements .ce-offer .col-img,
+  .elements .ce-offer .col-text
+  {
+    float: left;
+    width: 50%;
+
+    .col-text-inner {
+      width: 90%;
+      float: left;
+      margin: 0 0 0 10%;
+
+    }
+
+  }
+
+.elements .ce-offer:nth-child(even) .col-img {
+  float:right;
+}
+.elements .ce-offer:nth-child(even)  .col-text .col-text-inner {
+    width: 90%;
+    float: left;
+    margin: 0 0 0 0%;
+  }
+
+}

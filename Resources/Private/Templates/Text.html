@@ -1,0 +1,27 @@
+<div class="row content-block">
+    <div class="content-part ce-text">
+        <f:if condition="{data.subheader}">
+            <div class="section-name text-bold trans"><div class="section-name-Inner"><span class="section-line-top"></span>{data.subheader}<span class="section-line-bottom"></span></div></div>
+        </f:if>
+        <div class="container">
+            <div class="row rowborder-bottom">
+                <div class="col trans">
+                    <div class="headline">
+                        <h1 class="text-bold">{data.header -> f:format.nl2br()}</h1>
+                    </div>
+                    <div class="text text-leadin">
+                        {data.bodytext -> f:format.html()}
+                    </div>
+                </div>
+                <f:if condition="{data.header_link}">
+                    <div class="col text-right mt-auto trans">
+                        <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
+                        {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
+                                               <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
+                      </f:link.typolink>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</div>

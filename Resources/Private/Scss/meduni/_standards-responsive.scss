@@ -1,0 +1,44 @@
+/* ...........................................................................  1720 px */
+@media screen and (max-width: 1720px) {
+  .content-block {
+    width: 98%;
+  }
+}
+
+
+/* ...........................................................................  1600 px */
+@media screen and (max-width: 1600px) {
+  .section-name {
+    left: -40px;
+  }
+}
+
+
+
+/* ...........................................................................  1400 px */
+@media screen and (max-width: 1400px) {
+  .section-name {
+    left: -50px;
+  }
+  .section-name-Inner {
+    width: 128px;
+    font-size: 11px;
+  }
+}
+
+/* ...........................................................................  1330 px */
+@media screen and (max-width: 1330px) {
+  .section-name {display:none}
+}
+
+
+/* ...........................................................................  767 px */
+@media screen and (max-width: 767px) {
+  .content-block {
+    width: 95%;
+  }
+  .col {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}

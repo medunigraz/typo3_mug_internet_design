@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+  <file t3:id="1471786343" source-language="en" datatype="plaintext" original="messages" date="2020-03-19T15:15:42Z" product-name="general">
+    <header/>
+    <body>
+      <trans-unit id="moreLabel" xml:space="preserve">
+        <source>Mehr</source>
+      </trans-unit>
+      <trans-unit id="iAmNavCaption" xml:space="preserve">
+        <source>Ich bin</source>
+      </trans-unit>
+      <trans-unit id="quicklinks" xml:space="preserve">
+        <source>Quicklinks</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

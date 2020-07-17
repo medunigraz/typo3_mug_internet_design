@@ -1,0 +1,27 @@
+/* ....................................................................................... 1240 */
+@media screen and (max-width: 1240px) {
+  .ce-offers .elements .ce-offer .col-img .col-text-inner, .ce-offers .elements .ce-offer .col-text .col-text-inner {
+    width: 90%;
+    float: left;
+    margin: 0 0 0 5%;
+  }
+  .ce-offers .elements .ce-offer:nth-child(2n) .col-text .col-text-inner {
+    width: 90%;
+    float: left;
+    margin: 0 0 0 5%;
+  }
+}
+
+
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .ce-offers .headline {
+    margin: 50px 0 40px 0;
+  }
+  .ce-offers .elements .ce-offer .col-img .col-text-inner, .ce-offers .elements .ce-offer .col-text .col-text-inner,
+  .ce-offers .elements .ce-offer:nth-child(2n) .col-text .col-text-inner
+  {
+    margin-top: 20px;
+  }
+}

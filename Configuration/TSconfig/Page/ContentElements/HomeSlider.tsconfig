@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        mugce_homeslider {
+            iconIdentifier = mugce-icon-homeslider
+            title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_homeslider.caption
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_homeslider.description
+            tt_content_defValues {
+                CType = mugce_homeslider
+            }
+        }
+    }
+    show := addToList(mugce_homeslider)
+}

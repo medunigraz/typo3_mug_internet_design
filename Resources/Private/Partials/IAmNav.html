@@ -1,0 +1,29 @@
+<div id="iAmNav" class="i-am-nav">
+  <div class="iam-btn">
+    <span class="caption text-bold">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:iAmNavCaption", default: "Ich bin")}</span>
+    <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/bg-iam.svg')}" alt="" class="iambgbtn">
+  </div>
+
+
+</div>
+
+<div class="iamlinkbox">
+<div class="iam-btn-listheader">
+  <span class="caption text-bold">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:iAmNavCaption", default: "Ich bin")}</span>
+  <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/bg-iam-open.svg')}" alt="" class="iambgbtn-open">
+  <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-close-iam.svg')}" alt="" class="iambgbtn-close">
+</div>
+<ul class="iamlinksitelist">
+  <f:for each="{menu}" as="item" iteration="iterator">
+    <f:if condition="{item.doktype}!=42">
+      <li class="nav-item animateAll nav-item-level-0 {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
+        <f:link.typolink parameter="{item.link}" class="menu-link menu-link-level0 animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
+          {item.linktext}<span class="btn-toggle btn-toggle-0"></span>
+        </f:link.typolink>
+      </li>
+    </f:if>
+  </f:for>
+</ul>
+</div>
+
+

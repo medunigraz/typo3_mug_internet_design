@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        mugce_imagetileselement {
+            iconIdentifier = mugce-icon-imagetileselement
+            title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_imagetileselement.caption
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_imagetileselement.description
+            tt_content_defValues {
+                CType = mugce_imagetileselement
+            }
+        }
+    }
+    show := addToList(mugce_imagetileselement)
+}

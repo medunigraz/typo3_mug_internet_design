@@ -1,0 +1,220 @@
+.main-menu {
+  width: auto;
+  float: right;
+
+  .hero-menu {
+    width:auto;
+    float:right;
+    margin: 70px 0 -70px 0;
+    padding: 0 0 70px 0;
+   .hero-menu-closeframe {
+      position: absolute;
+      width: 67%;
+      height: 10px;
+      right: 0px;
+      top: 43px;
+    }
+    ul , li {
+      margin:0px;
+      padding:0px;
+      list-style-type: none;
+    }
+
+    .nav-item-level-0 {
+      margin: 0px 35px 0 142.5px
+    }
+    .nav-item-level-0:after {
+      content: "";
+      position: relative;
+      top: 9px;
+      right: -30px;
+      background-image: url("img/icon-nav-down.svg");
+      width: 20px;
+      height: 20px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      float: right;
+    }
+
+    .nav-item-level-0:first-child {
+      margin-left:0px;
+    }
+
+    .nav-item.nav-item-level-1 {
+      width: 100%;
+      float: left;
+      padding: 0px 0 0px 0;
+      display: block;
+      height: 60px;
+    }
+    .nav-item.nav-item-level-2 {
+      width: 41%;
+      margin: 0 0 0 6%;
+      height: 60px;
+      position: relative;
+    }
+
+    .nav-item {
+      float:left;
+
+      .dropdown-wrap-level0  {
+        display: block;
+        position: absolute;
+        background: $green-dark;
+        z-index: 99;
+        right: 0px;
+        width: 80%;
+        padding: 20px 20px 20px 20px;
+        margin: 31px 0 0 0;
+        min-height: 333px;
+        opacity:0;
+        z-index:-1;
+        height:0px;
+        top:-99999999px;
+        border-top:0.5px solid #cccccc;
+        -webkit-transition: opacity 750ms;
+        -moz-transition:opacity 750ms;
+        -o-transition:opacity 750ms;
+        transition: opacity 750ms;
+
+      }
+
+      .dropdown-wrap.dropdown-wrap-level1 {
+        position: absolute;
+        width: 55%;
+        background: $withe;
+        height: 100%;
+        top: 0px;
+        left: 25%;
+        padding: 20px 0 20px 0;
+        display:none;
+      }
+    }
+    .nav-item-ON .dropdown-wrap-level0 {
+      height:auto;
+      opacity:1;
+      z-index:99;
+      top:97px;
+
+
+      .nav-item-ON .dropdown-wrap-level1  {
+        display:block;
+      }
+    }
+
+  }
+
+  .menu-link {
+    font-size:$font-size-normal;
+    line-height:$font-line-normal;
+  }
+  .menu-link:hover {color:$green-dark; }
+
+
+
+  .quicklinks {
+    position: absolute;
+    right: 0px;
+    width: 20%;
+    background: $grey-light;
+    height: 100%;
+    z-index: 999;
+    padding: 20px;
+    display: block;
+    float: left;
+    top: 0px;
+
+    .quicklinks-wrap {
+      width: 85%;
+      margin: 20px 0 0 8%;
+      float: left;
+    }
+    .quicklinksHL {
+      font-size: 20px;
+      color: $green-dark;
+      display: block;
+      float: left;
+      width: 100%;
+      margin: 0 0 23px 0;
+    }
+    .nav-item-quicklink {
+      width:100%;
+      float:left;
+      margin: 0 0 5px 0;
+    }
+
+  }
+
+  .menu-link-level0 {
+    position:relative;
+  }
+  .menu-link-level0.active {
+    color:$green-dark;
+
+  }
+  .menu-link-level0:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 55px);
+    height: 9px;
+    background: $green-dark;
+    bottom: -33px;
+    left: -5px;
+    opacity:0;
+    border-right:30xp solid $green-dark;
+    -webkit-transition: opacity 350ms;
+    -moz-transition:opacity 350ms;
+    -o-transition:opacity 350ms;
+    transition: opacity 350ms;
+  }
+  .nav-item-ON .menu-link-level0:after {
+     opacity:1;
+  }
+  .menu-link-level1 {
+    color:#B4D3BE;
+  opacity: 1;
+  width: 20%;
+  display: block;
+  text-align: right;
+    position:relative;
+    z-index: 99999;
+  }
+  .menu-link-level1:hover, .nav-item-level-1.nav-item-ON .menu-link-level1 {
+    color:$withe;
+    opacity:1;
+  }
+  .menu-link-level1:after {
+    content: "";
+    background-image: url("img/icon-navactivearrow-green.svg");
+    position: absolute;
+    right: -28%;
+    height: 40px;
+    width: 40px;
+    background-size: 100%;
+    z-index: 9999999999;
+    opacity: 0;
+
+  }
+  .nav-item-level-1.nav-item-ON   .menu-link-level1:after {
+    opacity: 1;
+  }
+  .menu-link-level2 {
+    font-size:16px;
+    color:$green-dark;
+    border-bottom:1px solid $green-dark;
+    display:block;
+    width:100%;
+    floaT:left;
+  }
+
+  .menu-link-quick {
+    font-size:16px;
+    width:100%;
+    floaT:left;
+    display:block;
+    color:$black;
+
+  }
+
+
+}
