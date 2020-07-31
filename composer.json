@@ -10,5 +10,10 @@
     "typo3/cms": {
       "extension-key": "mug_ce"
     }
+  },
+  "autoload": {
+    "psr-4": {
+      "MUG\\ContentElements\\": "Classes"
+    }
   }
 }
