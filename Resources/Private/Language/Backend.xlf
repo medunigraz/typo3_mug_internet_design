@@ -12,8 +12,17 @@
       <trans-unit id="CType.default.input.link_label" xml:space="preserve">
         <source>Link Label</source>
       </trans-unit>
+      <trans-unit id="CType.default.input.link_label_2" xml:space="preserve">
+        <source>Link Label</source>
+      </trans-unit>
       <trans-unit id="CType.default.input.header" xml:space="preserve">
         <source>Header</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.bodytext" xml:space="preserve">
+        <source>Bodytext</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.link" xml:space="preserve">
+        <source>Link</source>
       </trans-unit>
       <trans-unit id="CType.default.input.subheader" xml:space="preserve">
         <source>Subheader</source>
@@ -23,6 +32,15 @@
       </trans-unit>
       <trans-unit id="CType.default.input.quicklinks" xml:space="preserve">
         <source>Quicklinks</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.show_marker" xml:space="preserve">
+        <source>Show Section Marker</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.display_type" xml:space="preserve">
+        <source>Display Type</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.display_type.standard" xml:space="preserve">
+        <source>Standard</source>
       </trans-unit>
       <trans-unit id="CType.mugce_homeslider.caption" xml:space="preserve">
         <source>Home Slider</source>
@@ -90,11 +108,104 @@
       <trans-unit id="CType.mugce_text.input.subheader" xml:space="preserve">
         <source>Section Name</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_text.input.display_type.headline_left" xml:space="preserve">
+        <source>Headline Left</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_text.input.bodytext" xml:space="preserve">
         <source>Text</source>
       </trans-unit>
       <trans-unit id="CType.mugce_text.input.header_link" xml:space="preserve">
         <source>Link</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.caption" xml:space="preserve">
+        <source>Text Columns</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.description" xml:space="preserve">
+        <source>Text element with kicker, headline, text and link in 2 columns</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.subheader" xml:space="preserve">
+        <source>Section Name</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.header" xml:space="preserve">
+        <source>Headline (Left)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.bodytext" xml:space="preserve">
+        <source>Text (Left)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.mugce_link_label" xml:space="preserve">
+        <source>Link Label (Left)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.header_link" xml:space="preserve">
+        <source>Link (Left)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.mugce_header" xml:space="preserve">
+        <source>Headline (Right)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.mugce_bodytext" xml:space="preserve">
+        <source>Text (Right)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.mugce_link_label_2" xml:space="preserve">
+        <source>Link Label (Right)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_columns.input.mugce_link" xml:space="preserve">
+        <source>Link (Right)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.caption" xml:space="preserve">
+        <source>Text Media</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.description" xml:space="preserve">
+        <source>Text element with kicker, headline, text, link and media</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.input.subheader" xml:space="preserve">
+        <source>Section Name</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.input.bodytext" xml:space="preserve">
+        <source>Text</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.input.mugce_link_label" xml:space="preserve">
+        <source>Link Label</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.input.header_link" xml:space="preserve">
+        <source>Link</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.input.mugce_link_label_2" xml:space="preserve">
+        <source>Link Label (Bottom)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.input.mugce_link" xml:space="preserve">
+        <source>Link (Bottom)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media.input.image" xml:space="preserve">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.caption" xml:space="preserve">
+        <source>Text Media with Teaser</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.description" xml:space="preserve">
+        <source>Text element with kicker, teaser, headline, text, media and link list</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.input.subheader" xml:space="preserve">
+        <source>Section Name</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.input.header" xml:space="preserve">
+        <source>Headline (Teaser)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.input.bodytext" xml:space="preserve">
+        <source>Text (Teaser)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.input.image" xml:space="preserve">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.input.mugce_header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.input.mugce_bodytext" xml:space="preserve">
+        <source>Text</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.input.mugce_quicklinks" xml:space="preserve">
+        <source>Links</source>
       </trans-unit>
       <trans-unit id="CType.mugce_offers.caption" xml:space="preserve">
         <source>Offers</source>
@@ -158,6 +269,57 @@
       </trans-unit>
       <trans-unit id="CType.mugce_imagetileselement.input.header_link" xml:space="preserve">
         <source>Link</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.caption" xml:space="preserve">
+        <source>Contact</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.description" xml:space="preserve">
+        <source>Contact</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_caption" xml:space="preserve">
+        <source>Departmnet</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.header" xml:space="preserve">
+        <source>Title (pre)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.bodytext" xml:space="preserve">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_header" xml:space="preserve">
+        <source>Title (post)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.subheader" xml:space="preserve">
+        <source>Phone</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_subheader" xml:space="preserve">
+        <source>E-Mail</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.header_link" xml:space="preserve">
+        <source>Link</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_link_label" xml:space="preserve">
+        <source>Link Label</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.image" xml:space="preserve">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_accordion.caption" xml:space="preserve">
+        <source>Accordion</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_accordion.description" xml:space="preserve">
+        <source>Container element for accordion tiles</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_accordionelement.caption" xml:space="preserve">
+        <source>Accordion Element</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_accordionelement.description" xml:space="preserve">
+        <source>Accordion element</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_accordionelement.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_accordionelement.input.bodytext" xml:space="preserve">
+        <source>Text</source>
       </trans-unit>
     </body>
   </file>

@@ -1,0 +1,25 @@
+/* ...........................................................................  1024 px */
+@media screen and (max-width: 1024px) {
+  .content-block-ce-text-media-teaser .medialinks-box .link::after {
+    right: -17%;
+}
+}
+
+/* ...........................................................................  1023 px */
+@media screen and (max-width: 1023px) {
+  .content-block-ce-text-media-teaser .ce-text-media-teaser .col-35  .headline {
+    margin: 20px 0 20px 0;
+  }
+
+}
+
+/* ...........................................................................  767 px */
+@media screen and (max-width: 767px) {
+  .img.img-ce-text-media {
+    margin: 0 0 20px 0;
+  }
+  .ce-text-columns {
+    margin: 20px 0;
+  }
+}
+

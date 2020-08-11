@@ -53,6 +53,7 @@
   height: 117px;
   margin: -31px -20px 0 0;
   cursor: pointer;
+
 }
 .iambgbtn {
   display:block;
@@ -60,28 +61,33 @@
   bottom:2px;
   left:0px;
   width:100%;
+  -webkit-transition: opacity 550ms ;
+  -moz-transition:opacity 550ms ;
+  -o-transition:opacity 550ms ;
+  transition: opacity 550ms ;
 }
-
+.iam-nav-On .iambgbtn {
+  opacity:0.1;
+}
 .iamlinkbox {
   position: absolute;
   z-index: 99999;
 overflow:hidden;
-  right: -1500px;
-  width: 430px;
+  right: 0px;
+  width: 0px;
   top: -30px;
   height:600px;
-  -webkit-transition: right 550ms ;
-  -moz-transition:right 550ms ;
-  -o-transition:right 550ms ;
-  transition: right 550ms ;
+  pointer-events:none;
+  -webkit-transition: width 550ms ;
+  -moz-transition:width 550ms ;
+  -o-transition:width 550ms ;
+  transition: width 550ms ;
 }
 .iam-nav-On .iamlinkbox   {
-  right: 0px;
+  pointer-events:all;
   width: 430px;
   z-index: 99999;
-  top: -30px;
   opacity:1;
-  height:600px;
 }
 .iam-btn-listheader {
   width: 440px;

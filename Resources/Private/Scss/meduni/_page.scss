@@ -9,6 +9,7 @@ html,body {
   font-family:'Trebuchet W01 Regular', sans-serif;
   font-size:16px;
   line-height:22px;
+  min-height:101%;
   color:$black;
   -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
@@ -16,10 +17,11 @@ html,body {
 }
 .page-wrapper {
   position:relative;
-  overflow: hidden;
   width: 100%;
+  min-height:100%;
 }
 #logo-page {
    float: left;
  }
 .header-line {position:relative; width:100%; float:left; margin:30px 0; z-index:9999999;}
+a.textlink:hover {text-decoration:underline;}

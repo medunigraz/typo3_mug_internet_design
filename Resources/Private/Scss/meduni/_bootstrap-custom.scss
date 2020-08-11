@@ -9,3 +9,14 @@
   margin-right: 0px;
   margin-left: 0px;
 }
+
+.col-55 {
+  -ms-flex: 0 0 48%;
+  flex: 0 0 48%;
+  max-width: 48%;
+}
+.col-05 {
+  -ms-flex: 0 0 4%;
+  flex: 0 0 4%;
+  max-width: 4%;
+}

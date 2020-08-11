@@ -36,7 +36,8 @@ class PageViewQueryHook
         $queryBuilder->expr()->notIn('colPos', [$queryBuilder->createNamedParameter(100, \PDO::PARAM_INT),
                                                          $queryBuilder->createNamedParameter(101, \PDO::PARAM_INT),
                                                          $queryBuilder->createNamedParameter(102, \PDO::PARAM_INT),
-                                                         $queryBuilder->createNamedParameter(103, \PDO::PARAM_INT)])
+                                                         $queryBuilder->createNamedParameter(103, \PDO::PARAM_INT),
+                                                         $queryBuilder->createNamedParameter(104, \PDO::PARAM_INT)])
       );
     }
   }

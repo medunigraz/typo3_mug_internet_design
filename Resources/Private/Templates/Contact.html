@@ -1,0 +1,46 @@
+<div class="row content-block content-block-ce-contact ">
+    <div class="container">
+        <div class="content-part ce-contact-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-7 bg-grey-light trans">
+                        <div class="contact-text">
+                            <div class="headline rowborder-bottom">
+                                <h2 class="text-bold">
+                                    <span class="caption">{data.mugce_caption}</span>
+                                </h2>
+                            </div>
+                            <div class="contact-data">
+                        <span class="name">
+                           <f:if condition="{data.header}"><span class="titelpre">{data.header}</span></f:if>
+                           <span class="text-bold">{data.bodytext}</span>
+                           <f:if condition="{data.mugce_header}"> <span class="titelpost">{data.mugce_header}</span></f:if>
+                        </span>
+                                <f:if condition="{data.subheader}">
+                                    <div class="phone">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:phone", default: "T:")} {data.subheader}</div>
+                                </f:if>
+                                <f:if condition="{data.mugce_subheader}">
+                                    <div class="mail">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:mail", default: "E:")} <a href="mailto:{data.mugce_subheader}" class="textlink">{data.mugce_subheader}</a></div>
+                                </f:if>
+                            </div>
+                        </div>
+                        <div class="contact-image">
+                            <f:image image="{image.0}" class="img" width="570c" height="380c" />
+                            <f:if condition="{data.header_link}">
+                                <div class="cvlink">
+                                    <div class="box-balken blend"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green-dark.png')}" alt="" class="blend"></div>
+                                    <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
+                                        {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
+                                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
+                                    </f:link.typolink>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                    <div class="col col-05 "> </div>
+                    <div class="col col-35 trans"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

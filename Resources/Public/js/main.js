@@ -51,6 +51,11 @@ $(window).resize(function(){
 $(window).trigger('resize');
 
 
+//last textblockrow
+$('div.row-headline-left:last').addClass('row-headline-left-last');
+
+
+
 //headlineslider
 $('.ce-header-slider-element .headline h2').each(function(){
   var text = $.trim($(this).text()),
@@ -78,6 +83,14 @@ $(".ce-header-slider .quicklinks-box").mouseleave(function(){
 //  $(this).removeClass("quicklinks-boxOn");
 });
 
+
+//accordion
+$(".accordion-title").click(function(){
+  $('.accordion-item').removeClass("accordion-item-On");
+  $('.accordion-text ').fadeOut(0);
+  $(this).closest('.accordion-item').addClass("accordion-item-On");
+  $(this).closest('.accordion-item').find('.accordion-text ').fadeIn(600);
+});
 
 //Burger Button
 $(".burgerBTNOpen").click(function(){
@@ -110,6 +123,9 @@ $('.btn-toggle-quicklink').click(function(){
 
 
 //iam menu
+var windowWidth = $(window).width();
+var contentWidth = $('.header-line').width();
+$('.iamlinkbox').css({"right": - ((windowWidth - contentWidth)*0.5) +"px"});
 $('.iam-btn').click(function(){
   $('html').addClass("iam-nav-On");
   var windowWidth = $(window).width();
@@ -119,7 +135,6 @@ $('.iam-btn').click(function(){
 });
 $('.iambgbtn-close').click(function(){
   $('html').removeClass("iam-nav-On");
-  $('.iamlinkbox').removeAttr("style")
   return false;
 });
 //ways

@@ -12,6 +12,12 @@
       <trans-unit id="quicklinks" xml:space="preserve">
         <source>Quicklinks</source>
       </trans-unit>
+      <trans-unit id="phone" xml:space="preserve">
+        <source>T:</source>
+      </trans-unit>
+      <trans-unit id="mail" xml:space="preserve">
+        <source>E:</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

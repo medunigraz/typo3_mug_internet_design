@@ -1,0 +1,11 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        mugce_text_columns {
+            iconIdentifier = mugce-icon-text-columns
+            title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.caption
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.description
+            tt_content_defValues.CType = mugce_text_columns
+        }
+    }
+    show := addToList(mugce_text_columns)
+}

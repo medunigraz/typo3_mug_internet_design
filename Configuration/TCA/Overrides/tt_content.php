@@ -67,6 +67,15 @@ $additionalColumns = array(
             'max' => 255
         )
     ),
+    'mugce_link_label_2' => array (
+        'exclude' => 0,
+        'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.link_label_2',
+        'config' => array(
+            'type' => 'input',
+            'size' => 50,
+            'max' => 255
+        )
+    ),
     'mugce_header' => array (
         'exclude' => 0,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.header',
@@ -85,6 +94,38 @@ $additionalColumns = array(
             'max' => 255
         )
     ),
+    'mugce_bodytext' => array (
+        'exclude' => 0,
+        'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.bodytext',
+        'config' => [
+            'type' => 'text',
+            'cols' => 80,
+            'rows' => 15,
+            'softref' => 'typolink_tag,images,email[subst],url',
+            'search' => [
+                'andWhere' => '{#CType}=\'text\' OR {#CType}=\'textpic\' OR {#CType}=\'textmedia\''
+            ]
+        ]
+    ),
+    'mugce_link' => array (
+        'exclude' => 0,
+        'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.link',
+        'config' => [
+            'type' => 'input',
+            'renderType' => 'inputLink',
+            'size' => 50,
+            'max' => 1024,
+            'eval' => 'trim',
+            'fieldControl' => [
+                'linkPopup' => [
+                    'options' => [
+                        'title' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel',
+                    ],
+                ],
+            ],
+            'softref' => 'typolink'
+        ]
+    ),
     'mugce_caption' => array (
         'exclude' => 0,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.caption',
@@ -92,6 +133,25 @@ $additionalColumns = array(
             'type' => 'input',
             'size' => 50,
             'max' => 255
+        )
+    ),
+    'mugce_show_marker' => array (
+        'exclude' => 0,
+        'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.show_marker',
+        'config' => array(
+            'type' => 'check',
+            'default' => '1',
+        )
+    ),
+    'mugce_display_type' => array (
+        'exclude' => 0,
+        'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.display_type',
+        'config' => array(
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.display_type.standard', 0]
+            ],
         )
     ),
 );
@@ -272,6 +332,7 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     --palette--;;general,
                     subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text.input.subheader,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text.input.header,
+                    mugce_display_type,
                     bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text.input.bodytext,
                     mugce_link_label,
                     header_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text.input.header_link,
@@ -296,12 +357,238 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                 'max' => 255,
             ],
         ],
+        'mugce_display_type' => [
+          'config' => array(
+              'items' => [
+                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.display_type.standard', 0],
+                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text.input.display_type.headline_left', 1]
+              ],
+          )
+        ],
         'bodytext' => [
             'config' => [
                 'eval' => 'required',
                 'enableRichtext' => true,
                 'richtextConfiguration' => 'default'
             ]
+        ]
+    ]
+];
+
+$ceName = 'mugce_text_columns';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.caption',
+        $ceName,
+        'mugce-icon-text-columns',
+    ],
+    'mugce_text',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.subheader,
+                    header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.header,
+                    bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.bodytext,
+                    mugce_link_label;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.mugce_link_label,
+                    header_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.header_link,
+                    mugce_header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.mugce_header,
+                    mugce_bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.mugce_bodytext,
+                    mugce_link_label_2;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.mugce_link_label_2,
+                    mugce_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_columns.input.mugce_link,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'header' => [
+            'config' => [
+                'eval' => 'required',
+                'type' => 'text',
+                'cols' => 50,
+                'rows' => 3,
+                'max' => 255,
+            ],
+        ],
+        'mugce_header' => [
+            'config' => [
+                'eval' => 'required',
+                'type' => 'text',
+                'cols' => 50,
+                'rows' => 3,
+                'max' => 255,
+            ],
+        ],
+        'bodytext' => [
+            'config' => [
+                'eval' => 'required',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ]
+        ],
+        'mugce_bodytext' => [
+            'config' => [
+                'eval' => 'required',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ]
+        ]
+    ]
+];
+
+$ceName = 'mugce_text_media';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.caption',
+        $ceName,
+        'mugce-icon-text-media',
+    ],
+    'mugce_text_columns',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.subheader,
+                    header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.header,
+                    bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.bodytext,
+                    image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.image,
+                    mugce_link_label;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.mugce_link_label,
+                    header_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.header_link,
+                    mugce_link_label_2;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.mugce_link_label_2,
+                    mugce_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.mugce_link,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'header' => [
+            'config' => [
+                'eval' => 'required',
+                'type' => 'text',
+                'cols' => 50,
+                'rows' => 3,
+                'max' => 255,
+            ],
+        ],
+        'mugce_header' => [
+            'config' => [
+                'eval' => 'required',
+                'type' => 'text',
+                'cols' => 50,
+                'rows' => 3,
+                'max' => 255,
+            ],
+        ],
+        'bodytext' => [
+            'config' => [
+                'eval' => 'required',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ]
+        ],
+        'image' => [
+            'config' => [
+                'maxitems' => 1,
+                'minitems' => 1,
+            ],
+        ]
+    ]
+];
+
+$ceName = 'mugce_text_media_teaser';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.caption',
+        $ceName,
+        'mugce-icon-text-media-teaser',
+    ],
+    'mugce_text_media',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.subheader,
+                    header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.header,
+                    mugce_show_marker,
+                    bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.bodytext,
+                    image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.image,
+                    mugce_header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.mugce_header,
+                    mugce_bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.mugce_bodytext,
+                    mugce_quicklinks;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.mugce_quicklinks,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'header' => [
+            'config' => [
+                'type' => 'text',
+                'cols' => 50,
+                'rows' => 3,
+                'max' => 255,
+            ],
+        ],
+        'mugce_header' => [
+            'config' => [
+                'type' => 'text',
+                'cols' => 50,
+                'rows' => 3,
+                'max' => 255,
+            ],
+        ],
+        'bodytext' => [
+            'config' => [
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ]
+        ],
+        'mugce_bodytext' => [
+            'config' => [
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ]
+        ],
+        'image' => [
+            'config' => [
+                'maxitems' => 1,
+                'minitems' => 0,
+            ],
         ]
     ]
 ];
@@ -315,7 +602,7 @@ $ceName = 'mugce_offers';
         $ceName,
         'mugce-icon-offers',
     ],
-    'mugce_text',
+    'mugce_text_media_teaser',
     'after'
 );
 
@@ -324,6 +611,7 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_offers.input.header,
+                    mugce_show_marker,
                     mugce_content_elements,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
@@ -439,6 +727,7 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     --palette--;;general,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_imagetiles.input.header,
                     subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_imagetiles.input.subheader,
+                    mugce_show_marker,
                     mugce_content_elements,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
@@ -520,5 +809,164 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                 'minitems' => 1,
             ],
         ]
+    ],
+];
+
+$ceName = 'mugce_contact';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.caption',
+        $ceName,
+        'mugce-icon-contact',
+    ],
+    'mugce_imagetileselement',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    mugce_caption;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_caption,
+                    header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.header,
+                    bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.bodytext,
+                    mugce_header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_header,
+                    subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.subheader,
+                    mugce_subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_subheader,
+                    header_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.header_link,
+                    mugce_link_label;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_link_label,
+                    image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.image,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'mugce_caption' => [
+            'config' => [
+                'eval' => 'required'
+            ]
+        ],
+        'bodytext' => [
+            'config' => array(
+                'eval' => 'required',
+                'type' => 'input',
+                'size' => 50,
+                'max' => 255
+            )
+        ],
+        'image' => [
+            'config' => [
+                'maxitems' => 1,
+                'minitems' => 1,
+            ],
+        ]
+    ],
+];
+
+$ceName = 'mugce_accordion';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_accordion.caption',
+        $ceName,
+        'mugce-icon-accordion',
+    ],
+    'mugce_contact',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    mugce_content_elements,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'mugce_content_elements' => [
+            'config' => [
+                'overrideChildTca' => [
+                    'columns' => [
+                        'CType' => [
+                            'config' => [
+                                'default' => 'mugce_accordionelement',
+                            ],
+                        ],
+                        'colPos' => [
+                            'config' => [
+                                'default' => '104',
+                            ],
+                        ],
+                    ],
+                ],
+                'maxitems' => 50,
+                'minitems' => 1,
+            ],
+        ],
+    ],
+];
+
+$ceName = 'mugce_accordionelement';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_accordionelement.caption',
+        $ceName,
+        'mugce-icon-accordionelement',
+    ],
+    'mugce_accordion',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_accordionelement.input.header,
+                    bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_accordionelement.input.bodytext,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'header' => [
+            'config' => [
+                'eval' => 'required'
+            ]
+        ],
+        'bodytext' => [
+            'config' => [
+                'eval' => 'required',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default'
+            ]
+        ],
     ],
 ];

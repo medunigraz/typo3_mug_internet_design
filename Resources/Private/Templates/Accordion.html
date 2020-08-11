@@ -1,0 +1,21 @@
+<div class="row content-block content-block-ce-accordion">
+  <div class="container">
+    <div class="content-part ce-accordion-box">
+      <div class="container">
+        <div class="row">
+          <div class="col col-7 trans">
+
+            <f:for each="{elements}" as="element">
+              <v:content.render contentUids="{0: element.data.uid}" limit="1" render="1" as="content">
+                {content.0 -> f:format.raw()}
+              </v:content.render>
+            </f:for>
+          </div>
+          <div class="col col-05 "> </div>
+          <div class="col col-35 trans"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

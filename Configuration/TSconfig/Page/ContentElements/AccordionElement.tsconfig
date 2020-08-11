@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        mugce_accordionelement {
+            iconIdentifier = mugce-icon-accordionelement
+            title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_accordionelement.caption
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_accordionelement.description
+            tt_content_defValues {
+                CType = mugce_accordionelement
+            }
+        }
+    }
+    show := addToList(mugce_accordionelement)
+}

@@ -70,6 +70,17 @@ mod.web_layout.BackendLayouts {
                             }
                         }
                     }
+                    104 {
+                        columns {
+                            1 {
+                                name = Accordion
+                                colPos = 104
+                                allowed {
+                                    CType = mugce_accordionelement
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -1,0 +1,40 @@
+.ce-contact-box {
+  margin: 80px 0 80px 0;
+  .headline{
+    float: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  .contact-text {
+    width: 61%;
+    float: left;
+    margin: 20px 0 0 3%;
+  }
+  .contact-image {
+    float: left;
+    width: 31%;
+    margin: 15px 0 0 3%;
+    position:relative;
+    padding: 0 0 20px 0;
+    text-align: center;
+    .box-balken {
+    position: relative;
+      top: inherit;
+      margin: -24px 0 5px 0;
+    }
+  }
+  .caption {
+    display: block;
+    width: 100%;
+    float: left;
+    font-size: 20px;
+  }
+
+  .cvlink a:hover {
+    color:$green-dark;
+
+  }
+}
+
+
+
