@@ -1,0 +1,46 @@
+.tmpl-Organisation {
+  .minheader {
+    min-height: 120px;
+  }
+
+  .contentpart-60 {
+    width: 65%;
+    position: relative;
+    float: left;
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
+
+.ce-text .rowborder-bottom {
+  border-bottom: 0px ;
+}
+  }
+
+
+  .contentpart-40 {
+    width: 30%;
+    float: right;
+
+    .info-box {
+      right: 0px;
+      position: relative;
+      bottom: inherit;
+      width: 100%;
+    }
+
+  }
+
+  .ce-contact-box {
+    margin: 20px 0 80px 0;
+    .col.col-7 {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+
+
+}

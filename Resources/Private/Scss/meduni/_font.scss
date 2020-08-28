@@ -9,17 +9,29 @@
 h1, .h1 {
   font-size: 32px;
   line-height: 44px;
+  text-transform: uppercase;
 }
 h2, .h2 {
      font-size: 28px;
      line-height: 40px;
+  text-transform: uppercase;
+
    }
 .hl-big {
-  font-size: 55px;
-  line-height: 65px;
+  font-size: 40px;
+  line-height: 55px;
   text-transform: uppercase;
 }
 .text-mega {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 70px;
+}
+
+
+blockquote {
+  color:$green-light;
+  font-style:italic;
+  font-size:26px;
+  line-height:40px;
+
 }

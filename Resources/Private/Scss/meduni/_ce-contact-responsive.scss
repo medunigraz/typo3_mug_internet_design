@@ -1,0 +1,47 @@
+/* ....................................................................................... 1024 */
+@media screen and (max-width: 1024px) {
+  .ce-contact-box {
+    margin: 20px 0 20px 0;
+  }
+  .titelpre, .titelpost {
+    display:block;
+    width:100%;
+  }
+  .box-balken img {
+    width: 12px;
+  }
+  .ce-contact-box .contact-image .box-balken {
+    margin: -10px 0 5px 0;
+  }
+  .ce-contact-box  .morelink-arrow {
+      margin: -17px -3px 0 0px;
+    right: 0px;
+    position: absolute;
+    width: 9px;
+  }
+}
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .tmpl-Organisation .ce-contact-box {
+    margin: 20px 0 20px 0;
+  }
+  .ce-contact-box .contact-image {
+    width: 100%;
+    margin: 10px 0 0 0%;
+  }
+  .ce-contact-noimg .ce-contact-box .contact-image {
+    margin: 0px 0 0 0%;
+    position: relative;
+    right: 0;
+    top: inherit;
+  }
+  .ce-contact-box .contact-text {
+    width: 93%;
+    margin: 20px 0 0 3%;
+  }
+  .ce-contact-box .morelink-arrow {
+    margin: -19px 15px 0 0px;
+    right: 0px;
+  }
+}

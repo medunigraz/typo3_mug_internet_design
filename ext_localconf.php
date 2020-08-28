@@ -5,6 +5,8 @@ defined('TYPO3_MODE') or die();
   $icons = [
       'mugce-icon-homeslider' => 'mugce-icon-homeslider.svg',
       'mugce-icon-homesliderelement' => 'mugce-icon-homesliderelement.svg',
+      'mugce-icon-header-default' => 'mugce-icon-header-default.svg',
+      'mugce-icon-header-organisation' => 'mugce-icon-header-organisation.svg',
       'mugce-icon-link' => 'mugce-icon-link.svg',
       'mugce-icon-text' => 'mugce-icon-text.svg',
       'mugce-icon-text-columns' => 'mugce-icon-text-columns.svg',
@@ -33,10 +35,13 @@ defined('TYPO3_MODE') or die();
   );
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/Home.tsconfig">'
+  );
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/Default.tsconfig">'
   );
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/OE.tsconfig">'
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/Organisation.tsconfig">'
   );
 
   // Hide content elements in list module & filter in administration module
@@ -48,6 +53,13 @@ defined('TYPO3_MODE') or die();
 
   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['mug_ce'] =
       \MUG\ContentElements\Hooks\Backend\ContentPreviewRenderer::class;
+
+  // Add rootline field
+  $rootlinefields = &$GLOBALS["TYPO3_CONF_VARS"]["FE"]["addRootLineFields"];
+  if ($rootlinefields != '') {
+    $rootlinefields .= ' , ';
+  }
+  $rootlinefields .= 'backend_layout';
 
   // Content Element: Home Slider
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -65,6 +77,24 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/HomeSliderElement/setup.ts">'
+  );
+
+  // Content Element: Header Default
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/HeaderDefault.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/HeaderDefault/setup.ts">'
+  );
+
+  // Content Element: Header Organisation
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/HeaderOrganisation.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/HeaderOrganisation/setup.ts">'
   );
 
   // Content Element: Link

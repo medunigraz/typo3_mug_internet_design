@@ -6,7 +6,10 @@
             <div class="section-name text-bold trans"><div class="section-name-Inner"><span class="section-line-top"></span>{data.subheader}<span class="section-line-bottom"></span></div></div>
         </f:if>
         <div class="container">
-            <div class="row rowborder-bottom">
+            <div class="row  <f:if condition='{data.mugce_show_border}'>rowborder-bottom</f:if>">
+
+
+
                 <div class="col trans">
                     <div class="headline">
                         <h2 class="text-bold">{data.header -> f:format.nl2br()}</h2>

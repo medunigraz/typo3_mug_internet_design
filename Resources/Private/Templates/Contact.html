@@ -1,4 +1,4 @@
-<div class="row content-block content-block-ce-contact ">
+<div class="row content-block content-block-ce-contact <f:if condition='{image.0}'><f:then></f:then><f:else>ce-contact-noimg</f:else></f:if>">
     <div class="container">
         <div class="content-part ce-contact-box">
             <div class="container">
@@ -12,9 +12,9 @@
                             </div>
                             <div class="contact-data">
                         <span class="name">
-                           <f:if condition="{data.header}"><span class="titelpre">{data.header}</span></f:if>
-                           <span class="text-bold">{data.bodytext}</span>
-                           <f:if condition="{data.mugce_header}"> <span class="titelpost">{data.mugce_header}</span></f:if>
+                           <f:if condition="{data.header}"><span class="titelpre">{data.header}&nbsp;</span></f:if>
+                           <span class="text-bold">{data.bodytext}&nbsp;</span>
+                           <f:if condition="{data.mugce_header}"><span class="titelpost">{data.mugce_header}</span></f:if>
                         </span>
                                 <f:if condition="{data.subheader}">
                                     <div class="phone">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:phone", default: "T:")} {data.subheader}</div>
@@ -25,7 +25,14 @@
                             </div>
                         </div>
                         <div class="contact-image">
-                            <f:image image="{image.0}" class="img" width="570c" height="380c" />
+                            <f:if condition="{image.0}">
+                                <f:then>
+                                    <f:image image="{image.0}" class="img" width="570c" height="380c" />
+                                </f:then>
+                                <f:else>
+                                </f:else>
+                            </f:if>
+
                             <f:if condition="{data.header_link}">
                                 <div class="cvlink">
                                     <div class="box-balken blend"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green-dark.png')}" alt="" class="blend"></div>

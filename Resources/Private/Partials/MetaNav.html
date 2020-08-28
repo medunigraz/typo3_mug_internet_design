@@ -4,7 +4,7 @@
       <f:if condition="{item.doktype}!=42">
         <li class="nav-item animateAll nav-item-level-0 text-medium {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
           <f:link.typolink parameter="{item.link}" class="menu-link menu-link-level0 animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
-            {item.linktext}<span class="btn-toggle btn-toggle-0"></span>
+            {item.linktext}
           </f:link.typolink>
         </li>
       </f:if>

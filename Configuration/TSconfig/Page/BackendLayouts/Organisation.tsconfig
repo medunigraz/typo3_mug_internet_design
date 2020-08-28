@@ -1,16 +1,19 @@
 mod.web_layout.BackendLayouts {
-    oe {
-        title = OE
+    organisation {
+        title = Organisation
         config{
             backend_layout {
                 colCount = 1
-                rowCount = 6
+                rowCount = 7
                 rows {
                     1 {
                         columns {
                             1 {
                                 name = Header
                                 colPos = 1
+                                allowed {
+                                    CType = mugce_header_organisation
+                                }
                                 maxitems = 1
                             }
                         }
@@ -21,7 +24,7 @@ mod.web_layout.BackendLayouts {
                                 name = Main
                                 colPos = 0
                                 allowed {
-                                    CType = mugce_text,mugce_offers,mugce_imagetiles
+                                    CType = mugce_text,mugce_contact
                                 }
                             }
                         }

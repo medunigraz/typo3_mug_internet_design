@@ -1,10 +1,10 @@
 mod.web_layout.BackendLayouts {
-    default{
+    default {
         title = Default
         config{
             backend_layout {
                 colCount = 1
-                rowCount = 6
+                rowCount = 7
                 rows {
                     1 {
                         columns {
@@ -12,7 +12,7 @@ mod.web_layout.BackendLayouts {
                                 name = Header
                                 colPos = 1
                                 allowed {
-                                    CType = mugce_homeslider
+                                    CType = mugce_header_default
                                 }
                                 maxitems = 1
                             }

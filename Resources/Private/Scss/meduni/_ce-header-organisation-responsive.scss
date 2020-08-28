@@ -1,0 +1,54 @@
+/* ....................................................................................... 1500 */
+@media screen and (max-width: 1500px) {
+  .ce-header-organisation .headertext {
+    top: 40px;
+  }
+
+}
+/* ....................................................................................... 1260 */
+@media screen and (max-width: 1260px) {
+  .ce-header-organisation .headertext {
+    top: 36px;
+    width: 60%;
+    left: 2%;
+  }
+  .ce-header-organisation .headertext h1 {
+    font-size: 23px;
+    line-height: 31px;
+  }
+}
+
+/* ....................................................................................... 890 */
+@media screen and (max-width: 890px) {
+  .ce-header-organisation .headertext {
+    top: 14px;
+  }
+  .ce-header-organisation .headertext h1 {
+    font-size: 21px;
+    line-height: 29px;
+  }
+}
+
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+
+.ce-header-organisation .img {
+  height: 240px;
+  width: auto;
+  max-width: inherit;
+  margin: 0 0 0 -70%;
+}
+  .ce-header-organisation .headertext {
+    top: 46px;
+    width: 97%;
+  }
+
+  .ce-header-organisation .sliderbgbalken {
+    left: 14%;
+    margin: 0 0 0 0px;
+    width: 180px;
+  }
+
+}
+

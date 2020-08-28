@@ -1,0 +1,70 @@
+/* ....................................................................................... 1260 */
+@media screen and (max-width: 1260px) {
+    .submenu-box .nav-item-level-0 > a {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .submenu-box .subnavopenBTN {
+    top: -4px;
+  }
+  .submenu-box  .infobox-inner {
+    height: auto;
+  }
+  .submenu-box .nav-item-level-1 {
+    margin: 3px 0 0 0;
+    font-size: 12px;
+  }
+
+}
+
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .submenu-box {
+  display:none;
+  }
+  .submenburgerBTN { display: block;}
+
+  .submenburgerBTN , .submenburgerBTN-x {
+       background: $grey-light;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 99;
+    top: -22px;
+    right: 2%;
+    cursor:pointer;
+  }
+  .burgerbtnline {
+    display: block;
+    width: 65%;
+    margin: 12px auto -6px auto;
+    height: 2px;
+    background: #000;
+  }
+  .icon-submenburgerBTN-x {
+    display: block;
+    margin: 7px auto 0 auto;
+    width: 25px;
+    height: 25px;
+  }
+
+  .subnavboxOn    .submenburgerBTN {  display:none;  }
+
+  .subnavboxOn    .submenburgerBTN-x {  display:block;  }
+
+  .subnavboxOn   .submenu-box {
+    display:block;
+  }
+.subnavboxOn   .tmpl-Organisation .contentpart-40 .info-box {
+    right: 0px;
+    position: absolute;
+    bottom: inherit;
+    width: 100%;
+    top: 128px;
+    z-index: 999999;
+  }
+  .submenu-box .nav-item-level-0 > a {
+     width: 90%;
+  }
+}

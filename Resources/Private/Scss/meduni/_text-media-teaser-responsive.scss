@@ -1,3 +1,10 @@
+/* ...........................................................................  1245 px */
+@media screen and (max-width: 1245px) {
+.content-block-ce-text-media-teaser .ce-text-media-teaser .headline {
+  display: block;
+  width: 95%;
+}
+}
 /* ...........................................................................  1024 px */
 @media screen and (max-width: 1024px) {
   .content-block-ce-text-media-teaser .medialinks-box .link::after {
@@ -15,11 +22,21 @@
 
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
+  .content-block-ce-text-media-teaser {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
   .img.img-ce-text-media {
     margin: 0 0 20px 0;
   }
   .ce-text-columns {
     margin: 20px 0;
   }
+
+
+  .content-block-ce-text-media-teaser .ce-text-media-teaser .col-35 .headline {
+    margin: 20px auto 20px auto;
+  }
+
 }
 

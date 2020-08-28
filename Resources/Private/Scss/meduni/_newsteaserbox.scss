@@ -1,0 +1,126 @@
+.contenblock-newsteaser {
+  .quicklinks-box {
+   background:none;
+
+  }
+  .quicklinks-items {
+    height: auto;
+    width:100%;
+    margin: 0 auto;
+    position:relative;
+    overflow: visible;
+
+  }
+
+  .info-box {
+      bottom: inherit;
+      width: 30%;
+    top: -198px;
+  }
+
+.news-box-inner {
+  position:relative;
+  float: left;
+
+
+}
+  .news-item {
+    float: left;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .quicklinks-headline {
+    margin: 0px;
+    float: left;
+    width: 100%;
+    max-height: 50px;
+    overflow: hidden;
+  }
+  .linktoall {
+    background: $grey-light ;
+    float: left;
+    width: 100%;
+    position: relative;
+       padding: 0px 5% 20px 5%;
+.border-bottom {
+  border-top: 2px solid #000;
+  width:100%;
+  margin:0 auto;
+}
+    .morelink {
+      display: block;
+      width: 100%;
+      float: right;
+      text-align: right;
+      margin: 10px 0 0px 0;
+      overflow: visible;
+    }
+
+  }
+  .news-item {
+    background: $grey-light ;
+    float: left;
+    width: 100%;
+    margin: 0 0 0px 0;
+    padding: 20px 5% 20px 5%;
+    .infobox-headline-BTN {
+      display:none;
+    }
+    .teaser {
+      height: 112px;
+      width: 100%;
+      float: left;
+      overflow: hidden;
+    }
+    .morelinknews {
+      font-weight: 800;
+      text-decoration: underline;
+    }
+  }
+  .news-item.entry-0 {
+    height: 200px;
+    background:none;
+    color:#ffffff;
+    .teaser {
+      height: 70px;
+    }
+.morelinknews {display:none;}
+    .infobox-headline-BTN {
+      background: #31972A;
+      right: 5%;
+      display:block;
+      top: 26px;
+
+    }
+
+    a {  color:#ffffff;}
+    .quicklinks-headline {
+      border-bottom: 2px solid #ffffff;
+      padding: 0 0 10px 0;
+      margin: 0 0 10px 0;
+      max-height: 84px;
+      overflow: hidden;
+
+
+
+    }
+  }
+
+}
+
+
+.content-header-default .contenblock-newsteaser0-blende {
+
+   width: 100%;
+
+.info-box {
+    bottom: 0px;
+    top: inherit;
+  height: 200px;
+  .news-item {
+    background:none;
+  }
+
+  }
+}

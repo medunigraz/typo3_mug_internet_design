@@ -17,7 +17,13 @@
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
   .ce-offers .headline {
-    margin: 50px 0 40px 0;
+    margin: 20px 0 20px 0;
+  }
+  .ce-offers .box-balken {
+    top: -14px;
+  }
+  .ce-offers .ce-offer {
+    margin: 0 0 40px 0;
   }
   .ce-offers .elements .ce-offer .col-img .col-text-inner, .ce-offers .elements .ce-offer .col-text .col-text-inner,
   .ce-offers .elements .ce-offer:nth-child(2n) .col-text .col-text-inner

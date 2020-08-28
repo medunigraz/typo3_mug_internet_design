@@ -18,11 +18,14 @@ page.10 {
     file.stdWrap.cObject {
         key.data = pagelayout
 
+        pagets__home = TEXT
+        pagets__home.value = EXT:mug_ce/Resources/Private/Layouts/Home.html
+
         pagets__default = TEXT
         pagets__default.value = EXT:mug_ce/Resources/Private/Layouts/Default.html
 
-        pagets__oe = TEXT
-        pagets__oe.value = EXT:mug_ce/Resources/Private/Layouts/OE.html
+        pagets__organisation = TEXT
+        pagets__organisation.value = EXT:mug_ce/Resources/Private/Layouts/Organisation.html
     }
     variables {
         mugce_content < styles.content.get

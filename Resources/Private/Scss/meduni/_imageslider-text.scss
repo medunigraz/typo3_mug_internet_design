@@ -16,17 +16,29 @@
     margin: 0 0 0 -600px;
     text-align: center;
     text-transform:uppercase;
-    h1  {  font-size: 99px; line-height:114px;}
-    h2  {  font-size: 99px; line-height:114px;}
-    h3  {  font-size: 99px; line-height:114px;}
+    text-shadow: 0px 0px 43px #333;
+    h1  {  font-size: 99px; line-height:114px; text-shadow: 0px 0px 43px #333;}
+    h2  {  font-size: 99px; line-height:114px; text-shadow: 0px 0px 43px #333;}
+    h3  {  font-size: 99px; line-height:114px; text-shadow: 0px 0px 43px #333;}
   }
 }
-.ce-homesliderelement:nth-child(2) .sliderword:nth-child(1) {
-  margin: 0px 0 0 -25%;
+
+.ce-homesliderelement:nth-child(1) .sliderword:nth-child(1) {
+  margin: 0px 0 0 -49%;
   display: block;
 }
+
+.ce-homesliderelement:nth-child(2) .sliderword:nth-child(1) {
+  margin: 0px 0 0 -25%;
+
+}
 .ce-homesliderelement:nth-child(2) .sliderword:nth-child(2) {
-  margin: 0px 0 0 14%;
+  margin: 0px 0 0 0%;
+
+}
+.ce-homesliderelement:nth-child(2) .sliderword:nth-child(3) {
+  margin: 0px 0 0 5%;
+  display: block;
 }
 .ce-homesliderelement:nth-child(3) .sliderword:nth-child(1) {
   margin: 0px 0 0 -25%;
@@ -154,7 +166,7 @@ width:100%;
   border-bottom:0px;
 
 }
-.box-sliderbgbalken {width:100%; height:99.9%;   position: absolute; top:0px; left:0px; overflow:hidden; pointer-events: none}
+.box-sliderbgbalken {width:100%; height:100%;   position: absolute; top:0px; left:0px; overflow:hidden; pointer-events: none}
 .sliderbgbalken {
   display: block;
   position: absolute;

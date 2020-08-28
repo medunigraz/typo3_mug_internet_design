@@ -51,22 +51,31 @@
 h1, .h1 {
   font-size: 32px;
   line-height: 44px;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
   font-size: 28px;
   line-height: 40px;
+  text-transform: uppercase;
 }
 
 .hl-big {
-  font-size: 55px;
-  line-height: 65px;
+  font-size: 40px;
+  line-height: 55px;
   text-transform: uppercase;
 }
 
 .text-mega {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 70px;
+}
+
+blockquote {
+  color: #31972A;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 40px;
 }
 
 /* ....................................................................................... 1492 */
@@ -83,11 +92,11 @@ h2, .h2 {
     line-height: 45px;
   }
 }
-/* ....................................................................................... 767 */
-@media screen and (max-width: 767px) {
+/* ....................................................................................... 1024 */
+@media screen and (max-width: 1024px) {
   .hl-big {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 26px;
+    line-height: 36px;
   }
 
   h1, .h1 {
@@ -96,13 +105,25 @@ h2, .h2 {
   }
 
   h2, .h2 {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 26px;
   }
 
   .text-mega {
-    font-size: 30px;
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+/* ....................................................................................... 1024 */
+@media screen and (max-width: 1024px) {
+  blockquote {
+    font-size: 20px;
     line-height: 30px;
+  }
+
+  .hl-big {
+    font-size: 22px;
+    line-height: 32px;
   }
 }
 *:focus, *:active {
@@ -202,8 +223,9 @@ img {
 }
 
 .logoimg {
-  width: 120px;
+  width: 140px;
   display: block;
+  margin: -17px 0 0 0;
 }
 
 .rowborder-bottom {
@@ -292,6 +314,12 @@ a:hover .morelink-arrow {
   background: #eeeeee;
 }
 
+.standardshadow {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.1);
+}
+
 /* ...........................................................................  1720 px */
 @media screen and (max-width: 1720px) {
   .content-block {
@@ -373,6 +401,48 @@ a.textlink:hover {
   text-decoration: underline;
 }
 
+.headline-imageteaseritem .text {
+  width: 98%;
+}
+
+.text ul, .accordion-text ul, .text ol, .accordion-text ol {
+  margin: 10px 0 10px 0;
+  padding: 0px;
+  list-style-type: none;
+  width: 100%;
+  float: left;
+}
+
+.text ol, .accordion-text ol {
+  list-style-type: decimal;
+}
+
+.text ul li, .text ol li, .accordion-text ul li, .accordion-text ol li {
+  position: relative;
+  width: 95%;
+  float: left;
+  padding: 0 0 10px 30px;
+  margin: 0 0 10px 0;
+}
+
+.text ol li, .accordion-text ol li {
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+.text ul li:before, .accordion-text ul li:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  background-image: url("img/icon-arrow-black-right.svg");
+  background-repeat: no-repeat;
+  left: 0px;
+  top: 2px;
+  background-size: 100% 100%;
+}
+
 .metaline {
   position: absolute;
   right: 0px;
@@ -385,6 +455,7 @@ a.textlink:hover {
 
 .meta-nav {
   float: left;
+  margin: -8px 0 0 0;
 }
 .meta-nav li {
   float: left;
@@ -399,7 +470,7 @@ a.textlink:hover {
 
 .metasettings {
   float: left;
-  margin: 0 25px 0 20px;
+  margin: -8px 25px 0 20px;
   color: #A2A2A2;
 }
 .metasettings a {
@@ -426,7 +497,7 @@ a.textlink:hover {
   width: 100%;
   font-size: 16px;
   text-transform: uppercase;
-  top: 27px;
+  top: 22px;
   left: 55px;
 }
 .i-am-nav .caption:after {
@@ -439,7 +510,7 @@ a.textlink:hover {
   position: relative;
   overflow: hidden;
   color: #fff;
-  height: 117px;
+  height: 65px;
   margin: -31px -20px 0 0;
   cursor: pointer;
 }
@@ -450,10 +521,11 @@ a.textlink:hover {
   bottom: 2px;
   left: 0px;
   width: 100%;
-  -webkit-transition: opacity 550ms;
+  height: 165px;
   -moz-transition: opacity 550ms;
   -o-transition: opacity 550ms;
   transition: opacity 550ms;
+  top: -37px;
 }
 
 .iam-nav-On .iambgbtn {
@@ -582,6 +654,20 @@ a.textlink:hover {
   .i-am-nav {
     width: 150px;
   }
+  .i-am-nav .caption {
+    width: 100px;
+    left: 41px;
+  }
+
+  .iam-btn {
+    width: 150px;
+    height: 106px;
+    margin: -31px 0px 0 0;
+  }
+
+  .iambgbtn {
+    top: -56px;
+  }
 }
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
@@ -617,6 +703,10 @@ a.textlink:hover {
   .iambgbtn {
     bottom: 13px;
     left: 33px;
+  }
+
+  .iam-btn {
+    margin: -31px 0px 0 0;
   }
 
   .metasettings {
@@ -701,7 +791,10 @@ a.textlink:hover {
   float: left;
   padding: 0px 0 0px 0;
   display: block;
-  height: 60px;
+  min-height: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 25px 0;
 }
 .main-menu .hero-menu .nav-item.nav-item-level-2 {
   width: 41%;
@@ -835,6 +928,7 @@ a.textlink:hover {
   background-size: 100%;
   z-index: 9999999999;
   opacity: 0;
+  top: 0px;
 }
 .main-menu .nav-item-level-1.nav-item-ON .menu-link-level1:after {
   opacity: 1;
@@ -922,7 +1016,7 @@ a.textlink:hover {
 
   .burgerBTN {
     position: absolute;
-    top: 100px;
+    top: 70px;
     right: 20px;
   }
 
@@ -1152,27 +1246,40 @@ a.textlink:hover {
   margin: 0 0 0 -600px;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: 0px 0px 43px #333;
 }
 .ce-homesliderelement .headline h1 {
   font-size: 99px;
   line-height: 114px;
+  text-shadow: 0px 0px 43px #333;
 }
 .ce-homesliderelement .headline h2 {
   font-size: 99px;
   line-height: 114px;
+  text-shadow: 0px 0px 43px #333;
 }
 .ce-homesliderelement .headline h3 {
   font-size: 99px;
   line-height: 114px;
+  text-shadow: 0px 0px 43px #333;
+}
+
+.ce-homesliderelement:nth-child(1) .sliderword:nth-child(1) {
+  margin: 0px 0 0 -49%;
+  display: block;
 }
 
 .ce-homesliderelement:nth-child(2) .sliderword:nth-child(1) {
   margin: 0px 0 0 -25%;
-  display: block;
 }
 
 .ce-homesliderelement:nth-child(2) .sliderword:nth-child(2) {
-  margin: 0px 0 0 14%;
+  margin: 0px 0 0 0%;
+}
+
+.ce-homesliderelement:nth-child(2) .sliderword:nth-child(3) {
+  margin: 0px 0 0 5%;
+  display: block;
 }
 
 .ce-homesliderelement:nth-child(3) .sliderword:nth-child(1) {
@@ -1340,7 +1447,7 @@ a.textlink:hover {
 
 .box-sliderbgbalken {
   width: 100%;
-  height: 99.9%;
+  height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1631,10 +1738,18 @@ a.textlink:hover {
   margin-bottom: 80px;
 }
 
+.lowspace .ce-text .row {
+  width: 58%;
+}
+
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
   .ce-text {
     margin: 30px 0 23px 0;
+  }
+
+  .lowspace .ce-text .row {
+    width: 100%;
   }
 }
 .ce-offers .box-balken {
@@ -1699,7 +1814,15 @@ a.textlink:hover {
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
   .ce-offers .headline {
-    margin: 50px 0 40px 0;
+    margin: 20px 0 20px 0;
+  }
+
+  .ce-offers .box-balken {
+    top: -14px;
+  }
+
+  .ce-offers .ce-offer {
+    margin: 0 0 40px 0;
   }
 
   .ce-offers .elements .ce-offer .col-img .col-text-inner, .ce-offers .elements .ce-offer .col-text .col-text-inner,
@@ -1792,7 +1915,7 @@ a.textlink:hover {
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
   .content-part.ce-link-tile .headline {
-    margin: 20px 0 10px 0;
+    margin: 0px 0 10px 0;
   }
 
   .hoverimage-item h2, .hoverimage-item .h2 {
@@ -1843,6 +1966,9 @@ a.textlink:hover {
   width: 100%;
   margin: 50px 0 80px 0;
 }
+.content-block-ce-text-media-teaser .ce-text-media-teaser .headline-imageteaseritem {
+  margin: 10px 0 80px 0;
+}
 .content-block-ce-text-media-teaser .ce-text-media-teaser .text.text-leadin {
   width: 80%;
   margin: 0 auto;
@@ -1885,6 +2011,13 @@ a.textlink:hover {
   margin: 0 -20px 0 0px;
 }
 
+/* ...........................................................................  1245 px */
+@media screen and (max-width: 1245px) {
+  .content-block-ce-text-media-teaser .ce-text-media-teaser .headline {
+    display: block;
+    width: 95%;
+  }
+}
 /* ...........................................................................  1024 px */
 @media screen and (max-width: 1024px) {
   .content-block-ce-text-media-teaser .medialinks-box .link::after {
@@ -1899,12 +2032,21 @@ a.textlink:hover {
 }
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
+  .content-block-ce-text-media-teaser {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
   .img.img-ce-text-media {
     margin: 0 0 20px 0;
   }
 
   .ce-text-columns {
     margin: 20px 0;
+  }
+
+  .content-block-ce-text-media-teaser .ce-text-media-teaser .col-35 .headline {
+    margin: 20px auto 20px auto;
   }
 }
 .ce-contact-box {
@@ -1914,6 +2056,11 @@ a.textlink:hover {
   float: left;
   width: 100%;
   margin: 0 0 10px 0;
+  padding: 0 0 8px 0;
+}
+.ce-contact-box .contact-data {
+  width: 100%;
+  padding: 0 0 30px 0;
 }
 .ce-contact-box .contact-text {
   width: 61%;
@@ -1931,18 +2078,81 @@ a.textlink:hover {
 .ce-contact-box .contact-image .box-balken {
   position: relative;
   top: inherit;
-  margin: -24px 0 5px 0;
+  margin: -14px 0 5px 0;
 }
 .ce-contact-box .caption {
   display: block;
   width: 100%;
   float: left;
-  font-size: 20px;
 }
 .ce-contact-box .cvlink a:hover {
   color: #006A23;
 }
 
+.ce-contact-noimg .ce-contact-box .contact-text {
+  width: 94%;
+}
+.ce-contact-noimg .ce-contact-box .contact-image {
+  margin: 0px 0 0 0%;
+  position: absolute;
+  right: 3%;
+  top: 84px;
+}
+
+/* ....................................................................................... 1024 */
+@media screen and (max-width: 1024px) {
+  .ce-contact-box {
+    margin: 20px 0 20px 0;
+  }
+
+  .titelpre, .titelpost {
+    display: block;
+    width: 100%;
+  }
+
+  .box-balken img {
+    width: 12px;
+  }
+
+  .ce-contact-box .contact-image .box-balken {
+    margin: -10px 0 5px 0;
+  }
+
+  .ce-contact-box .morelink-arrow {
+    margin: -17px -3px 0 0px;
+    right: 0px;
+    position: absolute;
+    width: 9px;
+  }
+}
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .tmpl-Organisation .ce-contact-box {
+    margin: 20px 0 20px 0;
+  }
+
+  .ce-contact-box .contact-image {
+    width: 100%;
+    margin: 10px 0 0 0%;
+  }
+
+  .ce-contact-noimg .ce-contact-box .contact-image {
+    margin: 0px 0 0 0%;
+    position: relative;
+    right: 0;
+    top: inherit;
+  }
+
+  .ce-contact-box .contact-text {
+    width: 93%;
+    margin: 20px 0 0 3%;
+  }
+
+  .ce-contact-box .morelink-arrow {
+    margin: -19px 15px 0 0px;
+    right: 0px;
+  }
+}
 .content-block-ce-accordion .ce-accordion-box {
   margin: 50px 0;
 }
@@ -1950,6 +2160,8 @@ a.textlink:hover {
   margin: 0 0 0px 0;
   padding: 18px 0 15px 0;
   position: relative;
+  float: left;
+  width: 100%;
 }
 .content-block-ce-accordion .accordion-item-On {
   background: #f5f5f5;
@@ -1961,43 +2173,544 @@ a.textlink:hover {
 }
 .content-block-ce-accordion .accordion-title {
   cursor: pointer;
+  text-transform: uppercase;
 }
 .content-block-ce-accordion .accordion-title h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 2%;
   width: 90%;
 }
 .content-block-ce-accordion .accordion-text {
   display: none;
-  margin-left: 2%;
   width: 90%;
-}
-.content-block-ce-accordion .accordion-text ul {
-  list-style-type: none;
-  margin: 10px 0 20px 5px;
-  padding: 0px;
-  display: block;
-}
-.content-block-ce-accordion .accordion-text ul li {
-  position: relative;
-  width: 80%;
-  padding: 0 0 10px 29px;
-}
-.content-block-ce-accordion .accordion-text ul li:before {
-  content: "";
-  background-image: url("img/icon-arrow-black-right.svg");
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 14px;
-  height: 30px;
-  background-repeat: no-repeat;
+  margin: 20px 0 0 4%;
+  width: 90%;
 }
 .content-block-ce-accordion .arrow {
   display: block;
   position: absolute;
   right: 10px;
   top: 27px;
+}
+
+.tmpl-Organisation .minheader {
+  min-height: 120px;
+}
+.tmpl-Organisation .contentpart-60 {
+  width: 65%;
+  position: relative;
+  float: left;
+}
+.tmpl-Organisation .contentpart-60 .container {
+  width: 100%;
+  max-width: 100%;
+}
+.tmpl-Organisation .contentpart-60 .ce-text .rowborder-bottom {
+  border-bottom: 0px;
+}
+.tmpl-Organisation .contentpart-40 {
+  width: 30%;
+  float: right;
+}
+.tmpl-Organisation .contentpart-40 .info-box {
+  right: 0px;
+  position: relative;
+  bottom: inherit;
+  width: 100%;
+}
+.tmpl-Organisation .ce-contact-box {
+  margin: 20px 0 80px 0;
+}
+.tmpl-Organisation .ce-contact-box .col.col-7 {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .tmpl-Organisation .contentpart-60,
+.tmpl-Organisation .contentpart-40 {
+    width: 100%;
+  }
+
+  .tmpl-Organisation .ce-contact-box {
+    margin: 20px 0 20px 0;
+  }
+}
+/* ...........................................................................  767 px */
+@media screen and (max-width: 767px) {
+  .content-header-default .ce-header-slider-element .sliderbgbalken {
+    margin: 0px 0 0 -70px;
+    width: 60px;
+  }
+
+  .content-header-default .contenblock-newsteaser0-blende {
+    display: none;
+  }
+
+  .content-header-default .ce-header-slider {
+    height: auto;
+  }
+}
+.ce-header-organisation {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.ce-header-organisation .img {
+  width: 100%;
+  float: left;
+  display: block;
+}
+.ce-header-organisation .headertext {
+  position: absolute;
+  color: #ffffff;
+  z-index: 20;
+  width: 71%;
+  top: 100px;
+}
+.ce-header-organisation .headertext h1 {
+  text-transform: uppercase;
+  text-shadow: 0px 0px 43px #333;
+}
+.ce-header-organisation .box-sliderbgbalken {
+  height: 500px;
+}
+
+/* ....................................................................................... 1500 */
+@media screen and (max-width: 1500px) {
+  .ce-header-organisation .headertext {
+    top: 40px;
+  }
+}
+/* ....................................................................................... 1260 */
+@media screen and (max-width: 1260px) {
+  .ce-header-organisation .headertext {
+    top: 36px;
+    width: 60%;
+    left: 2%;
+  }
+
+  .ce-header-organisation .headertext h1 {
+    font-size: 23px;
+    line-height: 31px;
+  }
+}
+/* ....................................................................................... 890 */
+@media screen and (max-width: 890px) {
+  .ce-header-organisation .headertext {
+    top: 14px;
+  }
+
+  .ce-header-organisation .headertext h1 {
+    font-size: 21px;
+    line-height: 29px;
+  }
+}
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .ce-header-organisation .img {
+    height: 240px;
+    width: auto;
+    max-width: inherit;
+    margin: 0 0 0 -70%;
+  }
+
+  .ce-header-organisation .headertext {
+    top: 46px;
+    width: 97%;
+  }
+
+  .ce-header-organisation .sliderbgbalken {
+    left: 14%;
+    margin: 0 0 0 0px;
+    width: 180px;
+  }
+}
+.breadcrumbline {
+  width: 100%;
+  position: relative;
+  z-index: 99;
+}
+.breadcrumbline .breadcrumbbox {
+  width: 70%;
+  position: absolute;
+  margin: 30px 0 0px 0.5%;
+  font-size: 12px;
+}
+.breadcrumbline .breadcrumbbox a {
+  max-width: 30%;
+  display: inline-block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+.breadcrumbline .breadcrumbbox a .breatitem-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  float: left;
+}
+.breadcrumbline .breadcrumbbox a:last-child .breatitem-name {
+  overflow: visible;
+  text-overflow: inherit;
+}
+.breadcrumbline .breadcrumbbox a:after {
+  content: " / ";
+  position: absolute;
+  margin: 0 0 0 2px;
+}
+.breadcrumbline .breadcrumbbox a:last-child:after {
+  content: "  ";
+  display: none;
+}
+
+/* ....................................................................................... 1225 */
+@media screen and (max-width: 1225px) {
+  .breadcrumbline .breadcrumbbox {
+    margin: 30px 0 0px 2%;
+  }
+}
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .breadcrumbbox {
+    display: none;
+  }
+}
+.submenburgerBTN-x, .submenburgerBTN {
+  display: none;
+}
+
+.submenu-box {
+  font-family: "Ubuntu", sans-serif;
+  margin: -110px 0 0 0;
+}
+.submenu-box .quicklinks-box {
+  padding: 20px 0 5px 0;
+}
+.submenu-box .nav-item-level-0 > a {
+  font-weight: 700;
+  display: block;
+  width: 95%;
+}
+.submenu-box .nav-item-level-0 > a:hover {
+  color: #006A23;
+}
+.submenu-box .nav-item-level-0.nav-item-ON > a, .submenu-box .nav-item-level-0.active > a {
+  color: #006A23;
+}
+.submenu-box #subMenu {
+  width: 90%;
+  margin: 0 auto;
+}
+.submenu-box ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.submenu-box .nav-item-level-1 {
+  float: left;
+  width: 100%;
+  margin: 5px 0 0 0;
+}
+.submenu-box .nav-item-level-0 {
+  float: left;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  padding: 0 0 15px 0;
+  margin: 0 0 15px 0;
+  position: relative;
+}
+.submenu-box .nav-item-level-0:last-child {
+  border-bottom: 0px solid #000;
+  margin: 0 0 0px 0;
+}
+.submenu-box .subnavopenBTN {
+  width: 22px;
+  height: 27px;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: -1px;
+}
+.submenu-box .nav-item-level-1 {
+  float: left;
+  width: 100%;
+  margin: 5px 0 0 0;
+}
+.submenu-box .sub-sub-menu {
+  display: none;
+}
+.submenu-box .activeLi .sub-sub-menu, .submenu-box .nav-item-level-0.active .sub-sub-menu {
+  display: block;
+}
+.submenu-box .activeLi .subnavbox-arrow, .submenu-box .nav-item-level-0.active .subnavbox-arrow {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* ....................................................................................... 1260 */
+@media screen and (max-width: 1260px) {
+  .submenu-box .nav-item-level-0 > a {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submenu-box .subnavopenBTN {
+    top: -4px;
+  }
+
+  .submenu-box .infobox-inner {
+    height: auto;
+  }
+
+  .submenu-box .nav-item-level-1 {
+    margin: 3px 0 0 0;
+    font-size: 12px;
+  }
+}
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .submenu-box {
+    display: none;
+  }
+
+  .submenburgerBTN {
+    display: block;
+  }
+
+  .submenburgerBTN, .submenburgerBTN-x {
+    background: #eeeeee;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 99;
+    top: -22px;
+    right: 2%;
+    cursor: pointer;
+  }
+
+  .burgerbtnline {
+    display: block;
+    width: 65%;
+    margin: 12px auto -6px auto;
+    height: 2px;
+    background: #000;
+  }
+
+  .icon-submenburgerBTN-x {
+    display: block;
+    margin: 7px auto 0 auto;
+    width: 25px;
+    height: 25px;
+  }
+
+  .subnavboxOn .submenburgerBTN {
+    display: none;
+  }
+
+  .subnavboxOn .submenburgerBTN-x {
+    display: block;
+  }
+
+  .subnavboxOn .submenu-box {
+    display: block;
+  }
+
+  .subnavboxOn .tmpl-Organisation .contentpart-40 .info-box {
+    right: 0px;
+    position: absolute;
+    bottom: inherit;
+    width: 100%;
+    top: 128px;
+    z-index: 999999;
+  }
+
+  .submenu-box .nav-item-level-0 > a {
+    width: 90%;
+  }
+}
+.contenblock-newsteaser .quicklinks-box {
+  background: none;
+}
+.contenblock-newsteaser .quicklinks-items {
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+.contenblock-newsteaser .info-box {
+  bottom: inherit;
+  width: 30%;
+  top: -198px;
+}
+.contenblock-newsteaser .news-box-inner {
+  position: relative;
+  float: left;
+}
+.contenblock-newsteaser .news-item {
+  float: left;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.contenblock-newsteaser .quicklinks-headline {
+  margin: 0px;
+  float: left;
+  width: 100%;
+  max-height: 50px;
+  overflow: hidden;
+}
+.contenblock-newsteaser .linktoall {
+  background: #eeeeee;
+  float: left;
+  width: 100%;
+  position: relative;
+  padding: 0px 5% 20px 5%;
+}
+.contenblock-newsteaser .linktoall .border-bottom {
+  border-top: 2px solid #000;
+  width: 100%;
+  margin: 0 auto;
+}
+.contenblock-newsteaser .linktoall .morelink {
+  display: block;
+  width: 100%;
+  float: right;
+  text-align: right;
+  margin: 10px 0 0px 0;
+  overflow: visible;
+}
+.contenblock-newsteaser .news-item {
+  background: #eeeeee;
+  float: left;
+  width: 100%;
+  margin: 0 0 0px 0;
+  padding: 20px 5% 20px 5%;
+}
+.contenblock-newsteaser .news-item .infobox-headline-BTN {
+  display: none;
+}
+.contenblock-newsteaser .news-item .teaser {
+  height: 112px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+.contenblock-newsteaser .news-item .morelinknews {
+  font-weight: 800;
+  text-decoration: underline;
+}
+.contenblock-newsteaser .news-item.entry-0 {
+  height: 200px;
+  background: none;
+  color: #ffffff;
+}
+.contenblock-newsteaser .news-item.entry-0 .teaser {
+  height: 70px;
+}
+.contenblock-newsteaser .news-item.entry-0 .morelinknews {
+  display: none;
+}
+.contenblock-newsteaser .news-item.entry-0 .infobox-headline-BTN {
+  background: #31972A;
+  right: 5%;
+  display: block;
+  top: 26px;
+}
+.contenblock-newsteaser .news-item.entry-0 a {
+  color: #ffffff;
+}
+.contenblock-newsteaser .news-item.entry-0 .quicklinks-headline {
+  border-bottom: 2px solid #ffffff;
+  padding: 0 0 10px 0;
+  margin: 0 0 10px 0;
+  max-height: 84px;
+  overflow: hidden;
+}
+
+.content-header-default .contenblock-newsteaser0-blende {
+  width: 100%;
+}
+.content-header-default .contenblock-newsteaser0-blende .info-box {
+  bottom: 0px;
+  top: inherit;
+  height: 200px;
+}
+.content-header-default .contenblock-newsteaser0-blende .info-box .news-item {
+  background: none;
+}
+
+/* ....................................................................................... 1240 */
+@media screen and (max-width: 1240px) {
+  .contenblock-newsteaser .news-item .teaser {
+    height: auto;
+  }
+
+  .contenblock-newsteaser .news-item.entry-0 .teaser {
+    height: auto;
+    max-height: 99px;
+  }
+
+  .contenblock-newsteaser .news-item.entry-0 .quicklinks-headline {
+    padding: 0 15px 10px 0;
+  }
+}
+/* ....................................................................................... 1070 */
+@media screen and (max-width: 1070px) {
+  .contenblock-newsteaser .quicklinks-headline {
+    height: auto;
+    line-height: 20px;
+  }
+}
+/* ....................................................................................... 1024 */
+@media screen and (max-width: 1024px) {
+  .contenblock-newsteaser .info-box {
+    bottom: inherit;
+    width: 39%;
+    top: -198px;
+  }
+}
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .contenblock-newsteaser .info-box {
+    width: 100%;
+    top: 0;
+  }
+
+  .contenblock-newsteaser .news-item {
+    display: none;
+  }
+
+  .contenblock-newsteaser .news-item.entry-0 {
+    display: block;
+    background: #006A23;
+  }
+
+  .contenblock-newsteaser .news-item.entry-0 .quicklinks-headline {
+    padding: 0 25px 10px 0;
+  }
+
+  .contenblock-newsteaser .linktoall .border-bottom {
+    border-top: 0px solid #000;
+    display: none;
+  }
+
+  .contenblock-newsteaser .linktoall .morelink {
+    width: 36%;
+    float: left;
+    text-align: left;
+    margin: 22px 0% 0px 0;
+  }
+
+  .contenblock-newsteaser .linktoall .morelink:last-child {
+    float: right;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

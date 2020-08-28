@@ -11,5 +11,6 @@ CREATE TABLE tt_content (
     mugce_subheader varchar(255) DEFAULT '' NOT NULL,
     mugce_caption varchar(255) DEFAULT '' NOT NULL,
     mugce_show_marker tinyint(1) DEFAULT '1' NOT NULL,
+    mugce_show_border tinyint(1) DEFAULT '1' NOT NULL,
     mugce_display_type smallint(5) DEFAULT '0' NOT NULL
 );

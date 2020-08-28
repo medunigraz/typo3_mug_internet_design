@@ -12,6 +12,7 @@
 
 .meta-nav {
   float: left;
+  margin: -8px 0 0 0;
     li {
       float:left;
       margin: 0 25px 0 0;
@@ -21,7 +22,7 @@
 }
 .metasettings {
   float: left;
-  margin: 0 25px 0 20px;
+  margin: -8px 25px 0 20px;
   color:#A2A2A2;
   a { color:#A2A2A2;}
   a:hover { color:$green-dark;}
@@ -39,7 +40,7 @@
     width: 100%;
     font-size: 16px;
     text-transform: uppercase;
-    top: 27px;
+    top: 22px;
     left: 55px;
   }
   .caption:after {content:"..."  }
@@ -50,21 +51,22 @@
   position: relative;
   overflow: hidden;
   color: #fff;
-  height: 117px;
+  height: 65px;
   margin: -31px -20px 0 0;
   cursor: pointer;
 
 }
 .iambgbtn {
-  display:block;
-  position:absolute;
-  bottom:2px;
-  left:0px;
-  width:100%;
-  -webkit-transition: opacity 550ms ;
-  -moz-transition:opacity 550ms ;
-  -o-transition:opacity 550ms ;
-  transition: opacity 550ms ;
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 0px;
+  width: 100%;
+  height: 165px;
+  -moz-transition: opacity 550ms;
+  -o-transition: opacity 550ms;
+  transition: opacity 550ms;
+  top: -37px;
 }
 .iam-nav-On .iambgbtn {
   opacity:0.1;

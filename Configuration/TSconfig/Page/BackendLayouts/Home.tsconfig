@@ -1,0 +1,91 @@
+mod.web_layout.BackendLayouts {
+    home {
+        title = Home
+        config{
+            backend_layout {
+                colCount = 1
+                rowCount = 7
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Header
+                                colPos = 1
+                                allowed {
+                                    CType = mugce_homeslider
+                                }
+                                maxitems = 1
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Main
+                                colPos = 0
+                                allowed {
+                                    CType = mugce_text,mugce_text_columns,mugce_text_media,mugce_text_media_teaser,mugce_offers,mugce_imagetiles,mugce_contact,mugce_accordion
+                                }
+                            }
+                        }
+                    }
+                    100 {
+                        columns {
+                            1 {
+                                name = Slider Elements
+                                colPos = 100
+                                allowed {
+                                    CType = mugce_homesliderelement
+                                }
+                            }
+                        }
+                    }
+                    101 {
+                        columns {
+                            1 {
+                                name = Quicklinks
+                                colPos = 101
+                                allowed {
+                                    CType = mugce_link
+                                }
+                            }
+                        }
+                    }
+                    102 {
+                        columns {
+                            1 {
+                                name = Offer Elements
+                                colPos = 102
+                                allowed {
+                                    CType = mugce_offer
+                                }
+                            }
+                        }
+                    }
+                    103 {
+                        columns {
+                            1 {
+                                name = Image Tiles
+                                colPos = 103
+                                allowed {
+                                    CType = mugce_imagetileselement
+                                }
+                            }
+                        }
+                    }
+                    104 {
+                        columns {
+                            1 {
+                                name = Accordion
+                                colPos = 104
+                                allowed {
+                                    CType = mugce_accordionelement
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

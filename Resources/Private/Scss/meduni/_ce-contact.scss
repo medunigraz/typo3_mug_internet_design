@@ -4,6 +4,12 @@
     float: left;
     width: 100%;
     margin: 0 0 10px 0;
+    padding: 0 0 8px 0;
+
+  }
+  .contact-data {
+    width: 100%;
+    padding: 0 0 30px 0;
   }
   .contact-text {
     width: 61%;
@@ -20,14 +26,13 @@
     .box-balken {
     position: relative;
       top: inherit;
-      margin: -24px 0 5px 0;
+      margin: -14px 0 5px 0;
     }
   }
   .caption {
     display: block;
     width: 100%;
     float: left;
-    font-size: 20px;
   }
 
   .cvlink a:hover {
@@ -35,6 +40,21 @@
 
   }
 }
+
+.ce-contact-noimg {
+  .ce-contact-box {
+    .contact-text  {
+    width: 94%;
+  }
+    .contact-image {
+      margin: 0px 0 0 0%;
+      position: absolute;
+      right: 3%;
+      top: 84px;
+    }
+}
+}
+
 
 
 

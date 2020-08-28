@@ -9,21 +9,9 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class GetRootViewHelper extends AbstractViewHelper {
 
-  public function initializeArguments() {
-    parent::initializeArguments();
-    $this->registerArgument(
-        'pageUid',
-        'integer',
-        'Optional parent page UID to use as top level of menu. If left out will be detected from ' .
-        'rootLine using $entryLevel'
-    );
-  }
-
   public static function renderStatic(array $arguments, \Closure $renderChildrenClosure,  RenderingContextInterface $renderingContext) {
     $pageUid = $GLOBALS['TSFE']->id;
     $pageService = GeneralUtility::makeInstance(ObjectManager::class)->get(PageService::class);
-    $rootId = $pageService->getRootLine($pageUid)[0]['uid'];
-
-    return $rootId;
+    return $pageService->getRootLine($pageUid)[0];
   }
 }

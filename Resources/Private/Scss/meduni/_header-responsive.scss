@@ -5,6 +5,18 @@
   }
   .i-am-nav {
     width: 150px;
+    .caption{
+      width: 100px;
+      left: 41px;
+    }
+  }
+  .iam-btn {
+    width: 150px;
+    height: 106px;
+    margin: -31px 0px 0 0;
+  }
+  .iambgbtn {
+    top: -56px;
   }
 }
 /* ...........................................................................  767 px */
@@ -30,10 +42,14 @@
     width: 130px;
     margin: -10px 0 0 0;
     float: right;
+
   }
   .iambgbtn {
     bottom: 13px;
     left: 33px;
+  }
+  .iam-btn {
+      margin: -31px 0px 0 0;
   }
   .metasettings {
     margin: -12px 0px 0 10px;

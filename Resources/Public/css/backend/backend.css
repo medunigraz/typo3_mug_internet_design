@@ -1,6 +1,7 @@
 td.t3-page-column[data-colpos="100"],
 td.t3-page-column[data-colpos="101"],
 td.t3-page-column[data-colpos="102"],
-td.t3-page-column[data-colpos="103"] {
+td.t3-page-column[data-colpos="103"],
+td.t3-page-column[data-colpos="104"] {
   display: none;
 }

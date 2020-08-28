@@ -1,0 +1,29 @@
+.ce-header-organisation {
+width:100%;
+position:relative;
+overflow:hidden;
+
+  .img {
+    width: 100%;
+    float: left;
+    display: block;
+  }
+  .headertext {
+    position: absolute;
+    color: $withe;
+    z-index:20;
+    width: 71%;
+    top: 100px;
+
+
+
+    h1 {
+      text-transform:uppercase;
+      text-shadow: 0px 0px 43px #333;
+    }
+  }
+  .box-sliderbgbalken {
+    height: 500px;
+  }
+
+}

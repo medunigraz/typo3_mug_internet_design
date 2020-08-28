@@ -1,0 +1,37 @@
+.breadcrumbline {
+  width: 100%;
+    position: relative;
+    z-index: 99;
+
+  .breadcrumbbox {
+    width: 70%;
+    position:absolute;
+    margin: 30px 0 0px 0.5%;
+    font-size: 12px;
+    a {  max-width:30%;
+      display: inline-block;
+      float: left;
+      margin: 0 10px 0 0;
+    }
+    a .breatitem-name {
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+      width:100%;
+      display: inline-block;
+      float: left;
+    }
+    a:last-child .breatitem-name {
+
+      overflow: visible;
+      text-overflow: inherit;
+    }
+    a:after {
+      content:" / ";
+      position: absolute;
+      margin: 0 0 0 2px;
+    }
+    a:last-child:after {content:"  "; display:none;}
+  }
+
+}

@@ -43,8 +43,9 @@ img {border:0px; max-width:100%; height:auto;}
 
 .blend-full {position:absolute; width:100%; height:100%; left:0px; top:0px;}
 .logoimg {
-  width: 120px;
+  width: 140px;
   display: block;
+  margin: -17px 0 0 0;
 }
 
 .rowborder-bottom {border-bottom:2px solid $black;}
@@ -121,4 +122,9 @@ a:hover .morelink-arrow {
   top: 0;
   right: 100%;
   background:$grey-light ;
+}
+.standardshadow {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.10);
+  -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.10);
+  box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.10);
 }
