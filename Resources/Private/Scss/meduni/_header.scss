@@ -43,7 +43,7 @@
     top: 22px;
     left: 55px;
   }
-  .caption:after {content:"..."  }
+  .caption:after {content:" ..."  }
 }
 .iam-btn {
   width: 190px;
@@ -171,6 +171,13 @@ overflow:hidden;
   margin: 0 20px 0 0;
 }
 .meta-nav li:last-child {margin-right:0px; }
+
+.standard-leadin{
+  .ce-text {
+    margin: 52px 0 0 0;
+  }
+
+}
 
 
 

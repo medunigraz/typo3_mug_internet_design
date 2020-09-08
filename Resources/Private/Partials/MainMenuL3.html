@@ -1,12 +1,25 @@
-<v:menu pageUid="{uid}" as="menu" useShortcutUid="true">
+<v:menu pageUid="{uid}" as="menu" useShortcutUid="true" includeSpacers="true">
 
   <f:for each="{menu}" as="item" iteration="iterator">
     <f:if condition="{item.doktype}!=42">
-      <li class="nav-item nav-item-level-2 animateAll {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
-        <f:link.typolink parameter="{item.link}" class="menu-link menu-link-level2 animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
-          {item.linktext} <span class="btn-toggle btn-toggle-2"></span>
-        </f:link.typolink>
-      </li>
+      <f:then>
+        <f:if condition="{item.doktype}!=199">
+          <f:then>
+            <li class="nav-item nav-item-level-2 animateAll {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
+              <f:link.typolink parameter="{item.link}" class="menu-link menu-link-level2 animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
+                {item.linktext} <span class="btn-toggle btn-toggle-2"></span>
+              </f:link.typolink>
+            </li>
+          </f:then>
+          <f:else>
+            </ul>
+            <ul class="dropdown-wrap dropdown-wrap-level1 dropdown-wrap-level1-right">
+          </f:else>
+        </f:if>
+      </f:then>
+      <f:else>
+        <f:render partial="MainMenuQL" arguments="{uid: item.uid}"/>
+      </f:else>
     </f:if>
   </f:for>
 

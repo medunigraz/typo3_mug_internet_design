@@ -19,19 +19,12 @@ class GetOrganisationRootViewHelper extends AbstractViewHelper {
 
     foreach (array_reverse($pages) as $page) {
       if ($takeNext) {
-        if (($page['backend_layout'] == '') && ($page['doktype'] < PageRepository::DOKTYPE_BE_USER_SECTION)) {
+        if ($page['doktype'] < PageRepository::DOKTYPE_BE_USER_SECTION) {
           return $page;
         }
       }
-      if ($page['backend_layout_next_level'] == 'pagets__organisation') {
+      if ($page['doktype'] == PageRepository::DOKTYPE_SYSFOLDER) {
         $takeNext = true;
-      } else {
-        if ($page['backend_layout_next_level'] != '') {
-          $takeNext = false;
-        }
-      }
-      if (($page['backend_layout'] == 'pagets__organisation') && ($page['doktype'] < PageRepository::DOKTYPE_BE_USER_SECTION)) {
-        return $page;
       }
     }
 

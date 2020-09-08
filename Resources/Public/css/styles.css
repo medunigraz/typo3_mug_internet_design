@@ -54,7 +54,7 @@ h1, .h1 {
   text-transform: uppercase;
 }
 
-h2, .h2 {
+h2, .h2, .h2 {
   font-size: 28px;
   line-height: 40px;
   text-transform: uppercase;
@@ -282,18 +282,19 @@ a:hover .morelink-arrow {
 .box-balken {
   width: 100%;
   position: absolute;
-  left: 0%;
+  left: 1%;
   z-index: 99;
   pointer-events: none;
   text-align: center;
-  top: -7%;
+  top: -9%;
   margin: 0 0 0 0;
 }
 .box-balken img {
   position: relative;
-  width: 20px;
+  width: 44px;
   margin: 0 auto;
   display: inline;
+  height: 94px;
 }
 
 .bgbox {
@@ -430,17 +431,18 @@ a.textlink:hover {
   margin-left: 20px;
 }
 
-.text ul li:before, .accordion-text ul li:before {
+.text ul li::before, .accordion-text ul li::before {
   position: absolute;
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 2px;
   overflow: hidden;
-  background-image: url("img/icon-arrow-black-right.svg");
+  background-image: none;
   background-repeat: no-repeat;
   left: 0px;
-  top: 2px;
+  top: 10px;
   background-size: 100% 100%;
+  background: #ccc;
 }
 
 .metaline {
@@ -501,7 +503,7 @@ a.textlink:hover {
   left: 55px;
 }
 .i-am-nav .caption:after {
-  content: "...";
+  content: " ...";
 }
 
 .iam-btn {
@@ -645,6 +647,10 @@ a.textlink:hover {
   margin-right: 0px;
 }
 
+.standard-leadin .ce-text {
+  margin: 52px 0 0 0;
+}
+
 /* ...........................................................................  1023 px */
 @media screen and (max-width: 1023px) {
   #logo-page {
@@ -756,6 +762,15 @@ a.textlink:hover {
   margin: 70px 0 -70px 0;
   padding: 0 0 70px 0;
 }
+.main-menu .hero-menu .menu-background {
+  position: absolute;
+  background: #ffffff;
+  height: 100%;
+  width: 75%;
+  top: 0px;
+  left: 25%;
+  z-index: -1;
+}
 .main-menu .hero-menu .hero-menu-closeframe {
   position: absolute;
   width: 67%;
@@ -797,8 +812,8 @@ a.textlink:hover {
   margin: 0 0 25px 0;
 }
 .main-menu .hero-menu .nav-item.nav-item-level-2 {
-  width: 41%;
-  margin: 0 0 0 6%;
+  width: 80%;
+  margin: 0px 0 0 12%;
   height: 60px;
   position: relative;
 }
@@ -827,13 +842,20 @@ a.textlink:hover {
 }
 .main-menu .hero-menu .nav-item .dropdown-wrap.dropdown-wrap-level1 {
   position: absolute;
-  width: 55%;
+  width: 28%;
   background: #ffffff;
-  height: 100%;
+  min-height: 97%;
+  height: 97%;
   top: 0px;
   left: 25%;
   padding: 20px 0 20px 0;
   display: none;
+}
+.main-menu .hero-menu .nav-item .dropdown-wrap.dropdown-wrap-level1.dropdown-wrap-level1-right {
+  left: 53%;
+}
+.main-menu .hero-menu .nav-item .dropdown-wrap.dropdown-wrap-level1.dropdown-wrap-level1-right .nav-item.nav-item-level-2 {
+  margin: 0px 0 0 5%;
 }
 .main-menu .hero-menu .nav-item-ON .dropdown-wrap-level0 {
   height: auto;
@@ -853,10 +875,10 @@ a.textlink:hover {
 }
 .main-menu .quicklinks {
   position: absolute;
-  right: 0px;
-  width: 20%;
+  right: -168%;
+  width: 72%;
   background: #eeeeee;
-  height: 100%;
+  height: 332px;
   z-index: 999;
   padding: 20px;
   display: block;
@@ -1739,7 +1761,7 @@ a.textlink:hover {
 }
 
 .lowspace .ce-text .row {
-  width: 58%;
+  width: 66%;
 }
 
 /* ....................................................................................... 767 */
@@ -1753,7 +1775,7 @@ a.textlink:hover {
   }
 }
 .ce-offers .box-balken {
-  top: -23px;
+  top: -50px;
 }
 .ce-offers .headline {
   display: block;
@@ -1954,12 +1976,23 @@ a.textlink:hover {
   margin: 10px 0 0 0;
 }
 
+.lowspace2 .ce-text-columns {
+  margin: 160px 0 80px 0;
+}
+
+.lowspacenewsbar .ce-text-columns {
+  margin: 40px 0 80px 0;
+}
+.lowspacenewsbar .ce-text-columns .row {
+  width: 66%;
+}
+
 .content-block-ce-text-media-teaser {
   margin-top: 80px;
   margin-bottom: 80px;
 }
 .content-block-ce-text-media-teaser .box-balken {
-  top: -20px;
+  top: -50px;
 }
 .content-block-ce-text-media-teaser .ce-text-media-teaser .headline {
   display: block;
@@ -2011,6 +2044,10 @@ a.textlink:hover {
   margin: 0 -20px 0 0px;
 }
 
+.content-block-ce-text-media-teaser.bg-grey-light .ce-text-media-teaser .headline-imageteaseritem {
+  margin-top: 30px;
+}
+
 /* ...........................................................................  1245 px */
 @media screen and (max-width: 1245px) {
   .content-block-ce-text-media-teaser .ce-text-media-teaser .headline {
@@ -2052,6 +2089,12 @@ a.textlink:hover {
 .ce-contact-box {
   margin: 80px 0 80px 0;
 }
+.ce-contact-box .name {
+  display: block;
+  width: 100%;
+  float: left;
+  margin: 0 0 10px 0;
+}
 .ce-contact-box .headline {
   float: left;
   width: 100%;
@@ -2078,7 +2121,7 @@ a.textlink:hover {
 .ce-contact-box .contact-image .box-balken {
   position: relative;
   top: inherit;
-  margin: -14px 0 5px 0;
+  margin: -40px 0 5px 0;
 }
 .ce-contact-box .caption {
   display: block;
@@ -2097,6 +2140,14 @@ a.textlink:hover {
   position: absolute;
   right: 3%;
   top: 84px;
+}
+.ce-contact-noimg .ce-contact-box.headline-small .contact-image {
+  top: 94px;
+}
+
+.ce-contact-box.headline-small .headline h2 {
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /* ....................................................................................... 1024 */
@@ -2334,10 +2385,11 @@ a.textlink:hover {
   z-index: 99;
 }
 .breadcrumbline .breadcrumbbox {
-  width: 70%;
+  width: 100%;
   position: absolute;
-  margin: 30px 0 0px 0.5%;
+  margin: 0px 0 0px 0.5%;
   font-size: 12px;
+  top: -30px;
 }
 .breadcrumbline .breadcrumbbox a {
   max-width: 30%;
@@ -2711,6 +2763,103 @@ a.textlink:hover {
   .contenblock-newsteaser .linktoall .morelink:last-child {
     float: right;
   }
+}
+.sidebar-default .news-item-inner {
+  width: 90%;
+  margin: 0px auto;
+  padding: 2px 0 10px 0;
+}
+.sidebar-default .morelinknews {
+  font-weight: 800;
+  text-decoration: underline;
+}
+.sidebar-default .quicklinks-box {
+  background: none;
+}
+.sidebar-default .submenu-box .quicklinks-box {
+  background: #eeeeee;
+}
+.sidebar-default .info-box {
+  right: 0px;
+  position: absolute;
+  top: -50px;
+  width: 100%;
+}
+.sidebar-default .submenu-box {
+  margin: 0px 0 0 0;
+}
+.sidebar-default .news-box-inner {
+  width: 100%;
+  margin: 0 auto;
+}
+.sidebar-default .quicklinks-headline {
+  width: 100%;
+  padding: 0 0px 0 0;
+}
+.sidebar-default .greenbox {
+  position: absolute;
+  top: -210px;
+  width: 100%;
+}
+.sidebar-default .greenbox .infobox-inner {
+  height: 160px;
+  overflow: hidden;
+}
+.sidebar-default .greenbox .infobox-headline {
+  width: 90%;
+}
+.sidebar-default .greenbox .teaser {
+  font-family: "Trebuchet W01 Regular", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 100;
+  height: 66px;
+  overflow: hidden;
+}
+.sidebar-default .greenbox .linktoall {
+  padding: 0 0 0px 0;
+  position: absolute;
+  top: 113px;
+  background: none;
+}
+.sidebar-default .greenbox .linktoall .border-bottom {
+  border-bottom: 2px solid #fff !important;
+  margin: 5px 0 20px 0;
+  display: block;
+}
+.sidebar-default .greenbox .linktoall .morelink {
+  width: auto;
+  float: left;
+  text-align: left;
+  margin: -12px 15px 0px 0;
+  color: #fff;
+  opacity: 0.9;
+}
+.sidebar-default .greenbox .linktoall .morelink .morelink-arrow {
+  display: none;
+}
+.sidebar-default .greenbox .linktoall .morelink:hover {
+  opacity: 1;
+}
+.sidebar-default .nogreybox .border-bottom {
+  display: none;
+}
+.sidebar-default .linktoall {
+  float: left;
+  width: 100%;
+  padding: 0 0 20px 0;
+}
+.sidebar-default .linktoall .border-bottom {
+  border-bottom: 2px solid #000 !important;
+  margin: 10px 0 20px 0;
+}
+.sidebar-default .linktoall .morelink {
+  display: block;
+  width: 100%;
+  float: right;
+  text-align: right;
+  margin: 10px 0 0px 0;
+  overflow: visible;
 }
 
 /*# sourceMappingURL=styles.css.map */

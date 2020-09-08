@@ -40,9 +40,6 @@ defined('TYPO3_MODE') or die();
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/Default.tsconfig">'
   );
-  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/Organisation.tsconfig">'
-  );
 
   // Hide content elements in list module & filter in administration module
   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Recordlist\RecordList\DatabaseRecordList::class]['modifyQuery'][]
@@ -86,15 +83,6 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/HeaderDefault/setup.ts">'
-  );
-
-  // Content Element: Header Organisation
-  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/HeaderOrganisation.tsconfig">'
-  );
-
-  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
-      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/HeaderOrganisation/setup.ts">'
   );
 
   // Content Element: Link

@@ -50,15 +50,16 @@ a.textlink:hover {text-decoration:underline;}
   padding-left: 10px;
   margin-left: 20px;
 }
-.text ul li:before, .accordion-text ul li:before {
+.text ul li::before, .accordion-text ul li::before {
   position: absolute;
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 2px;
   overflow: hidden;
-  background-image: url("img/icon-arrow-black-right.svg");
+  background-image: none;
   background-repeat: no-repeat;
   left: 0px;
-  top: 2px;
+  top: 10px;
   background-size: 100% 100%;
+  background: #ccc;
 }

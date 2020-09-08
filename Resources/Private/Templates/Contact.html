@@ -1,6 +1,6 @@
 <div class="row content-block content-block-ce-contact <f:if condition='{image.0}'><f:then></f:then><f:else>ce-contact-noimg</f:else></f:if>">
     <div class="container">
-        <div class="content-part ce-contact-box">
+        <div class="content-part ce-contact-box{f:if(condition: '{data.mugce_display_type} == 1', then: ' headline-small')}">
             <div class="container">
                 <div class="row">
                     <div class="col col-7 bg-grey-light trans">
@@ -12,15 +12,21 @@
                             </div>
                             <div class="contact-data">
                         <span class="name">
-                           <f:if condition="{data.header}"><span class="titelpre">{data.header}&nbsp;</span></f:if>
+                           <f:if condition="{data.header}"><span class="titelpre">{data.header}</span><br></f:if>
                            <span class="text-bold">{data.bodytext}&nbsp;</span>
                            <f:if condition="{data.mugce_header}"><span class="titelpost">{data.mugce_header}</span></f:if>
                         </span>
                                 <f:if condition="{data.subheader}">
                                     <div class="phone">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:phone", default: "T:")} {data.subheader}</div>
                                 </f:if>
+                                <f:if condition="{data.mugce_text}">
+                                    <div class="mail">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:phone2", default: "T:")} {data.mugce_text}</div>
+                                </f:if>
                                 <f:if condition="{data.mugce_subheader}">
                                     <div class="mail">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:mail", default: "E:")} <a href="mailto:{data.mugce_subheader}" class="textlink">{data.mugce_subheader}</a></div>
+                                </f:if>
+                                <f:if condition="{data.mugce_text_2}">
+                                    <div class="mail">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:fax", default: "F:")} {data.mugce_text_2}</div>
                                 </f:if>
                             </div>
                         </div>

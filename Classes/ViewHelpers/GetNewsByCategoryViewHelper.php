@@ -6,7 +6,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use GeorgRinger\News\Domain\Model\Dto\NewsDemand;
 
-class GetNewsByPageCategoryViewHelper extends AbstractViewHelper {
+class GetNewsByCategoryViewHelper extends AbstractViewHelper {
 
   /**
    * @var \GeorgRinger\News\Domain\Repository\NewsRepository
@@ -22,6 +22,11 @@ class GetNewsByPageCategoryViewHelper extends AbstractViewHelper {
         'Optional page to use'
     );
     $this->registerArgument(
+        'uid',
+        'int',
+        'Uid of the content element.'
+    );
+    $this->registerArgument(
         'limit',
         'int',
         'Optinal maximum news entries to return. Default is 3.'
@@ -30,7 +35,6 @@ class GetNewsByPageCategoryViewHelper extends AbstractViewHelper {
 
   public function render() {
     $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('sys_category');
-    $pageUid = $this->arguments['page'] ? $this->arguments['page']['uid'] : $GLOBALS['TSFE']->page['uid'];
 
     $queryBuilder->select('sys_category.uid');
     $queryBuilder->from('sys_category');
@@ -41,8 +45,8 @@ class GetNewsByPageCategoryViewHelper extends AbstractViewHelper {
         $queryBuilder->expr()->eq('sys_category_record_mm.uid_local', $queryBuilder->quoteIdentifier('sys_category.uid'))
     );
     $queryBuilder->where(
-        $queryBuilder->expr()->eq('sys_category_record_mm.uid_foreign', $queryBuilder->createNamedParameter($pageUid, \PDO::PARAM_INT)),
-        $queryBuilder->expr()->like('sys_category_record_mm.tablenames',  $queryBuilder->createNamedParameter('pages'))
+        $queryBuilder->expr()->eq('sys_category_record_mm.uid_foreign', $queryBuilder->createNamedParameter($this->arguments['uid'], \PDO::PARAM_INT)),
+        $queryBuilder->expr()->like('sys_category_record_mm.tablenames',  $queryBuilder->createNamedParameter('tt_content'))
     );
 
     $result = $queryBuilder->execute();

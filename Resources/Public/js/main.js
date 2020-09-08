@@ -34,19 +34,40 @@ $(window).resize(function(){
 
   }
 
+  //sidebar collision
+  var sidebardefaultHeight = $('.sidebar-default .infobox-inner').height() ;
+  var quicklinksboxHeight = $('.sidebar-default .quicklinks-box').height() ;
+  var standardleadinHeight = $('.standard-leadin').height();
+  if (sidebardefaultHeight > standardleadinHeight) {
+    $('.standard-leadin').next('.content-block').addClass('lowspace lowspace2 ');
+  }
+  if (quicklinksboxHeight > standardleadinHeight) {
+    $('.standard-leadin').next('.content-block').addClass('lowspace lowspace2 lowspacenewsbar');
+  }
 
 
 
   if ($(window).width() > 1024) {
 //Heromenu
     $(".dropdown-wrap-level0").each(function(){
-      $(this).find('.quicklinks').insertAfter($(this).find('li.nav-item-level-1').last());
+      //$(this).find('.quicklinks').appendTo($(this).find('.nav-item-level-1'));
     });
     $(".hero-menu .nav-item-level-1").mouseenter(function(){
       $(".hero-menu .nav-item-level-1").removeClass("nav-item-ON");
       $(this).addClass("nav-item-ON");
-    });
+
+ });
     $(".hero-menu .nav-item-level-0").mouseenter(function(){
+     /*
+      //layer height
+      var layerheight =  $(this).find('.dropdown-wrap-level0').height();
+      var sublistheight =  $(this).find('ul.dropdown-wrap-level1').height();
+      if (sublistheight > layerheight) {
+        $(this).find('.dropdown-wrap-level0').css({"height": sublistheight +60 +"px"});
+      } else {
+        $(this).find('.dropdown-wrap-level0').css({"height": ""});
+      }
+      */
       $(".hero-menu .nav-item-level-0").removeClass("nav-item-ON");
       $(".hero-menu .nav-item-level-1").removeClass("nav-item-ON");
       $(this).addClass("nav-item-ON");
@@ -126,7 +147,7 @@ $(".burgerBTNClose").click(function(){
 });
 //set quicklinks last
 $(".nav-item-level-0").each(function(){
-  $(this).find('.quicklinks').insertAfter($(this).find('li.nav-item-level-1').last());
+ // $(this).find('.quicklinks').insertAfter($(this).find('li.nav-item-level-1').last());
 });
 
 //heromobnav
@@ -198,6 +219,18 @@ $(function () {
     });
   });
 });
+
+
+//newsboxen
+$(".greenbox-news" ).appendTo( ".sidebar-default" );
+if($(".submenu-box").length > 0) {
+  $(".linktoall" ).appendTo( ".greenbox-news" );
+}
+if($(".greybox-news").length < 1) {
+  $(".linktoall" ).addClass( "nogreybox" );
+}
+
+
 
 
 

@@ -1,0 +1,110 @@
+.sidebar-default {
+  .news-item-inner {
+    width: 90%;
+    margin: 0px auto;
+    padding: 2px 0 10px 0;
+  }
+  .morelinknews {
+    font-weight: 800;
+    text-decoration: underline;
+  }
+  .quicklinks-box {
+    background: none;
+  }
+  .submenu-box .quicklinks-box {
+    background: $grey-light;
+  }
+
+  .info-box {
+    right: 0px;
+    position: absolute;
+    top: -50px;
+    width: 100%;
+  }
+  .submenu-box {
+    margin: 0px 0 0 0;
+  }
+
+
+  .news-box-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .quicklinks-headline {
+
+    width: 100%;
+    padding: 0 0px 0 0;
+  }
+
+
+
+  .greenbox {
+    position: absolute;
+    top: -210px;
+    width: 100%;
+    .infobox-inner {
+      height: 160px;
+      overflow:hidden;
+    }
+    .infobox-headline {
+      width: 90%;
+    }
+    .teaser{
+      font-family: "Trebuchet W01 Regular", sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 100;
+      height: 66px;
+      overflow: hidden;
+    }
+
+    .linktoall {
+          padding: 0 0 0px 0;
+      position: absolute;
+      top: 113px;
+      background: none;
+      .border-bottom {
+        border-bottom: 2px solid #fff !important;
+        margin: 5px 0 20px 0;
+        display:block;
+      }
+
+      .morelink {
+        width: auto;
+        float: left;
+        text-align: left;
+        margin: -12px 15px 0px 0;
+        color: #fff;
+        opacity: 0.9;
+        .morelink-arrow {display:none}
+      }
+      .morelink:hover {  opacity: 1; }
+    }
+
+
+  }
+  .nogreybox {
+    .border-bottom {
+      display:none;
+    }
+  }
+.linktoall {
+  float: left;
+  width: 100%;
+  padding: 0 0 20px 0;
+  .border-bottom {
+    border-bottom: 2px solid #000 !important;
+    margin: 10px 0 20px 0;
+  }
+  .morelink {
+    display: block;
+    width: 100%;
+    float: right;
+    text-align: right;
+    margin: 10px 0 0px 0;
+    overflow: visible;
+  }
+}
+
+
+}

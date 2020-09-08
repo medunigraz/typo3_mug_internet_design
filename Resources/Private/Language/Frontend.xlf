@@ -18,6 +18,18 @@
       <trans-unit id="mail" xml:space="preserve">
         <source>E:</source>
       </trans-unit>
+      <trans-unit id="phone2" xml:space="preserve">
+        <source>T:</source>
+      </trans-unit>
+      <trans-unit id="fax" xml:space="preserve">
+        <source>F:</source>
+      </trans-unit>
+      <trans-unit id="allNews" xml:space="preserve">
+        <source>Alle News</source>
+      </trans-unit>
+      <trans-unit id="allEvents" xml:space="preserve">
+        <source>Alle Events</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

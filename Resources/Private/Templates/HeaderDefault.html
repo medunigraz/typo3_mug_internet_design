@@ -1,3 +1,7 @@
+
+
+{namespace ce=MUG\ContentElements\ViewHelpers}
+{namespace n=GeorgRinger\News\ViewHelpers}
 <div class="row content-block content-header-default">
   <div class="ce-homeslider">
     <div class="ce-header-slider trans">
@@ -8,31 +12,145 @@
             <f:if condition="{image}">
               <f:image image="{image.0}" class="slider-img" width="1720c" height="550c" />
             </f:if>
-            <div class="row content-block contenblock-newsteaser contenblock-newsteaser0-blende">
-              <div class="content-part">
-                <div class="container ">
-                  <div class="col">
-                    <div class="info-box blend  bg-green-dark">
-                      <div class="quicklinks-box ">
-                        <div class="news-box-inner">
-                          <div class="quicklinks-items animateAll">
-                            <div class="news-item entry-{idx}">
-                              <div class="blend blend-full bg-green-dark"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!--div class="row content-block contenblock-newsteaser contenblock-newsteaser0-blende">
+               <div class="content-part">
+                 <div class="container ">
+                   <div class="col">
+                     <div class="info-box blend  bg-green-dark">
+                       <div class="quicklinks-box ">
+                         <div class="news-box-inner">
+                           <div class="quicklinks-items animateAll">
+                             <div class="news-item entry">
+                               <div class="blend blend-full bg-green-dark"></div>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               </div-->
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="row content-block standard standard-leadin">
+  <div class="content-part ce-text">
+    <div class="container">
+      <div class="row  ">
+        <div class="col  col-8  trans">
+          <v:page.breadCrumb class="breadcrumb" as="items">
+            <f:render partial="Breadcrumb" arguments="{items: items}"/>
+          </v:page.breadCrumb>
+          <div class="headline">
+            <h1 class="text-bold h2">{data.header}</h1>
+          </div>
+          <div class="text text-leadin">
+            {data.bodytext -> f:format.html()}
+          </div>
+        </div>
+        <div class="col col-05 "> </div>
+        <div class="col col-35 sidebar-default">
+          <f:if condition="{data.mugce_display_type} == 3 || {data.mugce_display_type} == 5 || {data.mugce_display_type} == 6">
+            <div class="greenbox">
+              <div class="infobox-inner">
+                <div class="blend blend-full bg-green-dark"></div>
+                <div class="infobox-headline text-bold">
+                  {data.mugce_header}
+                </div>
+              </div>
+            </div>
+          </f:if>
+          <f:if condition="{data.mugce_display_type} == 2 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 5">
+            <f:render partial="OrganisationSubmenu" arguments="{_all}" />
+          </f:if>
+          <f:if condition="{data.mugce_display_type} == 1 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 6  || {data.mugce_display_type} == 7">
+            <f:switch expression="{data.mugce_display_type}">
+              <f:case value="1">
+                <f:variable name="newscount" value="3" />
+              </f:case>
+              <f:case value="4">
+                <f:variable name="newscount" value="1" />
+              </f:case>
+              <f:case value="6">
+                <f:variable name="newscount" value="2" />
+              </f:case>
+              <f:case value="7">
+                <f:variable name="newscount" value="1" />
+              </f:case>
+            </f:switch>
+            <f:variable name="news" value="{ce:getNewsByRelation(uid: data.uid ,limit: newscount)}" />
+            <f:if condition="{news -> f:count()} == 0">
+              <f:variable name="news" value="{ce:getNewsByCategory(uid: data.uid ,limit: newscount)}" />
+            </f:if>
+            <div class="info-box">
+              <div class="quicklinks-box">
+                <div class="news-box-inner">
+                  <f:for as="newsItem" key="idx" each="{news}">
+                    <f:if condition="{data.mugce_display_type} != 6 && {idx} == 0">
+                      <f:then>
+                        <f:comment>Green block</f:comment>
+
+                        <div class="greenbox greenbox-news">
+                          <div class="infobox-inner">
+                            <div class="blend blend-full bg-green-dark"></div>
+                            <div class="infobox-headline text-bold">
+                              {newsItem.title}
+
+                              <n:link newsItem="{newsItem}" title="{newsItem.title}">
+                                <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
+
+                              </n:link>
+                              <div class="teaser">
+                              {newsItem.teaser}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
 
+
+
+                      </f:then>
+                      <f:else>
+                        <f:comment>Grey block</f:comment>
+                        <div class="news-item  greybox-news bg-grey-light entry-{idx}">
+                          <div class="news-item-inner">
+                            <div class="quicklinks-headline text-bold">{newsItem.title}</div>
+                            <div class="teaser">
+                              {newsItem.teaser}
+                              <n:link newsItem="{newsItem.data}" title="{newsItem.title}">
+                                <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                              </n:link>
+                            </div>
+                          </div>
+                        </div>
+                      </f:else>
+                    </f:if>
+                  </f:for>
+                  <div class="linktoall bg-grey-light">
+                    <div class="news-item-inner">
+                      <div class="border-bottom"></div>
+                      <a href="#" target="_blank" class="morelink text-bold animateAll">
+                        {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
+                        <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                      </a>
+                      <a href="#" target="_blank" class="morelink text-bold animateAll">
+                        {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
+                        <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </f:if>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 

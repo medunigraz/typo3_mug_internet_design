@@ -1,51 +1,7 @@
-{namespace ce=MUG\ContentElements\ViewHelpers}
-{namespace n=GeorgRinger\News\ViewHelpers}
 <div class="page-wrapper">
     <f:render partial="Header" arguments="{_all}" />
 
     <f:format.raw>{mugce_headercontent}</f:format.raw>
-    <v:page.breadCrumb class="breadcrumb" as="items">
-        <f:render partial="Breadcrumb" arguments="{items: items}"/>
-    </v:page.breadCrumb>
-    <div class="row content-block contenblock-newsteaser newsteaser-sidebar  trans">
-        <div class="content-part">
-            <div class="container ">
-                <div class="col">
-                    <div class="info-box">
-                        <div class="quicklinks-box">
-                            <div class="news-box-inner">
-                            <div class="quicklinks-items animateAll">
-                                <f:for as="newsItem" key="idx" each="{ce:getNewsByPageCategory(limit: 3)}">
-                                    <div class="news-item entry-{idx}">
-
-                                        <div class="quicklinks-headline text-bold">{newsItem.title}</div>
-                                        <div class="teaser">{newsItem.teaser}</div>
-                                        <n:link newsItem="{newsItem}" title="{newsItem.title}">
-                                            <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
-                                            <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
-                                        </n:link>
-                                    </div>
-                                </f:for>
-
-<div class="linktoall">
-    <div class="border-bottom"></div>
-                                <a href="#" target="_blank" class="morelink text-bold animateAll">
-                                    Alle News
-                                    <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-                                </a>
-    <a href="#" target="_blank" class="morelink text-bold animateAll">
-        Alle Events
-        <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-    </a>
-</div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <f:format.raw>{mugce_content}</f:format.raw>

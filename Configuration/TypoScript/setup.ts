@@ -23,9 +23,6 @@ page.10 {
 
         pagets__default = TEXT
         pagets__default.value = EXT:mug_ce/Resources/Private/Layouts/Default.html
-
-        pagets__organisation = TEXT
-        pagets__organisation.value = EXT:mug_ce/Resources/Private/Layouts/Organisation.html
     }
     variables {
         mugce_content < styles.content.get

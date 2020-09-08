@@ -27,6 +27,12 @@
       <trans-unit id="CType.default.input.subheader" xml:space="preserve">
         <source>Subheader</source>
       </trans-unit>
+      <trans-unit id="CType.default.input.text" xml:space="preserve">
+        <source>Text</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.text_2" xml:space="preserve">
+        <source>Text</source>
+      </trans-unit>
       <trans-unit id="CType.default.input.captiom" xml:space="preserve">
         <source>Caption</source>
       </trans-unit>
@@ -44,6 +50,9 @@
       </trans-unit>
       <trans-unit id="CType.default.input.display_type.standard" xml:space="preserve">
         <source>Standard</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.news_entries" xml:space="preserve">
+        <source>News Entries</source>
       </trans-unit>
       <trans-unit id="CType.mugce_homeslider.caption" xml:space="preserve">
         <source>Home Slider</source>
@@ -96,17 +105,41 @@
       <trans-unit id="CType.mugce_header_default.input.image" xml:space="preserve">
         <source>Image</source>
       </trans-unit>
-      <trans-unit id="CType.mugce_header_organisation.caption" xml:space="preserve">
-        <source>Organisation Header</source>
+      <trans-unit id="CType.mugce_header_default.input.display_type.plain" xml:space="preserve">
+        <source>Plain</source>
       </trans-unit>
-      <trans-unit id="CType.mugce_header_organisation.description" xml:space="preserve">
-        <source>Header element for organisation unit</source>
+      <trans-unit id="CType.mugce_header_default.input.display_type.news" xml:space="preserve">
+        <source>News</source>
       </trans-unit>
-      <trans-unit id="CType.mugce_header_organisation.input.header" xml:space="preserve">
+      <trans-unit id="CType.mugce_header_default.input.display_type.news_submenu" xml:space="preserve">
+        <source>News and Submenu</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.display_type.news_short" xml:space="preserve">
+        <source>1 News entry only</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.display_type.text_submenu" xml:space="preserve">
+        <source>Text and Submenu</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.display_type.text" xml:space="preserve">
+        <source>Text</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.display_type.text_news" xml:space="preserve">
+        <source>Text and 2 News</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.display_type.submenu" xml:space="preserve">
+        <source>Submenu</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.header" xml:space="preserve">
         <source>Headline</source>
       </trans-unit>
-      <trans-unit id="CType.mugce_header_organisation.input.image" xml:space="preserve">
-        <source>Image</source>
+      <trans-unit id="CType.mugce_header_default.input.bodytext" xml:space="preserve">
+        <source>Text</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.mugce_header" xml:space="preserve">
+        <source>Teaser: Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.mugce_news_entries" xml:space="preserve">
+        <source>Teaser: News Entries (overrides categories)</source>
       </trans-unit>
       <trans-unit id="CType.mugce_link.caption" xml:space="preserve">
         <source>Link</source>
@@ -303,6 +336,9 @@
       <trans-unit id="CType.mugce_contact.input.mugce_caption" xml:space="preserve">
         <source>Departmnet</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.display_type.headline_small" xml:space="preserve">
+        <source>Headline small</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_contact.input.header" xml:space="preserve">
         <source>Title (pre)</source>
       </trans-unit>
@@ -317,6 +353,18 @@
       </trans-unit>
       <trans-unit id="CType.mugce_contact.input.mugce_subheader" xml:space="preserve">
         <source>E-Mail</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_text" xml:space="preserve">
+        <source>Phone 2</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_text_2" xml:space="preserve">
+        <source>Fax</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_text" xml:space="preserve">
+        <source>Phone 2</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_text_2" xml:space="preserve">
+        <source>Fax</source>
       </trans-unit>
       <trans-unit id="CType.mugce_contact.input.header_link" xml:space="preserve">
         <source>Link</source>
