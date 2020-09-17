@@ -1,4 +1,4 @@
-<div class="row content-block">
+<div id="c{data.uid}" class="row content-block">
   <div class="content-part ce-text-columns ce-text-media">
     <f:if condition="{data.subheader}">
       <div class="section-name text-bold trans">
@@ -27,6 +27,16 @@
             </f:link.typolink>
           </f:if>
         </div>
+      </div>
+      <div class="row">
+        <f:if condition="{data.mugce_link}">
+          <div class="col text-right mt-auto trans bottom">
+            <f:link.typolink parameter="{data.mugce_link}" class="morelink text-bold animateAll">
+              {f:if(condition: '{data.mugce_link_label_2}', then: '{data.mugce_link_label_2}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
+              <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
+            </f:link.typolink>
+          </div>
+        </f:if>
       </div>
     </div>
   </div>

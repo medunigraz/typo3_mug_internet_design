@@ -334,10 +334,7 @@
         <source>Contact</source>
       </trans-unit>
       <trans-unit id="CType.mugce_contact.input.mugce_caption" xml:space="preserve">
-        <source>Departmnet</source>
-      </trans-unit>
-      <trans-unit id="CType.mugce_contact.input.display_type.headline_small" xml:space="preserve">
-        <source>Headline small</source>
+        <source>Departmnet/Headline</source>
       </trans-unit>
       <trans-unit id="CType.mugce_contact.input.header" xml:space="preserve">
         <source>Title (pre)</source>

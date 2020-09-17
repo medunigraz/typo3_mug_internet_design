@@ -1,30 +1,28 @@
-
-
-  <div class="ce-offer">
-    <f:if condition="{image}">
-      <div class="col col-img trans">
-        <f:image image="{image.0}" class="img" width="570c" height="380c" />
-        </div>
-    </f:if>
-    <div class="col col-text trans">
-<div class="col-text-inner">
-      <div class="headline text-left">
-        <h2 class="text-bold uppercase">{data.header}</h2>
+<div id="c{data.uid}" class="ce-offer">
+  <f:if condition="{image}">
+    <div class="col col-img trans">
+      <f:image image="{image.0}" class="img" width="570c" height="380c" />
       </div>
+  </f:if>
+  <div class="col col-text trans">
+  <div class="col-text-inner">
+    <div class="headline text-left">
+      <h2 class="text-bold uppercase">{data.header}</h2>
+    </div>
 
     <div class="text">{data.bodytext -> f:format.html()}</div>
-    <f:if condition="{data.header_link}">
-      <div class="col">
+      <f:if condition="{data.header_link}">
+        <div class="col">
 
 
-          <div class="col text-right mt-auto">
-        <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
-          {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
-            <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
-        </f:link.typolink>
-          </div>
-      </div>
-    </f:if>
-    </div>
+            <div class="col text-right mt-auto">
+          <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
+            {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
+              <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
+          </f:link.typolink>
+            </div>
+        </div>
+      </f:if>
     </div>
   </div>
+</div>
