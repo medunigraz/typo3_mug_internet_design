@@ -56,13 +56,13 @@ h1, .h1 {
 
 h2, .h2, .h2 {
   font-size: 28px;
-  line-height: 40px;
+  line-height: 35px;
   text-transform: uppercase;
 }
 
 .hl-big {
   font-size: 40px;
-  line-height: 55px;
+  line-height: 48px;
   text-transform: uppercase;
 }
 
@@ -74,8 +74,8 @@ h2, .h2, .h2 {
 blockquote {
   color: #31972A;
   font-style: italic;
-  font-size: 26px;
-  line-height: 40px;
+  font-size: 22px;
+  line-height: 29px;
 }
 
 /* ....................................................................................... 1492 */
@@ -87,13 +87,6 @@ blockquote {
 }
 /* ....................................................................................... 1240 */
 @media screen and (max-width: 1240px) {
-  .hl-big {
-    font-size: 35px;
-    line-height: 45px;
-  }
-}
-/* ....................................................................................... 1024 */
-@media screen and (max-width: 1024px) {
   .hl-big {
     font-size: 26px;
     line-height: 36px;
@@ -223,9 +216,9 @@ img {
 }
 
 .logoimg {
-  width: 140px;
+  width: 127px;
   display: block;
-  margin: -17px 0 0 0;
+  margin: -12px 0 0 0;
 }
 
 .rowborder-bottom {
@@ -267,6 +260,10 @@ img {
   marggin: 5px 0 0px -0.5px;
 }
 
+.opacity0 {
+  opacity: 0;
+}
+
 .morelink-arrow {
   display: block;
   float: right;
@@ -286,7 +283,7 @@ a:hover .morelink-arrow {
   z-index: 99;
   pointer-events: none;
   text-align: center;
-  top: -9%;
+  top: -110px;
   margin: 0 0 0 0;
 }
 .box-balken img {
@@ -295,6 +292,10 @@ a:hover .morelink-arrow {
   margin: 0 auto;
   display: inline;
   height: 94px;
+}
+
+.box-balken.box-balken-hl {
+  top: -90px;
 }
 
 .bgbox {
@@ -319,6 +320,22 @@ a:hover .morelink-arrow {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.1);
   -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.1);
   box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.1);
+}
+
+.button {
+  border: 1px solid #000000;
+  color: #000000;
+  padding: 10px 20px;
+  margin: 50px 0 -20px 0;
+  display: inline-block;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.button:hover {
+  border: 1px solid #006A23;
+  color: #ffffff;
+  background-color: #006A23;
 }
 
 /* ...........................................................................  1720 px */
@@ -373,12 +390,12 @@ html, body {
   font-family: "Trebuchet W01 Regular", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  min-height: 101%;
+  min-height: 1200px;
   color: #000000;
+  overflow-y: auto;
   -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: auto;
 }
 
 .page-wrapper {
@@ -443,7 +460,7 @@ a.textlink:hover {
   left: 0px;
   top: 10px;
   background-size: 100% 100%;
-  background: #ccc;
+  background: #BFBFBF;
 }
 
 .metaline {
@@ -577,7 +594,7 @@ a.textlink:hover {
   left: 55px;
 }
 .iam-btn-listheader .caption:after {
-  content: "...";
+  content: " ...";
 }
 
 .iambgbtn-open {
@@ -655,7 +672,7 @@ a.textlink:hover {
 /* ...........................................................................  1023 px */
 @media screen and (max-width: 1023px) {
   #logo-page {
-    margin: 50px 0 0 0;
+    margin: 10px 0 0 0;
   }
 
   .i-am-nav {
@@ -678,6 +695,10 @@ a.textlink:hover {
 }
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
+  #logo-page {
+    margin: 50px 0 0 0;
+  }
+
   .header-line {
     margin: 30px 0 0 0;
   }
@@ -814,8 +835,8 @@ a.textlink:hover {
 }
 .main-menu .hero-menu .nav-item.nav-item-level-2 {
   width: 80%;
-  margin: 0px 0 0 12%;
-  height: 60px;
+  margin: -5px 0 5px 12%;
+  min-height: auto;
   position: relative;
 }
 .main-menu .hero-menu .nav-item {
@@ -856,7 +877,7 @@ a.textlink:hover {
   left: 53%;
 }
 .main-menu .hero-menu .nav-item .dropdown-wrap.dropdown-wrap-level1.dropdown-wrap-level1-right .nav-item.nav-item-level-2 {
-  margin: 0px 0 0 5%;
+  margin: -5px 0 5px 5%;
 }
 .main-menu .hero-menu .nav-item-ON .dropdown-wrap-level0 {
   height: auto;
@@ -888,7 +909,7 @@ a.textlink:hover {
 }
 .main-menu .quicklinks .quicklinks-wrap {
   width: 85%;
-  margin: 20px 0 0 8%;
+  margin: 22px 0 0 8%;
   float: left;
 }
 .main-menu .quicklinks .quicklinksHL {
@@ -902,7 +923,7 @@ a.textlink:hover {
 .main-menu .quicklinks .nav-item-quicklink {
   width: 100%;
   float: left;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 .main-menu .menu-link-level0 {
   position: relative;
@@ -951,7 +972,7 @@ a.textlink:hover {
   background-size: 100%;
   z-index: 9999999999;
   opacity: 0;
-  top: 0px;
+  top: -5px;
 }
 .main-menu .nav-item-level-1.nav-item-ON .menu-link-level1:after {
   opacity: 1;
@@ -962,10 +983,15 @@ a.textlink:hover {
   border-bottom: 1px solid #006A23;
   display: block;
   width: 100%;
-  floaT: left;
+  float: left;
+  line-height: 22px;
+  padding: 10px 0 5px 0;
+  min-height: 30px;
+  margin: 0 0 15px 0;
 }
 .main-menu .menu-link-quick {
   font-size: 16px;
+  line-height: 22px;
   width: 100%;
   floaT: left;
   display: block;
@@ -977,6 +1003,12 @@ a.textlink:hover {
   cursor: pointer;
 }
 
+/* ...........................................................................  1620 px */
+@media screen and (max-width: 1620px) {
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 70px;
+  }
+}
 /* ...........................................................................  1350 px */
 @media screen and (max-width: 1350px) {
   .main-menu .hero-menu .nav-item .dropdown-wrap-level0 {
@@ -984,13 +1016,7 @@ a.textlink:hover {
   }
 
   .main-menu .hero-menu .nav-item-level-0 {
-    margin: 0px 35px 0 104px;
-  }
-}
-/* ...........................................................................  1215 px */
-@media screen and (max-width: 1215px) {
-  .main-menu .hero-menu .nav-item-level-0 {
-    margin: 0px 35px 0 70px;
+    margin: 0px 35px 0 20px;
   }
 }
 /* ...........................................................................  1024 px */
@@ -1287,6 +1313,20 @@ a.textlink:hover {
   text-shadow: 0px 0px 43px #333;
 }
 
+.ce-homesliderelement .slidertext-L1 {
+  display: block;
+  width: 90%;
+  margin-left: -10%;
+  white-space: nowrap;
+}
+
+.ce-homesliderelement .slidertext-L2 {
+  display: block;
+  width: 90%;
+  margin-left: 10%;
+  white-space: nowrap;
+}
+
 .ce-homesliderelement:nth-child(1) .sliderword:nth-child(1) {
   margin: 0px 0 0 -49%;
   display: block;
@@ -1470,7 +1510,7 @@ a.textlink:hover {
 
 .box-sliderbgbalken {
   width: 100%;
-  height: 100%;
+  height: 99.85%;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1743,7 +1783,7 @@ a.textlink:hover {
   }
 }
 .ce-text {
-  margin: 80px 0;
+  margin: 20px 0 20px 0;
 }
 .ce-text .morelink {
   margin-bottom: 15px;
@@ -1775,6 +1815,10 @@ a.textlink:hover {
     width: 100%;
   }
 }
+.content-block-ce-offers {
+  margin: 130px auto 80px auto;
+}
+
 .ce-offers .box-balken {
   top: -50px;
 }
@@ -1854,12 +1898,16 @@ a.textlink:hover {
   }
 }
 .content-part.ce-link-tile {
-  margin: 50px 0 50px 0;
+  margin: 130px 0 130px 0;
 }
 .content-part.ce-link-tile .headline {
   display: block;
   width: 100%;
   margin: 0px 0 40px 0;
+}
+.content-part.ce-link-tile .headline .hl-ce-link-tile {
+  width: 48%;
+  margin: 0 auto;
 }
 
 .hoverimage-item {
@@ -1967,7 +2015,7 @@ a.textlink:hover {
   }
 }
 .ce-text-columns {
-  margin: 80px 0;
+  margin: 20px 0 20px 0;
 }
 .ce-text-columns .text-leadin {
   margin: 15px 0 0 0;
@@ -1989,8 +2037,8 @@ a.textlink:hover {
 }
 
 .content-block-ce-text-media-teaser {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 130px;
+  margin-bottom: 0px;
 }
 .content-block-ce-text-media-teaser .box-balken {
   top: -50px;
@@ -2088,7 +2136,7 @@ a.textlink:hover {
   }
 }
 .ce-contact-box {
-  margin: 80px 0 80px 0;
+  margin: 20px 0 20px 0;
 }
 .ce-contact-box .name {
   display: block;
@@ -2129,6 +2177,9 @@ a.textlink:hover {
   width: 100%;
   float: left;
 }
+.ce-contact-box .cvlink {
+  margin: 15px 0 0 0;
+}
 .ce-contact-box .cvlink a:hover {
   color: #006A23;
 }
@@ -2143,7 +2194,7 @@ a.textlink:hover {
   top: 84px;
 }
 .ce-contact-noimg .ce-contact-box.headline-small .contact-image {
-  top: 94px;
+  top: 49px;
 }
 
 .ce-contact-box.headline-small .headline h2 {
@@ -2386,9 +2437,9 @@ a.textlink:hover {
   z-index: 99;
 }
 .breadcrumbline .breadcrumbbox {
-  width: 100%;
+  width: 66%;
   position: absolute;
-  margin: 0px 0 0px 0.5%;
+  margin: 0px 0 0px 0%;
   font-size: 12px;
   top: -30px;
 }
@@ -2423,7 +2474,7 @@ a.textlink:hover {
 /* ....................................................................................... 1225 */
 @media screen and (max-width: 1225px) {
   .breadcrumbline .breadcrumbbox {
-    margin: 30px 0 0px 2%;
+    margin: 0px 0 0px 0;
   }
 }
 /* ....................................................................................... 767 */
@@ -2487,6 +2538,10 @@ a.textlink:hover {
   position: absolute;
   right: 0px;
   top: -1px;
+}
+.submenu-box li.active .subnavopenBTN {
+  cursor: default;
+  opacity: 0.1 !important;
 }
 .submenu-box .nav-item-level-1 {
   float: left;

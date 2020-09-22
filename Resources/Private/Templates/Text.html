@@ -10,7 +10,7 @@
 
 
 
-                        <div class="col trans">
+                        <div class="col-md-9 trans">
                             <div class="headline">
                                 <h2 class="text-bold">{data.header -> f:format.nl2br()}</h2>
                             </div>
@@ -19,7 +19,7 @@
                             </div>
                         </div>
                         <f:if condition="{data.header_link}">
-                            <div class="col text-right mt-auto trans">
+                            <div class="col-md-3 text-right mt-auto trans">
                                 <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
                                 {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
                                                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
@@ -40,7 +40,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-55 trans">
-                            <div class="headline rowborder-bottom">
+                            <div class="headline  rowborder-bottom">
                                 <h2 class="text-bold">{data.header -> f:format.nl2br()}</h2>
                             </div>
 

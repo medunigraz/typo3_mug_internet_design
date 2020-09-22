@@ -2,21 +2,26 @@
   display:none;
   cursor:pointer;
 }
+
+/* ...........................................................................  1620 px */
+@media screen and (max-width: 1620px) {
+
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 70px;
+  }
+}
+
+
 /* ...........................................................................  1350 px */
 @media screen and (max-width: 1350px) {
   .main-menu .hero-menu .nav-item .dropdown-wrap-level0 {
     width: 100%;
   }
   .main-menu .hero-menu .nav-item-level-0 {
-    margin: 0px 35px 0 104px;
+    margin: 0px 35px 0 20px;
   }
 }
-/* ...........................................................................  1215 px */
-@media screen and (max-width: 1215px) {
-  .main-menu .hero-menu .nav-item-level-0 {
-    margin: 0px 35px 0 70px;
-  }
-}
+
 
 /* ...........................................................................  1024 px */
 @media screen and (max-width: 1024px) {

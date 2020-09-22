@@ -21,6 +21,7 @@
   .nav-item-level-0.nav-item-ON > a, .nav-item-level-0.active > a {
     color:$green-dark ;
 }
+
   #subMenu {
     width: 90%;
     margin: 0 auto;
@@ -61,6 +62,9 @@
     top: -1px;
 
   }
+
+  li.active  .subnavopenBTN { cursor:default; opacity: 0.1 !important;}
+
   .nav-item-level-1 {
     float: left;
     width: 100%;

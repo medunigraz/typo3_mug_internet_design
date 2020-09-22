@@ -44,7 +44,7 @@
             <f:render partial="Breadcrumb" arguments="{items: items}"/>
           </v:page.breadCrumb>
           <div class="headline">
-            <h1 class="text-bold h2">{data.header}</h1>
+            <h1 class="text-bold h1">{data.header}</h1>
           </div>
           <div class="text text-leadin">
             {data.bodytext -> f:format.html()}
@@ -120,8 +120,8 @@
                             <div class="quicklinks-headline text-bold">{newsItem.title}</div>
                             <div class="teaser">
                               {newsItem.teaser}
-                              <n:link newsItem="{newsItem.data}" title="{newsItem.title}">
-                                <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                              <n:link newsItem="{newsItem}" title="{newsItem.title}">
+                               <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
                               </n:link>
                             </div>
                           </div>

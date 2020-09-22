@@ -1,5 +1,5 @@
 .ce-contact-box {
-  margin: 80px 0 80px 0;
+  margin: 20px 0 20px 0;
   .name {
     display: block;
     width: 100%;
@@ -40,7 +40,9 @@
     width: 100%;
     float: left;
   }
-
+  .cvlink {
+    margin: 15px 0 0 0;
+  }
   .cvlink a:hover {
     color:$green-dark;
 
@@ -63,7 +65,7 @@
   .ce-contact-box.headline-small {
 
     .contact-image {
-         top: 94px;
+      top: 49px;
     }
 
   }

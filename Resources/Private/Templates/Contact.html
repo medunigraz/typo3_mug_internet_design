@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col col-7 bg-grey-light trans">
                         <div class="contact-text">
-                            <div class="headline rowborder-bottom">
+                            <div class="headline  <f:if condition='{data.mugce_caption}'>rowborder-bottom </f:if>">
                                 <h2 class="text-bold">
                                     <span class="caption">{data.mugce_caption}</span>
                                 </h2>
@@ -41,7 +41,6 @@
 
                             <f:if condition="{data.header_link}">
                                 <div class="cvlink">
-                                    <div class="box-balken blend"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green-dark.png')}" alt="" class="blend"></div>
                                     <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
                                         {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
                                         <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
