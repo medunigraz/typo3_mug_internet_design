@@ -114,7 +114,7 @@
     right: 10px;
   }
   .main-menu .hero-menu .nav-item-level-0.open0::after {
-    background-image: url("img/icon-x-green.svg");
+    background-image: url("#{$icon-path}/icon-x-green.svg");
     margin: -5px 0 0 0;
   }
 
@@ -150,7 +150,7 @@
   .main-menu .quicklinks::before {
     content: "";
     position: absolute;
-    background-image: url("img/icon-burgerbtn.svg");
+    background-image: url("#{$icon-path}/icon-burgerbtn.svg");
     width: 22px;
     height: 40px;
     left: 10px;
@@ -203,7 +203,7 @@
   .main-menu .nav-item-level-1::after {
     content: "";
     position: absolute;
-    background-image: url("img/icon-arrow-withe-down.svg");
+    background-image: url("#{$icon-path}/icon-arrow-withe-down.svg");
     width: 22px;
     height: 40px;
     right: 10px;
@@ -213,7 +213,7 @@
   }
 
   .main-menu .nav-item-level-1.open1::after {
-    background-image: url("img/icon-x-white.svg");
+    background-image: url("#{$icon-path}/icon-x-white.svg");
     margin: -6px 0 0 0;
   }
 
