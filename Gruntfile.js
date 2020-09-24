@@ -24,7 +24,7 @@ module.exports = function(grunt) {
           ],
         },
         files: {
-          'Resources/Public/Css/styles.css': 'Resources/Private/Scss/styles.scss',
+          'Resources/Public/Css/styles.min.css': 'Resources/Private/Scss/styles.scss',
         }
       }
     },

@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "styles.css",
+	"file": "styles.min.css",
 	"sources": [
 		"../../Private/Scss/styles.scss",
 		"../../Private/Scss/meduni/_variables.scss",
