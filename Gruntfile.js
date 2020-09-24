@@ -8,10 +8,6 @@ module.exports = function(grunt) {
     githooks: {
       options: {},
       all: {
-        options: {
-          hashbang: '#!/usr/bin/env nodejs',
-          template: 'hooks/template.js'
-        },
         'pre-commit': 'default',
         'post-merge': 'default',
         'post-checkout': 'default'
@@ -71,6 +67,12 @@ module.exports = function(grunt) {
       'sass:dist',
       'uglify:dist',
       'copy:dist',
+    ]
+  );
+  grunt.registerTask(
+    'prepare',
+    [
+      'githooks:all',
     ]
   );
 };
