@@ -7860,7 +7860,7 @@ a.textlink:hover {
       position: relative;
       top: 9px;
       right: -30px;
-      background-image: url("img/icon-nav-down.svg");
+      background-image: url("../Images/icon-nav-down.svg");
       width: 20px;
       height: 20px;
       background-size: 100%;
@@ -7988,7 +7988,7 @@ a.textlink:hover {
     opacity: 1; }
   .main-menu .menu-link-level1:after {
     content: "";
-    background-image: url("img/icon-navactivearrow-green.svg");
+    background-image: url("../Images/icon-navactivearrow-green.svg");
     position: absolute;
     right: -28%;
     height: 40px;
@@ -8105,7 +8105,7 @@ a.textlink:hover {
     top: 25px;
     right: 10px; }
   .main-menu .hero-menu .nav-item-level-0.open0::after {
-    background-image: url("img/icon-x-green.svg");
+    background-image: url("../Images/icon-x-green.svg");
     margin: -5px 0 0 0; }
   .main-menu .hero-menu .nav-item .dropdown-wrap-level0 {
     display: none;
@@ -8134,7 +8134,7 @@ a.textlink:hover {
   .main-menu .quicklinks::before {
     content: "";
     position: absolute;
-    background-image: url("img/icon-burgerbtn.svg");
+    background-image: url("../Images/icon-burgerbtn.svg");
     width: 22px;
     height: 40px;
     left: 10px;
@@ -8176,7 +8176,7 @@ a.textlink:hover {
   .main-menu .nav-item-level-1::after {
     content: "";
     position: absolute;
-    background-image: url("img/icon-arrow-withe-down.svg");
+    background-image: url("../Images/icon-arrow-withe-down.svg");
     width: 22px;
     height: 40px;
     right: 10px;
@@ -8184,7 +8184,7 @@ a.textlink:hover {
     background-repeat: no-repeat;
     background-size: 100%; }
   .main-menu .nav-item-level-1.open1::after {
-    background-image: url("img/icon-x-white.svg");
+    background-image: url("../Images/icon-x-white.svg");
     margin: -6px 0 0 0; }
   .main-menu .hero-menu .nav-item .dropdown-wrap.dropdown-wrap-level1 {
     position: relative;
@@ -8839,7 +8839,7 @@ a.textlink:hover {
       position: absolute;
       width: 13px;
       height: 30px;
-      background-image: url("img/icon-arrow-black-right.svg");
+      background-image: url("../Images/icon-arrow-black-right.svg");
       background-repeat: no-repeat;
       right: -20%;
       top: 0px;
