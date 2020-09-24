@@ -2,6 +2,7 @@ module.exports = function(grunt) {
   const sass = require('node-sass');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.initConfig({
     githooks: {
@@ -46,12 +47,30 @@ module.exports = function(grunt) {
         }
       }
     },
+    copy: {
+      dist: {
+        files: [
+          // includes files within path
+          {
+            expand: true,
+            flatten: true,
+            src: [
+              'node_modules/fontsource-ubuntu/files/*.woff',
+              'node_modules/fontsource-ubuntu/files/*.woff2',
+            ],
+            dest: 'Resources/Public/Fonts/',
+            filter: 'isFile',
+          },
+        ],
+      },
+    },
   });
   grunt.registerTask(
     'default',
     [
       'sass:dist',
       'uglify:dist',
+      'copy:dist',
     ]
   );
 };
