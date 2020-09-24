@@ -4,7 +4,7 @@
   "description": "Content elements for the website of Med Uni Graz.",
   "license": "GPL-2.0-or-later",
   "require": {
-    "typo3/cms-core": "^9.5"
+    "typo3/cms-core": "^9.5.20"
   },
   "extra": {
     "typo3/cms": {
