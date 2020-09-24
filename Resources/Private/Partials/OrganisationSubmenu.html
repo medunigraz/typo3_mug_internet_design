@@ -5,7 +5,7 @@
   <span class="burgerbtnline"></span>
 </div>
 <div class="submenburgerBTN-x">
-  <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-x-green.svg" alt="" class="icon-submenburgerBTN-x">
+  <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-x-green.svg" alt="" class="icon-submenburgerBTN-x">
 </div>
 <div class="info-box submenu-box">
   <div class="infobox-inner">
@@ -19,7 +19,7 @@
         {v:variable.set(name:'hasSub',value:'{v:condition.page.hasSubpages(then: "TRUE", else: "FALSE", pageUid: "{item.uid}", includeHidden: 0, showHiddenInMenu: 0)}')}
         <li class="nav-item animateAll nav-item-level-0 {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
           <f:link.typolink parameter="{item.link}" class="menu-link menu-link-level0 animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
-            {item.linktext}<span class="subnavopenBTN"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll subnavbox-arrow"></span>
+            {item.linktext}<span class="subnavopenBTN"><img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll subnavbox-arrow"></span>
           </f:link.typolink>
           <f:if condition='{hasSub} == "TRUE"'>
             <ul class="sub-sub-menu">
@@ -28,7 +28,7 @@
                   <f:if condition="{subItem.doktype}!=42">
                     <li class="nav-item animateAll nav-item-level-1 {f:if(condition:'{subItem.active}',then:' active')}{f:if(condition:'{subItem.doktype}==4 && {subItem.shortcut} == {currentPid}',then:' active')}">
                       <f:link.typolink parameter="{subItem.link}" class="menu-link menu-link-level1 animateAll {f:if(condition:'{subItem.active}',then:'active')}{f:if(condition:'{subItem.doktype}==4 && {subItem.shortcut} == {currentPid}',then:'active')}">
-                        {subItem.linktext}<span class="subnavopenBTN"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll subnavbox-arrow "></span>
+                        {subItem.linktext}<span class="subnavopenBTN"><img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll subnavbox-arrow "></span>
                       </f:link.typolink>
                     </li>
                   </f:if>
