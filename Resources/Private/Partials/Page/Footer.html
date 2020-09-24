@@ -3,12 +3,12 @@
         <div class="container">
             <div class="adressbox">
                 <a href="/">
-                    <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/logo-meduni-graz.svg')}" alt="" class="logoimg">
+                    <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/logo-meduni-graz.svg')}" alt="" class="logoimg">
                 </a>
                 <address>
                     {v:content.render(contentUids:{0: footerContentIdDe, 1: footerContentIdEn}) -> f:format.raw()}
                     <div class="orientationbox">
-                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-googlemarker.svg')}" alt="" class="googlemarker">
+                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-googlemarker.svg')}" alt="" class="googlemarker">
                         <v:menu pageUid="{footerOrientationNavId}">
                             <f:render partial="FooterOrientationNav" arguments="{menu: menu, currentPid: data.uid, cssClass: 'column'}"/>
                         </v:menu>
@@ -29,5 +29,5 @@
     </div>
 </footer>
 <div class="footerbg">
-    <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/bgfooter.jpg')}" alt="" class="footerlastlinebg">
+    <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/bgfooter.jpg')}" alt="" class="footerlastlinebg">
 </div>
