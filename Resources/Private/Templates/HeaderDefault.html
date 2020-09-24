@@ -5,7 +5,7 @@
       <div class="cycle-slideshow">
         <div class="ce-homesliderelement">
           <div class="ce-header-slider-element">
-            <div class="box-sliderbgbalken"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green.png')}" alt="" class="sliderbgbalken blend animateAll-s"></div>
+            <div class="box-sliderbgbalken"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/balken-green.svg')}" alt="" class="sliderbgbalken blend animateAll-s"></div>
             <f:if condition="{image}">
               <f:image image="{image.0}" class="slider-img" width="1720c" height="550c" />
             </f:if>
@@ -79,8 +79,7 @@
                               {newsItem.title}
 
                               <f:link.action pageUid="{newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
-                                <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
-
+                                <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
                               </f:link.action>
                               <div class="teaser">
                               {newsItem.teaser}
@@ -114,11 +113,11 @@
                       <div class="border-bottom"></div>
                       <f:link.action pageUid="{newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="list" arguments="{news:newsItem.uid}" class="morelink text-bold animateAll">
                         {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
-                        <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                        <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                       </f:link.action>
                       <f:link.action pageUid="{eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="listEvents" arguments="{news:newsItem.uid}" class="morelink text-bold animateAll">
                         {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
-                        <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                        <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                       </f:link.action>
                     </div>
                   </div>

@@ -3,7 +3,7 @@
     <div class="headline">
       <h2 class="text-bold line1"><span class="slidertext-L1">{data.header}</span><span class="slidertext-L2">{data.subheader}</span></h2>
     </div>
-    <div class="box-sliderbgbalken"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green.png')}" alt="" class="sliderbgbalken blend animateAll-s"></div>
+    <div class="box-sliderbgbalken"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/balken-green.svg')}" alt="" class="sliderbgbalken blend animateAll-s"></div>
 
     <f:if condition="{image}">
       <f:image image="{image.0}" class="slider-img" width="1720c" height="780c" />
@@ -20,7 +20,7 @@
                   {data.mugce_header}
                   <f:if condition="{data.header_link}">
                     <f:link.typolink parameter="{data.header_link}">
-                      <div class="infobox-headline-BTN animateAll"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg')}" alt="" class="arrow"></div>
+                      <div class="infobox-headline-BTN animateAll"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-arrow-withe-right.svg')}" alt="" class="arrow"></div>
                     </f:link.typolink>
                   </f:if>
                 </div>
@@ -36,7 +36,7 @@
               <div class="quicklinks-box">
                 <div class="quicklinks-headline text-bold">
                   {f:if(condition: '{data.mugce_caption}', then: '{data.mugce_caption}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:quicklinks", default: "Quicklinks")}')}
-                   <div class="quicklinks-headline-BTN animateAll"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-down.svg')}" alt="" class="arrow"></div>
+                   <div class="quicklinks-headline-BTN animateAll"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-arrow-black-down.svg')}" alt="" class="arrow"></div>
                 </div>
                 <div class="quicklinks-items animateAll">
                   <f:for each="{quicklinks}" as="link">
