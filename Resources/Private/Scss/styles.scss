@@ -1,6 +1,7 @@
 // meduni graz
-@import "meduni/bootstrap-custom";
 @import "meduni/variables";
+@import "bootstrap/scss/bootstrap";
+@import "meduni/bootstrap-custom";
 @import "meduni/colors";
 @import "meduni/font";
 @import "meduni/font-responsive";
@@ -42,20 +43,4 @@
 @import "meduni/newsteaserbox-responsive";
 @import "meduni/sidebar";
 @import "meduni/sidebar-responsive";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import "meduni/ubuntu";
