@@ -8386,7 +8386,8 @@ a.textlink:hover {
   position: absolute;
   top: 0px;
   left: 50%;
-  margin: 0 0 0 -505px; }
+  margin: 0 0 0 -505px;
+  height: 930px; }
 
 .cycle-slide-active .sliderbgbalken {
   margin: 0 0 0 -205px; }
