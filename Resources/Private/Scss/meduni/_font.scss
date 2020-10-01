@@ -7,31 +7,31 @@
   font-weight: 500;
 }
 h1, .h1 {
-  font-size: 32px;
+  font-size: 40px;
   line-height: 44px;
-  text-transform: uppercase;
+  text-transform: uppercase;  letter-spacing: 0.01em;
+
 }
 h2, .h2, .h2 {
-     font-size: 28px;
-     line-height: 35px;
-  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 35px;
+  text-transform: uppercase
 
    }
 .hl-big {
-  font-size: 40px;
+  font-size: 32px;
   line-height: 48px;
   text-transform: uppercase;
+  letter-spacing: 0.01em;
+
 }
 .text-mega {
   font-size: 60px;
   line-height: 70px;
 }
-
-
 blockquote {
-  color:$green-light;
+  color:#A2A2A2;
   font-style:italic;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 29px;
-
 }

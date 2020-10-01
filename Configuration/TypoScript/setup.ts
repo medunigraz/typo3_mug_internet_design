@@ -40,7 +40,7 @@ page.includeCSSLibs {
 }
 
 page.includeCSS {
-    file10 = https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap
+    file10 = https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap
     file11 = EXT:mug_ce/Resources/Public/css/styles.css
 }
 page.includeJS {

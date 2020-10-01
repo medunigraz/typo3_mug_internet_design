@@ -7,12 +7,16 @@
     width: 66%;
     position: absolute;
     margin: 0px 0 0px 0%;
-    font-size: 12px;
+    font-size: 13px;
     top: -30px;
     a {  max-width:30%;
       display: inline-block;
       float: left;
       margin: 0 10px 0 0;
+      color:$grey-darker;
+    }
+    a:hover .breatitem-name {
+      text-decoration:underline;
     }
     a .breatitem-name {
       white-space: nowrap;

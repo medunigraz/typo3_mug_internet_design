@@ -63,7 +63,7 @@
             </div>
           </f:if>
           <f:if condition="{data.mugce_display_type} == 2 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 5">
-            <f:render partial="OrganisationSubmenu" arguments="{_all}" />
+            <f:render partial="OrganisationSubmenu" arguments="{rootId: data.pid}" />
           </f:if>
           <f:if condition="{data.mugce_display_type} == 1 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 6  || {data.mugce_display_type} == 7">
             <f:switch expression="{data.mugce_display_type}">

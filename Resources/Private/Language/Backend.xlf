@@ -390,6 +390,51 @@
       <trans-unit id="CType.mugce_accordionelement.input.bodytext" xml:space="preserve">
         <source>Text</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_quote.caption" xml:space="preserve">
+        <source>Quote</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.description" xml:space="preserve">
+        <source>Quote element</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.subheader" xml:space="preserve">
+        <source>Section Name</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.bodytext" xml:space="preserve">
+        <source>Quote</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.mugce_subheader" xml:space="preserve">
+        <source>Quote By</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.mugce_link_label" xml:space="preserve">
+        <source>Link Label</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.header_link" xml:space="preserve">
+        <source>Link</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.mugce_link_label_2" xml:space="preserve">
+        <source>Link Label (Bottom)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.mugce_link" xml:space="preserve">
+        <source>Link (Bottom)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.image" xml:space="preserve">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_list.caption" xml:space="preserve">
+        <source>Link List</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_list.description" xml:space="preserve">
+        <source>Container element for a link list</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_list.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_list.input.mugce_quicklinks" xml:space="preserve">
+        <source>Links</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

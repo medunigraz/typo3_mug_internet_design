@@ -7,7 +7,7 @@
   <div class="col col-text trans">
   <div class="col-text-inner">
     <div class="headline text-left">
-      <h2 class="text-bold uppercase">{data.header}</h2>
+      <h2 class="text-bold uppercase">{data.header -> f:format.nl2br()}</h2>
     </div>
 
     <div class="text">{data.bodytext -> f:format.html()}</div>

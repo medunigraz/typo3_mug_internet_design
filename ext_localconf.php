@@ -19,6 +19,8 @@ defined('TYPO3_MODE') or die();
       'mugce-icon-contact' => 'mugce-icon-contact.svg',
       'mugce-icon-accordion' => 'mugce-icon-accordion.svg',
       'mugce-icon-accordionelement' => 'mugce-icon-accordionelement.svg',
+      'mugce-icon-quote' => 'mugce-icon-quote.svg',
+      'mugce-icon-link-list' => 'mugce-icon-link-list.svg'
     ];
 
   $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
@@ -191,6 +193,24 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/AccordionElement/setup.ts">'
+  );
+
+  // Content Element: Quote
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/Quote.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Quote/setup.ts">'
+  );
+
+  // Content Element: Link List
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/LinkList.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/LinkList/setup.ts">'
   );
 
 })($_EXTKEY);

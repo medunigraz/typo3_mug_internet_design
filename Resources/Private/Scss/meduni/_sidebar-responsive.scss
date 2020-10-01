@@ -1,0 +1,11 @@
+/* ...........................................................................  767 px */
+@media screen and (max-width: 767px) {
+  .sidebar-default .greenbox {
+    position: relative;
+    top: inherit;
+  }
+  .sidebar-default .greenbox .infobox-inner {
+    height: auto;
+    min-height: 1px;
+  }
+}

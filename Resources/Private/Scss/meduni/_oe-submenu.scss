@@ -91,4 +91,33 @@
 
   }
 
+
+  .sub-sub-menu {
+    .nav-item-level-1 a {
+      padding: 0 0 0 15px;
+      position: relative;
+      display: block;
+      margin: 5px 0 0 5px;
+      font-size: 16px;
+      line-height: 20px;
+
+    }
+
+    .nav-item-level-1 a:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: url("img/icon-arrow-black-right.svg");
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 20px;
+      left: 0px;
+      top: 2px;
+      background-size: 100%;
+    }
+    .nav-item-level-1 .subnavopenBTN {
+      display:none;
+    }
+  }
+
 }
