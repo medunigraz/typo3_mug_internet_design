@@ -49,7 +49,7 @@ page.includeCSSLibs {
 }
 
 page.includeCSS {
-    styles = EXT:mug_ce/Resources/Public/Css/styles.min.css
+    styles = EXT:mug_ce/Resources/Public/Css/styles.css
 }
 page.includeJS {
     jquery = EXT:mug_ce/Resources/Public/Js/jquery.min.js
