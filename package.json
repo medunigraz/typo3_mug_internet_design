@@ -8,8 +8,13 @@
     "grunt-contrib-uglify": "^5.0.0",
     "grunt-githooks": "^0.6.0",
     "grunt-sass": "^3.1.0",
-    "jquery": "3.5.1",
+    "imagesloaded": "^3.1.8",
+    "jquery": "^3.5.1",
+    "jquery-cycle2": "https://github.com/malsup/cycle2/#2.1.6",
+    "masonry-layout": "^3.3.2",
     "node-sass": "^4.14.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "slimbox": "https://github.com/cbeyls/slimbox/#2.05",
+    "waypoints": "^4.0.1"
   }
 }
