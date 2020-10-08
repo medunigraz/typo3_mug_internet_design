@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        mugce_newsletter {
+            iconIdentifier = mugce-icon-newsletter
+            title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_newsletter.caption
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_newsletter.description
+            tt_content_defValues {
+                CType = mugce_newsletter
+            }
+        }
+    }
+    show := addToList(mugce_newsletter)
+}

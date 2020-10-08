@@ -10,6 +10,10 @@
   .content-block-ce-text-media-teaser .medialinks-box .link::after {
     right: -17%;
 }
+  .content-block-ce-text-media-teaser .box-balken {
+      top: -14px;
+    }
+
 }
 
 /* ...........................................................................  1023 px */
@@ -36,6 +40,10 @@
 
   .content-block-ce-text-media-teaser .ce-text-media-teaser .col-35 .headline {
     margin: 20px auto 20px auto;
+  }
+
+  .content-block-ce-text-media-teaser .box-balken {
+    top: -14px;
   }
 
 }

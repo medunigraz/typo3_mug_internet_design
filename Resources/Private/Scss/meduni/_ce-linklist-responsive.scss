@@ -1,0 +1,22 @@
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+.ce-linklist .ce-link {
+  width: 100%;
+  float: left;
+  min-height: 5px;
+  margin: 10px 0 0px 0;
+}
+.ce-linklist .link-list-box {
+  width: 100%;
+  margin: 10px auto 10px auto;
+}
+.ce-linklist .ce-link:nth-child(2n+1) {
+  float: left;
+}
+  .ce-linklist .link::after {
+    right: 20px;
+}
+  .ce-linklist.addmarkerspace .rowborder-top {
+    padding: 50px 0 0 0;
+  }
+}

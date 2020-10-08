@@ -1,7 +1,15 @@
-<div id="c{data.uid}" class="ce-link-list">
-  <div class="headline text-center trans">
-    <h2 class="text-bold hl-big">{data.header}</h2>
-  </div>
+<div id="c{data.uid}" class="row content-block <f:if condition="{data.mugce_show_marker}"> addmarkerspace </f:if> ce-linklist trans">
+<div class="content-part">
+<div class="container <f:if condition="{data.mugce_show_marker}"> rowborder-top </f:if>">
+  <f:if condition="{data.mugce_show_marker}">
+    <div class="box-balken blend"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green-dark.png')}" alt="" class="blend"></div>
+  </f:if>
+  <f:if condition="{data.header}">
+    <div class="headline text-center">
+      <h2 class="text-bold hl-big">{data.header -> f:format.nl2br()}</h2>
+    </div>
+  </f:if>
+
   <div class="link-list-box">
     <div class="link-list-items animateAll">
       <f:for each="{linklist}" as="link">
@@ -12,3 +20,6 @@
     </div>
   </div>
 </div>
+</div>
+</div>
+

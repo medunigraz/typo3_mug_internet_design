@@ -1,3 +1,20 @@
+/* ...........................................................................  1024 px */
+@media screen and (max-width: 1024px) {
+.sidebar-default .greenbox .teaser {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+ .sidebar-default  .quicklinks-headline {
+    height: auto;
+    max-height: inherit;
+    line-height: 15px;
+   margin: 15px auto 5px auto;
+  }
+
+
+}
+
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
   .sidebar-default .greenbox {
@@ -7,5 +24,17 @@
   .sidebar-default .greenbox .infobox-inner {
     height: auto;
     min-height: 1px;
+  }
+  .sidebar-default .info-box {
+    right: 0px;
+    position: relative;
+    top: inherit;
+    width: 100%;
+  }
+  .sidebar-default .linktoall .morelink {
+    width: 40%;
+    float: left;
+    text-align: left;
+    margin: 5px 10% 0px 0;
   }
 }

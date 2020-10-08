@@ -1,0 +1,38 @@
+/* ....................................................................................... 1023 */
+@media screen and (max-width: 1023px) {
+  .ce-quote .quote-text {
+    font-size: 23px;
+    line-height: 30px;
+    margin: 10px 0 20px -20%;
+  }
+}
+
+
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .ce-quote .headline {
+    margin: 20px 0 15px 0;
+  }
+  .ce-quote .quote-text {
+    margin: 0px auto 10px auto;
+    width: 90%;
+  }
+  .ce-quote .quote-by {
+    text-align: left;
+  }
+
+  .ce-quote .box-balken {
+    top: -18px;
+  }
+  .ce-quote.addmarkerspace {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .ce-quote .morelink {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+}

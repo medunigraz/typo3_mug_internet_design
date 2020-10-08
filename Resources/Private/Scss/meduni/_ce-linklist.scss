@@ -1,0 +1,69 @@
+.ce-linklist {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+
+  .morelink {
+    color:$green-light;
+  }
+  .link::after {
+    content: "";
+    display: block;
+    float: left;
+    position: absolute;
+    width: 13px;
+    height: 30px;
+    background-image: url("img/icon-arrow-black-right.svg");
+    background-repeat: no-repeat;
+    right: -20%;
+    top: 0px;
+    margin: 0 -15px 0 0px;
+    -webkit-transition: all 350ms;
+    -moz-transition: all 350ms;
+    -o-transition: all 350ms;
+    transition: all 350ms;
+  }
+
+  .link:hover:after {
+    margin: 0 -20px 0 0px;
+  }
+
+   .link-list-box {
+    width: 75%;
+    margin: 30px auto 30px auto;
+  }
+  .ce-link {
+    width: 40%;
+    float: left;
+    position: relative;
+    min-height: 65px;
+    margin:10px 0 0px 0;
+
+  }
+  .ce-link:nth-child(odd) {float:right;}
+  .link-list-items {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+
+  .linklabel {
+    display:block;
+    float:left;
+    width:80%;
+  }
+
+}
+
+
+.ce-linklist.addmarkerspace {
+
+  .rowborder-top {
+    padding: 110px 0 0 0;
+  }
+  .box-balken {
+    top: 0px;
+  }
+
+}
+

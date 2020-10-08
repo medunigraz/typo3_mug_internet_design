@@ -20,7 +20,10 @@ defined('TYPO3_MODE') or die();
       'mugce-icon-accordion' => 'mugce-icon-accordion.svg',
       'mugce-icon-accordionelement' => 'mugce-icon-accordionelement.svg',
       'mugce-icon-quote' => 'mugce-icon-quote.svg',
-      'mugce-icon-link-list' => 'mugce-icon-link-list.svg'
+      'mugce-icon-link-list' => 'mugce-icon-link-list.svg',
+      'mugce-icon-gallery' => 'mugce-icon-gallery.svg',
+      'mugce-icon-newsletter' => 'mugce-icon-newsletter.svg',
+      'mugce-icon-default' => 'mugce-icon-default.svg'
     ];
 
   $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
@@ -211,6 +214,33 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/LinkList/setup.ts">'
+  );
+
+  // Content Element: Gallery
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/Gallery.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Gallery/setup.ts">'
+  );
+
+  // Content Element: Newsletter
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/Newsletter.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Newsletter/setup.ts">'
+  );
+
+  // Content Element: Default
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/Default.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Default/setup.ts">'
   );
 
 })($_EXTKEY);

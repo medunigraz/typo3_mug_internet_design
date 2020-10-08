@@ -1,0 +1,94 @@
+.ce-newsletter {
+  margin-bottom: 50px;
+  .box-balken {
+    top: 0;
+  }
+  .headline {
+    margin: 36px 0 0 0;
+    float: left;
+    width: 48%;
+  }
+  .newsletter-formbox {
+    float: right;
+    width: 46%;
+    position: relative;
+    margin: 36px 0 0 0;
+  }
+  .row-nlform {
+    display:block;
+    float:left;
+    width:100%;
+  }
+  .control-label {display:none}
+  .input {
+    input {
+    border: 0px;
+    border-bottom: 0.5px solid $black;
+    border-radius: 0px;
+    padding: 0px;
+    font-style: italic;
+    height: 58px;
+  }
+
+    .form-check {
+       padding-left: 0;
+    }
+
+  }
+
+    .checkbox {
+      input {
+        border-radius: 0px;
+        width: 20px;
+        display: block;
+        float: left;
+        margin: -19px 0 0 0;
+    }
+      span {
+        font-size: 13px;
+        color: #666;
+        line-height: 17px;
+        display: block;
+        margin: 0 0px 0 0px;
+        float: right;
+        width: 93%;
+        a {
+          color: #666;
+          text-decoration:underline;
+        }
+      }
+}
+  .btn-toolbar, .btn-group {
+    display: block;
+  }
+  .submit {
+    .btn {
+      background: none;
+      cursor: pointer;
+      float: right;
+      margin: 10px 0 0 0;
+      color: #000000;
+      border: 0px;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0px;
+      width: auto;
+      display: block;
+      background-image: url("img/icon-arrow-black-right.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      padding: 0 30px 0 0;
+      -webkit-transition: all 350ms;
+      -moz-transition: all 350ms;
+      -o-transition: all 350ms;
+      transition: all 350ms;
+    }
+    .btn:hover {
+      padding: 0 40px 0 0;
+      margin: 10px -10px 0 0;
+    }
+
+
+  }
+}

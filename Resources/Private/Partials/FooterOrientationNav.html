@@ -1,0 +1,11 @@
+<div id="footerOrientiationMenu" class="footer-orientation-menu">
+  <ul class="footer-orientation">
+    <f:for each="{menu}" as="item" iteration="iterator">
+      <li class="">
+        <f:link.typolink parameter="{item.link}" class="footer-orientation-menu-link">
+          {item.linktext}
+        </f:link.typolink>
+      </li>
+    </f:for>
+  </ul>
+</div>

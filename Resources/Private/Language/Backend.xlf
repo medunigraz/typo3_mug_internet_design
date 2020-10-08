@@ -423,6 +423,9 @@
       <trans-unit id="CType.mugce_quote.input.image" xml:space="preserve">
         <source>Image</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_quote.input.display_type.no_background" xml:space="preserve">
+        <source>No Background</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_link_list.caption" xml:space="preserve">
         <source>Link List</source>
       </trans-unit>
@@ -434,6 +437,36 @@
       </trans-unit>
       <trans-unit id="CType.mugce_link_list.input.mugce_quicklinks" xml:space="preserve">
         <source>Links</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_gallery.caption" xml:space="preserve">
+        <source>Gallery</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_gallery.description" xml:space="preserve">
+        <source>Gallery element</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_gallery.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_gallery.input.image" xml:space="preserve">
+        <source>Images</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_newsletter.caption" xml:space="preserve">
+        <source>Newsletter</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_newsletter.description" xml:space="preserve">
+        <source>Newsletter subscription element</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_newsletter.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_default.caption" xml:space="preserve">
+        <source>Default</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_default.description" xml:space="preserve">
+        <source>Content element for global content</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_default.input.bodytext" xml:space="preserve">
+        <source>Text</source>
       </trans-unit>
     </body>
   </file>

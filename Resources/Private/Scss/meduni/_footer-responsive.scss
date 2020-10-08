@@ -1,0 +1,44 @@
+/* ....................................................................................... 1023 */
+@media screen and (max-width: 1023px) {
+  .ce-footer {
+    font-size: 14px;
+    line-height: 20px;
+   .footer-menu-column {
+          width: 21%;
+      margin: 0 5% 0 0;
+    }
+    .content-part {
+      width: 98%;
+    }
+  }
+}
+
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .ce-footer  .adressbox {
+  float: left;
+  width: 100%;
+}
+  .ce-footer .bottom-metaline {
+    width: 100%;
+    float: left;
+    margin: 30px 0 0 0;
+  }
+  .ce-footer .footer-menu-column {
+    width: 50%;
+    margin: 0 0% 0px 0;
+  }
+  .ce-footer .rubikon {
+    float: left;
+    margin: 10px 0 20px 0;
+  }
+  .ce-footer  .content-block .container {
+    max-width: 98%;
+  }
+  .ce-footer .container {
+    padding: 20px 0 0 0;
+    max-width: 98%;
+  }
+
+}

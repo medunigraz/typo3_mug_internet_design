@@ -1,0 +1,138 @@
+.ce-footer {
+  font-size:16px;
+  line-height:22px;
+  position:relative;
+
+  .container {
+    padding: 40px 0 0 0;
+  }
+  .adressbox {
+    float: left;
+    width: 30%;
+  }
+  .logoimg {
+    width: 105px;
+  }
+  address {
+    margin: 20px 0 0 0;
+  }
+  .bottom-metaline {
+    width: 70%;
+    float: right;
+    margin: 100px 0 0 0;
+  }
+  #footerMenu {
+    float: right;
+    width: 100%;
+  }
+  .footer-menu-column {
+    float: left;
+    border-top: 2px solid green;
+    width: 23%;
+    margin: 0 2% 0 0;
+    position: relative;
+    padding: 10px 0 0 0;
+    list-style-type: none;
+    li {
+      width: 100%;
+      float: left;
+      margin: 0px 0 10px 18px;
+      position: relative;
+      font-weight: 500;
+    }
+    li:before {
+      content: "";
+      background-image: url("img/icon-arrow-black-right.svg");
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: -16px;
+      top: 3px;
+      background-size: 9px;
+      -webkit-transition: all 350ms;
+      -moz-transition:all 350ms;
+      -o-transition:all 350ms;
+      transition: all 350ms;
+    }
+    li:hover:before {
+      content: "";
+      left: -11px;
+    }
+
+  }
+  .footer-menu-column:last-child {
+    margin-right:0px;
+  }
+  .footer-menu-link img {
+    display: block;
+    float: left;
+    margin: 4px 7px 0 0;
+    width: 13px;
+    height: 14px;
+  }
+  .googlemarker {
+    display: block;
+    widht: 20px;
+    height: auto;
+    float: left;
+    margin: 0 10px 0 0;
+  }
+  .footer-orientation {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+
+    li {
+      float:left;
+      font-weight: 500;
+    }
+    li::after {
+      content: "|";
+      display: block;
+      float: right;
+      margin: 0 9px 0 8px;
+    }
+    li:last-child:after {
+      display:none;
+    }
+
+  }
+.container-lastline {
+    padding: 20px 0 20px 0;
+    clear: both;
+    margin: 20px auto 0 auto;
+    clear:both;
+  font-size: 12px;
+  }
+  .clear {
+    margin: 20px 0 0 0;
+  }
+  .copy {
+    float: left;
+
+  }
+  .rubikon {
+    float:right;
+    opacity: 0.5;
+    margin: 0 0 20px 0;
+    font-size: 12px;
+  }
+}
+.footerlastlinebg {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.footerbg {
+  width: 100%;
+  position: relative;
+  float: left;
+  height: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.3;
+}

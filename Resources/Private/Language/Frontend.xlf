@@ -30,6 +30,15 @@
       <trans-unit id="allEvents" xml:space="preserve">
         <source>Alle Events</source>
       </trans-unit>
+      <trans-unit id="galleryDownload" xml:space="preserve">
+        <source>Download</source>
+      </trans-unit>
+      <trans-unit id="galleryImageSize" xml:space="preserve">
+        <source>Bildgröße</source>
+      </trans-unit>
+      <trans-unit id="galleryFileSize" xml:space="preserve">
+        <source>Dateigröße</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

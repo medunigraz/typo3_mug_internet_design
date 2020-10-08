@@ -1,0 +1,26 @@
+<div id="footerMenu" class="footer-menu">
+  <ul class="footer-menu-column">
+    <f:for each="{menu}" as="item" iteration="iterator">
+      <f:if condition="{item.doktype}!=199">
+        <f:then>
+          <li class="">
+            <f:link.typolink parameter="{item.link}" class="footer-menu-link">
+              <f:if condition="{item.media} > 0">
+                <v:page.resources.fal table="pages" field="media" uid="{item.uid}" as="images" slide="-1" >
+                  <f:for each="{images}" as="image">
+                    <f:image src="{image.url}" alt="{image.alternative} {image.name}" title="{image.title}" />
+                  </f:for>
+                </v:page.resources.fal>
+              </f:if>
+              {item.linktext}
+            </f:link.typolink>
+          </li>
+        </f:then>
+        <f:else>
+          </ul>
+          <ul class="footer-menu-column">
+        </f:else>
+      </f:if>
+    </f:for>
+  </ul>
+</div>

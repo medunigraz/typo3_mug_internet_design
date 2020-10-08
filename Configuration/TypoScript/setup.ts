@@ -32,6 +32,16 @@ page.10 {
         metaNavId.value = {$const.metaNavId}
         iAmNavId = TEXT
         iAmNavId.value = {$const.iAmNavId}
+        footerContentIdDe = TEXT
+        footerContentIdDe.value = {$const.footerContentIds.de}
+        footerContentIdEn = TEXT
+        footerContentIdEn.value = {$const.footerContentIds.en}
+        footerNavId = TEXT
+        footerNavId.value = {$const.footerNavId}
+        footerOrientationNavId = TEXT
+        footerOrientationNavId.value = {$const.footerOrientationNavId}
+        currentYear = TEXT
+        currentYear.data = date:Y
     }
 }
 
@@ -63,3 +73,12 @@ tmp.templatePaths {
         10 = EXT:mug_ce/Resources/Private/Layouts/
     }
 }
+
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:mug_ce/Configuration/Yaml/CustomFormSetup.yaml
+        }
+    }
+}
+

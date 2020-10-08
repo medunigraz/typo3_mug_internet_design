@@ -1,0 +1,56 @@
+.ce-gallery {
+  .gallerybox {
+        float: left;
+    margin: 50px 0 0 0;
+    width: 100%;
+    position: relative;
+    overflow:hidden;
+    -webkit-transition: opacity 850ms;
+    -moz-transition:opacity 850ms;
+    -o-transition:opacity 850ms;
+    transition: opacity 850ms;
+  }
+  .galleryboxloading {opacity:0;}
+  .grid{
+
+    width: 109%;
+    position: relative;
+
+  }
+
+  .grid-sizer {
+
+    width: 33%;
+
+  }
+  .grid-item {
+    margin:0 0% 80px 0;
+    width: 32.55%;
+
+    .grid-item-inner {
+      width:80%;
+
+    }
+    .image-title.text-bold {
+      float: left;
+      width: 100%;
+      margin: 10px 0 5px 0;
+    }
+    .download {
+      width: 100%;
+      float: left;
+      margin: 10px 0 0 0;
+    }
+    .morelink {
+      display: inline-block;
+    }
+
+    .gallery-img {
+      display: block;
+      width:100%;
+      height:auto;
+    }
+
+
+  }
+}

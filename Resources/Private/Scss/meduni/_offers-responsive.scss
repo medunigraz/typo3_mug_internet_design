@@ -11,17 +11,18 @@
     margin: 0 0 0 5%;
   }
 }
-
-
-
+/* ....................................................................................... 1024 */
+@media screen and (max-width: 1024px) {
+.ce-offers .box-balken {
+  top: -14px;
+}
+}
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
   .ce-offers .headline {
     margin: 20px 0 20px 0;
   }
-  .ce-offers .box-balken {
-    top: -14px;
-  }
+
   .ce-offers .ce-offer {
     margin: 0 0 40px 0;
   }
@@ -29,5 +30,8 @@
   .ce-offers .elements .ce-offer:nth-child(2n) .col-text .col-text-inner
   {
     margin-top: 20px;
+  }
+  .content-block-ce-offers {
+    margin: 50px auto 50px auto;
   }
 }

@@ -1,0 +1,52 @@
+<div id="c{data.uid}" class="row content-block ce-gallery">
+    <div class="content-part">
+        <div class="container">
+            <div class="row ">
+                <f:if condition="{data.header} || {data.bodytext}">
+                    <div class="headline trans">
+                        <h2 class="text-bold hl-big">{data.header -> f:format.nl2br()}</h2>
+                    </div>
+                </f:if>
+                <div class="gallerybox galleryboxloading">
+                    <div class="grid">
+                        <div class="grid-sizer"></div>
+                        <f:for each="{images}" as="image">
+                            <div class="grid-item">
+                                <div class="grid-item-inner">
+                                    <f:image image="{image}" class="gallery-img" width="500c" />
+                                    <div class="image-title text-bold">
+                                        <f:if condition="{image.title}">
+                                            <f:then>
+                                                {image.title}
+                                            </f:then>
+                                            <f:else>
+                                                {image.name}
+                                            </f:else>
+                                        </f:if>
+                                    </div>
+                                    <f:if condition="{image.originalFile.properties.width} && {image.originalFile.properties.height}">
+                                        <div class="image-size text-small">
+                                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:galleryImageSize", default: "Bildgröße")}: {image.originalFile.properties.width} x {image.originalFile.properties.height}
+                                        </div>
+                                    </f:if>
+                                    <f:if condition="{image.originalFile.properties.size}">
+                                        <div class="file-size text-small">
+                                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:galleryFileSize", default: "Dateigröße")}: {image.originalFile.properties.size -> f:format.bytes()}
+                                        </div>
+                                    </f:if>
+                                    <div class="download">
+                                        <a href="{f:uri.image(image:'{image}', treatIdAsReference: 1)}" download="{f:uri.image(image:'{image}', treatIdAsReference: 1)}" target="_blank" class="morelink text-bold animateAll">
+                                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:galleryDownload", default: "Download")}
+                                            <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

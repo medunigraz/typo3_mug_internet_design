@@ -31,6 +31,13 @@
   .section-name {display:none}
 }
 
+/* ...........................................................................  1024 px */
+@media screen and (max-width: 1024px) {
+.box-balken img {
+  width: 15px;
+  height: 35px;
+}
+}
 
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
@@ -40,5 +47,17 @@
   .col {
     min-width: 100%;
     max-width: 100%;
+  }
+  .box-balken {
+    top: -35px;
+  }
+
+  .box-balken.box-balken-hl {
+    top: -35px;
+  }
+
+  .button {
+    margin: 30px 0 0px 0;
+
   }
 }
