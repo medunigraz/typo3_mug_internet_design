@@ -1,1 +1,6 @@
-vendor/
+/composer.lock
+/node_modules/
+/public/
+/vendor/
+/yarn-error.log
+/yarn.lock
