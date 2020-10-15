@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        mugce_header_simple {
+            iconIdentifier = mugce-icon-header-simple
+            title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_simple.caption
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_simple.description
+            tt_content_defValues {
+                CType = mugce_header_simple
+            }
+        }
+    }
+    show := addToList(mugce_header_simple)
+}

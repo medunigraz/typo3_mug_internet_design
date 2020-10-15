@@ -1,0 +1,37 @@
+/* ....................................................................................... 1240 */
+@media screen and (max-width: 1240px) {
+  .spotnewsbox .header h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .spotnewsbox {
+    margin: 30px 0 30px 0;
+  }
+}
+
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+.spotnewsbox .news-img-wrap {
+  width: 100%;
+}
+  .spotnewsbox .header {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .spotnewsbox .teaser-text {
+    width: 100%;
+    margin: 0 0 0 0%;
+  }
+  .news-overview-list .article-news {
+    width: 100%;
+    margin: 1px 0 50px 0;
+  }
+
+  .frame-type-list  .standard-leadin-newsoverview .row {
+    width: 100%;
+  }
+
+
+
+}

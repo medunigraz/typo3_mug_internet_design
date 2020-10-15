@@ -1,0 +1,63 @@
+.content-block-eventsdetail {
+  .sidebar-default .greenbox .infobox-headline {
+    width: 80%;
+  }
+  .infobox-headline, .quicklinks-headline {
+    padding: 0 0px 0 0;
+  }
+  .Day {
+    font-size: 55px;
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin: 15px 0 0 0;
+  }
+  .Month {
+     float: left;
+    width: 100%;
+    margin: 30px 0 0 0;
+    font-weight: 400;
+    text-align: center;
+    font-size: 30px;
+    border-top: 2px solid $withe;
+    padding: 15px 0 0 0;
+  }
+  .greybox-news {
+    background: #eeeeee;
+    float: left;
+    padding: 20px 0 0 0;
+  }
+  .sidebar-default .news-item-inner {
+    width: 80%;
+  }
+ .eventmeta-row {
+    position: relative;
+    margin: 5px 0 0 0;
+    float: left;
+    width: 100%;
+   font-size: 16px;
+   a:hover {text-decoration: underline;}
+  }
+  .eventmeta-row-trenner {
+    margin: 5px 0 5px 0;
+  }
+  .eventmeta-label {
+    float:left;
+    display: block;
+    color:$green-light;
+    margin: 0 10px 0 0px;
+  }
+  .eventmeta-info {
+    display: block;
+    float: left;
+    margin: 0 0 0 0px;
+  }
+  .sidebar-default .linktoall .morelink {
+    float: left;
+    text-align: left;
+    font-size:16px;
+  }
+  .sidebar-default .linktoall .border-bottom {
+    margin: 10px 0 8px 0;
+  }
+}

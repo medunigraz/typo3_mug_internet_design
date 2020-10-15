@@ -1,5 +1,4 @@
 {namespace ce=MUG\ContentElements\ViewHelpers}
-{namespace n=GeorgRinger\News\ViewHelpers}
 <div id="c{data.uid}" class="row content-block content-header-default">
   <div class="ce-homeslider">
     <div class="ce-header-slider trans">
@@ -10,25 +9,6 @@
             <f:if condition="{image}">
               <f:image image="{image.0}" class="slider-img" width="1720c" height="550c" />
             </f:if>
-            <!--div class="row content-block contenblock-newsteaser contenblock-newsteaser0-blende">
-               <div class="content-part">
-                 <div class="container ">
-                   <div class="col">
-                     <div class="info-box blend  bg-green-dark">
-                       <div class="quicklinks-box ">
-                         <div class="news-box-inner">
-                           <div class="quicklinks-items animateAll">
-                             <div class="news-item entry">
-                               <div class="blend blend-full bg-green-dark"></div>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-               </div-->
           </div>
         </div>
       </div>
@@ -98,10 +78,10 @@
                             <div class="infobox-headline text-bold">
                               {newsItem.title}
 
-                              <n:link newsItem="{newsItem}" title="{newsItem.title}">
+                              <f:link.action pageUid="{newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
                                 <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
 
-                              </n:link>
+                              </f:link.action>
                               <div class="teaser">
                               {newsItem.teaser}
                               </div>
@@ -120,9 +100,9 @@
                             <div class="quicklinks-headline text-bold">{newsItem.title}</div>
                             <div class="teaser">
                               {newsItem.teaser}
-                              <n:link newsItem="{newsItem}" title="{newsItem.title}">
+                              <f:link.action pageUid="{newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
                                <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
-                              </n:link>
+                              </f:link.action>>
                             </div>
                           </div>
                         </div>
@@ -132,14 +112,14 @@
                   <div class="linktoall bg-grey-light">
                     <div class="news-item-inner">
                       <div class="border-bottom"></div>
-                      <a href="#" target="_blank" class="morelink text-bold animateAll">
+                      <f:link.action pageUid="{newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="list" arguments="{news:newsItem.uid}" class="morelink text-bold animateAll">
                         {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
                         <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-                      </a>
-                      <a href="#" target="_blank" class="morelink text-bold animateAll">
+                      </f:link.action>
+                      <f:link.action pageUid="{eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="listEvents" arguments="{news:newsItem.uid}" class="morelink text-bold animateAll">
                         {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
                         <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-                      </a>
+                      </f:link.action>
                     </div>
                   </div>
                 </div>

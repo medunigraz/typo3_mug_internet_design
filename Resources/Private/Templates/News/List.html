@@ -1,0 +1,86 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<f:section name="content">
+    <div class="row content-block standard standard-leadin standard-leadin-newsoverview">
+        <div class="content-part ce-text">
+            <div class="container">
+                <div class="row  ">
+                    <div class="col  col-8  trans">
+                        <div class="row content-block breadcrumbline trans">
+                            <div class="content-part breadcrumbline">
+                                <div class="container">
+                                    <div class="breadcrumbbox">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="headline">
+                            <h1 class="text-bold h1">
+                                Neues und<br>
+                                Aktuelles
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col col-05 "> </div>
+                    <div class="col col-35 sidebar-default sidebar-filterbox trans">
+                        <div class="info-box">
+                            <div class="quicklinks-box">
+                                <div class="news-box-inner">
+                                    <div class="news-item  greybox-news bg-grey-light entry-1">
+                                        <div class="news-item-inner">
+                                            <div class="teaser">
+                                                <div class="filterbox">
+                                                    <div class="filteritem filteritem-active">
+                                                        <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="list" arguments="{news:newsItem.uid}">
+                                                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:showAll", default: "Alle zeigen")}
+                                                        </f:link.action>
+                                                    </div>
+                                                    <div class="filteritem">
+                                                        <a href="#">Universität</a>
+                                                    </div>
+                                                    <div class="filteritem">
+                                                        <a href="#">Studieren</a>
+                                                    </div>
+                                                    <div class="filteritem">
+                                                        <a href="#">Lehren</a>
+                                                    </div>
+                                                    <div class="filteritem">
+                                                        <a href="#">Forschen</a>
+                                                    </div>
+                                                    <div class="filteritem">
+                                                        <a href="#">Mitarbeiten</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spotnewsbox"></div>
+                    <div class="news-overview-list" id="news-container-{contentObjectData.uid}">
+                        <f:if condition="{settings.hidePagination}">
+                            <f:then>
+                                <f:for each="{news}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:then>
+                            <f:else>
+                                <n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
+                                    <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+                                        <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </f:for>
+                                </n:widget.paginate>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+</html>
+

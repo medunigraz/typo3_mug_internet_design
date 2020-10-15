@@ -1,0 +1,29 @@
+/* ....................................................................................... 1024 */
+@media screen and (max-width: 1024px) {
+.content-block-eventsoverview .eventfilterbox {
+  width: 45%;
+  margin: -86px 0 0 0;
+}
+}
+
+
+/* ....................................................................................... 1023 */
+@media screen and (max-width: 1023px) {
+
+.content-block-eventsoverview .article-eventcalendar {
+  width: 80%;
+}
+}
+
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+.content-block-eventsoverview .eventfilterbox {
+  width: 100%;
+  margin: 0px 0 0 0;
+}
+  .content-block-eventsoverview .article-eventcalendar {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}

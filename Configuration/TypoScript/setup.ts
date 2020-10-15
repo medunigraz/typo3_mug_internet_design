@@ -23,6 +23,21 @@ page.10 {
 
         pagets__default = TEXT
         pagets__default.value = EXT:mug_ce/Resources/Private/Layouts/Default.html
+
+        pagets__news_overview = TEXT
+        pagets__news_overview.value = EXT:mug_ce/Resources/Private/Layouts/NewsOverview.html
+
+        pagets__news_detail = TEXT
+        pagets__news_detail.value = EXT:mug_ce/Resources/Private/Layouts/NewsDetail.html
+
+        pagets__events_overview = TEXT
+        pagets__events_overview.value = EXT:mug_ce/Resources/Private/Layouts/EventsOverview.html
+
+        pagets__events_detail = TEXT
+        pagets__events_detail.value = EXT:mug_ce/Resources/Private/Layouts/EventsDetail.html
+
+        pagets__search_results = TEXT
+        pagets__search_results.value = EXT:mug_ce/Resources/Private/Layouts/SearchResults.html
     }
     variables {
         mugce_content < styles.content.get
@@ -79,6 +94,53 @@ plugin.tx_form {
         yamlConfigurations {
             100 = EXT:mug_ce/Configuration/Yaml/CustomFormSetup.yaml
         }
+    }
+}
+
+lib.tx_news.contentElementRendering = RECORDS
+lib.tx_news.contentElementRendering {
+    tables = tt_content
+    source.current = 1
+    dontCheckPid = 1
+}
+
+plugin.tx_news {
+    view {
+        templateRootPaths {
+            100 = EXT:mug_ce/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            100 = EXT:mug_ce/Resources/Private/Partials/News/
+        }
+        layoutRootPaths {
+            100 = EXT:mug_ce/Resources/Private/Layouts/News/
+        }
+    }
+    settings {
+        newsDetailPid = {$const.newsDetailPid}
+        eventsDetailPid = {$const.eventsDetailPid}
+        newsOverviewPid = {$const.newsOverviewPid}
+        eventsOverviewPid = {$const.eventsOverviewPid}
+    }
+}
+
+plugin.tx_indexedsearch {
+    view {
+        templateRootPaths {
+            100 = EXT:mug_ce/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            100 = EXT:mug_ce/Resources/Private/Partials/Search/
+        }
+        layoutRootPaths {
+            100 = EXT:mug_ce/Resources/Private/Layouts/Search/
+        }
+    }
+    settings {
+        newsDetailPid = {$const.newsDetailPid}
+        eventsDetailPid = {$const.eventsDetailPid}
+        newsOverviewPid = {$const.newsOverviewPid}
+        eventsOverviewPid = {$const.eventsOverviewPid}
     }
 }
 

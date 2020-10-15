@@ -1,0 +1,82 @@
+{namespace ce=MUG\ContentElements\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:variable name="news" value="{ce:getTopNews(limit: 2)}" />
+
+<div class="row content-block standard standard-leadin">
+    <div class="content-part ce-text">
+        <div class="container">
+            <div class="row  ">
+                <div class="col  col-8  trans">
+
+
+                    <div class="row content-block breadcrumbline trans">
+                        <div class="content-part breadcrumbline">
+                            <div class="container">
+                                <div class="breadcrumbbox">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headline">
+                        <h1 class="text-bold h1">
+                   Suche
+                        </h1>
+                    </div>
+                    <div class="text text-leadin searchresultlist">
+
+                    </div>
+
+                </div>
+
+                    <div class="col col-05 "> </div>
+                    <div class="col col-35 sidebar-default sidebar-search">
+                        <div class="info-box">
+                            <div class="quicklinks-box">
+                                <div class="news-box-inner">
+                                    <f:for as="newsItem" key="idx" each="{news}">
+                                        <div class="news-item  greybox-news bg-grey-light entry-{idx}">
+                                            <div class="news-item-inner">
+                                                <div class="quicklinks-headline text-bold">{newsItem.title}</div>
+                                                <div class="teaser">
+                                                    {newsItem.teaser}
+                                                    <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
+                                                        <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                                                    </f:link.action>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </f:for>
+                                    <div class="linktoall bg-grey-light">
+                                        <div class="news-item-inner">
+                                            <div class="border-bottom"></div>
+                                            <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="list" class="morelink text-bold animateAll" arguments="{news:newsItem.uid}">
+                                                {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
+                                                <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                                            </f:link.action>
+                                            <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="listEvents" class="morelink text-bold animateAll" arguments="{news:newsItem.uid}">
+                                                {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
+                                                <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                                            </f:link.action>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="greenbox greenbox-news">
+                            <div class="infobox-inner">
+                                <div class="blend blend-full bg-green-dark"></div>
+                                <div class="infobox-headline text-bold">
+                                    <f:render partial="Form" arguments="{_all}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>

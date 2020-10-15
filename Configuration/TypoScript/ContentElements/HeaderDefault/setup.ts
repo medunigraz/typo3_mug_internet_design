@@ -13,5 +13,15 @@ tt_content {
                 as = image
             }
         }
+        variables {
+            newsDetailPid = TEXT
+            newsDetailPid.value = {$const.newsDetailPid}
+            eventsDetailPid = TEXT
+            eventsDetailPid.value = {$const.eventsDetailPid}
+            newsOverviewPid = TEXT
+            newsOverviewPid.value = {$const.newsOverviewPid}
+            eventsOverviewPid = TEXT
+            eventsOverviewPid.value = {$const.eventsOverviewPid}
+        }
     }
 }

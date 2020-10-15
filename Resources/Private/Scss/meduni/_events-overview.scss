@@ -1,0 +1,205 @@
+.content-block-eventsoverview {
+  .h1 {
+    float: left;
+    width: 65%;
+  }
+  .headline {
+    position: relative;
+    z-index: 100;
+    float: left;
+    width: 100%;
+  }
+  .eventfilterbox {
+    width: 30%;
+    float: right;
+    margin: -36px 0 0 0;
+    ::-webkit-input-placeholder {
+      color: #000000;
+      opacity: 1;
+    }
+    :-ms-input-placeholder {
+      color: #000000;
+      opacity: 1;
+    }
+    ::placeholder {
+      color: #000000;
+      opacity: 1;
+
+    }
+    .eventfilterbox-input {
+      width: 100%;
+      border: 0px;
+      border-bottom: 2px solid #000;
+      font-size: 16px;
+      height: 35px;
+      padding: 0 0 5px 0;
+      margin: 0 0 4px 0;
+    }
+    .eventfilterbox-date {
+      background-image: url("img/icon-calendar.svg");
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+    .eventfilterbox-select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("img/icon-arrow-down-green.svg");
+      background-position: right;
+      background-repeat: no-repeat;
+      cursor:pointer;
+    }
+
+    .monthpaging.eventfilterbox-input {
+      height: 40px;
+      margin: 1px 0 0 0;
+    }
+    .monthpagingLink-prev {
+      display: block;
+      float: left;
+      background-image: url("img/icon-arrow-left-green.svg");
+      background-repeat: no-repeat;
+      margin: 5px 0 0 0;
+      padding: 0 0 0 20px;
+      width:50%;
+    }
+    .monthpagingLink-next {
+      width:50%;
+      display: block;
+      float: right;
+      margin: 5px 0 0 0;
+      background-image: url("img/icon-arrow-right-green.svg");
+      background-position: right;
+      background-repeat: no-repeat;
+      padding: 0 20px 0 0px;
+
+      text-align: right;
+    }
+
+  }
+
+  .monthpaging-bottom  {
+width:100%;
+    float:left;
+    .monthpagingLink-prev {
+      display: block;
+      float: left;
+      background-image: url("img/icon-arrow-left-green.svg");
+      background-repeat: no-repeat;
+      margin: 5px 0 0 0;
+      padding: 0 0 0 20px;
+      width:50%;
+    }
+    .monthpagingLink-next {
+      width:50%;
+      display: block;
+      float: right;
+      margin: 5px 0 0 0;
+      background-image: url("img/icon-arrow-right-green.svg");
+      background-position: right;
+      background-repeat: no-repeat;
+      padding: 0 20px 0 0px;
+
+      text-align: right;
+    }
+  }
+
+  .neventlist-overview {
+    margin: 37px 0 50px 0;
+    width: 100%;
+    float: left;
+  }
+.h1subline {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: none;
+}
+.dayrow {
+  position:relative;
+  float:left;
+  border-bottom:1px solid #707070;
+  margin:0 0 40px 0;
+  padding: 0 0 40px 0;
+
+  .eventdatebox {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 80px;
+    text-align: center;
+
+    .daybox {
+      width:100%;
+      float:left;
+      background:$green-dark;
+      color:#ffffff;
+      font-weight:600;
+      font-size:25px;
+      padding: 25px 0 25px 0;
+    }
+    .monthbox {
+      float:left;
+      width:100%;
+      background:$grey-light;
+      color:#000000;
+      font-size:14px;
+      padding: 5px 0 5px 0;
+    }
+
+  }
+
+}
+
+
+
+  .article-eventcalendar {
+    width: 35%;
+    float: left;
+    min-height: 100px;
+    margin: 0 0 45px 20%;
+
+    .header {
+      width: 100%;
+      float: left;
+      margin: 16px 0 0 0;
+      a {
+        text-decoration: none;
+        color: #000000;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      width: 100%;
+      padding: 0 40px 0 0;
+      line-height: 22px;
+      position: relative;
+      margin: 0px;
+
+    }
+    .teaser-text {
+      font-size: 16px;
+      line-height: 20px;
+      float: left;
+      width: 100%;
+      margin: 5px 0 0 0;
+      p {
+        margin:0px
+      }
+    }
+    .morelink {
+      font-weight: 800;
+      text-decoration: underline;
+      font-size: 16px;
+      color: #000000;
+    }
+  }
+  .article-eventcalendar:nth-child(even) {
+    float:right;
+    margin-right:0px;
+    margin-left:0px;
+
+  }
+
+
+}

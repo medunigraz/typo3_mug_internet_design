@@ -18,7 +18,7 @@ class RecordListQueryHook
 
   public function modifyQuery(array &$parameters, string $table, int $pageId, array $additionalConstraints, array $fieldList, QueryBuilder $queryBuilder) {
     if ($table === 'tt_content' && $pageId > 0) {
-      $queryBuilder->where(...['colPos NOT IN (100, 101, 102, 103, 104)']);
+      $queryBuilder->andWhere(...['colPos NOT IN (100, 101, 102, 103, 104)']);
     }
   }
 

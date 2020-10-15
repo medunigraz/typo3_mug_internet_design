@@ -1,0 +1,128 @@
+/* ....................................................................................... 1720 */
+@media screen and (max-width: 1720px) {
+
+  .frame-type-list header {
+    width: 98%;
+  }
+
+
+
+  .frame-type-list .content-part {
+    position: relative;
+    float: none;
+    width: 100%;
+  }
+  .content-part-newsevents {
+    margin: 50px auto;
+  }
+}
+
+/* ....................................................................................... 1295 */
+@media screen and (max-width: 1295px) {
+  .spotlightslider .spotlightsliderbox {
+    width: 92%;
+  }
+}
+
+/* ....................................................................................... 1023 */
+@media screen and (max-width: 1023px) {
+  .spotlightslider {
+    height: 450px;
+  }
+  .spotlightslider .spolightItem-inner {
+    height: 340px;
+  }
+  .content-part-newsevents .article-event .teaser-text {
+display:none;
+  }
+}
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+
+.frame-type-list header h2 {
+  font-size: 22px;
+  line-height: 32px;
+  width: 100%;
+}
+  .frame-type-list .alllinksbox {
+    position: relative;
+    right: inherit;
+    top: -10px;
+  }
+  .frame-type-list .alllinksbox a {
+    text-align: left;
+    width: auto;
+    float: left;
+    clear: none;
+    margin: 0 30px 0px 0;
+  }
+
+
+  .frame-type-list .row {
+    display:block;
+    width:95%;
+  }
+
+  .frame-type-list .content-part-newsevents .row {
+
+    width:100%;
+  }
+
+  .content-part-newsevents .news-list-view .article-news {
+    width: 100%;
+    margin: 0 0 45px 0;
+  }
+  .content-part-newsevents .news-list-view {
+    float: left;
+    width: 100%;
+  }
+  .content-part-newsevents .events-list-view {
+    float: left;
+    width: 100%;
+  }
+
+  .socialsidebar {
+    display:none;
+  }
+
+  .spotlightslider {
+    width: 100%;
+    float: left;
+    position: relative;
+    height: auto;
+    margin: 0 0 20px 0;
+  }
+  .spotlightslider .spotlightsliderInner {
+    width: 100%;
+    float: left;
+    position: relative;
+    height: auto;
+    padding: 0 0 20px 0;
+  }
+  .spotlightslider .spolightItem-inner {
+    height: auto;
+    min-width: 290px;
+  }
+  .spotlightslider .spotlightsliderbox {
+    width: 100%;
+  }
+  .spotlightslider .spotslider-pager {
+    position: relative;
+    width: 100%;
+    left: inherit;
+    bottom: inherit;
+    margin: 9px 0 0 0px;
+    float: left;
+  }
+  .spotlightslider .spolightItem-desc {
+
+    position: relative;
+  }
+  .frame-type-list header::after,
+  .spotlightslider .spotlightsliderInner::after,
+  .spotlightsliderInner-after
+  {
+    display:none;
+  }
+}

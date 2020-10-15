@@ -27,6 +27,9 @@
       <trans-unit id="allNews" xml:space="preserve">
         <source>Alle News</source>
       </trans-unit>
+      <trans-unit id="showAll" xml:space="preserve">
+        <source>Alle zeigen</source>
+      </trans-unit>
       <trans-unit id="allEvents" xml:space="preserve">
         <source>Alle Events</source>
       </trans-unit>

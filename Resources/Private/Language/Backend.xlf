@@ -141,6 +141,15 @@
       <trans-unit id="CType.mugce_header_default.input.mugce_news_entries" xml:space="preserve">
         <source>Teaser: News Entries (overrides categories)</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_header_simple.caption" xml:space="preserve">
+        <source>Simple Header</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_simple.description" xml:space="preserve">
+        <source>Simple header element user for news, events and search</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_simple.input.image" xml:space="preserve">
+        <source>Image</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_link.caption" xml:space="preserve">
         <source>Link</source>
       </trans-unit>

@@ -1,0 +1,154 @@
+.news-img-wrap img {width:100%; display:block;}
+
+.sidebar-filterbox {
+  margin: -109px 0 0 0;
+}
+.filteritem {
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+  padding: 0px 0 15px 0;
+  margin: 15px 0 8px 0;
+}
+.filteritem:last-child {
+
+  border-bottom: 0px solid #000;
+  margin: 15px 0 0px 0;
+  padding: 0 0 7px 0;
+}
+.filteritem a:hover, .filteritem-active a {
+  color:$green-dark;
+
+}
+.spotnewsbox {
+
+    float: left;
+    width: 100%;
+    margin: 70px 0 30px 0;
+
+    .news-img-wrap {
+      width: 64%;
+      float: left;
+  }
+
+  .header {
+    width: 25%;
+    float: left;
+    margin: 100px 0 0 7%;
+
+    h3 {
+      font-size: 26px;
+      line-height: 35px;
+      text-transform: uppercase;
+    }
+  }
+
+  .teaser-text {
+    width: 25%;
+    float: left;
+    margin: 0 0 0 7%;
+  }
+  .morelink {
+    position:relative;
+    border-top: 2px solid #000;
+    width: 100%;
+    text-align: right;
+    display: block;
+    padding: 10px 24px 0 0;
+    font-weight: 600;
+    background-image: url("img/icon-arrow-black-right.svg");
+    background-repeat: no-repeat;
+    background-position: 99% 11px;
+    height: 47px;
+    -webkit-transition: all 350ms;
+    -moz-transition:all 350ms;
+    -o-transition:all 350ms;
+    transition: all 350ms;
+  }
+
+  .morelink:hover {
+    background-position: 100% 11px;
+  }
+}
+
+.news-overview-list{
+ margin: 50px 0 0 0;
+
+  .article-news {
+    float: left;
+    width: 29%;
+    margin: 1px 6.5% 50px 0;
+  }
+
+  .article-news:nth-child(3n) {
+  margin-right:0px;
+    clear: right;
+  }
+  .article-news:nth-child(4n) {
+    clear: left;
+  }
+
+  .header {
+    width: 100%;
+    float: left;
+    margin: 16px 0 0 0;
+  }
+  h3{
+    font-size: 18px;
+    width: 100%;
+    padding: 0 40px 0 0;
+    line-height: 22px;
+    position: relative;
+    margin:0px;
+  }
+  .teaser-text {
+    font-size: 16px;
+    line-height: 20px;
+    float: left;
+    width: 100%;
+    margin: 5px 0 0 0;
+  }
+  .news-list-date {
+    color: $green-dark;
+    display: block;
+    width: 100%;
+    float: left;
+    margin: 0 0 0px 0;
+  }
+  .teaser-text p{
+    display:inline;
+  }
+  .morelink {
+    font-weight: 800;
+    text-decoration: underline;
+    font-size: 16px;
+  }
+
+  .news-overview-list {
+    float: left;
+    width: 70%;
+
+
+    .article-news {
+      width: 42%;
+      float: left;
+      min-height: 100px;
+      margin: 0 8% 45px 0;
+    }
+    .header {
+      width: 100%;
+      float: left;
+      margin: 16px 0 0 0;
+    }
+
+    .article-news:nth-child(3) {
+
+      clear:both;
+    }
+  }
+
+
+}
+
+
+
+

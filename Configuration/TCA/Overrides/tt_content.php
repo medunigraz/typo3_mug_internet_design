@@ -398,6 +398,46 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
     ]
 ];
 
+$ceName = 'mugce_header_simple';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_simple.caption',
+        $ceName,
+        'mugce-icon-header-simple',
+    ],
+    'mugce_header_default',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    mugce_display_type,
+                    image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_simple.input.image,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'image' => [
+            'config' => [
+                'maxitems' => 1,
+                'minitems' => 1,
+            ],
+        ],
+    ]
+];
+
 $ceName = 'mugce_link';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
@@ -407,7 +447,7 @@ $ceName = 'mugce_link';
         $ceName,
         'mugce-icon-link',
     ],
-    'mugce_header_default',
+    'mugce_header_simple',
     'after'
 );
 

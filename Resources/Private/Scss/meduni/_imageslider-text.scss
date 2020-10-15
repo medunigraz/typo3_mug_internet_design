@@ -120,8 +120,11 @@
 .infobox-headline  {  margin: 20px auto 20px auto;}
 .quicklinks-headline {
   margin: 15px auto;
-  cursor:pointer;
+
 }
+
+.ce-header-slider-element .quicklinks-headline {  cursor:pointer; }
+
 .infobox-text {
   width: 85%;
   margin: 0px auto 20px auto;

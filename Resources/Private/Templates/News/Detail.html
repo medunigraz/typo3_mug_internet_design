@@ -1,0 +1,108 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Detail" />
+<f:section name="content">
+  <f:if condition="{newsItem}">
+    <f:then>
+      <div class="row content-block standard standard-leadin">
+        <div class="content-part ce-text">
+          <div class="container">
+            <div class="row  ">
+              <div class="col  col-8  trans">
+                <div class="row content-block breadcrumbline trans">
+                  <div class="content-part breadcrumbline">
+                    <div class="container">
+                      <div class="breadcrumbbox">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="headline">
+                  <h1 class="text-bold h1">
+                    <f:if condition="{newsItem.alternativeTitle}">
+                      <f:then>
+                        <f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+                      </f:then>
+                      <f:else>
+                        <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+                      </f:else>
+                    </f:if>
+                  </h1>
+                  <span class="news-list-date text-bold">
+                                 <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+                                    <f:format.date format="d.m.Y">{newsItem.datetime}</f:format.date>
+                                 </time>
+                              </span>
+                </div>
+                <div class="text text-leadin">
+                  <f:format.html>{newsItem.bodytext}</f:format.html>
+                </div>
+              </div>
+              <div class="col col-05 "> </div>
+              <div class="col col-35 sidebar-default">
+                <div class="info-box">
+                  <div class="quicklinks-box">
+                    <div class="news-box-inner">
+                      <f:for as="newsItem" key="idx" each="{news}">
+                        <f:if condition="{idx} != 0">
+                          <div class="news-item  greybox-news bg-grey-light entry-{idx}">
+                            <div class="news-item-inner">
+                              <div class="quicklinks-headline text-bold">{newsItem.title}</div>
+                              <div class="teaser">
+                                {newsItem.teaser}
+                                <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
+                                  <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                                </f:link.action>
+                              </div>
+                            </div>
+                          </div>
+                        </f:if>
+                      </f:for>
+                      <div class="linktoall bg-grey-light">
+                        <div class="news-item-inner">
+                          <div class="border-bottom"></div>
+                          <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="list" arguments="{news:newsItem.uid}" class="morelink text-bold animateAll">
+                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
+                            <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                          </f:link.action>
+                          <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="listEvents" arguments="{news:newsItem.uid}" class="morelink text-bold animateAll">
+                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
+                            <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                          </f:link.action>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <f:if condition="{news}">
+                  <div class="greenbox greenbox-news">
+                    <div class="infobox-inner">
+                      <div class="blend blend-full bg-green-dark"></div>
+                      <div class="infobox-headline text-bold">
+                        {news.0.title}
+                        <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:news.0.uid}">
+                          <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
+                        </f:link.action>
+                        <div class="teaser">
+                          {news.0.teaser}
+                        </div>
+                      </div>
+                    </div>
+                </f:if>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <f:if condition="{newsItem.contentElements}">
+        <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+      </f:if>
+    </f:then>
+    <f:else>
+    </f:else>
+  </f:if>
+</f:section>
+</html>
+

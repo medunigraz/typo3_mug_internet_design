@@ -168,8 +168,11 @@
     line-height: 31px;
   }
   .slider-pager {
-    margin: 0 0 0 -115px;
-    bottom: 100px;
+    margin: 0 auto;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0px;
   }
   .slider-pager span {
     width: 15px;

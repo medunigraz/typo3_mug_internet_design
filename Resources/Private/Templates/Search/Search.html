@@ -1,0 +1,131 @@
+{namespace ce=MUG\ContentElements\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:is="http://typo3.org/ns/TYPO3/CMS/IndexedSearch/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:alias map="{sword: searchParams.sword}">
+</f:alias>
+
+<f:variable name="news" value="{ce:getTopNews(limit: 2)}" />
+
+<div class="row content-block standard standard-leadin">
+  <div class="content-part ce-text">
+    <div class="container">
+      <div class="row  ">
+        <div class="col  col-8  trans">
+          <div class="row content-block breadcrumbline trans">
+            <div class="content-part breadcrumbline">
+              <div class="container">
+                <div class="breadcrumbbox">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="headline">
+            <h1 class="text-bold h1">
+              <f:for each="{resultsets}" as="result">
+                <f:if condition="{result.categoryTitle}">
+                 {result.categoryTitle}
+                </f:if>
+                <f:if condition="{result.count} > 0">
+                  <div class="tx-indexedsearch-info-sword">
+                    <f:for each="{searchWords}" as="searchWord" key="key">
+                      <f:if condition="{key} > 0">
+                        <f:then>
+                          <f:translate key="searchFor.{searchWord.oper}" />&nbsp;{searchWord.sword}
+                        </f:then>
+                        <f:else>
+                          <f:translate key="searchFor" />&nbsp;{searchWord.sword}
+                        </f:else>
+                      </f:if>
+                    </f:for>
+                  </div>
+                </f:if>
+              </f:for>
+            </h1>
+          </div>
+          <div class="text text-leadin searchresultlist">
+            <f:for each="{resultsets}" as="result">
+               {result.searchedInSectionInfo}
+              <f:if condition="{result.count} > 0">
+                <f:then>
+                  <div class="tx-indexedsearch-browsebox">
+                    <div class="h1subline">
+                      <is:pageBrowsingResults numberOfResults="{result.count}" currentPage="{searchParams.pointer}" resultsPerPage="{searchParams.numberOfResults}" />
+                      {result.sectionText}
+                    </div>
+                    <!-- render the anchor-links to the sections inside the displayed result rows -->
+                    </div>
+                  <f:for each="{result.rows}" as="row">
+                    <f:if condition="{row.isSectionHeader}">
+                      <f:then>
+                        <div id="anchor_{row.sectionId}" class="tx-indexedsearch-sectionhead">
+                          <h2 class="tx-indexedsearch-title"><f:format.html>{row.sectionTitle}</f:format.html> <span class="tx-indexedsearch-result-count">{row.numResultRows} <f:translate key="{f:if(condition: '{row.numResultRows} > 1', then: 'result.pages', else: 'result.page')}" /></span></h2>
+                        </div>
+                      </f:then>
+                      <f:else>
+                        <f:render partial="Searchresult" arguments="{row: row}" />
+                      </f:else>
+                    </f:if>
+                  </f:for>
+                  <div class="tx-indexedsearch-browsebox">
+                    <is:pageBrowsing numberOfResults="{result.count}" maximumNumberOfResultPages="{settings.page_links}" currentPage="{searchParams.pointer}" resultsPerPage="{searchParams.numberOfResults}" />
+                  </div>
+                </f:then>
+                <f:else>
+                  <div class="tx-indexedsearch-info-noresult">
+                    <f:translate key="result.noResult" />
+                  </div>
+                </f:else>
+              </f:if>
+            </f:for>
+          </div>
+        </div>
+        <div class="col col-05 "> </div>
+        <div class="col col-35 sidebar-default sidebar-search">
+          <div class="info-box">
+            <div class="quicklinks-box">
+              <div class="news-box-inner">
+                <f:for as="newsItem" key="idx" each="{news}">
+                  <div class="news-item  greybox-news bg-grey-light entry-{idx}">
+                    <div class="news-item-inner">
+                      <div class="quicklinks-headline text-bold">{newsItem.title}</div>
+                      <div class="teaser">
+                        {newsItem.teaser}
+                        <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
+                          <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                        </f:link.action>
+                      </div>
+                    </div>
+                  </div>
+                </f:for>
+                <div class="linktoall bg-grey-light">
+                  <div class="news-item-inner">
+                    <div class="border-bottom"></div>
+                    <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="list" class="morelink text-bold animateAll" arguments="{news:newsItem.uid}">
+                      {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
+                      <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                    </f:link.action>
+                    <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="listEvents" class="morelink text-bold animateAll" arguments="{news:newsItem.uid}">
+                      {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
+                      <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                    </f:link.action>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="greenbox greenbox-news">
+            <div class="infobox-inner">
+              <div class="blend blend-full bg-green-dark"></div>
+              <div class="infobox-headline text-bold">
+                <f:render partial="Form" arguments="{_all}" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>

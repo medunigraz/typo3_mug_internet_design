@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="article article-event trans articletype-{eventItem.type}{f:if(condition: eventItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <n:excludeDisplayedNews newsItem="{eventItem}"/>
+    <!-- header -->
+    <div class="header">
+        <h3 class="text-bold">
+            <f:link.action pageUid="{settings.eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:eventItem.uid}">
+                <span itemprop="headline">{eventItem.title}</span>
+            </f:link.action>
+        </h3>
+        <span class="news-list-date text-bold">
+            <time itemprop="datePublished" datetime="{f:format.date(date:eventItem.datetime, format:'Y-m-d')}">
+               <f:format.date format="d.m.Y">{eventItem.datetime}</f:format.date>
+            </time>
+        </span>
+    </div>
+
+    <div class="teaser-text">
+        <n:removeMediaTags>
+            <f:if condition="{eventItem.teaser}">
+                <f:then>
+                    <div itemprop="description">{eventItem.teaser -> f:format.crop(maxCharacters: 70, respectWordBoundaries:'1') -> f:format.html()}
+                        <f:link.action pageUid="{settings.eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:eventItem.uid}">
+                            <span class="morelink">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                        </f:link.action>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div itemprop="description">{eventItem.bodytext -> f:format.crop(maxCharacters: 70, respectWordBoundaries:'1') -> f:format.html()}
+                        <f:link.action pageUid="{settings.eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:eventItem.uid}">
+                            <span class="morelink">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                        </f:link.action>
+                    </div>
+                </f:else>
+            </f:if>
+        </n:removeMediaTags>
+    </div>
+</div>
+</html>

@@ -1,5 +1,4 @@
 .breadcrumbline {
-  width: 100%;
     position: relative;
     z-index: 99;
 
@@ -15,10 +14,10 @@
       margin: 0 10px 0 0;
       color:$grey-darker;
     }
-    a:hover .breatitem-name {
+    a:hover .breaditem-name {
       text-decoration:underline;
     }
-    a .breatitem-name {
+    a .breaditem-name {
       white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -26,7 +25,7 @@
       display: inline-block;
       float: left;
     }
-    a:last-child .breatitem-name {
+    a:last-child .breaditem-name {
 
       overflow: visible;
       text-overflow: inherit;
@@ -39,4 +38,15 @@
     a:last-child:after {content:"  "; display:none;}
   }
 
+}
+
+
+.breadcrumb-detailsite{
+.breadcrumbline .breadcrumbbox {
+  width: 66%;
+  position: absolute;
+  margin: 0px 0 0px 0%;
+  font-size: 13px;
+  top: 15px;
+}
 }

@@ -1,0 +1,37 @@
+mod.web_layout.BackendLayouts {
+    search_results {
+        title = Search Results
+        config{
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Header
+                                colPos = 1
+                                allowed {
+                                    CType = mugce_header_simple
+                                }
+                                maxitems = 1
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Main
+                                colPos = 0
+                                allowed {
+                                    CType = list
+                                    list_type = indexedsearch_pi2
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

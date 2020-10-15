@@ -6,6 +6,7 @@ defined('TYPO3_MODE') or die();
       'mugce-icon-homeslider' => 'mugce-icon-homeslider.svg',
       'mugce-icon-homesliderelement' => 'mugce-icon-homesliderelement.svg',
       'mugce-icon-header-default' => 'mugce-icon-header-default.svg',
+      'mugce-icon-header-simple' => 'mugce-icon-header-simple.svg',
       'mugce-icon-header-organisation' => 'mugce-icon-header-organisation.svg',
       'mugce-icon-link' => 'mugce-icon-link.svg',
       'mugce-icon-text' => 'mugce-icon-text.svg',
@@ -45,6 +46,21 @@ defined('TYPO3_MODE') or die();
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/Default.tsconfig">'
   );
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/NewsOverview.tsconfig">'
+  );
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/NewsDetail.tsconfig">'
+  );
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/EventsOverview.tsconfig">'
+  );
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/EventsDetail.tsconfig">'
+  );
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/SearchResults.tsconfig">'
+  );
 
   // Hide content elements in list module & filter in administration module
   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Recordlist\RecordList\DatabaseRecordList::class]['modifyQuery'][]
@@ -55,6 +71,10 @@ defined('TYPO3_MODE') or die();
 
   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['mug_ce'] =
       \MUG\ContentElements\Hooks\Backend\ContentPreviewRenderer::class;
+
+  $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][GeorgRinger\News\Controller\NewsController::class] = [
+      'className' => MUG\ContentElements\Xclass\NewsController::class
+  ];
 
   // Add rootline field
   $rootlinefields = &$GLOBALS["TYPO3_CONF_VARS"]["FE"]["addRootLineFields"];
@@ -88,6 +108,15 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/HeaderDefault/setup.ts">'
+  );
+
+  // Content Element: Header Simple
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/HeaderSimple.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/HeaderSimple/setup.ts">'
   );
 
   // Content Element: Link
@@ -242,5 +271,9 @@ defined('TYPO3_MODE') or die();
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Default/setup.ts">'
   );
+
+  $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newItems']['News->listEvents'] = 'List view events';
+  $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newItems']['News->detailEvents'] = 'Detail view events';
+  $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newItems']['News->listNewsEvents'] = 'List view news and events';
 
 })($_EXTKEY);

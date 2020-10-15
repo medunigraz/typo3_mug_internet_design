@@ -1,0 +1,125 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Detail" />
+
+<f:section name="content">
+  <f:if condition="{eventItem}">
+    <f:then>
+      <div class="row content-block content-block-eventsdetail standard standard-leadin">
+        <div class="content-part ce-text">
+          <div class="container">
+            <div class="row  ">
+              <div class="col  col-8  trans">
+                <div class="row content-block breadcrumbline">
+                  <div class="content-part breadcrumbline">
+                    <div class="container">
+                      <div class="breadcrumbbox">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="headline">
+                  <h1 class="text-bold h1">
+                    <f:if condition="{eventItem.alternativeTitle}">
+                      <f:then>
+                        <f:format.htmlentitiesDecode>{eventItem.alternativeTitle}</f:format.htmlentitiesDecode>
+                      </f:then>
+                      <f:else>
+                        <f:format.htmlentitiesDecode>{eventItem.title}</f:format.htmlentitiesDecode>
+                      </f:else>
+                    </f:if>
+                  </h1>
+                </div>
+                <div class="text text-leadin">
+                  <f:format.html>{eventItem.bodytext}</f:format.html>
+                </div>
+              </div>
+              <div class="col col-05 "> </div>
+              <div class="col col-35 sidebar-default">
+                <div class="info-box">
+                  <div class="quicklinks-box">
+                    <div class="news-box-inner">
+                      <div class="news-item  greybox-news bg-grey-light entry-1">
+                        <div class="news-item-inner text-bold">
+
+                          <div class="eventmeta-row">
+                            <span class="eventmeta-label">Ort:</span><span class="eventmeta-info">MED CAMPUS Graz</span>
+                          </div>
+                          <div class="eventmeta-row">
+                            <span class="eventmeta-label">Beginn:</span><span class="eventmeta-info">17:30</span>
+                          </div>
+                          <div class="eventmeta-row">
+                            <span class="eventmeta-label">Ende:</span><span class="eventmeta-info">20:00</span>
+                          </div>
+                          <div class="eventmeta-row eventmeta-row-trenner"></div>
+                          <div class="eventmeta-row">
+                            <span class="eventmeta-label">Kostenpflichtig:</span><span class="eventmeta-info">Nein</span>
+                          </div>
+                          <div class="eventmeta-row eventmeta-row-trenner"></div>
+                          <div class="eventmeta-row">
+                            <span class="eventmeta-label">Veranstalter:</span><span class="eventmeta-info">ÖH Med Graz </span>
+                          </div>
+                          <div class="eventmeta-row">
+                            <span class="eventmeta-label">TeilnehmerInnenzahl:</span><span class="eventmeta-info">50</span>
+                          </div>
+                          <div class="eventmeta-row eventmeta-row-trenner"></div>
+                          <div class="eventmeta-row">
+                            <span class="eventmeta-label">Kontaktperson:</span><span class="eventmeta-info">Max Mustermann<br>+433161234321<br><a href="mailto:m.mustermann@meduni-graz.at">m.mustermann@meduni-graz.at</a></span>
+                          </div>
+                          <div class="eventmeta-row eventmeta-row-trenner"></div>
+                          <div class="eventmeta-row">
+                            <span class="eventmeta-label">Website:</span><span class="eventmeta-info"><a href="https://www.oehmedgraz.at" target="_blank">www.oehmedgraz.at</a></span>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+
+                      <div class="linktoall bg-grey-light">
+                        <div class="news-item-inner">
+                          <div class="border-bottom"></div>
+                          <a href="#" target="_blank" class="morelink text-bold animateAll">
+                            DOWNLOAD PROGRAMM
+                            <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="greenbox greenbox-news">
+                  <div class="infobox-inner">
+                    <div class="blend blend-full bg-green-dark"></div>
+                    <div class="infobox-headline text-bold">
+                      <div class="Day">
+                      <time itemprop="datePublished" datetime="{f:format.date(date:eventItem.datetime, format:'Y-m-d')}">
+                        <f:format.date format="d">{eventItem.datetime}</f:format.date>
+                      </time>
+                      </div>
+                      <div class="Month">
+                        <time itemprop="datePublished" datetime="{f:format.date(date:eventItem.datetime, format:'Y-m-d')}">
+                          <f:format.date format="M">{eventItem.datetime}</f:format.date>
+                        </time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <f:if condition="{eventItem.contentElements}">
+        <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{eventItem.contentElementIdList}</f:cObject>
+      </f:if>
+    </f:then>
+    <f:else>
+
+    </f:else>
+  </f:if>
+</f:section>
+</html>
