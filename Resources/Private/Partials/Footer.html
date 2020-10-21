@@ -9,14 +9,14 @@
                     {v:content.render(contentUids:{0: footerContentIdDe, 1: footerContentIdEn}) -> f:format.raw()}
                     <div class="orientationbox">
                         <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-googlemarker.svg')}" alt="" class="googlemarker">
-                        <v:menu pageUid="{footerOrientationNavId}" useShortcutUid="true" useShortcutTarget="true">
+                        <v:menu pageUid="{footerOrientationNavId}">
                             <f:render partial="FooterOrientationNav" arguments="{menu: menu, currentPid: data.uid, cssClass: 'column'}"/>
                         </v:menu>
                     </div>
                 </address>
             </div>
             <div class="bottom-metaline">
-                <v:menu pageUid="{footerNavId}" useShortcutUid="true" useShortcutTarget="true" includeSpacers="true">
+                <v:menu pageUid="{footerNavId}" includeSpacers="true">
                     <f:render partial="FooterNav" arguments="{menu: menu, currentPid: data.uid, cssClass: 'column'}"/>
                 </v:menu>
             </div>

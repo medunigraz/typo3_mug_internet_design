@@ -30,7 +30,7 @@
     }
 
     .nav-item-level-0 {
-      margin: 0px 35px 0 142.5px
+      margin: 0px 35px 0 153.5px;
     }
     .nav-item-level-0:after {
       content: "";
@@ -201,6 +201,7 @@
   text-align: right;
     position:relative;
     z-index: 99999;
+    cursor:default;
   }
   .menu-link-level1:hover, .nav-item-level-1.nav-item-ON .menu-link-level1 {
     color:$withe;

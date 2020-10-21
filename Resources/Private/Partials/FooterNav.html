@@ -4,16 +4,32 @@
       <f:if condition="{item.doktype}!=199">
         <f:then>
           <li class="">
-            <f:link.typolink parameter="{item.link}" class="footer-menu-link">
-              <f:if condition="{item.media} > 0">
-                <v:page.resources.fal table="pages" field="media" uid="{item.uid}" as="images" slide="-1" >
-                  <f:for each="{images}" as="image">
-                    <f:image src="{image.url}" alt="{image.alternative} {image.name}" title="{image.title}" />
-                  </f:for>
-                </v:page.resources.fal>
-              </f:if>
-              {item.linktext}
-            </f:link.typolink>
+            <f:if condition="{item.doktype} == 4 && {item.shortcut_mode} == 0">
+              <f:then>
+                <f:link.page pageUid="{item.shortcut}" class="footer-orientation-menu-link">
+                  <f:if condition="{item.media} > 0">
+                    <v:page.resources.fal table="pages" field="media" uid="{item.uid}" as="images" slide="-1" >
+                      <f:for each="{images}" as="image">
+                        <f:image src="{image.url}" alt="{image.alternative} {image.name}" title="{image.title}" />
+                      </f:for>
+                    </v:page.resources.fal>
+                  </f:if>
+                  {item.linktext}
+                </f:link.page>
+              </f:then>
+              <f:else>
+                <f:link.typolink parameter="{item.link}" class="footer-orientation-menu-link">
+                  <f:if condition="{item.media} > 0">
+                    <v:page.resources.fal table="pages" field="media" uid="{item.uid}" as="images" slide="-1" >
+                      <f:for each="{images}" as="image">
+                        <f:image src="{image.url}" alt="{image.alternative} {image.name}" title="{image.title}" />
+                      </f:for>
+                    </v:page.resources.fal>
+                  </f:if>
+                  {item.linktext}
+                </f:link.typolink>
+              </f:else>
+            </f:if>
           </li>
         </f:then>
         <f:else>

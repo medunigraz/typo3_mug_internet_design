@@ -1,13 +1,23 @@
-<v:menu pageUid="{uid}" as="menu" useShortcutUid="true">
+<v:menu pageUid="{uid}" as="menu">
   <li class="quicklinks">
     <ul class="quicklinks-wrap"><span class="btn-toggle btn-toggle-quicklink"></span>
       <span class="quicklinksHL">Quicklinks</span>
       <f:for each="{menu}" as="item" iteration="iterator">
         <f:if condition="{item.doktype}!=42">
           <li class="nav-item nav-item-quicklink animateAll {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
-            <f:link.typolink parameter="{item.link}" class="menu-link menu-link-quick animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
-              {item.linktext}
-            </f:link.typolink>
+            <f:if condition="{item.doktype} == 4 && {item.shortcut_mode} == 0">
+              <f:then>
+                <f:link.page pageUid="{item.shortcut}" class="menu-link menu-link-quick animateAll {f:if(condition:'{item.shortcut} == {currentPid}',then:'active')}">
+                  {item.linktext}
+                </f:link.page>
+              </f:then>
+              <f:else>
+                <f:link.typolink parameter="{item.link}" class="menu-link menu-link-quick animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
+                  {item.linktext}
+                </f:link.typolink>
+              </f:else>
+            </f:if>
+
           </li>
         </f:if>
       </f:for>

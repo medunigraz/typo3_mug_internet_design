@@ -7,11 +7,11 @@
     <div class="content-part content-part-newsevents">
       <div class="container">
 <div class="alllinksbox">
-        <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="list" arguments="{news:newsItem.uid}">
+        <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list">
           {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
             <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
         </f:link.action>
-        <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="listEvents" arguments="{news:newsItem.uid}">
+        <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents">
           {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
             <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
         </f:link.action>
@@ -21,7 +21,7 @@
             <f:for each="{news}" as="newsItem" iteration="iterator">
               <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
             </f:for>
-            <f:render partial="List/SpotlightSlider"/>
+            <f:render partial="List/SpotlightSlider" arguments="{_all}"/>
           </div>
           <div class="events-list-view" id="news-container-{contentObjectData.uid}">
             <f:for each="{events}" as="eventItem" iteration="iterator">

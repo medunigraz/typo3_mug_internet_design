@@ -10,11 +10,9 @@
       <h2 class="text-bold uppercase">{data.header -> f:format.nl2br()}</h2>
     </div>
 
-    <div class="text">{data.bodytext -> f:format.html()}</div>
+    <div class="text text-box">{data.bodytext -> f:format.html()}</div>
       <f:if condition="{data.header_link}">
-        <div class="col">
-
-
+        <div class="morelink-line">
             <div class="col text-right mt-auto">
           <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
             {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}

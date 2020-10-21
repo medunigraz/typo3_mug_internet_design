@@ -4,37 +4,36 @@
             <h3 class="text-bold">Spotlights</h3>
             <div class="cycle-slideshow cycle-slideshow-spolights"
                  data-cycle-fx="fade"
-                 data-cycle-timeout="6000"
+                 data-cycle-timeout="0"
                  data-cycle-slides="> div.spolightItem"
                  data-cycle-pager=".spotslider-pager"
                  data-cycle-swipe="true"
                  data-cycle-auto-height="container"
                  data-cycle-swipe-fx="scrollHorz"
             >
-                <div class="spolightItem">
-                    <div class="spolightItem-inner">
-                        <img src="/fileadmin/_processed_/e/e/csm_meduni-graz-hoersaal_a2f4f0ae61.jpg" alt="" class="spolightItem-img">
-                        <div class="spolightItem-desc">#ERASMUSDAYS: Diversity in White Coats</div>
+
+                <f:for each="{social}" as="item" >
+                    <div class="spolightItem">
+                        <div class="spolightItem-inner">
+                            <f:if condition="{item.type} == 4">
+                                <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/play-btn.svg')}" alt="" class="videoplayBtn">
+                            </f:if>
+
+
+                            <f:media file="{item}" />
+                            <div class="spolightItem-desc">
+                                <f:if condition="{item.title}">
+                                    <f:then>
+                                        {item.title}
+                                    </f:then>
+                                    <f:else>
+                                        {item.name}
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="spolightItem">
-                    <div class="spolightItem-inner">
-                        <img src="/fileadmin/_processed_/3/9/csm_Bild_5_b80be7102b.png" alt="" class="spolightItem-img">
-                        <div class="spolightItem-desc">Das ist ein Bild Text 2</div>
-                    </div>
-                </div>
-                <div class="spolightItem">
-                    <div class="spolightItem-inner">
-                        <img src="/fileadmin/_processed_/7/a/csm_Bild_7_cfa78e6d18.png" alt="" class="spolightItem-img">
-                        <div class="spolightItem-desc">Das ist ein Bild Text 3</div>
-                    </div>
-                </div>
-                <div class="spolightItem">
-                    <div class="spolightItem-inner">
-                        <img src="/fileadmin/_processed_/3/6/csm_Bild_22_2f1642986f.png" alt="" class="spolightItem-img">
-                        <div class="spolightItem-desc">Das ist ein Bild Text 4</div>
-                    </div>
-                </div>
+                </f:for>
             </div>
             <div class="spotslider-pager"></div>
         </div>

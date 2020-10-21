@@ -8,7 +8,7 @@
           </div>
       <div class="metaline">
 
-     <v:menu pageUid="{metaNavId}" useShortcutUid="true" useShortcutTarget="true">
+     <v:menu pageUid="{metaNavId}">
        <f:render partial="MetaNav" arguments="{menu: menu, currentPid: data.uid, cssClass: 'column'}"/>
      </v:menu>
      <div class="metasettings text-medium">
@@ -37,7 +37,7 @@
         </f:if>
       </v:page.languageMenu>
      </div>
-      <v:menu pageUid="{iAmNavId}" useShortcutUid="true" useShortcutTarget="true">
+      <v:menu pageUid="{iAmNavId}">
         <f:render partial="IAmNav" arguments="{menu: menu, currentPid: data.uid, cssClass: 'column'}"/>
       </v:menu>
 
@@ -45,7 +45,7 @@
       </div>
 
       <f:variable name="root" value="{ce:getRoot()}"/>
-      <v:menu pageUid="{root.uid}" useShortcutUid="true" useShortcutTarget="true">
+      <v:menu pageUid="{root.uid}">
         <f:render partial="MainMenu" arguments="{menu: menu, currentPid: data.uid, cssClass: 'column'}"/>
       </v:menu>
 

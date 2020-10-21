@@ -163,9 +163,18 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController {
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_ONLY_EVENTS);
     $eventsRecords = $this->newsRepository->findDemanded($demand);
 
+    if ($this->settings['social'] > 0) {
+      $cUid = $this->configurationManager->getContentObject()->data['uid'];
+      $fileRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\FileRepository::class);
+      $social = $fileRepository->findByRelation('tt_content', 'social', $cUid);
+    } else {
+      $social = array();
+    }
+
     $assignedValues = [
         'news' => $newsRecords,
         'events' => $eventsRecords,
+        'social' => $social,
         'overwriteDemand' => $overwriteDemand,
         'demand' => $demand,
         'categories' => null,

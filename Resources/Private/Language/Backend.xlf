@@ -3,6 +3,15 @@
   <file t3:id="1471786343" source-language="en" datatype="plaintext" original="messages" date="2020-03-19T15:15:42Z" product-name="general">
     <header/>
     <body>
+      <trans-unit id="Flexform.news.sheet.social" xml:space="preserve">
+        <source>Social Media</source>
+      </trans-unit>
+      <trans-unit id="Flexform.news.sheet.social.social" xml:space="preserve">
+        <source>Social Media</source>
+      </trans-unit>
+      <trans-unit id="Flexform.news.sheet.social.social.add" xml:space="preserve">
+        <source>Add media</source>
+      </trans-unit>
       <trans-unit id="Doktype.quicklinks" xml:space="preserve">
         <source>Quicklinks</source>
       </trans-unit>
@@ -44,6 +53,9 @@
       </trans-unit>
       <trans-unit id="CType.default.input.show_border" xml:space="preserve">
         <source>Show Border</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.add_effect" xml:space="preserve">
+        <source>Add Image Effect</source>
       </trans-unit>
       <trans-unit id="CType.default.input.display_type" xml:space="preserve">
         <source>Display Type</source>
@@ -282,6 +294,9 @@
       <trans-unit id="CType.mugce_offers.input.header" xml:space="preserve">
         <source>Offers Headline</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_offers.input.display_type.no_background" xml:space="preserve">
+        <source>No Background</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_offer.caption" xml:space="preserve">
         <source>Offer</source>
       </trans-unit>
@@ -359,12 +374,6 @@
       </trans-unit>
       <trans-unit id="CType.mugce_contact.input.mugce_subheader" xml:space="preserve">
         <source>E-Mail</source>
-      </trans-unit>
-      <trans-unit id="CType.mugce_contact.input.mugce_text" xml:space="preserve">
-        <source>Phone 2</source>
-      </trans-unit>
-      <trans-unit id="CType.mugce_contact.input.mugce_text_2" xml:space="preserve">
-        <source>Fax</source>
       </trans-unit>
       <trans-unit id="CType.mugce_contact.input.mugce_text" xml:space="preserve">
         <source>Phone 2</source>
@@ -476,6 +485,24 @@
       </trans-unit>
       <trans-unit id="CType.mugce_default.input.bodytext" xml:space="preserve">
         <source>Text</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_button.caption" xml:space="preserve">
+        <source>Link Button</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_button.description" xml:space="preserve">
+        <source>Link button element</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_button.input.header_link" xml:space="preserve">
+        <source>Link</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_button.input.header" xml:space="preserve">
+        <source>Link Label</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_button.input.display_type.white" xml:space="preserve">
+        <source>White</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_button.input.display_type.grey" xml:space="preserve">
+        <source>Grey</source>
       </trans-unit>
     </body>
   </file>

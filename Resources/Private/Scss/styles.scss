@@ -11,9 +11,10 @@
 @import "meduni/header-responsive";
 @import "meduni/main-menu";
 @import "meduni/main-menu-responsive";
-@import "meduni/imageslider-text";
-@import "meduni/imageslider-text-responsive";
-@import "meduni/header-default";
+//@import "meduni/imageslider-text";
+//@import "meduni/imageslider-text-responsive";
+@import "meduni/imageslider-text-low";
+@import "meduni/imageslider-text-low-responsive";
 @import "meduni/ce-text";
 @import "meduni/ce-text-responsive";
 @import "meduni/offers";
@@ -62,6 +63,8 @@
 @import "meduni/events-overview-responsive";
 @import "meduni/search";
 @import "meduni/search-responsive";
+@import "meduni/ce-linkbuttonbottom";
+@import "meduni/ce-linkbuttonbottom-responsive";
 @import "meduni/footer";
 @import "meduni/footer-responsive";
 

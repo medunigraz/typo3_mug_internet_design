@@ -61,7 +61,26 @@
     right: 0px;
     top: -1px;
 
+
+    img.subnavbox-arrowplus {
+      display:none;
+    }
+
+
   }
+
+  .subsubinside  .subnavopenBTN  {
+    img.subnavbox-arrowplus {
+      display: block;
+      width: 25px;
+      margin: 0 0 0 -6px;
+    }
+    img.subnavbox-noarrowplus {
+      display:none;
+    }
+  }
+
+
 
   li.active  .subnavopenBTN { cursor:default; opacity: 0.1 !important;}
 
@@ -81,11 +100,11 @@
   }
 
 .subnavbox-arrow {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 
 }
 

@@ -59,6 +59,12 @@
   line-height: 17px;
 }
 
+h3, h4, h5, h6 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
 h1, .h1 {
   font-size: 40px;
   line-height: 44px;
@@ -309,7 +315,7 @@ img {
   position: absolute;
   width: 1px;
   background: #cccccc;
-  height: 170px;
+  height: 220px;
   bottom: 100%;
   left: 50%;
   marggin: 0 0 5px -0.5px;
@@ -510,16 +516,25 @@ a.textlink:hover {
   text-decoration: underline;
 }
 
+td {
+  padding: 0px 0 15px 0;
+  vertical-align: top;
+}
+
 .headline-imageteaseritem .text {
   width: 98%;
 }
 
 .text ul, .accordion-text ul, .text ol, .accordion-text ol {
-  margin: 10px 0 10px 0;
+  margin: 0px 0 25px 0;
   padding: 0px;
   list-style-type: none;
   width: 100%;
   float: left;
+}
+
+.text ul ul, .accordion-text ul ul, .text ol ol, .accordion-text ol ol {
+  margin: 0px 0 0px 0;
 }
 
 .text ol, .accordion-text ol {
@@ -530,8 +545,8 @@ a.textlink:hover {
   position: relative;
   width: 95%;
   float: left;
-  padding: 0 0 10px 30px;
-  margin: 0 0 0px 0;
+  padding: 0 0 0px 30px;
+  margin: 10px 0 0px 0;
 }
 
 .text ol li, .accordion-text ol li {
@@ -551,6 +566,44 @@ a.textlink:hover {
   top: 10px;
   background-size: 100% 100%;
   background: #BFBFBF;
+}
+
+.link-list {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+.link-list li:before {
+  display: none;
+}
+.link-list a {
+  text-align: right;
+  margin-bottom: 10px;
+  display: inline-block;
+  float: right;
+  position: relative;
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+.link-list a:hover {
+  text-decoration: none !important;
+}
+.link-list a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -37px;
+  top: 0px;
+  width: 13px;
+  height: 30px;
+  background-image: url("img/icon-arrow-black-right.svg");
+  background-repeat: no-repeat;
+  -webkit-transition: all 350ms;
+  -moz-transition: all 350ms;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+}
+.link-list a:hover:after {
+  right: -45px;
 }
 
 .text a, .accordion-text a {
@@ -904,7 +957,7 @@ a.textlink:hover {
   list-style-type: none;
 }
 .main-menu .hero-menu .nav-item-level-0 {
-  margin: 0px 35px 0 142.5px;
+  margin: 0px 35px 0 153.5px;
 }
 .main-menu .hero-menu .nav-item-level-0:after {
   content: "";
@@ -1055,6 +1108,7 @@ a.textlink:hover {
   text-align: right;
   position: relative;
   z-index: 99999;
+  cursor: default;
 }
 .main-menu .menu-link-level1:hover, .main-menu .nav-item-level-1.nav-item-ON .menu-link-level1 {
   color: #ffffff;
@@ -1101,10 +1155,40 @@ a.textlink:hover {
   cursor: pointer;
 }
 
+/* ...........................................................................  1690 px */
+@media screen and (max-width: 1690px) {
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 127px;
+  }
+}
 /* ...........................................................................  1620 px */
 @media screen and (max-width: 1620px) {
   .main-menu .hero-menu .nav-item-level-0 {
-    margin: 0px 35px 0 70px;
+    margin: 0px 35px 0 123px;
+  }
+}
+/* ...........................................................................  1540 px */
+@media screen and (max-width: 1540px) {
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 110.5px;
+  }
+}
+/* ...........................................................................  1500 px */
+@media screen and (max-width: 1500px) {
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 95.7px;
+  }
+}
+/* ...........................................................................  1440 px */
+@media screen and (max-width: 1440px) {
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 91.8px;
+  }
+}
+/* ...........................................................................  1400 px */
+@media screen and (max-width: 1400px) {
+  .main-menu .hero-menu .nav-item-level-0 {
+    margin: 0px 35px 0 77.2px;
   }
 }
 /* ...........................................................................  1350 px */
@@ -1418,6 +1502,10 @@ a.textlink:hover {
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0px 0px 43px #333;
+  -webkit-transition: margin-top 350ms;
+  -moz-transition: margin-top 350ms;
+  -o-transition: margin-top 350ms;
+  transition: margin-top 350ms;
 }
 .ce-homesliderelement .headline h1 {
   font-size: 99px;
@@ -1433,6 +1521,10 @@ a.textlink:hover {
   font-size: 99px;
   line-height: 114px;
   text-shadow: 0px 0px 43px #333;
+}
+
+.ce-homesliderelement.ce-homesliderelementinfobox .headline {
+  margin-top: -40px;
 }
 
 .ce-homesliderelement .slidertext-L1 {
@@ -1496,7 +1588,7 @@ a.textlink:hover {
   width: 150px;
   text-align: center;
   left: 50%;
-  bottom: 38%;
+  bottom: 10%;
   margin: 0 0 0 -84px;
 }
 .slider-pager span {
@@ -1662,15 +1754,25 @@ a.textlink:hover {
   border-bottom: 1px solid #cccccc;
 }
 
+/* ....................................................................................... 1700 */
+@media screen and (max-width: 1700px) {
+  .ce-homesliderelement.ce-homesliderelementinfobox .headline {
+    margin-top: -80px;
+  }
+}
 /* ....................................................................................... 1492 */
 @media screen and (max-width: 1492px) {
+  .ce-homesliderelement.ce-homesliderelementinfobox .headline {
+    margin-top: -80px;
+  }
+
   .ce-header-slider-element .headline h2 {
     font-size: 80px;
     line-height: 74px;
   }
 
   .slider-pager {
-    margin: 0 0 0 -50px;
+    margin: 0 0 0 -63px;
   }
 
   .content-block .container {
@@ -1753,8 +1855,7 @@ a.textlink:hover {
   }
 
   .slider-pager {
-    bottom: 46%;
-    margin: 0 0 0 -180px;
+    margin: 0 0 0 -198px;
   }
 
   .trans {
@@ -1815,6 +1916,17 @@ a.textlink:hover {
     margin: 0px;
   }
 
+  .ce-homesliderelement.ce-homesliderelementinfobox .headline h2 {
+    font-size: 40px;
+    line-height: 41px;
+    margin: 100px 0 0 0;
+    text-align: left;
+  }
+
+  .ce-homesliderelement.ce-homesliderelementinfobox .slidertext-L1 {
+    margin-left: 10px;
+  }
+
   .ce-header-slider-element .sliderbgbalken {
     margin: 0 0 0 -374px;
     width: 420px;
@@ -1832,7 +1944,25 @@ a.textlink:hover {
 @media screen and (max-width: 767px) {
   .ce-header-slider {
     opacity: 0;
-    height: 500px;
+    height: auto;
+  }
+
+  .ce-homesliderelement {
+    width: 100%;
+    float: left;
+  }
+  .ce-homesliderelement .headline {
+    -webkit-transition: margin-top 0ms;
+    -moz-transition: margin-top 0ms;
+    -o-transition: margin-top 0ms;
+    transition: margin-top 0ms;
+  }
+
+  .ce-homesliderelement.ce-homesliderelementinfobox .headline h2 {
+    font-size: 30px;
+    line-height: 29px;
+    margin: 43px 0 0 0;
+    text-align: center;
   }
 
   .info-box {
@@ -1863,10 +1993,11 @@ a.textlink:hover {
 
   .slider-pager {
     margin: 0 auto;
-    bottom: 0;
+    bottom: inherit;
     width: 100%;
     text-align: center;
-    left: 0px;
+    left: 51px;
+    top: 94px;
   }
 
   .slider-pager span {
@@ -1923,6 +2054,9 @@ a.textlink:hover {
 }
 .ce-text .text-leadin {
   max-width: 900px;
+  max-width: 900px;
+  float: left;
+  margin: 0 0 0px 0;
 }
 
 .row-headline-left .ce-text-columns.headline-left {
@@ -1951,6 +2085,13 @@ a.textlink:hover {
   margin: 130px auto 80px auto;
 }
 
+.ce-offers .text-box {
+  float: left;
+}
+.ce-offers .morelink-line {
+  float: left;
+  width: 100%;
+}
 .ce-offers .box-balken {
   top: -50px;
 }
@@ -2160,7 +2301,9 @@ a.textlink:hover {
   margin: 30px 0 30px 0;
 }
 .ce-text-columns .text-leadin {
-  margin: 15px 0 0 0;
+  margin: 15px 0 15px 0;
+  float: left;
+  width: 100%;
 }
 .ce-text-columns .morelink {
   float: right;
@@ -2506,6 +2649,13 @@ a.textlink:hover {
     margin: 20px 0 20px 0;
   }
 }
+.content-header-default {
+  overflow: hidden;
+}
+.content-header-default .box-sliderbgbalken {
+  top: -1px;
+}
+
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
   .content-header-default .ce-header-slider-element .sliderbgbalken {
@@ -2617,7 +2767,7 @@ a.textlink:hover {
 .breadcrumbline .breadcrumbbox a:hover .breaditem-name {
   text-decoration: underline;
 }
-.breadcrumbline .breadcrumbbox a .breaditem-name {
+.breadcrumbline .breadcrumbbox a .breatitem-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2715,6 +2865,17 @@ a.textlink:hover {
   right: 0px;
   top: -1px;
 }
+.submenu-box .subnavopenBTN img.subnavbox-arrowplus {
+  display: none;
+}
+.submenu-box .subsubinside .subnavopenBTN img.subnavbox-arrowplus {
+  display: block;
+  width: 25px;
+  margin: 0 0 0 -6px;
+}
+.submenu-box .subsubinside .subnavopenBTN img.subnavbox-noarrowplus {
+  display: none;
+}
 .submenu-box li.active .subnavopenBTN {
   cursor: default;
   opacity: 0.1 !important;
@@ -2731,11 +2892,11 @@ a.textlink:hover {
   display: block;
 }
 .submenu-box .activeLi .subnavbox-arrow, .submenu-box .nav-item-level-0.active .subnavbox-arrow {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .submenu-box .sub-sub-menu .nav-item-level-1 a {
   padding: 0 0 0 15px;
@@ -3037,7 +3198,7 @@ a.textlink:hover {
 .sidebar-default .info-box {
   right: 0px;
   position: absolute;
-  top: -50px;
+  top: -51px;
   width: 100%;
 }
 .sidebar-default .submenu-box {
@@ -3053,7 +3214,7 @@ a.textlink:hover {
 }
 .sidebar-default .greenbox {
   position: absolute;
-  top: -210px;
+  top: -212px;
   width: 100%;
 }
 .sidebar-default .greenbox .infobox-inner {
@@ -3065,7 +3226,7 @@ a.textlink:hover {
 }
 .sidebar-default .greenbox .teaser {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   height: 66px;
@@ -3163,6 +3324,17 @@ a.textlink:hover {
 }
 .ce-quote .box-balken {
   top: -50px;
+}
+.ce-quote .greygradiantlayer {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0px;
+  opacity: 0.7;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, #eeeeee 100%);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, #eeeeee 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, #eeeeee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00ffffff", endColorstr="#eeeeee",GradientType=1 );
 }
 .ce-quote .headline {
   display: block;
@@ -3650,6 +3822,10 @@ a.textlink:hover {
 .ce-linklist .link:hover:after {
   margin: 0 -20px 0 0px;
 }
+.ce-linklist .link-list-box-wrapper {
+  float: left;
+  width: 100%;
+}
 .ce-linklist .link-list-box {
   width: 75%;
   margin: 30px auto 30px auto;
@@ -3679,7 +3855,11 @@ a.textlink:hover {
   padding: 110px 0 0 0;
 }
 .ce-linklist.addmarkerspace .box-balken {
-  top: 0px;
+  top: -100px;
+}
+
+.addmarkerspace.ce-linklist {
+  margin-top: 120px;
 }
 
 /* ....................................................................................... 767 */
@@ -3918,6 +4098,33 @@ a.textlink:hover {
   height: 430px;
   overflow: hidden;
   position: relative;
+}
+.spotlightslider .spolightItem-inner img {
+  display: block;
+  width: 100%;
+}
+.spotlightslider .spolightItem-inner video {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.spotlightslider .spolightItem-inner img.videoplayBtn {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 100px;
+  left: 50%;
+  margin: -47px 0 0 -50px;
+  top: 50%;
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: none;
+}
+.spotlightslider .spolightItem-inner img.videoplayBtn:hover {
+  opacity: 1;
+}
+.spotlightslider .spolightItem.videoPlay img.videoplayBtn {
+  display: none;
 }
 .spotlightslider .spolightItem-img {
   display: block;
@@ -4570,6 +4777,23 @@ a.textlink:hover {
 .search-selectbox-item .checkbox {
   float: left;
   margin: 6px 10px 0 0;
+}
+
+.ce-link-button .button {
+  margin: 20px 0 20px 0;
+  background-color: transparent;
+  min-width: 22.5%;
+}
+.ce-link-button .button:hover {
+  background-color: #666666;
+  color: #ffffff;
+}
+
+.bg-grey-light.ce-link-button {
+  margin-top: -70px;
+}
+.bg-grey-light.ce-link-button .button {
+  margin: 40px 0 40px 0;
 }
 
 .ce-footer {

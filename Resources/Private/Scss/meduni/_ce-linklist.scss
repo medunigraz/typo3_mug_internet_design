@@ -27,7 +27,11 @@
   .link:hover:after {
     margin: 0 -20px 0 0px;
   }
+  .link-list-box-wrapper {
+    float:left;
+    width:100%;
 
+  }
    .link-list-box {
     width: 75%;
     margin: 30px auto 30px auto;
@@ -62,8 +66,12 @@
     padding: 110px 0 0 0;
   }
   .box-balken {
-    top: 0px;
+    top: -100px;
   }
 
 }
 
+
+.addmarkerspace.ce-linklist {
+  margin-top: 120px;
+}

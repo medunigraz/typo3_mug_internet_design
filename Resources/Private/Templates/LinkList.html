@@ -1,25 +1,25 @@
 <div id="c{data.uid}" class="row content-block <f:if condition="{data.mugce_show_marker}"> addmarkerspace </f:if> ce-linklist trans">
 <div class="content-part">
-<div class="container <f:if condition="{data.mugce_show_marker}"> rowborder-top </f:if>">
-  <f:if condition="{data.mugce_show_marker}">
-    <div class="box-balken blend"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green-dark.png')}" alt="" class="blend"></div>
-  </f:if>
-  <f:if condition="{data.header}">
-    <div class="headline text-center">
-      <h2 class="text-bold hl-big">{data.header -> f:format.nl2br()}</h2>
+  <div class="container">
+    <f:if condition="{data.mugce_show_marker}">
+      <div class="box-balken blend"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green-dark.png')}" alt="" class="blend"></div>
+    </f:if>
+    <f:if condition="{data.header}">
+      <div class="headline text-center">
+        <h2 class="text-bold hl-big">{data.header -> f:format.nl2br()}</h2>
+      </div>
+    </f:if>
+    <div class="link-list-box-wrapper  <f:if condition="{data.mugce_show_marker}"> rowborder-bottom </f:if>">
+      <div class="link-list-box">
+      <div class="link-list-items animateAll">
+        <f:for each="{linklist}" as="link">
+          <v:content.render contentUids="{0: link.data.uid}" limit="1" render="1" as="content">
+            {content.0 -> f:format.raw()}
+          </v:content.render>
+        </f:for>
+      </div>
     </div>
-  </f:if>
-
-  <div class="link-list-box">
-    <div class="link-list-items animateAll">
-      <f:for each="{linklist}" as="link">
-        <v:content.render contentUids="{0: link.data.uid}" limit="1" render="1" as="content">
-          {content.0 -> f:format.raw()}
-        </v:content.render>
-      </f:for>
-    </div>
+  </div>
   </div>
 </div>
 </div>
-</div>
-

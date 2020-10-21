@@ -24,7 +24,8 @@ defined('TYPO3_MODE') or die();
       'mugce-icon-link-list' => 'mugce-icon-link-list.svg',
       'mugce-icon-gallery' => 'mugce-icon-gallery.svg',
       'mugce-icon-newsletter' => 'mugce-icon-newsletter.svg',
-      'mugce-icon-default' => 'mugce-icon-default.svg'
+      'mugce-icon-default' => 'mugce-icon-default.svg',
+      'mugce-icon-link-button' => 'mugce-icon-link-button.svg'
     ];
 
   $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
@@ -62,6 +63,8 @@ defined('TYPO3_MODE') or die();
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/SearchResults.tsconfig">'
   );
 
+  $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['mug_ce'] = 'EXT:mug_ce/Configuration/RTE/MugCEPresets.yaml';
+
   // Hide content elements in list module & filter in administration module
   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Recordlist\RecordList\DatabaseRecordList::class]['modifyQuery'][]
       = \MUG\ContentElements\Hooks\Backend\RecordListQueryHook::class;
@@ -71,6 +74,10 @@ defined('TYPO3_MODE') or die();
 
   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['mug_ce'] =
       \MUG\ContentElements\Hooks\Backend\ContentPreviewRenderer::class;
+
+  // Update flexforms
+  $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools::class]['flexParsing'][]
+      = \MUG\ContentElements\Hooks\Backend\FlexFormHook::class;
 
   $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][GeorgRinger\News\Controller\NewsController::class] = [
       'className' => MUG\ContentElements\Xclass\NewsController::class
@@ -270,6 +277,15 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Default/setup.ts">'
+  );
+
+  // Content Element: Link Button
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/LinkButton.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/LinkButton/setup.ts">'
   );
 
   $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newItems']['News->listEvents'] = 'List view events';

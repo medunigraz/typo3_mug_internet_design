@@ -112,11 +112,11 @@
                   <div class="linktoall bg-grey-light">
                     <div class="news-item-inner">
                       <div class="border-bottom"></div>
-                      <f:link.action pageUid="{newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="list" arguments="{news:newsItem.uid}" class="morelink text-bold animateAll">
+                      <f:link.action pageUid="{newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list" class="morelink text-bold animateAll">
                         {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
                         <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                       </f:link.action>
-                      <f:link.action pageUid="{eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News"  action="listEvents" arguments="{news:newsItem.uid}" class="morelink text-bold animateAll">
+                      <f:link.action pageUid="{eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents" class="morelink text-bold animateAll">
                         {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
                         <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                       </f:link.action>

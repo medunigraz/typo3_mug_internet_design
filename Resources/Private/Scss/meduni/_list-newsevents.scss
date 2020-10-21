@@ -232,6 +232,35 @@ content:"";
     height: 430px;
     overflow: hidden;
     position: relative;
+    img {
+      display: block;
+      width: 100%;
+    }
+    video {
+      display: block;
+      width: 100%;
+      cursor:pointer;
+    }
+    img.videoplayBtn {
+      display: none;
+      position: absolute;
+      z-index: 99;
+      width: 100px;
+      left: 50%;
+      margin: -47px 0 0 -50px;
+      top: 50%;
+      opacity: 1;
+      cursor:pointer;
+      pointer-events: none;
+    }
+    img.videoplayBtn:hover {
+      opacity: 1;
+    }
+
+  }
+  .spolightItem.videoPlay img.videoplayBtn {
+    display: none;
+
   }
 
   .spolightItem-img {

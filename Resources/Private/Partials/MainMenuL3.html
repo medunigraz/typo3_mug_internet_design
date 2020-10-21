@@ -1,4 +1,4 @@
-<v:menu pageUid="{uid}" as="menu" useShortcutUid="true" includeSpacers="true">
+<v:menu pageUid="{uid}" as="menu" includeSpacers="true">
 
   <f:for each="{menu}" as="item" iteration="iterator">
     <f:if condition="{item.doktype}!=42">
@@ -6,9 +6,19 @@
         <f:if condition="{item.doktype}!=199">
           <f:then>
             <li class="nav-item nav-item-level-2 animateAll {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
-              <f:link.typolink parameter="{item.link}" class="menu-link menu-link-level2 animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
-                {item.linktext} <span class="btn-toggle btn-toggle-2"></span>
-              </f:link.typolink>
+              <f:if condition="{item.doktype} == 4 && {item.shortcut_mode} == 0">
+                <f:then>
+                  <f:link.page pageUid="{item.shortcut}" class="menu-link menu-link-level2 animateAll {f:if(condition:'{item.shortcut} == {currentPid}',then:'active')}">
+                    {item.linktext} <span class="btn-toggle btn-toggle-2"></span>
+                  </f:link.page>
+                </f:then>
+                <f:else>
+                  <f:link.typolink parameter="{item.link}" class="menu-link menu-link-level2 animateAll {f:if(condition:'{item.active}',then:'active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:'active')}">
+                    {item.linktext} <span class="btn-toggle btn-toggle-2"></span>
+                  </f:link.typolink>
+                </f:else>
+              </f:if>
+
             </li>
           </f:then>
           <f:else>
