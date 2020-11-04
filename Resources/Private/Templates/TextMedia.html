@@ -28,15 +28,6 @@
           </f:if>
         </div>
       </div>
-      <div class="row">
-        <f:if condition="{data.mugce_link}">
-          <div class="col text-center mt-auto trans bottom">
-            <f:link.typolink parameter="{data.mugce_link}" class="button animateAll">
-              {f:if(condition: '{data.mugce_link_label_2}', then: '{data.mugce_link_label_2}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
-            </f:link.typolink>
-          </div>
-        </f:if>
-      </div>
     </div>
   </div>
 </div>

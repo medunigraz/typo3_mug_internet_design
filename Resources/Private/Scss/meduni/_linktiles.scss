@@ -3,14 +3,19 @@
   .headline {
     display: block;
     width: 100%;
-    margin: 0px 0 40px 0;
+    margin: -20px 0 40px 0;
    .hl-ce-link-tile {
       width: 48%;
       margin: 0 auto;
     }
   }
-}
 
+}
+.content-part.ce-link-tile.showmarker {
+.headline {
+  margin-top: 11px;
+}
+}
 .hoverimage-item {
   position:relative;
   width:100%;

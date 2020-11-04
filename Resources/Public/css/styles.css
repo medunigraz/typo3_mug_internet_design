@@ -30,7 +30,7 @@
 }
 
 .bg-green-dark {
-  background: #006A23;
+  background: #007934;
 }
 
 .bg-grey-light {
@@ -636,7 +636,7 @@ td {
   color: #A2A2A2;
 }
 .meta-nav li a:hover {
-  color: #006A23;
+  color: #007934;
 }
 
 .metasettings {
@@ -648,10 +648,10 @@ td {
   color: #A2A2A2;
 }
 .metasettings a:hover {
-  color: #006A23;
+  color: #007934;
 }
 .metasettings b {
-  color: #006A23;
+  color: #007934;
 }
 
 .i-am-nav {
@@ -762,7 +762,7 @@ td {
 .iamlinksitelist {
   width: 440px;
   float: left;
-  background: #006A23;
+  background: #007934;
   position: absolute;
   left: 0px;
   top: 75px;
@@ -996,7 +996,7 @@ td {
 .main-menu .hero-menu .nav-item .dropdown-wrap-level0 {
   display: block;
   position: absolute;
-  background: #006A23;
+  background: #007934;
   z-index: 99;
   right: 0px;
   width: 80%;
@@ -1044,7 +1044,7 @@ td {
   line-height: 28px;
 }
 .main-menu .menu-link:hover {
-  color: #006A23;
+  color: #007934;
 }
 .main-menu .quicklinks {
   position: absolute;
@@ -1065,7 +1065,7 @@ td {
 }
 .main-menu .quicklinks .quicklinksHL {
   font-size: 20px;
-  color: #006A23;
+  color: #007934;
   display: block;
   float: left;
   width: 100%;
@@ -1080,18 +1080,18 @@ td {
   position: relative;
 }
 .main-menu .menu-link-level0.active {
-  color: #006A23;
+  color: #007934;
 }
 .main-menu .menu-link-level0:after {
   content: "";
   position: absolute;
   width: calc(100% + 55px);
   height: 9px;
-  background: #006A23;
+  background: #007934;
   bottom: -33px;
   left: -5px;
   opacity: 0;
-  border-right: 30xp solid #006A23;
+  border-right: 30xp solid #007934;
   -webkit-transition: opacity 350ms;
   -moz-transition: opacity 350ms;
   -o-transition: opacity 350ms;
@@ -1131,8 +1131,8 @@ td {
 }
 .main-menu .menu-link-level2 {
   font-size: 16px;
-  color: #006A23;
-  border-bottom: 1px solid #006A23;
+  color: #007934;
+  border-bottom: 1px solid #007934;
   display: block;
   width: 100%;
   float: left;
@@ -1315,7 +1315,7 @@ td {
 
   .main-menu .hero-menu .nav-item-level-0.open0 a.menu-link-level0 {
     font-weight: 600;
-    color: #006A23;
+    color: #007934;
   }
 
   .main-menu .hero-menu .nav-item-level-0.open0 {
@@ -1388,7 +1388,7 @@ td {
 
   .main-menu .hero-menu .nav-item.nav-item-level-1 {
     height: auto;
-    background: #006A23;
+    background: #007934;
     font-size: 14px;
     padding: 10px 0 0px 0px;
     margin: 0px;
@@ -1458,8 +1458,8 @@ td {
 
   .main-menu .menu-link-level2 {
     font-size: 16px;
-    color: #006A23;
-    border-bottom: 0.5px solid #006A23;
+    color: #007934;
+    border-bottom: 0.5px solid #007934;
     display: block;
     width: 93%;
     float: none;
@@ -1470,7 +1470,7 @@ td {
   }
 
   .main-menu .hero-menu .nav-item.nav-item-level-2:last-child a {
-    border-bottom: 0.5px solid #006A23;
+    border-bottom: 0.5px solid #007934;
     margin-bottom: 0px;
   }
 }
@@ -1663,7 +1663,7 @@ td {
 }
 
 .infobox-headline-BTN {
-  background: #31972A;
+  background: #34b233;
   width: 33px;
   height: 33px;
   text-align: center;
@@ -2182,11 +2182,15 @@ td {
 .content-part.ce-link-tile .headline {
   display: block;
   width: 100%;
-  margin: 0px 0 40px 0;
+  margin: -20px 0 40px 0;
 }
 .content-part.ce-link-tile .headline .hl-ce-link-tile {
   width: 48%;
   margin: 0 auto;
+}
+
+.content-part.ce-link-tile.showmarker .headline {
+  margin-top: 11px;
 }
 
 .hoverimage-item {
@@ -2361,7 +2365,7 @@ td {
   width: 100%;
 }
 .content-block-ce-text-media-teaser .medialinks-box .link {
-  color: #006A23;
+  color: #007934;
   display: block;
   float: left;
   position: relative;
@@ -2485,7 +2489,7 @@ td {
   margin: 15px 0 0 0;
 }
 .ce-contact-box .cvlink a:hover {
-  color: #006A23;
+  color: #007934;
 }
 
 .ce-contact-noimg .ce-contact-box .contact-text {
@@ -2826,10 +2830,10 @@ td {
   width: 95%;
 }
 .submenu-box .nav-item-level-0 > a:hover {
-  color: #006A23;
+  color: #007934;
 }
 .submenu-box .nav-item-level-0.nav-item-ON > a, .submenu-box .nav-item-level-0.active > a {
-  color: #006A23;
+  color: #007934;
 }
 .submenu-box #subMenu {
   width: 90%;
@@ -3157,7 +3161,7 @@ td {
 
   .contenblock-newsteaser .news-item.entry-0 {
     display: block;
-    background: #006A23;
+    background: #007934;
   }
 
   .contenblock-newsteaser .news-item.entry-0 .quicklinks-headline {
@@ -3689,7 +3693,7 @@ td {
   display: none;
 }
 .news-single .news-list-date {
-  color: #006A23;
+  color: #007934;
   display: block;
   width: 100%;
   float: left;
@@ -3749,7 +3753,7 @@ td {
 .content-block-eventsdetail .eventmeta-label {
   float: left;
   display: block;
-  color: #31972A;
+  color: #34b233;
   margin: 0 10px 0 0px;
 }
 .content-block-eventsdetail .eventmeta-info {
@@ -3800,7 +3804,7 @@ td {
   margin-bottom: 50px;
 }
 .ce-linklist .morelink {
-  color: #31972A;
+  color: #007934;
 }
 .ce-linklist .link::after {
   content: "";
@@ -3958,7 +3962,7 @@ td {
   margin: 5px 0 0 0;
 }
 .content-part-newsevents .news-list-date {
-  color: #006A23;
+  color: #007934;
   display: block;
   width: 100%;
   float: left;
@@ -4007,7 +4011,7 @@ td {
 .spotlightslider {
   float: left;
   width: 50%;
-  height: 550px;
+  height: 555px;
   position: relative;
   margin: 0 0 50px 0;
 }
@@ -4046,7 +4050,7 @@ td {
   margin: 40px 0 0 0;
 }
 .spotlightslider .socialsidebar {
-  background: #006A23;
+  background: #007934;
   position: absolute;
   right: -65%;
   top: 0px;
@@ -4095,7 +4099,7 @@ td {
 }
 .spotlightslider .spolightItem-inner {
   width: 100%;
-  height: 430px;
+  height: 470px;
   overflow: hidden;
   position: relative;
 }
@@ -4144,7 +4148,7 @@ td {
   width: auto;
   text-align: center;
   right: -5px;
-  bottom: 0px;
+  bottom: -3px;
   margin: 0 0 0 0px;
 }
 .spotlightslider .spotslider-pager span {
@@ -4162,7 +4166,7 @@ td {
   border: 0px solid #eeeeee;
 }
 .spotlightslider .spotslider-pager span:hover, .spotlightslider .spotslider-pager span.cycle-pager-active {
-  background: #006A23;
+  background: #007934;
 }
 
 /* ....................................................................................... 1720 */
@@ -4318,7 +4322,7 @@ td {
 }
 
 .filteritem a:hover, .filteritem-active a {
-  color: #006A23;
+  color: #007934;
 }
 
 .spotnewsbox {
@@ -4402,7 +4406,7 @@ td {
   margin: 5px 0 0 0;
 }
 .news-overview-list .news-list-date {
-  color: #006A23;
+  color: #007934;
   display: block;
   width: 100%;
   float: left;
@@ -4597,7 +4601,7 @@ td {
 .content-block-eventsoverview .dayrow .eventdatebox .daybox {
   width: 100%;
   float: left;
-  background: #006A23;
+  background: #007934;
   color: #ffffff;
   font-weight: 600;
   font-size: 25px;
@@ -4713,7 +4717,7 @@ td {
   position: relative;
   margin: 0px;
   font-weight: 600;
-  color: #006A23;
+  color: #007934;
 }
 .tx-indexedsearch-res .searchresult-icon {
   display: block;
@@ -4790,7 +4794,7 @@ td {
 }
 
 .bg-grey-light.ce-link-button {
-  margin-top: -70px;
+  margin-top: 0px;
 }
 .bg-grey-light.ce-link-button .button {
   margin: 40px 0 40px 0;

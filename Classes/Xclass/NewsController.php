@@ -175,6 +175,7 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController {
         'news' => $newsRecords,
         'events' => $eventsRecords,
         'social' => $social,
+        'socialCaption' => $this->settings['socialCaption'],
         'overwriteDemand' => $overwriteDemand,
         'demand' => $demand,
         'categories' => null,

@@ -297,6 +297,9 @@ $(".news-overview-list .article-news:first-child" ).appendTo( ".spotnewsbox" );
 
 
 //video
+$('.spolightItem video').attr('controls',true);
+
+
 setTimeout(function(){
   $('.spolightItem .videoplayBtn, .spolightItem video').click(function() {
     $(this).find('video').get(0).play();

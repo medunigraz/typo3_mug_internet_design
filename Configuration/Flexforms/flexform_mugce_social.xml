@@ -5,6 +5,15 @@
     </TCEforms>
     <type>array</type>
     <el>
+      <settings.socialCaption>
+        <TCEforms>
+          <label>LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:Flexform.news.sheet.social.caption</label>
+          <config>
+            <type>input</type>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </settings.socialCaption>
       <settings.social>
         <TCEforms>
           <label>LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:Flexform.news.sheet.social.social</label>

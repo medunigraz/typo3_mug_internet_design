@@ -1,7 +1,9 @@
 <div class="article spotlightslider trans">
     <div class="article spotlightsliderInner ">
         <div class="spotlightsliderbox">
-            <h3 class="text-bold">Spotlights</h3>
+            <f:if condition="{socialCaption}">
+                <h3 class="text-bold">{socialCaption}</h3>
+            </f:if>
             <div class="cycle-slideshow cycle-slideshow-spolights"
                  data-cycle-fx="fade"
                  data-cycle-timeout="0"

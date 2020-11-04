@@ -6,6 +6,9 @@
       <trans-unit id="Flexform.news.sheet.social" xml:space="preserve">
         <source>Social Media</source>
       </trans-unit>
+      <trans-unit id="Flexform.news.sheet.social.caption" xml:space="preserve">
+        <source>Social Media Caption</source>
+      </trans-unit>
       <trans-unit id="Flexform.news.sheet.social.social" xml:space="preserve">
         <source>Social Media</source>
       </trans-unit>
@@ -144,9 +147,6 @@
       <trans-unit id="CType.mugce_header_default.input.header" xml:space="preserve">
         <source>Headline</source>
       </trans-unit>
-      <trans-unit id="CType.mugce_header_default.input.bodytext" xml:space="preserve">
-        <source>Text</source>
-      </trans-unit>
       <trans-unit id="CType.mugce_header_default.input.mugce_header" xml:space="preserve">
         <source>Teaser: Headline</source>
       </trans-unit>
@@ -187,7 +187,7 @@
         <source>Section Name</source>
       </trans-unit>
       <trans-unit id="CType.mugce_text.input.display_type.headline_left" xml:space="preserve">
-        <source>Headline Left</source>
+        <source>Columns</source>
       </trans-unit>
       <trans-unit id="CType.mugce_text.input.bodytext" xml:space="preserve">
         <source>Text</source>
@@ -249,12 +249,6 @@
       <trans-unit id="CType.mugce_text_media.input.header_link" xml:space="preserve">
         <source>Link</source>
       </trans-unit>
-      <trans-unit id="CType.mugce_text_media.input.mugce_link_label_2" xml:space="preserve">
-        <source>Link Label (Bottom)</source>
-      </trans-unit>
-      <trans-unit id="CType.mugce_text_media.input.mugce_link" xml:space="preserve">
-        <source>Link (Bottom)</source>
-      </trans-unit>
       <trans-unit id="CType.mugce_text_media.input.image" xml:space="preserve">
         <source>Image</source>
       </trans-unit>
@@ -266,6 +260,9 @@
       </trans-unit>
       <trans-unit id="CType.mugce_text_media_teaser.input.subheader" xml:space="preserve">
         <source>Section Name</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_text_media_teaser.input.display_type.no_background" xml:space="preserve">
+        <source>No Background</source>
       </trans-unit>
       <trans-unit id="CType.mugce_text_media_teaser.input.header" xml:space="preserve">
         <source>Headline (Teaser)</source>
@@ -325,7 +322,7 @@
         <source>Container element for image tiles</source>
       </trans-unit>
       <trans-unit id="CType.mugce_imagetiles.input.header" xml:space="preserve">
-        <source>Headline</source>
+        <source>Headline Tiles</source>
       </trans-unit>
       <trans-unit id="CType.mugce_imagetiles.input.subheader" xml:space="preserve">
         <source>Section Name</source>
@@ -431,12 +428,6 @@
       </trans-unit>
       <trans-unit id="CType.mugce_quote.input.header_link" xml:space="preserve">
         <source>Link</source>
-      </trans-unit>
-      <trans-unit id="CType.mugce_quote.input.mugce_link_label_2" xml:space="preserve">
-        <source>Link Label (Bottom)</source>
-      </trans-unit>
-      <trans-unit id="CType.mugce_quote.input.mugce_link" xml:space="preserve">
-        <source>Link (Bottom)</source>
       </trans-unit>
       <trans-unit id="CType.mugce_quote.input.image" xml:space="preserve">
         <source>Image</source>

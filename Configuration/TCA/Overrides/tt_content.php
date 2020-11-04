@@ -337,7 +337,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     mugce_display_type,
                     image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.image,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.header,
-                    bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.bodytext,
                     mugce_header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.mugce_header,
                     mugce_news_entries;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.mugce_news_entries,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
@@ -361,12 +360,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
       'header' => [
           'config' => [
               'eval' => 'required'
-          ]
-      ],
-      'bodytext' => [
-          'config' => [
-              'enableRichtext' => true,
-              'richtextConfiguration' => 'mug_ce'
           ]
       ],
       'mugce_display_type' => [
@@ -646,8 +639,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.image,
                     mugce_link_label;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.mugce_link_label,
                     header_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.header_link,
-                    mugce_link_label_2;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.mugce_link_label_2,
-                    mugce_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media.input.mugce_link,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -703,6 +694,7 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     --palette--;;general,
                     subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.subheader,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.header,
+                    mugce_display_type,
                     mugce_show_marker,
                     bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.bodytext,
                     image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.image,
@@ -728,6 +720,14 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                 'rows' => 3,
                 'max' => 255,
             ],
+        ],
+        'mugce_display_type' => [
+            'config' => array(
+                'items' => [
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.display_type.standard', 0],
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.display_type.no_background', 1]
+                ],
+            )
         ],
         'mugce_header' => [
             'config' => [
@@ -873,7 +873,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
         ],
         'header' => [
             'config' => [
-                'eval' => 'required',
                 'type' => 'text',
                 'cols' => 50,
                 'rows' => 3,
@@ -1175,8 +1174,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.image,
                     mugce_link_label;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.mugce_link_label,
                     header_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.header_link,
-                    mugce_link_label_2;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.mugce_link_label_2,
-                    mugce_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.mugce_link,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -1237,7 +1234,7 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_list.input.header,
-                    mugce_show_marker,
+                    mugce_show_border,
                     mugce_quicklinks;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_list.input.mugce_quicklinks,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
@@ -1401,8 +1398,8 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
     'showitem' => '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
-                    header_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_button.input.header_link,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_button.input.header,
+                    header_link;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_button.input.header_link,
                     mugce_display_type,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
