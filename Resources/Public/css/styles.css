@@ -2771,7 +2771,7 @@ td {
 .breadcrumbline .breadcrumbbox a:hover .breaditem-name {
   text-decoration: underline;
 }
-.breadcrumbline .breadcrumbbox a .breatitem-name {
+.breadcrumbline .breadcrumbbox a .breaditem-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
