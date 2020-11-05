@@ -3575,6 +3575,15 @@ td {
 .ce-gallery .grid-item .morelink {
   display: inline-block;
 }
+.ce-gallery .grid-item .image-description {
+  font-size: 13px;
+  line-height: 17px;
+  float: left;
+  width: 100%;
+  margin: 0 0 5px 0;
+  border-bottom: 1px solid #eee;
+  padding: 0 0 5px 0;
+}
 .ce-gallery .grid-item .gallery-img {
   display: block;
   width: 100%;
@@ -3941,6 +3950,10 @@ td {
   background-size: 100%;
   top: -112px;
   margin: 0 0 0 -11px;
+}
+
+.newsteaserpart header:after {
+  display: none;
 }
 
 .content-part-newsevents {

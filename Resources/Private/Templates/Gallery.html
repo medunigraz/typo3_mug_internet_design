@@ -28,6 +28,14 @@
                                             </f:else>
                                         </f:if>
                                     </div>
+                                    <f:if condition="{image.description}">
+                                        <f:then>
+                                            <div class="image-description">
+                                           {image.description}
+                                            </div>
+                                        </f:then>
+
+                                    </f:if>
                                     <f:if condition="{image.originalFile.properties.width} && {image.originalFile.properties.height}">
                                         <div class="image-size text-small">
                                             {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:galleryImageSize", default: "Bildgröße")}: {image.originalFile.properties.width} x {image.originalFile.properties.height}
