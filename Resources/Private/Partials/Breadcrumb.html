@@ -2,10 +2,18 @@
   <div class="content-part breadcrumbline">
     <div class="container">
       <div class="breadcrumbbox">
-        <f:for each="{items}" as="item" iteration="iterator">
-          <f:link.page pageUid="{item.uid}" class="entry">
-            <span class="breaditem-name">{item.title}</span>
-          </f:link.page>
+        <f:variable name="isfirst" value="true" />
+        <f:for reverse="true" each="{items}" as="item" iteration="iterator">
+          <f:if condition="{isfirst}">
+            <f:then>
+              <f:variable name="isfirst" value="false" />
+            </f:then>
+            <f:else>
+              <f:link.page pageUid="{item.uid}" class="entry">
+                <span class="breaditem-name">{item.title}</span>
+              </f:link.page>
+            </f:else>
+          </f:if>
         </f:for>
       </div>
     </div>

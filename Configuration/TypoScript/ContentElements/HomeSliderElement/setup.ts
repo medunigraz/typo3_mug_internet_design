@@ -1,4 +1,4 @@
-tt_content.mugce_homesliderelement < tmp.templatePaths
+tt_content.mugce_homesliderelement < tmp.mugceDefaults
 tt_content {
     mugce_homesliderelement =< lib.contentElement
     mugce_homesliderelement {

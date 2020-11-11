@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+  <div class="row content-block">
+    <div class="ce-homeslider">
+      <div class="ce-header-slider trans">
+        <div class="cycle-slideshow"
+             data-cycle-fx="fade"
+             data-cycle-timeout="4000"
+             data-cycle-speed=800
+             data-cycle-slides="> div.ce-homesliderelement"
+             data-cycle-pager=".slider-pager"
+             data-cycle-swipe="true"
+             data-cycle-auto-height="container"
+             data-cycle-swipe-fx="scrollHorz"
+        >
+          <f:for each="{elements}" as="element">
+            <v:content.render contentUids="{0: element.data.uid}" limit="1" render="1" as="content">
+              {content.0 -> f:format.raw()}
+            </v:content.render>
+          </f:for>
+        </div>
+        <div class="slider-pager"></div>
+      </div>
+    </div>
+  </div>
+</f:section>
+</html>
+

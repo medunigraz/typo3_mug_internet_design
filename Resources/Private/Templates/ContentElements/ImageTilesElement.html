@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+  <div class="col-6 trans{f:if(condition: '{data.bodytext}', then: ' has-text')}">
+    <f:link.typolink  parameter="{data.header_link}">
+      <div class="hoverimage-item">
+        <div class="hover-part animateAll">
+          <div class="hover-part-text animateAll">
+            <div class="headline animateAll">
+              <f:if condition="{data.subheader}">
+                <div class="subheader text-bold text-mega">{data.subheader}</div>
+              </f:if>
+              <h2 class="text-bold uppercase">{data.header}</h2>
+            </div>
+            <f:if condition="{data.bodytext}">
+              <div class="text  animateAll">
+                {data.bodytext -> f:format.nl2br()}
+              </div>
+            </f:if>
+          </div>
+        </div>
+        <div class="bg-grey-gradiant bg-darken animateAll"></div>
+        <div class="blend blend-full bg-green-dark animateAll"></div>
+        <f:image image="{image.0}" class="tile-img" width="600c" height="600c" />
+      </div>
+    </f:link.typolink>
+  </div>
+</f:section>
+</html>

@@ -15,7 +15,7 @@
     height: 30px;
     background-image: url("img/icon-arrow-black-right.svg");
     background-repeat: no-repeat;
-    right: -20%;
+    right: 0%;
     top: 0px;
     margin: 0 -15px 0 0px;
     -webkit-transition: all 350ms;
@@ -41,7 +41,7 @@
     float: left;
     position: relative;
     min-height: 65px;
-    margin:10px 0 0px 0;
+    margin: 10px 5% 0px 5%;
 
   }
   .ce-link:nth-child(odd) {float:right;}

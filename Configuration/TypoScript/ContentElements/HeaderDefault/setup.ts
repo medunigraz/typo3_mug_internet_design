@@ -1,4 +1,4 @@
-tt_content.mugce_header_default < tmp.templatePaths
+tt_content.mugce_header_default < tmp.mugceDefaults
 tt_content {
     mugce_header_default =< lib.contentElement
     mugce_header_default {

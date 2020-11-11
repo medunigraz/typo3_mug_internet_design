@@ -1,4 +1,4 @@
-tt_content.mugce_text_media < tmp.templatePaths
+tt_content.mugce_text_media < tmp.mugceDefaults
 tt_content {
     mugce_text_media =< lib.contentElement
     mugce_text_media {

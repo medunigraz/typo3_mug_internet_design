@@ -1,7 +1,9 @@
 .content-block-ce-offers {
-  margin:130px auto 80px auto;
+  margin:130px auto 0px auto;
 }
-
+.content-block-ce-offers.bg-no.marker-no  {
+  margin-top:70px
+}
 .ce-offers {
   .text-box {
     float:left;
@@ -58,4 +60,8 @@
     margin: 0 0 0 0%;
   }
 
+}
+
+.bg-no .ce-offer:last-child {
+  margin: 0 0 00px 0;
 }

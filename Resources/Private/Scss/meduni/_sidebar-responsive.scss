@@ -1,3 +1,11 @@
+/* ...........................................................................  1492 px */
+@media screen and (max-width: 1492px) {
+  .sidebar-default  .quicklinks-headline {
+    max-height: 50px;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+}
 /* ...........................................................................  1024 px */
 @media screen and (max-width: 1024px) {
 .sidebar-default .greenbox .teaser {

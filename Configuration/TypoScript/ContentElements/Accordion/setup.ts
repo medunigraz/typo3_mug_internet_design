@@ -1,4 +1,4 @@
-tt_content.mugce_accordion < tmp.templatePaths
+tt_content.mugce_accordion < tmp.mugceDefaults
 tt_content {
     mugce_accordion =< lib.contentElement
     mugce_accordion {

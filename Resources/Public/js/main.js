@@ -26,32 +26,63 @@ $(window).resize(function(){
   });
 
 
-
+//count standard CE
+  $(".row.content-block").addClass(function(i) { return 'standardCE' + (i + 1) });
 
   //newsbar collision
 
-  if ($('.newsteaser-sidebar .news-item').length){
-    $('.newsteaser-sidebar').next('.content-block').addClass('lowspace lowspace1');
+  if ($('.sidebar-default .news-item').length){
 
-    var newsteaserHeight = $('.newsteaser-sidebar .news-box-inner').height() - 400;
+    $('.standard-leadin .content-part').addClass('lowspace lowspace1');
 
-
+    var newsteaserHeight = $('.sidebar-default .news-box-inner').height() - 400;
     var leadin = $('.standard-leadin').height();
     var lowspace1 = $('.lowspace1 .content-part').height();
     var lowspace2 = $('.lowspace2 .content-part').height();
     if (newsteaserHeight > lowspace1) {
-      $('.newsteaser-sidebar').next('.content-block').next('.content-block').addClass('lowspace lowspace2');
+      $('.standardCE5').addClass('lowspace lowspace2');
     }
     else if (newsteaserHeight > (leadin + lowspace2)) {
-      $('.lowspace2').next('.content-block').addClass('lowspace lowspace3');
+      $('.standardCE6').addClass('lowspace lowspace3');
     }
     else {
-      $('.newsteaser-sidebar').next('.content-block').next('.content-block').removeClass('lowspace lowspace2');
+      $('.standardCE5, .standardCE6').removeClass('lowspace lowspace2');
     }
   } else {
 
   }
 
+
+  //navbar collision
+
+  if ($('.sidebar-default .sub-menu .nav-item').length){
+
+    $('.standard-leadin .content-part').addClass('lowspace lowspace1');
+
+    var newsteaserHeight = $('.sidebar-default .quicklinks-box').height() ;
+    var leadin = $('.standard-leadin').height();
+    var lowspace1 = $('.standardCE3 .content-part').height();
+    var lowspace2 = $('.standardCE5 .content-part').height();
+    var lowspace3 = $('.standardCE6 .content-part').height();
+
+    var lowspaceCE56 = (lowspace2+lowspace3);
+
+    if (newsteaserHeight > lowspace1) {
+      $('.standardCE5').addClass('lowspace lowspace2');
+    }
+    if ((newsteaserHeight) > (lowspaceCE56)) {
+
+      $('.standardCE6').addClass('lowspace lowspace3');
+    }
+    else {
+      $('.standardCE5, .standardCE6').removeClass('lowspace lowspace2');
+    }
+  } else {
+
+  }
+
+
+/*
   //sidebar collision
   var sidebardefaultHeight = $('.sidebar-default .infobox-inner').height() ;
   var quicklinksboxHeight = $('.sidebar-default .quicklinks-box').height() ;
@@ -67,7 +98,18 @@ $(window).resize(function(){
   if (quicklinksboxHeight >  (standardleadinHeight + firstcontenblockheight) ) {
     $('.standard-leadin').next('.content-block').next('.content-block').addClass('lowspace lowspace3 lowspacenewsbar');
   }
+*/
 
+//newspages
+  if ($('.sidebar-default.sidebar-filterbox').length){
+    $('body').addClass('page-news');
+  }
+  if ($('.newsteaserpart .greenbox-news').length){
+    $('body').addClass('page-news');
+  }
+  if ($('.eventmeta-row').length){
+    $('body').addClass('page-event');
+  }
 
 
   if ($(window).width() > 1024) {
@@ -133,6 +175,7 @@ $(window).trigger('resize');
 
 //home stuff
 $('.home .content-block:eq(2) .headline h2').addClass('h1');
+
 
 
 
@@ -257,10 +300,38 @@ $('.iam-btn').click(function(){
   $('.iamlinkbox').css({"right": - ((windowWidth - contentWidth)*0.5) +"px"});
   return false;
 });
+$('.iam-btn').mouseenter(function(){
+  $('html').addClass("iam-nav-On");
+  var windowWidth = $(window).width();
+  var contentWidth = $('.header-line').width();
+  $('.iamlinkbox').css({"right": - ((windowWidth - contentWidth)*0.5) +"px"});
+  return false;
+});
+
+$('.iamlinkbox').mouseleave(function(){
+  $('html').removeClass("iam-nav-On");
+  return false;
+
+});
 $('.iambgbtn-close').click(function(){
   $('html').removeClass("iam-nav-On");
   return false;
 });
+
+
+//quicksearch
+$('.QuicksearchOpen').click(function(){
+  $('html').addClass("box-quicksearch-on");
+  return false;
+});
+$('.quicksearchclose').click(function(){
+  $('html').removeClass("box-quicksearch-on");
+  return false;
+});
+
+
+
+
 //ways
 $(function () {
   $('.trans').each(function(){

@@ -1,4 +1,4 @@
-tt_content.mugce_contact < tmp.templatePaths
+tt_content.mugce_contact < tmp.mugceDefaults
 tt_content {
     mugce_contact =< lib.contentElement
     mugce_contact {

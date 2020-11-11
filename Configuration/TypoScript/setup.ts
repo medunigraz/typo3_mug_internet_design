@@ -4,40 +4,41 @@
 page.10 = FLUIDTEMPLATE
 page.10 {
     layoutRootPaths {
-        100 = EXT:mug_ce/Resources/Private/Layouts/
+        10 = EXT:mug_ce/Resources/Private/Layouts/Page/
     }
 
     partialRootPaths {
-        100 = EXT:mug_ce/Resources/Private/Partials/
+        10 = EXT:mug_ce/Resources/Private/Partials/Page/
     }
 
     templateRootPaths {
-        100 = EXT:mug_ce/Resources/Private/Templates/
+        10 = EXT:mug_ce/Resources/Private/Templates/Page/
     }
-    file.stdWrap.cObject = CASE
-    file.stdWrap.cObject {
+    templateName = TEXT
+    templateName.stdWrap.cObject = CASE
+    templateName.stdWrap.cObject {
         key.data = pagelayout
 
         pagets__home = TEXT
-        pagets__home.value = EXT:mug_ce/Resources/Private/Layouts/Home.html
+        pagets__home.value = Home.html
 
         pagets__default = TEXT
-        pagets__default.value = EXT:mug_ce/Resources/Private/Layouts/Default.html
+        pagets__default.value = Default.html
 
         pagets__news_overview = TEXT
-        pagets__news_overview.value = EXT:mug_ce/Resources/Private/Layouts/NewsOverview.html
+        pagets__news_overview.value = NewsOverview.html
 
         pagets__news_detail = TEXT
-        pagets__news_detail.value = EXT:mug_ce/Resources/Private/Layouts/NewsDetail.html
+        pagets__news_detail.value = NewsDetail.html
 
         pagets__events_overview = TEXT
-        pagets__events_overview.value = EXT:mug_ce/Resources/Private/Layouts/EventsOverview.html
+        pagets__events_overview.value = EventsOverview.html
 
         pagets__events_detail = TEXT
-        pagets__events_detail.value = EXT:mug_ce/Resources/Private/Layouts/EventsDetail.html
+        pagets__events_detail.value = EventsDetail.html
 
         pagets__search_results = TEXT
-        pagets__search_results.value = EXT:mug_ce/Resources/Private/Layouts/SearchResults.html
+        pagets__search_results.value = SearchResults.html
     }
     variables {
         mugce_content < styles.content.get
@@ -77,15 +78,18 @@ page.includeJSFooter {
     file11 = EXT:mug_ce/Resources/Public/js/main.js
 }
 
-tmp.templatePaths {
+tmp.mugceDefaults {
     templateRootPaths {
-        10 = EXT:mug_ce/Resources/Private/Templates/
+        10 = EXT:mug_ce/Resources/Private/Templates/ContentElements/
     }
     partialRootPaths {
-        10 = EXT:mug_ce/Resources/Private/Partials/
+        10 = EXT:mug_ce/Resources/Private/Partials/ContentElements/
     }
     layoutRootPaths {
-        10 = EXT:mug_ce/Resources/Private/Layouts/
+        10 = EXT:mug_ce/Resources/Private/Layouts/ContentElements/
+    }
+    dataProcessing {
+        100 = MUG\ContentElements\DataProcessing\DefaultValuesProcessor
     }
 }
 

@@ -1,4 +1,4 @@
-tt_content.mugce_link_list < tmp.templatePaths
+tt_content.mugce_link_list < tmp.mugceDefaults
 tt_content {
     mugce_link_list =< lib.contentElement
     mugce_link_list {

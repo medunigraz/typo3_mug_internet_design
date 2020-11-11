@@ -6,6 +6,17 @@
 }
 }
 
+
+
+/* ....................................................................................... 1686 */
+@media screen and (max-width: 1686px) {
+  .cycle-slide-active .sliderbgbalken {
+    margin: 0 0 0 -255px;
+  }
+  .slider-pager {
+    margin: 0 0 0 -114px;
+  }
+}
 /* ....................................................................................... 1492 */
 @media screen and (max-width: 1492px) {
   .ce-homesliderelement.ce-homesliderelementinfobox .headline {
@@ -14,9 +25,6 @@
   .ce-header-slider-element .headline h2 {
     font-size: 80px;
     line-height: 74px;
-  }
-  .slider-pager {
-    margin: 0 0 0 -63px;
   }
   .content-block .container {
     max-width: 100%;

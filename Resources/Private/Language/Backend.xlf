@@ -390,6 +390,9 @@
       <trans-unit id="CType.mugce_accordion.caption" xml:space="preserve">
         <source>Accordion</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_accordion.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_accordion.description" xml:space="preserve">
         <source>Container element for accordion tiles</source>
       </trans-unit>

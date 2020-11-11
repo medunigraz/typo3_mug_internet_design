@@ -1,0 +1,64 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+  <div class="ce-homesliderelement">
+    <div class="ce-header-slider-element">
+      <div class="headline">
+        <h2 class="text-bold line1"><span class="slidertext-L1">{data.header}</span><span class="slidertext-L2">{data.subheader}</span></h2>
+      </div>
+      <div class="box-sliderbgbalken"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green.png')}" alt="" class="sliderbgbalken blend animateAll-s"></div>
+
+      <f:if condition="{image}">
+        <f:image image="{image.0}" class="slider-img" width="1720c" height="550c" />
+      </f:if>
+
+      <div class="container">
+        <div class="col">
+          <f:if condition="{data.mugce_header} || {data.mugce_quicklinks} > 0">
+            <div class="info-box">
+              <div class="infobox-inner">
+                <div class="blend blend-full bg-green-dark"></div>
+                <f:if condition="{data.mugce_header}">
+                  <div class="infobox-headline text-bold">
+                    {data.mugce_header}
+                    <f:if condition="{data.header_link}">
+                      <f:link.typolink parameter="{data.header_link}">
+                        <div class="infobox-headline-BTN animateAll"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg')}" alt="" class="arrow"></div>
+                      </f:link.typolink>
+                    </f:if>
+                  </div>
+                </f:if>
+                <f:if condition="{data.mugce_subheader}">
+                  <div class="infobox-text">
+                    {data.mugce_subheader}
+                  </div>
+                </f:if>
+              </div>
+              <f:if condition="{data.mugce_quicklinks} > 0">
+                <f:then>
+                <div class="quicklinks-box">
+                  <div class="quicklinks-headline text-bold">
+                    {f:if(condition: '{data.mugce_caption}', then: '{data.mugce_caption}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:quicklinks", default: "Quicklinks")}')}
+                     <div class="quicklinks-headline-BTN animateAll"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-down.svg')}" alt="" class="arrow"></div>
+                  </div>
+                  <div class="quicklinks-items animateAll">
+                    <f:for each="{quicklinks}" as="link">
+                      <v:content.render contentUids="{0: link.data.uid}" limit="1" render="1" as="content">
+                        {content.0 -> f:format.raw()}
+                      </v:content.render>
+                    </f:for>
+                  </div>
+                </div>
+                </f:then>
+                <f:else>
+                  <div class="quicklinks-box"></div>
+                </f:else>
+              </f:if>
+            </div>
+          </f:if>
+        </div>
+      </div>
+    </div>
+  </div>
+</f:section>
+</html>

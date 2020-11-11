@@ -1,4 +1,4 @@
-tt_content.mugce_newsletter < tmp.templatePaths
+tt_content.mugce_newsletter < tmp.mugceDefaults
 tt_content {
     mugce_newsletter =< lib.contentElement
     mugce_newsletter {

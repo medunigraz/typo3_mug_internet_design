@@ -1,4 +1,4 @@
-tt_content.mugce_text_media_teaser < tmp.templatePaths
+tt_content.mugce_text_media_teaser < tmp.mugceDefaults
 tt_content {
     mugce_text_media_teaser =< lib.contentElement
     mugce_text_media_teaser {

@@ -1,0 +1,43 @@
+<div class="box-quicksearch">
+
+<div class="box-quicksearch-inner">
+    <div class="quicksearchclose"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-close-black.svg')}" alt="" ></div>
+
+
+
+<form method="post" id="tx_indexedsearch" action="/search-results?tx_indexedsearch_pi2%5Baction%5D=search&amp;tx_indexedsearch_pi2%5Bcontroller%5D=Search&amp;cHash=c631bc30307d70309f46eb02eebf2e67">
+
+
+
+    <fieldset>
+        <div class="tx-indexedsearch-form">
+            <input placeholder="Suchbegriff…" class="input"  type="text" name="tx_indexedsearch_pi2[search][sword]" value="">
+        </div>
+    </fieldset>
+
+    <div class="search-selectbox">
+
+        <div class="search-selectbox-item">
+            <input type="checkbox" id="QPersonensuche" name="QPersonensuche" class="checkbox">
+            <label for="QPersonensuche">Personensuche</label>
+        </div>
+        <div class="search-selectbox-item">
+            <input type="checkbox" id="QNews" name="QNews" class="checkbox">
+            <label for="QNews">News</label>
+        </div>
+        <div class="search-selectbox-item">
+            <input type="checkbox" id="QEvents" name="QEvents" class="checkbox">
+            <label for="QEvents">Events</label>
+        </div>
+        <div class="search-selectbox-item">
+            <input type="checkbox" id="QKarriere" name="QKarriere" class="checkbox">
+            <label for="QKarriere">Karriere</label>
+        </div>
+    </div>
+
+
+    <input type="submit" value="Finden" class="quicksearch-submit">
+
+</form>
+</div>
+</div>

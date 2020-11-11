@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+  <div class="row content-block content-header-default">
+    <div class="ce-homeslider">
+      <div class="ce-header-slider trans">
+        <div class="cycle-slideshow">
+          <div class="ce-homesliderelement">
+            <div class="ce-header-slider-element">
+              <div class="box-sliderbgbalken"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/balken-green.png')}" alt="" class="sliderbgbalken blend animateAll-s"></div>
+              <f:if condition="{image}">
+                <f:image image="{image.0}" class="slider-img" width="1720c" height="550c" />
+              </f:if>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</f:section>
+</html>

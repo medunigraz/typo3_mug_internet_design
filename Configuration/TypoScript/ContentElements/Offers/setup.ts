@@ -1,4 +1,4 @@
-tt_content.mugce_offers < tmp.templatePaths
+tt_content.mugce_offers < tmp.mugceDefaults
 tt_content {
     mugce_offers =< lib.contentElement
     mugce_offers {

@@ -1065,6 +1065,7 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
     'showitem' => '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
+                    header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_accordion.input.header,
                     mugce_content_elements,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
@@ -1278,6 +1279,7 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
     'showitem' => '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
+                    --palette--;;gallerySettings,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_gallery.input.header,
                     image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_gallery.input.image,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,

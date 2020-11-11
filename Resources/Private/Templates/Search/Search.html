@@ -48,11 +48,18 @@
                 <f:then>
                   <div class="tx-indexedsearch-browsebox">
                     <div class="h1subline">
-                      <is:pageBrowsingResults numberOfResults="{result.count}" currentPage="{searchParams.pointer}" resultsPerPage="{searchParams.numberOfResults}" />
-                      {result.sectionText}
+                      Es wurden 202 Ergebnisse gefunden.
                     </div>
                     <!-- render the anchor-links to the sections inside the displayed result rows -->
                     </div>
+
+                  <div class="result-section-hl">
+                    <h2 class="text-bold">
+                      Allgemein
+                  </h2>
+                  </div>
+
+
                   <f:for each="{result.rows}" as="row">
                     <f:if condition="{row.isSectionHeader}">
                       <f:then>
@@ -65,8 +72,8 @@
                       </f:else>
                     </f:if>
                   </f:for>
-                  <div class="tx-indexedsearch-browsebox">
-                    <is:pageBrowsing numberOfResults="{result.count}" maximumNumberOfResultPages="{settings.page_links}" currentPage="{searchParams.pointer}" resultsPerPage="{searchParams.numberOfResults}" />
+                  <div class="tx-indexedsearch-browsebox tx-indexedsearch-browsebox-footer">
+                    <a href="" class="arrow-pagging arrow-prev"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/arrow-right-green.svg')}" alt="" class="arrow"></a> 40/202 <a href="" class="arrow-pagging arrow-next"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/arrow-left-green.svg')}" alt="" class="arrow"></a>
                   </div>
                 </f:then>
                 <f:else>

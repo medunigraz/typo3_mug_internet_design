@@ -1,4 +1,4 @@
-tt_content.mugce_imagetileselement < tmp.templatePaths
+tt_content.mugce_imagetileselement < tmp.mugceDefaults
 tt_content {
     mugce_imagetileselement =< lib.contentElement
     mugce_imagetileselement {

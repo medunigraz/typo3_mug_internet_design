@@ -95,3 +95,71 @@
     margin: 6px 10px 0 0;
   }
 }
+
+.result-section-hl {
+  width: 100%;
+  float: left;
+  border-bottom: 2px solid #000;
+  margin: 40px 0 0 0;
+}
+
+.tx-indexedsearch-browsebox {
+
+  ul {
+    margin: 20px 0 20px 0;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    li {
+      float: none;
+      displaY: inline-block;
+      position: relative;
+      width: auto;
+      padding: 0 0 0px 0px;
+      margin: 20px 5px 20px 5px;
+      &:before {display:none}
+      &:last-child {
+        text-indent: -9999px;
+        background-image: url("img/arrow-left-green.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 24px;
+        margin: 0px 0px 0px 10px;
+      }
+      &:last-child  a { display:block; width: 20px;  height: 24px;  }
+    }
+  }
+
+}
+
+.tx-indexedsearch-browsebox-footer {
+  width: 100%;
+  float: left;
+  margin: 80px 0 80px 0;
+  text-align: center;
+  .arrow-pagging {
+    margin: 0 15px 0 15px;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label::before {
+  width: 16px;
+  height: 16px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  display: block;
+  content: "";
+  float: left;
+  margin: 3px 10px 0 0;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label::before {
+  box-shadow: inset 0px 0px 0px 3px #fff;
+  background-color: $green-dark;
+  border: 1px solid $green-dark;
+}

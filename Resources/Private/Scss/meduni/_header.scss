@@ -180,4 +180,147 @@ overflow:hidden;
 }
 
 
+.sidebar-icons {
+  position: absolute;
+  right: 0px;
+  background:$grey-light;
+  width:54px;
+  text-align: center;
+  top: 158px;
+
+  .iconitem {
+    width: 100%;
+    height: 54px;
+    overflow: hidden;
+    .iconsidebar {
+      display: block;
+      margin: 15px auto 0 auto;
+      width: 22px;
+    }
+
+  }
+  .iconitemsocial {
+    height: 45px;
+    .iconsidebar {
+      margin: 11px auto 0 auto;
+
+    }
+    .iconsidebar-twitter {
+      margin: 13px auto 0 auto;
+    }
+  }
+  .iconitem:hover {
+    background: $grey-middle ;
+  }
+  .iconitemsearch {
+    cursor:pointer;
+    background: $grey-middle;
+    opacity:0.65;
+  }
+  .iconitemsearch:hover {
+    opacity:1;
+  }
+
+  .box-quicksearch {
+    position: absolute;
+    z-index: -1;
+    background: $grey-superlight;
+    right: 0px;
+    top: 0px;
+    height: 235px;
+    width: 0px;
+    overflow: hidden;
+    opacity:0;
+
+
+    .box-quicksearch-inner {
+      position:relative;
+      width:84%;
+      margin: 50px 0 0 8%;
+
+      .quicksearch-submit {
+        border: 0px;
+        background-color: transparent;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: underline;
+        background-image: url("img/icon-lupe-green.svg");
+        background-repeat: no-repeat;
+        padding: 0 0 0 30px;
+        float: right;
+      }
+      .search-selectbox {
+        margin: 15px 0 25px 0;
+      }
+      .search-selectbox-item {
+        float: left;
+        width: auto;
+        margin: 0px 10px 0px 0;
+        &:last-child {
+          margin-right:0px;
+        }
+      }
+      .input {
+        background: none;
+        border: 0px;
+        border-bottom: 1px solid #666;
+        color: #000;
+        width: 100%;
+        padding: 0 0 15px 0;
+        font-style: italic;
+      }
+      ::-webkit-input-placeholder {
+        color: #000000;
+        opacity: 1;
+      }
+      :-ms-input-placeholder {
+        color: #000000;
+        opacity: 1;
+      }
+      ::placeholder {
+        color: #000000;
+        opacity: 1;
+
+      }
+      .quicksearchclose {
+        position: absolute;
+        right: 0px;
+        top: -20px;
+        cursor: pointer;
+        opacity: 0.5;
+        width: 25px;
+        height: 25px;
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+    }
+
+
+  }
+
+
+}
+
+.box-quicksearch-on  {
+.box-quicksearch {
+ opacity:1;
+  z-index: 9999;
+  width: 520px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.15);
+  -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.15);
+  box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.15);
+  -webkit-transition: opacity 550ms;
+  -moz-transition:opacity 550ms;
+  -o-transition:opacity 550ms;
+  transition: opacity 550ms;
+
+}
+
+}
+
+
+
 
