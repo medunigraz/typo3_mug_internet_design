@@ -1,3 +1,17 @@
+/* ...........................................................................  1830 px */
+@media screen and (max-width: 1830px) {
+  .sidebar-icons {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.1);
+    box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.1);
+  }
+}
+/* ...........................................................................  1314 px */
+@media screen and (max-width: 1314px) {
+.sidebar-icons {
+  position: absolute;
+}
+}
 /* ...........................................................................  1023 px */
 @media screen and (max-width: 1023px) {
   #logo-page {

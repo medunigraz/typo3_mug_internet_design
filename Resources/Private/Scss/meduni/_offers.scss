@@ -51,10 +51,10 @@
 
   }
 
-.elements .ce-offer:nth-child(even) .col-img {
+.elements .ce-offer.even .col-img {
   float:right;
 }
-.elements .ce-offer:nth-child(even)  .col-text .col-text-inner {
+.elements .ce-offer.even  .col-text .col-text-inner {
     width: 90%;
     float: left;
     margin: 0 0 0 0%;

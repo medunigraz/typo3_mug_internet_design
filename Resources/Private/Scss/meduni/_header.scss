@@ -179,14 +179,23 @@ overflow:hidden;
 
 }
 
-
+.iam-nav-On .sidebar-icons  {
+  z-index:99;
+opacity:0;
+}
 .sidebar-icons {
-  position: absolute;
+  opacity:1;
+  position: fixed;
   right: 0px;
   background:$grey-light;
   width:54px;
   text-align: center;
   top: 158px;
+  z-index:9999999;
+  -webkit-transition: opacity 350ms;
+  -moz-transition:opacity 350ms;
+  -o-transition:opacity 350ms;
+  transition: opacity 350ms;
 
   .iconitem {
     width: 100%;

@@ -32,8 +32,8 @@ $(window).resize(function(){
   //newsbar collision
 
   if ($('.sidebar-default .news-item').length){
-
-    $('.standard-leadin .content-part').addClass('lowspace lowspace1');
+    $('.standard-leadin .content-part, .standardCE5, .standardCE6').removeClass('lowspace lowspace1 lowspace2');
+    $('.standard-leadin .content-part, .standardCE5').addClass('lowspace lowspace1');
 
     var newsteaserHeight = $('.sidebar-default .news-box-inner').height() - 400;
     var leadin = $('.standard-leadin').height();
@@ -46,7 +46,7 @@ $(window).resize(function(){
       $('.standardCE6').addClass('lowspace lowspace3');
     }
     else {
-      $('.standardCE5, .standardCE6').removeClass('lowspace lowspace2');
+      $('.standardCE6').removeClass('lowspace lowspace2');
     }
   } else {
 
@@ -56,16 +56,17 @@ $(window).resize(function(){
   //navbar collision
 
   if ($('.sidebar-default .sub-menu .nav-item').length){
-
-    $('.standard-leadin .content-part').addClass('lowspace lowspace1');
+    $('.standard-leadin .content-part, .standardCE5, .standardCE6').removeClass('lowspace lowspace1 lowspace2');
+    $('.standard-leadin .content-part,.standardCE5').addClass('lowspace lowspace1');
 
     var newsteaserHeight = $('.sidebar-default .quicklinks-box').height() ;
     var leadin = $('.standard-leadin').height();
     var lowspace1 = $('.standardCE3 .content-part').height();
     var lowspace2 = $('.standardCE5 .content-part').height();
     var lowspace3 = $('.standardCE6 .content-part').height();
-
+    var lowspace4 = $('.standardCE7 .content-part').height();
     var lowspaceCE56 = (lowspace2+lowspace3);
+    var lowspaceCE57 = (lowspace2+lowspace3+lowspace4);
 
     if (newsteaserHeight > lowspace1) {
       $('.standardCE5').addClass('lowspace lowspace2');
@@ -74,8 +75,12 @@ $(window).resize(function(){
 
       $('.standardCE6').addClass('lowspace lowspace3');
     }
+    if ((newsteaserHeight) > (lowspaceCE57)) {
+
+      $('.standardCE7').addClass('lowspace lowspace4');
+    }
     else {
-      $('.standardCE5, .standardCE6').removeClass('lowspace lowspace2');
+      $('.standardCE6,.standardCE7').removeClass('lowspace lowspace2 lowspace3 lowspace4');
     }
   } else {
 
@@ -389,6 +394,19 @@ setTimeout(function(){
   });
 }, 3000);
 
+//evenodds
+$('.ce-offers .elements').each(function(){
+  $(this).find(".ce-offer").each( function (index) {
+    index += 1;
+    if(index % 2 == 0) {
+      $(this).addClass("even");
+    } else {
+      $(this).addClass("odd");
+    }
+  });
+});
+
+
 
 
 
@@ -409,6 +427,7 @@ $(window).on("load", function() {
   var sliderimgHeight = $('.ce-homesliderelement:first .slider-img').height();
   $('.ce-header-slider').css({"max-height": sliderimgHeight -2 +"px"}); $('.ce-header-slider').css({"min-height": sliderimgHeight -2  +"px"});
 });
-setTimeout(function(){ $(window).trigger('resize'); }, 3000);
+
+setTimeout(function(){ $(window).trigger('resize'); }, 2000);
 
 

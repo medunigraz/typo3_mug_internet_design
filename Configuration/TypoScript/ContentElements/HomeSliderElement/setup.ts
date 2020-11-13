@@ -16,6 +16,7 @@ tt_content {
             20 {
                 table = tt_content
                 orderBy = sorting
+                pidInList.field = pid
                 where.field = uid
                 where.intval = 1
                 where.dataWrap = mugce_quicklink_pid = |

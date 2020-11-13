@@ -425,6 +425,13 @@ a:hover .morelink-arrow {
   margin: 21px 0 0px 0;
 }
 
+.standardCE7.lowspace .row {
+  width: 66%;
+}
+.standardCE7.lowspace .content-part {
+  margin: 21px 0 0px 0;
+}
+
 .page-event .standardCE6 {
   margin-top: 130px;
 }
@@ -835,13 +842,24 @@ td {
   margin: 52px 0 0 0;
 }
 
+.iam-nav-On .sidebar-icons {
+  z-index: 99;
+  opacity: 0;
+}
+
 .sidebar-icons {
-  position: absolute;
+  opacity: 1;
+  position: fixed;
   right: 0px;
   background: #eeeeee;
   width: 54px;
   text-align: center;
   top: 158px;
+  z-index: 9999999;
+  -webkit-transition: opacity 350ms;
+  -moz-transition: opacity 350ms;
+  -o-transition: opacity 350ms;
+  transition: opacity 350ms;
 }
 .sidebar-icons .iconitem {
   width: 100%;
@@ -959,6 +977,20 @@ td {
   transition: opacity 550ms;
 }
 
+/* ...........................................................................  1830 px */
+@media screen and (max-width: 1830px) {
+  .sidebar-icons {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.1);
+    box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.1);
+  }
+}
+/* ...........................................................................  1314 px */
+@media screen and (max-width: 1314px) {
+  .sidebar-icons {
+    position: absolute;
+  }
+}
 /* ...........................................................................  1023 px */
 @media screen and (max-width: 1023px) {
   #logo-page {
@@ -2285,10 +2317,10 @@ td {
   float: left;
   margin: 0 0 0 10%;
 }
-.ce-offers .elements .ce-offer:nth-child(even) .col-img {
+.ce-offers .elements .ce-offer.even .col-img {
   float: right;
 }
-.ce-offers .elements .ce-offer:nth-child(even) .col-text .col-text-inner {
+.ce-offers .elements .ce-offer.even .col-text .col-text-inner {
   width: 90%;
   float: left;
   margin: 0 0 0 0%;
@@ -2928,6 +2960,14 @@ td {
   float: right;
   margin: 0 10px 0 0;
   color: #666666;
+}
+.breadcrumbline .breadcrumbbox .entry {
+  display: none;
+}
+.breadcrumbline .breadcrumbbox .entry:nth-child(1),
+.breadcrumbline .breadcrumbbox .entry:nth-child(2),
+.breadcrumbline .breadcrumbbox .entry:nth-child(3) {
+  display: inline-block;
 }
 .breadcrumbline .breadcrumbbox a:hover .breaditem-name {
   text-decoration: underline;
