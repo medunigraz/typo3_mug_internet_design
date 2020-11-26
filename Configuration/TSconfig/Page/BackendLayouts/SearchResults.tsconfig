@@ -25,7 +25,7 @@ mod.web_layout.BackendLayouts {
                                 colPos = 0
                                 allowed {
                                     CType = list
-                                    list_type = indexedsearch_pi2
+                                    list_type = indexedsearch_pi2,solr_pi_results,solr_pi_search,solr_pi_frequentlysearched,solr_pi_suggest
                                 }
                             }
                         }
