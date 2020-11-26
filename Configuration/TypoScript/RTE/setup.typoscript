@@ -1,0 +1,33 @@
+lib.parseFunc_RTE {
+    externalBlocks {
+        table {
+            stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(table-bordered,table-green,table-gray,table-striped)
+        }
+    }
+}
+
+tt_content {
+    stdWrap {
+        replacement {
+            78301 {
+                search = class="table-bordered"
+                replace = class="table table-bordered"
+            }
+
+            78302 {
+                search = class="table-primary"
+                replace = class="table table-primary"
+            }
+
+            78303 {
+                search = class="table-secondary"
+                replace = class="table table-secondary"
+            }
+
+            78304 {
+                search = class="table-striped"
+                replace = class="table table-striped"
+            }
+        }
+    }
+}

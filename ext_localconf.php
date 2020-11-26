@@ -62,6 +62,9 @@ defined('TYPO3_MODE') or die();
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/BackendLayouts/SearchResults.tsconfig">'
   );
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/RTE/Page.tsconfig">'
+  );
 
   $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['mug_ce'] = 'EXT:mug_ce/Configuration/RTE/MugCEPresets.yaml';
 
@@ -286,6 +289,13 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/LinkButton/setup.ts">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
+    $_EXTKEY,
+    'setup',
+    '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/RTE/setup.typoscript">',
+    'defaultContentRendering'
   );
 
   $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newItems']['News->listEvents'] = 'List view events';

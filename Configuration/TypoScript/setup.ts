@@ -101,6 +101,14 @@ plugin.tx_form {
     }
 }
 
+lib.parseFunc_RTE {
+    externalBlocks {
+        table {
+            stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(table-bordered,table-green,table-gray,table-striped)
+        }
+    }
+}
+
 lib.tx_news.contentElementRendering = RECORDS
 lib.tx_news.contentElementRendering {
     tables = tt_content
@@ -147,4 +155,3 @@ plugin.tx_indexedsearch {
         eventsOverviewPid = {$const.eventsOverviewPid}
     }
 }
-

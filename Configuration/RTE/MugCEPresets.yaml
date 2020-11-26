@@ -11,6 +11,10 @@ editor:
     stylesSet:
       # block level styles
       - { name: "Linklist", element: "ul", attributes: { class: "link-list"} }
+      - { name: "Linien", element: "table", attributes: { class: "table-bordered" } }
+      - { name: "Grün", element: "table", attributes: { class: "table-primary" }}
+      - { name: "Grau", element: "table", attributes: { class: "table-secondary" }}
+      - { name: "Zebra", element: "table", attributes: { class: "table-striped" }}
 
     format_tags: "p;h1;h2;h3;h4;h5;pre"
 
