@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+    xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+    xmlns:s="http://typo3.org/ns/ApacheSolrForTypo3/Solr/ViewHelpers">
+
+<f:section name="Document">
+<div class="tx-indexedsearch-res">
+  <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="searchresult-icon">
+  <h3>
+    <span class="tx-indexedsearch-title{row.CSSsuffix}">
+      <a href="{document.url}">
+        {document.title}
+      </a>
+    </span>
+  </h3>
+  <p class="tx-indexedsearch-description">
+    <f:switch expression="{document.fields.subtype_stringS}">
+      <f:case value="news">
+        {s:document.highlightResult(resultSet:resultSet, document:document, fieldName:'content')}
+      </f:case>
+      <f:case value="event">
+        {s:document.highlightResult(resultSet:resultSet, document:document, fieldName:'content')}
+      </f:case>
+      <f:case value="person">
+        <div class="container">
+          <f:if condition="{document.fields.telephone_stringS}">
+          <div class"row">
+            T: <a href="tel:{document.fields.telephone_stringS}">{document.fields.telephone_stringS}</a>
+          </div>
+          </f:if>
+          <f:if condition="{document.fields.mail_stringS}">
+          <div class"row">
+            E: <f:link.email email="{document.fields.mail_stringS}"/>
+          </div>
+          </f:if>
+          <f:if condition="{document.fields.ou_name_stringS}">
+          <div class"row">
+            O: {document.fields.ou_name_stringS}
+          </div>
+          </f:if>
+          <f:if condition="{document.fields.ou_zip_stringS} && {document.fields.ou_city_stringS} && {document.fields.ou_address_stringS}">
+          <div class"row">
+            A: {document.fields.ou_zip_stringS} {document.fields.ou_city_stringS}, {document.fields.ou_address_stringS}
+          </div>
+          </f:if>
+        </div>
+      </f:case>
+      <f:defaultCase>
+        {s:document.highlightResult(resultSet:resultSet, document:document, fieldName:'content')}
+      </f:defaultCase>
+    </f:switch>
+  </p>
+  <s:debug.documentScoreAnalyzer document="{document}" />
+</div>
+</f:section>

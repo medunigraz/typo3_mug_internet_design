@@ -1,0 +1,2 @@
+plugin.tx_solr.view.partialRootPath = EXT:mug_ce/Resources/Private/Partials/Plugins/Solr
+plugin.tx_solr.view.templateRootPath = EXT:mug_ce/Resources/Private/Templates/Plugins/Solr

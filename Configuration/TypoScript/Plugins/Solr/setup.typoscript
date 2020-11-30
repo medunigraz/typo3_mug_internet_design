@@ -1,0 +1,7 @@
+lib.searchPath = TEXT
+lib.searchPath {
+    typolink.parameter = {$plugin.tx_solr.search.targetPage}
+    typolink.returnLast = url
+}
+
+
