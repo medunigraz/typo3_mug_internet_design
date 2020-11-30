@@ -104,7 +104,7 @@ plugin.tx_form {
 lib.parseFunc_RTE {
     externalBlocks {
         table {
-            stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(table-bordered,table-green,table-gray,table-striped)
+            stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(table,table-bordered,table-green,table-gray,table-striped)
         }
     }
 }
