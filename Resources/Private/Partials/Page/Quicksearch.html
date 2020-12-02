@@ -18,20 +18,20 @@
     <div class="search-selectbox">
 
         <div class="search-selectbox-item">
-            <input type="checkbox" id="QPersonensuche" name="QPersonensuche" class="checkbox">
-            <label for="QPersonensuche">Personensuche</label>
+            <input type="checkbox" id="QKarriere" name="tx_solr[filter][]" class="checkbox" value="subtype_stringS:page">
+            <label for="QKarriere">Seiten</label>
         </div>
         <div class="search-selectbox-item">
-            <input type="checkbox" id="QNews" name="QNews" class="checkbox">
+            <input type="checkbox" id="QPersonensuche" name="tx_solr[filter][]" class="checkbox" value="subtype_stringS:person">
+            <label for="QPersonensuche">Bedienstete</label>
+        </div>
+        <div class="search-selectbox-item">
+            <input type="checkbox" id="QNews" name="tx_solr[filter][]" class="checkbox" value="subtype_stringS:news">
             <label for="QNews">News</label>
         </div>
         <div class="search-selectbox-item">
-            <input type="checkbox" id="QEvents" name="QEvents" class="checkbox">
+            <input type="checkbox" id="QEvents" name="tx_solr[filter][]" class="checkbox" value="subtype_stringS:event">
             <label for="QEvents">Events</label>
-        </div>
-        <div class="search-selectbox-item">
-            <input type="checkbox" id="QKarriere" name="QKarriere" class="checkbox">
-            <label for="QKarriere">Karriere</label>
         </div>
     </div>
 
