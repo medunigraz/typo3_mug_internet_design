@@ -7,7 +7,7 @@
     <div class="content-part ce-text">
       <div class="container">
         <div class="row  ">
-          <div class="col  col-8  trans">
+          <div class="col    trans">
             <div class="row content-block breadcrumbline trans">
               <div class="content-part breadcrumbline">
                 <div class="container">
@@ -23,22 +23,8 @@
               </h1>
               <div class="eventfilterbox">
                 <div class="eventfilterboxInner">
-                  <input type="text" onfocus="(this.type='date')" id="eventday" name="eventday" value="" placeholder="Tag auswählen" class="eventfilterbox-input eventfilterbox-date">
-                  <select name="eventmonth" id="eventmonth" class="eventfilterbox-input eventfilterbox-select">
-                    <option value="">Monat auswählen</option>
-                    <option value="Jaenner">Jänner</option>
-                    <option value="Februar">Februar</option>
-                    <option value="Maerz">März</option>
-                    <option value="April">April</option>
-                    <option value="Mai">Mai</option>
-                    <option value="Juni">Juni</option>
-                    <option value="Juli">Juli</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="Oktober">Oktober</option>
-                    <option value="November">November</option>
-                    <option value="Dezember">Dezember</option>
-                  </select>
+                  <input type="text" onfocus="(this.type='date')" id="eventday" name="eventday" value="" placeholder="Datum auswählen" class="eventfilterbox-input eventfilterbox-date">
+
                   <div class="monthpaging eventfilterbox-input">
                     <a href="#" class="monthpagingLink-prev">September</a>
                     <a href="#" class="monthpagingLink-next">November</a>
@@ -52,78 +38,27 @@
                   <f:for each="{events}" as="eventItem" iteration="iterator">
                     <f:if condition="!{currentDay} || {f:format.date(date:currentDay.datetime, format:'Y-m-d')} != {f:format.date(date:eventItem.datetime, format:'Y-m-d')}">
                       <f:if condition="{currentDay}">
-                        </div>
-                      </f:if>
-                      {eventItem -> f:variable(name: 'currentDay')}
-                      <div class="dayrow">
-                    </f:if>
-                      <f:render partial="List/ItemEventCalendar" arguments="{eventItem: eventItem,settings:settings,iterator:iterator}" />
-                  </f:for>
-                  </div>
-                </f:if>
-                <div class="monthpaging monthpaging-bottom eventfilterbox-input">
-                  <a href="#" class="monthpagingLink-prev">September</a>
-                  <a href="#" class="monthpagingLink-next">November</a>
-                </div>
               </div>
-            </div>
-          </div>
-          <div class="col col-05 "> </div>
-          <div class="col col-35 sidebar-default">
-            <div class="info-box">
-              <div class="quicklinks-box">
-                <div class="news-box-inner">
-                  <f:for as="newsItem" key="idx" each="{news}">
-                    <f:if condition="{idx} != 0">
-                      <div class="news-item  greybox-news bg-grey-light entry-{idx}">
-                        <div class="news-item-inner">
-                          <div class="quicklinks-headline text-bold">{newsItem.title}</div>
-                          <div class="teaser">
-                            {newsItem.teaser}
-                            <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
-                              <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
-                            </f:link.action>
-                          </div>
-                        </div>
-                      </div>
-                    </f:if>
-                  </f:for>
-                  <div class="linktoall bg-grey-light">
-                    <div class="news-item-inner">
-                      <div class="border-bottom"></div>
-                      <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list" class="morelink text-bold animateAll">
-                        {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
-                        <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-                      </f:link.action>
-                      <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents" class="morelink text-bold animateAll">
-                        {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
-                        <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-                      </f:link.action>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <f:if condition="{news}">
-              <div class="greenbox greenbox-news">
-                <div class="infobox-inner">
-                  <div class="blend blend-full bg-green-dark"></div>
-                  <div class="infobox-headline text-bold">
-                    {news.0.title}
-                    <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:news.0.uid}">
-                      <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
-                    </f:link.action>
-                    <div class="teaser">
-                      {news.0.teaser}
-                    </div>
-                  </div>
-                </div>
               </f:if>
+              {eventItem -> f:variable(name: 'currentDay')}
+              <div class="dayrow">
+                </f:if>
+                <f:render partial="List/ItemEventCalendar" arguments="{eventItem: eventItem,settings:settings,iterator:iterator}" />
+                </f:for>
+              </div>
+              </f:if>
+              <div class="monthpaging monthpaging-bottom eventfilterbox-input">
+                <a href="#" class="monthpagingLink-prev">September</a>
+                <a href="#" class="monthpagingLink-next">November</a>
+              </div>
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
+  </div>
   </div>
 </f:section>
 </html>

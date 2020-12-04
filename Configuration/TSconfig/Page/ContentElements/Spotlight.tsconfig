@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        mugce_spotlight {
+            iconIdentifier = mugce-icon-spotlight
+            title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.caption
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlightdescription
+            tt_content_defValues {
+                CType = mugce_spotlight
+            }
+        }
+    }
+    show := addToList(mugce_spotlight)
+}

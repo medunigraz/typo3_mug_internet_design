@@ -373,7 +373,8 @@ if($(".greybox-news").length < 1) {
 
 
 //spotnews
-$(".news-overview-list .article-news:first-child" ).appendTo( ".spotnewsbox" );
+$(".news-overview-list .article-news:first-child" ).addClass( "spotnewsbox" );
+$(".news-overview-list .article-news:nth-child(2)").after("<div class='clear'></div>");
 
 
 //video

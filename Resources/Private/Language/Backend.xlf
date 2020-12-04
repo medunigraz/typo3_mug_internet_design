@@ -69,6 +69,9 @@
       <trans-unit id="CType.default.input.news_entries" xml:space="preserve">
         <source>News Entries</source>
       </trans-unit>
+      <trans-unit id="CType.default.input.event_entries" xml:space="preserve">
+        <source>Event Entries</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_homeslider.caption" xml:space="preserve">
         <source>Home Slider</source>
       </trans-unit>
@@ -124,10 +127,16 @@
         <source>Plain</source>
       </trans-unit>
       <trans-unit id="CType.mugce_header_default.input.display_type.news" xml:space="preserve">
-        <source>News</source>
+        <source>Max. 3 News</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.display_type.events" xml:space="preserve">
+        <source>Max. 3 Events</source>
       </trans-unit>
       <trans-unit id="CType.mugce_header_default.input.display_type.news_submenu" xml:space="preserve">
-        <source>News and Submenu</source>
+        <source>1 News and Submenu</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.display_type.event_submenu" xml:space="preserve">
+        <source>1 Event and Submenu</source>
       </trans-unit>
       <trans-unit id="CType.mugce_header_default.input.display_type.news_short" xml:space="preserve">
         <source>1 News entry only</source>
@@ -141,6 +150,9 @@
       <trans-unit id="CType.mugce_header_default.input.display_type.text_news" xml:space="preserve">
         <source>Text and 2 News</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.display_type.text_events" xml:space="preserve">
+        <source>Text and 2 Evetns</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_header_default.input.display_type.submenu" xml:space="preserve">
         <source>Submenu</source>
       </trans-unit>
@@ -152,6 +164,9 @@
       </trans-unit>
       <trans-unit id="CType.mugce_header_default.input.mugce_news_entries" xml:space="preserve">
         <source>Teaser: News Entries (overrides categories)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_header_default.input.mugce_event_entries" xml:space="preserve">
+        <source>Teaser: Event Entries (overrides categories)</source>
       </trans-unit>
       <trans-unit id="CType.mugce_header_simple.caption" xml:space="preserve">
         <source>Simple Header</source>
@@ -497,6 +512,27 @@
       </trans-unit>
       <trans-unit id="CType.mugce_link_button.input.display_type.grey" xml:space="preserve">
         <source>Grey</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight.caption" xml:space="preserve">
+        <source>Spotlight</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight.description" xml:space="preserve">
+        <source>Spotlight element with news, events and social media content</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight.input.subheader" xml:space="preserve">
+        <source>Spotlight headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight.input.assets" xml:space="preserve">
+        <source>Media</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight.input.display_type.newsevents" xml:space="preserve">
+        <source>Show News and Events</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight.input.display_type.plain" xml:space="preserve">
+        <source>Spotlight only</source>
       </trans-unit>
     </body>
   </file>

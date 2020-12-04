@@ -1,12 +1,12 @@
 <?php
 namespace MUG\ContentElements\ViewHelpers;
 
-use GeorgRinger\Eventnews\Domain\Model\Dto\Demand;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3\CMS\Core\Database\ConnectionPool;
+use GeorgRinger\Eventnews\Domain\Model\Dto\Demand;
 
-class GetNewsByCategoryViewHelper extends AbstractViewHelper {
+class GetEventsByCategoryViewHelper extends AbstractViewHelper {
 
   /**
    * @var \GeorgRinger\News\Domain\Repository\NewsRepository
@@ -63,7 +63,7 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
     $demand->setCategories($catIds);
     $demand->setCategoryConjunction('OR');
     $demand->setLimit($this->arguments['limit'] ?: 3);
-    $demand->setEventRestriction(Demand::EVENT_RESTRICTION_NO_EVENTS);
+    $demand->setEventRestriction(Demand::EVENT_RESTRICTION_ONLY_EVENTS);
 
     return $this->newsRepository->findDemanded($demand);
   }

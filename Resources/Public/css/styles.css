@@ -4116,6 +4116,10 @@ td {
     padding: 50px 0 0 0;
   }
 }
+.page-event-overview .frame-type-list.newsteaserpart {
+  margin-top: 0;
+}
+
 .frame-type-list {
   width: 100%;
   max-width: 1720px;
@@ -4283,9 +4287,9 @@ td {
   right: -65%;
   top: 0px;
   height: 100%;
-  width: 36px;
+  width: 53px;
   z-index: 20;
-  z-index: 5;
+  z-index: 9999999;
 }
 .spotlightslider .socialsidebar-inner {
   float: left;
@@ -4302,7 +4306,7 @@ td {
 }
 .spotlightslider .iconlink img {
   display: block;
-  margin: 0 0 0 8px;
+  margin: 0 0 0 17px;
 }
 .spotlightslider .iconlink:last-child {
   border-bottom: 1px solid #fff;
@@ -4320,7 +4324,7 @@ td {
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  margin: 105px 0 0 -63px;
+  margin: 105px 0 0 -56px;
 }
 .spotlightslider .spolightItem {
   width: 100%;
@@ -4395,6 +4399,44 @@ td {
 }
 .spotlightslider .spotslider-pager span:hover, .spotlightslider .spotslider-pager span.cycle-pager-active {
   background: #007934;
+}
+
+.content-block-spotlight {
+  margin-top: 118px;
+}
+.content-block-spotlight .morelinkItem {
+  width: auto;
+  clear: both;
+  margin: 0px 0 16px 0;
+}
+.content-block-spotlight .headline-spotlight h2 {
+  width: 60%;
+}
+.content-block-spotlight .events-list-view {
+  background: #007934;
+  height: max-content;
+  padding-bottom: 30px;
+}
+.content-block-spotlight .events-list-view .article {
+  margin: 20px 0 0 5%;
+  float: left;
+  width: 90%;
+  color: #fff;
+}
+.content-block-spotlight .events-list-view .article .news-list-date {
+  color: #fff;
+  opacity: 0.8;
+  margin: 5px 0 0 0;
+}
+.content-block-spotlight .events-list-view .article a {
+  color: #fff;
+}
+.content-block-spotlight .events-list-view .article h3 {
+  padding: 0 0px 0 0;
+}
+
+.content-part-newsevents-spotlightonly {
+  margin-top: 0px;
 }
 
 /* ....................................................................................... 1720 */
@@ -4553,51 +4595,6 @@ td {
   color: #007934;
 }
 
-.spotnewsbox {
-  float: left;
-  width: 100%;
-  margin: 70px 0 30px 0;
-}
-.spotnewsbox .news-img-wrap {
-  width: 64%;
-  float: left;
-}
-.spotnewsbox .header {
-  width: 25%;
-  float: left;
-  margin: 100px 0 0 7%;
-}
-.spotnewsbox .header h3 {
-  font-size: 26px;
-  line-height: 35px;
-  text-transform: uppercase;
-}
-.spotnewsbox .teaser-text {
-  width: 25%;
-  float: left;
-  margin: 0 0 0 7%;
-}
-.spotnewsbox .morelink {
-  position: relative;
-  border-top: 2px solid #000;
-  width: 100%;
-  text-align: right;
-  display: block;
-  padding: 10px 24px 0 0;
-  font-weight: 600;
-  background-image: url("img/icon-arrow-black-right.svg");
-  background-repeat: no-repeat;
-  background-position: 99% 11px;
-  height: 47px;
-  -webkit-transition: all 350ms;
-  -moz-transition: all 350ms;
-  -o-transition: all 350ms;
-  transition: all 350ms;
-}
-.spotnewsbox .morelink:hover {
-  background-position: 100% 11px;
-}
-
 .news-overview-list {
   margin: 50px 0 0 0;
 }
@@ -4606,11 +4603,16 @@ td {
   width: 29%;
   margin: 1px 6.5% 50px 0;
 }
-.news-overview-list .article-news:nth-child(3n) {
-  margin-right: 0px;
-  clear: right;
+.news-overview-list .article-news:nth-child(2) {
+  margin-top: 70px;
 }
-.news-overview-list .article-news:nth-child(4n) {
+.news-overview-list .article-news:nth-child(3) {
+  clear: left !important;
+}
+.news-overview-list .article-news:nth-child(6), .news-overview-list .article-news:nth-child(9), .news-overview-list .article-news:nth-child(12), .news-overview-list .article-news:nth-child(15), .news-overview-list .article-news:nth-child(18) {
+  margin-right: 0px;
+}
+.news-overview-list .article-news:nth-child(7) {
   clear: left;
 }
 .news-overview-list .header {
@@ -4666,6 +4668,61 @@ td {
 .news-overview-list .news-overview-list .article-news:nth-child(3) {
   clear: both;
 }
+.news-overview-list .spotnewsbox {
+  position: relative;
+  float: right;
+  width: 64%;
+  margin: 70px 0 60px 0;
+}
+.news-overview-list .spotnewsbox .news-img-wrap {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 355px;
+  margin: 60px 0 0 0;
+}
+.news-overview-list .spotnewsbox:before {
+  content: "";
+  position: absolute;
+  background: #eeeeee;
+  height: 100%;
+  width: 180%;
+  left: -30px;
+  z-index: -1;
+}
+.news-overview-list .spotnewsbox .header {
+  width: 100%;
+  float: left;
+  margin: 0px 0 0 0%;
+}
+.news-overview-list .spotnewsbox .header h3 {
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20px;
+}
+.news-overview-list .spotnewsbox .teaser-text {
+  width: 100%;
+  float: left;
+  margin: 0 0 0 0%;
+}
+.news-overview-list .spotnewsbox .teaser-text p {
+  display: none;
+}
+.news-overview-list .spotnewsbox .morelink {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  display: block;
+  padding: 10px 0px 0 0;
+  font-weight: 600;
+  height: 47px;
+}
+.news-overview-list .spotnewsbox .morelink:hover {
+  background-position: 100% 11px;
+}
 
 /* ....................................................................................... 1240 */
 @media screen and (max-width: 1240px) {
@@ -4702,6 +4759,9 @@ td {
   .frame-type-list .standard-leadin-newsoverview .row {
     width: 100%;
   }
+}
+.content-block-eventsoverview .text-leadin {
+  max-width: 100%;
 }
 .content-block-eventsoverview .h1 {
   float: left;
@@ -4818,6 +4878,7 @@ td {
   border-bottom: 1px solid #707070;
   margin: 0 0 40px 0;
   padding: 0 0 40px 0;
+  width: 100%;
 }
 .content-block-eventsoverview .dayrow .eventdatebox {
   position: absolute;
@@ -4844,10 +4905,28 @@ td {
   padding: 5px 0 5px 0;
 }
 .content-block-eventsoverview .article-eventcalendar {
-  width: 35%;
+  width: 28%;
   float: left;
   min-height: 100px;
-  margin: 0 0 45px 20%;
+  margin: 0 0 45px 3%;
+}
+.content-block-eventsoverview .article-eventcalendar:first-child {
+  margin-left: 10%;
+}
+.content-block-eventsoverview .article-eventcalendar:nth-child(4) {
+  margin-left: 10%;
+}
+.content-block-eventsoverview .article-eventcalendar:nth-child(7) {
+  margin-left: 10%;
+}
+.content-block-eventsoverview .article-eventcalendar:nth-child(10) {
+  margin-left: 10%;
+}
+.content-block-eventsoverview .article-eventcalendar:nth-child(13) {
+  margin-left: 10%;
+}
+.content-block-eventsoverview .article-eventcalendar:nth-child(16) {
+  margin-left: 10%;
 }
 .content-block-eventsoverview .article-eventcalendar .header {
   width: 100%;
@@ -4882,12 +4961,6 @@ td {
   font-size: 16px;
   color: #000000;
 }
-.content-block-eventsoverview .article-eventcalendar:nth-child(even) {
-  float: right;
-  margin-right: 0px;
-  margin-left: 0px;
-}
-
 /* ....................................................................................... 1024 */
 @media screen and (max-width: 1024px) {
   .content-block-eventsoverview .eventfilterbox {

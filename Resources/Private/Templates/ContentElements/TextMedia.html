@@ -17,9 +17,11 @@
             </div>
           <div class="col col-05 "> </div>
           <div class="col col-55 trans">
+            <f:if condition="{data.header}">
             <div class="headline rowborder-bottom">
             <h2 class="text-bold">{data.header -> f:format.nl2br()}</h2>
             </div>
+            </f:if>
             <div class="text text-leadin">
               {data.bodytext -> f:format.html()}
             </div>

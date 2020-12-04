@@ -145,69 +145,6 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController {
     Cache::addPageCacheTagsByDemandObject($demand);
   }
 
-  public function listNewsEventsAction(array $overwriteDemand = null) {
-    $this->forwardToDetailActionWhenRequested();
-
-    /** @var \GeorgRinger\Eventnews\Domain\Model\Dto\Demand $demand */
-    $demand = $this->createDemandObjectFromSettings($this->settings,
-        'GeorgRinger\\Eventnews\\Domain\\Model\\Dto\\Demand');
-    $demand->setActionAndClass(__METHOD__, __CLASS__);
-
-    if ($this->settings['disableOverrideDemand'] != 1 && $overwriteDemand !== null) {
-      $demand = $this->overwriteDemandObject($demand, $overwriteDemand);
-    }
-
-    $demand->setEventRestriction(Demand::EVENT_RESTRICTION_NO_EVENTS);
-    $newsRecords = $this->newsRepository->findDemanded($demand);
-
-    $demand->setEventRestriction(Demand::EVENT_RESTRICTION_ONLY_EVENTS);
-    $eventsRecords = $this->newsRepository->findDemanded($demand);
-
-    if ($this->settings['social'] > 0) {
-      $cUid = $this->configurationManager->getContentObject()->data['uid'];
-      $fileRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\FileRepository::class);
-      $social = $fileRepository->findByRelation('tt_content', 'social', $cUid);
-    } else {
-      $social = array();
-    }
-
-    $assignedValues = [
-        'news' => $newsRecords,
-        'events' => $eventsRecords,
-        'social' => $social,
-        'socialCaption' => $this->settings['socialCaption'],
-        'overwriteDemand' => $overwriteDemand,
-        'demand' => $demand,
-        'categories' => null,
-        'tags' => null,
-        'settings' => $this->settings,
-    ];
-
-    if ($demand->getCategories() !== '') {
-      $categoriesList = $demand->getCategories();
-      if (!is_array($categoriesList)) {
-        $categoriesList = GeneralUtility::trimExplode(',', $categoriesList);
-      }
-      if (!empty($categoriesList)) {
-        $assignedValues['categories'] = $this->categoryRepository->findByIdList($categoriesList);
-      }
-    }
-
-    if ($demand->getTags() !== '') {
-      $tagList = $demand->getTags();
-      if (!is_array($tagList)) {
-        $tagList = GeneralUtility::trimExplode(',', $tagList);
-      }
-      if (!empty($tagList)) {
-        $assignedValues['tags'] = $this->tagRepository->findByIdList($tagList);
-      }
-    }
-    $assignedValues = $this->emitActionSignal('NewsController', self::SIGNAL_NEWS_LIST_ACTION, $assignedValues);
-    $this->view->assignMultiple($assignedValues);
-
-    Cache::addPageCacheTagsByDemandObject($demand);
-  }
-
   /**
    * Single view of a news record
    *

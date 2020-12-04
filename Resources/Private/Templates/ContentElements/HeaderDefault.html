@@ -47,7 +47,7 @@
             <f:if condition="{data.mugce_display_type} == 2 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 5">
               <f:render partial="OrganisationSubmenu" arguments="{rootId: data.pid}" />
             </f:if>
-            <f:if condition="{data.mugce_display_type} == 1 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 6  || {data.mugce_display_type} == 7">
+            <f:if condition="{data.mugce_display_type} == 1 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 6  || {data.mugce_display_type} == 7 || {data.mugce_display_type} == 8 || {data.mugce_display_type} == 9 || {data.mugce_display_type} == 10">
               <f:switch expression="{data.mugce_display_type}">
                 <f:case value="1">
                   <f:variable name="newscount" value="3" />
@@ -61,10 +61,29 @@
                 <f:case value="7">
                   <f:variable name="newscount" value="1" />
                 </f:case>
+                <f:case value="8">
+                  <f:variable name="newscount" value="3" />
+                </f:case>
+                <f:case value="9">
+                  <f:variable name="newscount" value="1" />
+                </f:case>
+                <f:case value="10">
+                  <f:variable name="newscount" value="2" />
+                </f:case>
               </f:switch>
-              <f:variable name="news" value="{ce:getNewsByRelation(uid: data.uid ,limit: newscount)}" />
-              <f:if condition="{news -> f:count()} == 0">
-                <f:variable name="news" value="{ce:getNewsByCategory(uid: data.uid ,limit: newscount)}" />
+              <f:if condition="{data.mugce_display_type} == 1 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 6  || {data.mugce_display_type} == 7">
+                <f:then>
+                  <f:variable name="news" value="{ce:getNewsByRelation(uid: data.uid ,limit: newscount)}" />
+                  <f:if condition="{news -> f:count()} == 0">
+                    <f:variable name="news" value="{ce:getNewsByCategory(uid: data.uid ,limit: newscount)}" />
+                  </f:if>
+                </f:then>
+                <f:else>
+                  <f:variable name="news" value="{ce:getEventsByRelation(uid: data.uid ,limit: newscount)}" />
+                  <f:if condition="{news -> f:count()} == 0">
+                    <f:variable name="news" value="{ce:getEventsByCategory(uid: data.uid ,limit: newscount)}" />
+                  </f:if>
+                </f:else>
               </f:if>
               <div class="info-box">
                 <div class="quicklinks-box">

@@ -25,7 +25,8 @@ defined('TYPO3_MODE') or die();
       'mugce-icon-gallery' => 'mugce-icon-gallery.svg',
       'mugce-icon-newsletter' => 'mugce-icon-newsletter.svg',
       'mugce-icon-default' => 'mugce-icon-default.svg',
-      'mugce-icon-link-button' => 'mugce-icon-link-button.svg'
+      'mugce-icon-link-button' => 'mugce-icon-link-button.svg',
+      'mugce-icon-spotlight' => 'mugce-icon-spotlight.svg',
     ];
 
   $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
@@ -77,10 +78,6 @@ defined('TYPO3_MODE') or die();
 
   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['mug_ce'] =
       \MUG\ContentElements\Hooks\Backend\ContentPreviewRenderer::class;
-
-  // Update flexforms
-  $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools::class]['flexParsing'][]
-      = \MUG\ContentElements\Hooks\Backend\FlexFormHook::class;
 
   $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][GeorgRinger\News\Controller\NewsController::class] = [
       'className' => MUG\ContentElements\Xclass\NewsController::class
@@ -291,6 +288,15 @@ defined('TYPO3_MODE') or die();
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/LinkButton/setup.ts">'
   );
 
+  // Content Element: Spotlight
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/Spotlight.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Spotlight/setup.ts">'
+  );
+
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
     $_EXTKEY,
     'setup',
@@ -300,6 +306,5 @@ defined('TYPO3_MODE') or die();
 
   $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newItems']['News->listEvents'] = 'List view events';
   $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newItems']['News->detailEvents'] = 'Detail view events';
-  $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newItems']['News->listNewsEvents'] = 'List view news and events';
 
 })($_EXTKEY);
