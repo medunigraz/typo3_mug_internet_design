@@ -72,6 +72,10 @@ h1, .h1 {
   letter-spacing: 0.01em;
 }
 
+.h1.newsh1 {
+  max-width: 450px;
+}
+
 h2, .h2, .h2 {
   font-size: 26px;
   line-height: 35px;
@@ -520,6 +524,7 @@ html, body {
   position: relative;
   width: 100%;
   min-height: 100%;
+  overflow: hidden;
 }
 
 #logo-page {
@@ -3928,6 +3933,9 @@ td {
   float: left;
   margin: 0 0 20px 0;
 }
+.news-single .standard-leadin .ce-text {
+  margin-bottom: 0px;
+}
 
 /* ....................................................................................... 1720 */
 .content-block-eventsdetail .sidebar-default .greenbox .infobox-headline {
@@ -3992,6 +4000,21 @@ td {
 }
 .content-block-eventsdetail .sidebar-default .linktoall .border-bottom {
   margin: 10px 0 8px 0;
+}
+
+.page-event .standardCE6 {
+  margin-top: 0px;
+}
+.page-event .ce-text-columns {
+  margin: 50px 0 50px 0;
+}
+.page-event .morelink.backlink {
+  width: auto;
+  display: inline-block;
+  float: right;
+}
+.page-event .content-part-backlink {
+  margin-top: 50px;
 }
 
 /* ....................................................................................... 1240 */
@@ -4174,6 +4197,67 @@ td {
 .newsteaserpart header:after {
   display: none;
 }
+.newsteaserpart .page-navigation {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 30px 0 50px 0;
+}
+.newsteaserpart .page-navigation p {
+  display: none;
+}
+.newsteaserpart .page-navigation ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.newsteaserpart .page-navigation ul li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #666;
+  overflow: hidden;
+  padding: 8px 0 0 0;
+  margin: 0 5px 0 5px;
+  position: relative;
+  -webkit-transition: all 350ms;
+  -moz-transition: all 350ms;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+}
+.newsteaserpart .page-navigation ul li a {
+  display: block;
+}
+.newsteaserpart .page-navigation ul li.next, .newsteaserpart .page-navigation ul li.previous {
+  font-size: 12px;
+}
+.newsteaserpart .page-navigation ul li.next a, .newsteaserpart .page-navigation ul li.previous a {
+  opacity: 0;
+}
+.newsteaserpart .page-navigation ul li.previous:before {
+  content: "<";
+  text-indent: 0px;
+  position: absolute;
+  left: 12px;
+  font-size: 18px;
+  top: 7px;
+}
+.newsteaserpart .page-navigation ul li.next:before {
+  content: ">";
+  text-indent: 0px;
+  position: absolute;
+  left: 14px;
+  font-size: 18px;
+  top: 7px;
+}
+.newsteaserpart .page-navigation ul li.current, .newsteaserpart .page-navigation ul li:hover {
+  background: #007934;
+  border: 1px solid #007934;
+  color: #ffffff;
+}
+.newsteaserpart .page-navigation ul li.current a, .newsteaserpart .page-navigation ul li:hover a {
+  color: #ffffff;
+}
 
 .content-part-newsevents {
   margin: 50px 0 0 0;
@@ -4220,7 +4304,7 @@ td {
   width: 42%;
   float: left;
   min-height: 100px;
-  margin: 0 8% 45px 0;
+  margin: 0 8% 85px 0;
 }
 .content-part-newsevents .news-list-view .header {
   width: 100%;
@@ -4245,7 +4329,7 @@ td {
   width: 50%;
   height: 555px;
   position: relative;
-  margin: 0 0 0px 0;
+  margin: 0px 0 0px 0;
 }
 .spotlightslider h3 {
   width: 100%;
@@ -4679,7 +4763,7 @@ td {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 355px;
+  height: 245px;
   margin: 60px 0 0 0;
 }
 .news-overview-list .spotnewsbox:before {
@@ -4718,7 +4802,7 @@ td {
   display: block;
   padding: 10px 0px 0 0;
   font-weight: 600;
-  height: 47px;
+  height: 30px;
 }
 .news-overview-list .spotnewsbox .morelink:hover {
   background-position: 100% 11px;

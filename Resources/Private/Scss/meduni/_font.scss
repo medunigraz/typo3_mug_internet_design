@@ -24,6 +24,9 @@ h1, .h1 {
   text-transform: uppercase;  letter-spacing: 0.01em;
 
 }
+.h1.newsh1 {
+  max-width: 450px;
+}
 h2, .h2, .h2 {
   font-size: 26px;
   line-height: 35px;

@@ -1,47 +1,65 @@
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
-  <file t3:id="1471786343" source-language="en" datatype="plaintext" original="messages" date="2020-03-19T15:15:42Z" product-name="general">
-    <header/>
-    <body>
-      <trans-unit id="moreLabel" xml:space="preserve">
-        <source>Mehr</source>
-      </trans-unit>
-      <trans-unit id="iAmNavCaption" xml:space="preserve">
-        <source>Ich bin</source>
-      </trans-unit>
-      <trans-unit id="quicklinks" xml:space="preserve">
-        <source>Quicklinks</source>
-      </trans-unit>
-      <trans-unit id="phone" xml:space="preserve">
-        <source>T:</source>
-      </trans-unit>
-      <trans-unit id="mail" xml:space="preserve">
-        <source>E:</source>
-      </trans-unit>
-      <trans-unit id="phone2" xml:space="preserve">
-        <source>T:</source>
-      </trans-unit>
-      <trans-unit id="fax" xml:space="preserve">
-        <source>F:</source>
-      </trans-unit>
-      <trans-unit id="allNews" xml:space="preserve">
-        <source>Alle News</source>
-      </trans-unit>
-      <trans-unit id="showAll" xml:space="preserve">
-        <source>Alle zeigen</source>
-      </trans-unit>
-      <trans-unit id="allEvents" xml:space="preserve">
-        <source>Alle Events</source>
-      </trans-unit>
-      <trans-unit id="galleryDownload" xml:space="preserve">
-        <source>Download</source>
-      </trans-unit>
-      <trans-unit id="galleryImageSize" xml:space="preserve">
-        <source>Bildgröße</source>
-      </trans-unit>
-      <trans-unit id="galleryFileSize" xml:space="preserve">
-        <source>Dateigröße</source>
-      </trans-unit>
-    </body>
-  </file>
+   <file t3:id="1471786343" source-language="en" datatype="plaintext" original="messages" date="2020-03-19T15:15:42Z" product-name="general">
+      <header/>
+      <body>
+         <trans-unit id="moreLabel" xml:space="preserve">
+            <source>Mehr</source>
+         </trans-unit>
+         <trans-unit id="iAmNavCaption" xml:space="preserve">
+            <source>Ich bin</source>
+         </trans-unit>
+         <trans-unit id="quicklinks" xml:space="preserve">
+            <source>Quicklinks</source>
+         </trans-unit>
+         <trans-unit id="phone" xml:space="preserve">
+            <source>T:</source>
+         </trans-unit>
+         <trans-unit id="mail" xml:space="preserve">
+            <source>E:</source>
+         </trans-unit>
+         <trans-unit id="phone2" xml:space="preserve">
+            <source>T:</source>
+         </trans-unit>
+         <trans-unit id="fax" xml:space="preserve">
+            <source>F:</source>
+         </trans-unit>
+         <trans-unit id="allNews" xml:space="preserve">
+            <source>Alle News</source>
+         </trans-unit>
+         <trans-unit id="showAll" xml:space="preserve">
+            <source>Alle zeigen</source>
+         </trans-unit>
+         <trans-unit id="allEvents" xml:space="preserve">
+            <source>Alle Events</source>
+         </trans-unit>
+         <trans-unit id="galleryDownload" xml:space="preserve">
+            <source>Download</source>
+         </trans-unit>
+         <trans-unit id="galleryImageSize" xml:space="preserve">
+            <source>Bildgröße</source>
+         </trans-unit>
+         <trans-unit id="galleryFileSize" xml:space="preserve">
+            <source>Dateigröße</source>
+         </trans-unit>
+         <trans-unit id="eventback" xml:space="preserve">
+            <source>Zurück zum Eventkalender</source>
+         </trans-unit>
+         <trans-unit id="newsheadline" xml:space="preserve">
+            <source>Neues und Aktuelles</source>
+         </trans-unit>
+         <trans-unit id="moreinfos" xml:space="preserve">
+            <source>Weitere Inforamtionen</source>
+         </trans-unit>
+         <trans-unit id="website" xml:space="preserve">
+            <source>Website</source>
+         </trans-unit>
+         <trans-unit id="program" xml:space="preserve">
+            <source>DOWNLOAD PROGRAMM</source>
+         </trans-unit>
+      </body>
+   </file>
 </xliff>
+

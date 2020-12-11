@@ -27,6 +27,7 @@ class GetTopEventsViewHelper extends AbstractViewHelper {
     $demand = GeneralUtility::makeInstance(Demand::class);
     $demand->setLimit($this->arguments['limit'] ?: 3);
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_ONLY_EVENTS);
+    $demand->setTopNewsFirst(true);
 
     return $this->newsRepository->findDemanded($demand);
   }

@@ -45,30 +45,16 @@
                 <div class="info-box">
                   <div class="quicklinks-box">
                     <div class="news-box-inner">
-                      <f:for as="newsItem" key="idx" each="{news}">
-                        <f:if condition="{idx} != 0">
-                          <div class="news-item  greybox-news bg-grey-light entry-{idx}">
-                            <div class="news-item-inner">
-                              <div class="quicklinks-headline text-bold">{newsItem.title}</div>
-                              <div class="teaser">
-                                {newsItem.teaser}
-                                <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
-                                  <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
-                                </f:link.action>
-                              </div>
-                            </div>
-                          </div>
-                        </f:if>
-                      </f:for>
+
                       <div class="linktoall bg-grey-light">
                         <div class="news-item-inner">
                           <div class="border-bottom"></div>
                           <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list" class="morelink text-bold animateAll">
-                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
+                              {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreinfos", default: "Weitere Informationen")}
                             <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                           </f:link.action>
                           <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents" class="morelink text-bold animateAll">
-                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
+                             {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:website", default: "Website")}
                             <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                           </f:link.action>
                         </div>
@@ -76,28 +62,16 @@
                     </div>
                   </div>
                 </div>
-                <f:if condition="{news}">
-                  <div class="greenbox greenbox-news">
-                    <div class="infobox-inner">
-                      <div class="blend blend-full bg-green-dark"></div>
-                      <div class="infobox-headline text-bold">
-                        {news.0.title}
-                        <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:news.0.uid}">
-                          <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
-                        </f:link.action>
-                        <div class="teaser">
-                          {news.0.teaser}
-                        </div>
-                      </div>
-                    </div>
-                </f:if>
+
               </div>
             </div>
           </div>
         </div>
       </div>
       <f:if condition="{newsItem.contentElements}">
-        <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+        <f:for each="{newsItem.contentElements}" as="element">
+          {v:content.render(contentUids:{0: element.uid}) -> f:format.raw()}
+        </f:for>
       </f:if>
     </f:then>
     <f:else>

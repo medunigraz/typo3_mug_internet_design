@@ -27,6 +27,7 @@ class GetTopNewsViewHelper extends AbstractViewHelper {
 
     $demand = GeneralUtility::makeInstance(NewsDemand::class);
     $demand->setLimit($this->arguments['limit'] ?: 3);
+    $demand->setTopNewsFirst(true);
 
     return $this->newsRepository->findDemanded($demand);
   }

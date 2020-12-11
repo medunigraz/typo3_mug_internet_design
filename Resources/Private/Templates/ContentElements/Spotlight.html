@@ -3,7 +3,7 @@
 <f:layout name="Default" />
 <f:section name="Main">
     <f:variable name="news" value="{ce:getTopNews(limit: 3)}" />
-    <f:variable name="events" value="{ce:getTopEvents(limit: 3)}" />
+    <f:variable name="events" value="{ce:getTopEvents(limit: 2)}" />
 
 
   <div  class="row content-block content-block-spotlight">
@@ -89,27 +89,7 @@
                 </div>
                 <div class="spotslider-pager <f:if condition='{data.mugce_display_type} == 0'>spolightItemAllpager</f:if><f:if condition='{data.mugce_display_type} == 1'>spolightItemSOnlypager</f:if>"></div>
               </div>
-              <div class="socialsidebar trans">
-                <div class="socialsidebar-inner">
-                  <div class="socialsidebar-icons">
-                    <div class="socialsidebar-label">
-                      Follow us
-                    </div>
-                    <a href="https://www.instagram.com/medunigraz/"  target="_blank"  class="iconlink">
-                      <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-instagram-light.svg')}" alt="" class="socialicon">
-                    </a>
-                    <a href="https://www.facebook.com/medunigraz/" target="_blank" class="iconlink">
-                      <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-facebook-light.svg')}" alt="" class="socialicon">
-                    </a>
-                    <a href="https://at.linkedin.com/school/medizinische-universit%C3%A4t-graz/"  target="_blank"  class="iconlink">
-                      <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-linkedin-light.svg')}" alt="" class="socialicon">
-                    </a>
-                    <a href="https://twitter.com/medunigraz"  target="_blank"  class="iconlink">
-                      <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-twitter-light.svg')}" alt="" class="socialicon">
-                    </a>
-                  </div>
-                </div>
-              </div>
+
               <div class="spotlightsliderInner-after">
               </div>
             </div>
