@@ -1,14 +1,15 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
-<f:section name="Main">
-  <div class="row content-block">
-    <div class="content-part ce-text-columns ce-text-media">
+
+<f:section name="BeforeContainer">
       <f:if condition="{data.subheader}">
         <div class="section-name text-bold trans">
           <div class="section-name-Inner"><span class="section-line-top"></span>{data.subheader}<span class="section-line-bottom"></span></div>
         </div>
       </f:if>
-      <div class="container">
+</f:section>
+
+<f:section name="Main">
         <div class="row">
           <div class="col col-55 trans">
 
@@ -33,8 +34,5 @@
             </f:if>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 </f:section>
 </html>
