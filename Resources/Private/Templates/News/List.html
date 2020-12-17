@@ -34,28 +34,22 @@
                                     <div class="news-item  greybox-news bg-grey-light entry-1">
                                         <div class="news-item-inner">
                                             <div class="teaser">
-                                                <div class="filterbox">
-                                                    <div class="filteritem filteritem-active">
-                                                        <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list">
-                                                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:showAll", default: "Alle zeigen")}
-                                                        </f:link.action>
+                                                <f:if condition="{allCategories}">
+                                                    <div class="filterbox">
+                                                        <div class="filteritem">
+                                                            <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list">
+                                                                {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:showAll", default: "Alle zeigen")}
+                                                            </f:link.action>
+                                                        </div>
+                                                        <f:for as="category" each="{allCategories}">
+                                                            <div class="filteritem{f:if(condition: '{categories -> f:count()} == 1 && {category.uid} == {categories.0.uid}' , then: ' filteritem-active', else: '')}">
+                                                                <f:link.page title="{category.title}" additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.uid}}}">
+                                                                    {category.title}
+                                                                </f:link.page>
+                                                            </div>
+                                                        </f:for>
                                                     </div>
-                                                    <div class="filteritem">
-                                                        <a href="#">Universität</a>
-                                                    </div>
-                                                    <div class="filteritem">
-                                                        <a href="#">Studieren</a>
-                                                    </div>
-                                                    <div class="filteritem">
-                                                        <a href="#">Lehren</a>
-                                                    </div>
-                                                    <div class="filteritem">
-                                                        <a href="#">Forschen</a>
-                                                    </div>
-                                                    <div class="filteritem">
-                                                        <a href="#">Mitarbeiten</a>
-                                                    </div>
-                                                </div>
+                                                </f:if>
                                             </div>
                                         </div>
                                     </div>

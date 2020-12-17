@@ -12,6 +12,68 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class NewsController extends \GeorgRinger\News\Controller\NewsController {
 
   /**
+   * Output a list view of news
+   *
+   * @param array $overwriteDemand
+   */
+  public function listAction(array $overwriteDemand = null)
+  {
+    $this->forwardToDetailActionWhenRequested();
+
+    $demand = $this->createDemandObjectFromSettings($this->settings);
+    $demand->setActionAndClass(__METHOD__, __CLASS__);
+
+    if ($this->settings['disableOverrideDemand'] != 1 && $overwriteDemand !== null) {
+      $demand = $this->overwriteDemandObject($demand, $overwriteDemand);
+    }
+    $newsRecords = $this->newsRepository->findDemanded($demand);
+
+    $assignedValues = [
+        'news' => $newsRecords,
+        'overwriteDemand' => $overwriteDemand,
+        'demand' => $demand,
+        'categories' => null,
+        'allCategories' => null,
+        'tags' => null,
+        'settings' => $this->settings,
+    ];
+
+    if ($demand->getCategories() !== '') {
+      $categoriesList = $demand->getCategories();
+      if (!is_array($categoriesList)) {
+        $categoriesList = GeneralUtility::trimExplode(',', $categoriesList);
+      }
+      if (!empty($categoriesList)) {
+        $assignedValues['categories'] = $this->categoryRepository->findByIdList($categoriesList);
+      }
+    }
+
+    if ($this->settings['categories'] !== '') {
+      $categoriesList = $this->settings['categories'];
+      if (!is_array($categoriesList)) {
+        $categoriesList = GeneralUtility::trimExplode(',', $categoriesList);
+      }
+      if (!empty($categoriesList)) {
+        $assignedValues['allCategories'] = $this->categoryRepository->findByIdList($categoriesList, ['title' => 'ASC']);
+      }
+    }
+
+    if ($demand->getTags() !== '') {
+      $tagList = $demand->getTags();
+      if (!is_array($tagList)) {
+        $tagList = GeneralUtility::trimExplode(',', $tagList);
+      }
+      if (!empty($tagList)) {
+        $assignedValues['tags'] = $this->tagRepository->findByIdList($tagList);
+      }
+    }
+    $assignedValues = $this->emitActionSignal('NewsController', self::SIGNAL_NEWS_LIST_ACTION, $assignedValues);
+    $this->view->assignMultiple($assignedValues);
+
+    Cache::addPageCacheTagsByDemandObject($demand);
+  }
+
+  /**
    * Single view of a news record
    *
    * @param \GeorgRinger\News\Domain\Model\News $news news item
@@ -48,7 +110,6 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController {
       if ($record->getUid() == $news->getUid()) continue;
       $moreNews[] = $record;
     }
-
 
     $demand = $this->createDemandObjectFromSettings($this->settings);
     $demand->setActionAndClass(__METHOD__, __CLASS__);
@@ -106,13 +167,25 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController {
     if ($this->settings['disableOverrideDemand'] != 1 && $overwriteDemand !== null) {
       $demand = $this->overwriteDemandObject($demand, $overwriteDemand);
     }
-
+    if (!$demand->getMonth()) {
+      $demand->setMonth(date('n'));
+    }
+    if (!$demand->getYear()) {
+      $demand->setYear(date('Y'));
+    }
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_ONLY_EVENTS);
     $eventsRecords = $this->newsRepository->findDemanded($demand);
+
+    $date = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()));
+    $prevMonth = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()))->modify('-1 month');;
+    $nextMonth = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()))->modify('+1 month');;
 
     $assignedValues = [
         'news' => $newsRecords,
         'events' => $eventsRecords,
+        'date' => $date,
+        'nextMonth' => $nextMonth,
+        'prevMonth' => $prevMonth,
         'overwriteDemand' => $overwriteDemand,
         'demand' => $demand,
         'categories' => null,

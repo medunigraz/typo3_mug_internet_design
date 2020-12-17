@@ -18,21 +18,25 @@
             </div>
             <div class="headline">
               <h1 class="text-bold h1">
-                Oktober 2020
-                <span class="h1subline">Alle Events im Oktober</span>
+                {f:format.date(date:date,format:'%B %Y')}
+                <span class="h1subline">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEventsIn", arguments: {0: '{f:format.date(date:date,format:"%B")}'}, default: "Alle Events")}</span>
               </h1>
               <div class="eventfilterbox">
                 <div class="eventfilterboxInner">
-                  <input type="text" onfocus="(this.type='date')" id="eventday" name="eventday" value="" placeholder="Datum auswählen" class="eventfilterbox-input eventfilterbox-date">
+                  <input type="text" onfocus="(this.type='date')" id="eventday" name="eventday" value="" placeholder="{f:translate(key: 'LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:chooseDate', default: 'Datum auswählen')}" class="eventfilterbox-input eventfilterbox-date datechk">
 
                   <div class="monthpaging eventfilterbox-input">
-                    <a href="#" class="monthpagingLink-prev">September</a>
-                    <a href="#" class="monthpagingLink-next">November</a>
+                    <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'n\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
+                      {f:format.date(date:prevMonth,format:'%B')}
+                    </f:link.page>
+                    <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'n\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
+                      {f:format.date(date:nextMonth,format:'%B')}
+                    </f:link.page>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="text text-leadin">
+            <div class="text monthpagingpart">
               <div class="neventlist-overview" id="news-container-{contentObjectData.uid}">
                 <f:if condition="{events}">
                   <f:for each="{events}" as="eventItem" iteration="iterator">
@@ -48,8 +52,12 @@
               </div>
               </f:if>
               <div class="monthpaging monthpaging-bottom eventfilterbox-input">
-                <a href="#" class="monthpagingLink-prev">September</a>
-                <a href="#" class="monthpagingLink-next">November</a>
+                <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'n\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
+                  {f:format.date(date:prevMonth,format:'%B')}
+                </f:link.page>
+                <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'n\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
+                  {f:format.date(date:nextMonth,format:'%B')}
+                </f:link.page>
               </div>
             </div>
           </div>

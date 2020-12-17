@@ -1,12 +1,16 @@
 .page-event-overview {
 .frame-type-list.newsteaserpart {
   margin-top: 0;
-
+  min-height: 400px;
 
 
 }
 }
-
+.page-news-overview {
+  .frame-type-list.newsteaserpart {
+    min-height: 400px;
+  }
+}
 .frame-type-list {
   width: 100%;
   max-width: 1720px;
@@ -340,7 +344,9 @@ content:"";
     width: 100%;
     padding: 10px 0 0 0;
   }
-
+  .hidepager {
+    display:none;
+  }
   .spotslider-pager {
     position: absolute;
     z-index: 999;

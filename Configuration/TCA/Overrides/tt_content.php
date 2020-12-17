@@ -1481,6 +1481,8 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     mugce_display_type,
                     subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.input.subheader,
                     assets;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.input.assets,
+                    mugce_news_entries,
+                    mugce_event_entries,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
@@ -1504,12 +1506,19 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
             ]
         ],
         'mugce_display_type' => [
+            'onChange' => 'reload',
             'config' => array(
                 'items' => [
-                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.input.display_type.newsevents', 0],
                     ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.input.display_type.plain', 1],
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.input.display_type.newsevents', 0],
                 ],
             )
         ],
+        'mugce_news_entries' => [
+            'displayCond'  => 'FIELD:mugce_display_type:=:0'
+        ],
+        'mugce_event_entries' => [
+            'displayCond'  => 'FIELD:mugce_display_type:=:0'
+        ]
     ]
 ];

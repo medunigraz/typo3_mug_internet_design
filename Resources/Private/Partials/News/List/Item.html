@@ -16,13 +16,13 @@
         <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
           <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
             <f:if condition="{mediaElement.originalResource.type} == 2">
-              <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="800c" height="255c" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+              <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="800c" height="255c" />
             </f:if>
             <f:if condition="{mediaElement.originalResource.type} == 4">
               <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
             </f:if>
             <f:if condition="{mediaElement.originalResource.type} == 5">
-              <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="800c" height="255c" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+              <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="800c" height="255c" />
             </f:if>
           </f:alias>
         </f:link.action>
@@ -33,7 +33,7 @@
         <div class="news-img-wrap">
 					<span class="no-media-element">
             <f:link.action pageUid="{settings.newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
-							<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+							<f:image src="{settings.list.media.dummyImage}" title="" alt=""/>
 				    </f:link.action>>
 					</span>
         </div>

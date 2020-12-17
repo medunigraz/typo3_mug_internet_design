@@ -2257,10 +2257,6 @@ td {
   margin: 20px 0 20px 0;
 }
 
-.standard-leadin .ce-text {
-  margin-bottom: -130px;
-}
-
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
   .ce-text {
@@ -3937,6 +3933,10 @@ td {
   margin-bottom: 0px;
 }
 
+.newsheaderSRC {
+  display: none;
+}
+
 /* ....................................................................................... 1720 */
 .content-block-eventsdetail .sidebar-default .greenbox .infobox-headline {
   width: 80%;
@@ -4141,6 +4141,11 @@ td {
 }
 .page-event-overview .frame-type-list.newsteaserpart {
   margin-top: 0;
+  min-height: 400px;
+}
+
+.page-news-overview .frame-type-list.newsteaserpart {
+  min-height: 400px;
 }
 
 .frame-type-list {
@@ -4458,6 +4463,9 @@ td {
   width: 100%;
   padding: 10px 0 0 0;
 }
+.spotlightslider .hidepager {
+  display: none;
+}
 .spotlightslider .spotslider-pager {
   position: absolute;
   z-index: 999;
@@ -4659,7 +4667,7 @@ td {
 }
 
 .sidebar-filterbox {
-  margin: -109px 0 0 0;
+  margin: -164px 0 0 0;
 }
 
 .filteritem {
@@ -4733,6 +4741,7 @@ td {
   font-weight: 800;
   text-decoration: underline;
   font-size: 16px;
+  margin-left: 7px;
 }
 .news-overview-list .news-overview-list {
   float: left;
@@ -4803,6 +4812,7 @@ td {
   padding: 10px 0px 0 0;
   font-weight: 600;
   height: 30px;
+  margin-left: 0px;
 }
 .news-overview-list .spotnewsbox .morelink:hover {
   background-position: 100% 11px;
@@ -4924,6 +4934,9 @@ td {
 .content-block-eventsoverview .monthpaging-bottom {
   width: 100%;
   float: left;
+}
+.content-block-eventsoverview .monthpaging-bottom a:hover {
+  text-decoration: none;
 }
 .content-block-eventsoverview .monthpaging-bottom .monthpagingLink-prev {
   display: block;

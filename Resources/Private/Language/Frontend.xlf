@@ -57,6 +57,12 @@
          <trans-unit id="program" xml:space="preserve">
             <source>DOWNLOAD PROGRAMM</source>
          </trans-unit>
+         <trans-unit id="allEventsIn" xml:space="preserve">
+            <source>Alle Events im %s</source>
+         </trans-unit>
+         <trans-unit id="chooseDate" xml:space="preserve">
+            <source>Datum auswählen</source>
+         </trans-unit>
       </body>
    </file>
 </xliff>
