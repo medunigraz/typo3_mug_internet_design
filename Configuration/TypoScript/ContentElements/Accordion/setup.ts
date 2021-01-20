@@ -4,6 +4,10 @@ tt_content {
     mugce_accordion {
         templateName = Accordion
 
+        settings {
+            ceClasses = content-block-ce-accordion test
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
             10 {

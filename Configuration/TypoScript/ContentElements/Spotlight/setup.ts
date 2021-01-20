@@ -4,6 +4,10 @@ tt_content {
     mugce_spotlight {
         templateName = Spotlight
 
+        settings {
+            ceClasses = content-block-spotlight
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {

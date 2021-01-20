@@ -4,6 +4,10 @@ tt_content {
     mugce_contact {
         templateName = Contact
 
+        settings {
+            ceClasses = content-block-ce-contact
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
@@ -12,6 +16,7 @@ tt_content {
                 }
                 as = image
             }
+            20 = MUG\ContentElements\DataProcessing\ContactCssProcessor
         }
     }
 }

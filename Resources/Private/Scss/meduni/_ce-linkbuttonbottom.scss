@@ -1,6 +1,6 @@
 .ce-link-button {
   .button {
-    margin: 20px 0 0px 0;
+    margin: 0px 0 0px 0;
     background-color: transparent;
     min-width: 22.5%;
   }
@@ -11,10 +11,10 @@
   }
 }
 
-.bg-grey-light.ce-link-button {
-  margin-top: -0px;
+.ce-link-button.bg-grey-light {
+  padding:20px 0;
   .button {
-  margin: 40px 0 40px 0;
+  margin: 0px 0 0px 0;
   }
 }
 

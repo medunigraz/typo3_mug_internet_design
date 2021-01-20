@@ -4,6 +4,10 @@ tt_content {
     mugce_offers {
         templateName = Offers
 
+        settings {
+            ceClasses = content-block-ce-offers
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
             10 {
@@ -15,6 +19,7 @@ tt_content {
                 where.dataWrap = mugce_content_element_pid = |
                 as = elements
             }
+            20 = MUG\ContentElements\DataProcessing\OffersCssProcessor
         }
     }
 }

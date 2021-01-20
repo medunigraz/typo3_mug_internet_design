@@ -15,7 +15,7 @@
   }
   .hoverimage-item {
     h2, .h2 {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 20px;
     }
 
@@ -23,15 +23,17 @@
   .hover-part-text {
     height: 60px;
     min-height: 60px;
+    bottom: 0;
   }
   .hoverimage-item:hover .hover-part-text {
     bottom: 0;
     height: auto;
+    min-height: 60px;
   }
   .hover-part-text .text {
     height: auto;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 16px;
     padding: 0 0 5px 0;
     br {display:none}
   }
@@ -39,6 +41,20 @@
     margin: 50px 0 50px 0;
   }
 
+  .hover-part-text {
+    height: auto;
+    min-height: 150px;
+  }
+  .ce-link-tile .row {
+     width: 100%;
+    display: block;
+    .col-6 {
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    }
 }
 
 

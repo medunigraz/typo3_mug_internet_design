@@ -1,7 +1,4 @@
 .ce-linklist {
-  margin-top: 50px;
-  margin-bottom: 50px;
-
 
   .morelink {
     color:$green-dark;
@@ -34,16 +31,16 @@
   }
    .link-list-box {
     width: 75%;
-    margin: 30px auto 30px auto;
+    margin: 0px auto 0px auto;
   }
   .ce-link {
     width: 40%;
     float: left;
     position: relative;
-    min-height: 65px;
-    margin: 10px 5% 0px 5%;
-
+    min-height: 44px;
+    margin: 0px 5% 15px 5%;
   }
+  .nobottomspace {margin-bottom: 0px;}
   .ce-link:nth-child(odd) {float:right;}
   .link-list-items {
     width: 100%;
@@ -71,7 +68,3 @@
 
 }
 
-
-.addmarkerspace.ce-linklist {
-  margin-top: 120px;
-}

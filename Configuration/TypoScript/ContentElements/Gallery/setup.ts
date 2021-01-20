@@ -4,6 +4,10 @@ tt_content {
     mugce_gallery {
         templateName = Gallery
 
+        settings {
+            ceClasses = ce-gallery
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {

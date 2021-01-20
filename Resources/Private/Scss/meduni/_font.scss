@@ -12,7 +12,7 @@
   line-height: 17px;
 }
 
-h3, h4, h5, h6 {
+ h3, h4, h5, h6 {
   margin-bottom: 5px;
   margin-top: 5px;
   font-weight:700;
@@ -21,25 +21,47 @@ h3, h4, h5, h6 {
 h1, .h1 {
   font-size: 40px;
   line-height: 44px;
-  text-transform: uppercase;  letter-spacing: 0.01em;
-
-}
-.h1.newsh1 {
-  max-width: 450px;
-}
-h2, .h2, .h2 {
-  font-size: 26px;
-  line-height: 35px;
-  text-transform: uppercase
-
-   }
-.hl-big {
-  font-size: 32px;
-  line-height: 48px;
   text-transform: uppercase;
   letter-spacing: 0.01em;
 
 }
+
+h2, .h2  {
+  font-size: 32px;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-weight:700;
+  margin: 0px 0 5px 0;
+}
+h3, .h3 {
+  font-size: 24px;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin: 0px 0 5px 0;
+}
+
+h4, .h4 {
+  font-size: 20px;
+  line-height: normal;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  margin: 0px 0 5px 0;
+}
+h5, .h5 {
+  font-size: 18px;
+  line-height: normal;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  margin: 0px 0 5px 0;
+}
+.nonecase { text-transform: none;}
+.h1.newsh1 {
+  max-width: 450px;
+}
+.hoverimage-item h2 {margin-bottom:0px;}
+
 .text-mega {
   font-size: 60px;
   line-height: 70px;

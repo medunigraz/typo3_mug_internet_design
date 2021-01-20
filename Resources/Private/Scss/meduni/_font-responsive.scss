@@ -1,25 +1,22 @@
 /* ....................................................................................... 1492 */
 @media screen and (max-width: 1492px) {
-.hl-big {
-  font-size: 45px;
-  line-height: 55px;
-}
+
 }
 
 /* ....................................................................................... 1240 */
 @media screen and (max-width: 1240px) {
 
-  .hl-big {
-    font-size: 26px;
-    line-height: 36px;
-  }
+
   h1, .h1 {
     font-size: 22px;
     line-height: 28px;
   }
   h2, .h2 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 26px;
+  }
+  h3, .h3 {
+    font-size: 16px;
   }
   .text-mega {
     font-size: 26px;
@@ -34,9 +31,19 @@ blockquote {
   line-height: 30px;
 }
 
-  .hl-big {
-    font-size: 22px;
-    line-height: 32px;
+
+}
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .hoverimage-item h2, .hoverimage-item .h2,
+  .hoverimage-item h3, .hoverimage-item .h3 {
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 10px;
+  }
+  .hoverimage-item h2, .hoverimage-item .h2 {
+    min-height: 10px;
   }
 
 }

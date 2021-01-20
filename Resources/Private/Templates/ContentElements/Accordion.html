@@ -1,32 +1,28 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Main">
-  <div class="row content-block content-block-ce-accordion">
+  <div class="content-part ce-accordion-box">
     <div class="container">
-      <div class="content-part ce-accordion-box">
-        <div class="container">
-          <div class="row">
-            <div class="col col-7 trans">
+      <div class="row-100">
+        <div class="col col-100 trans">
 
-              <f:if condition="{data.header}">
+          <f:if condition="{data.header}">
 
 
-              <div class="headline  rowborder-bottom">
-                <h2 class="text-bold">{data.header -> f:format.nl2br()}</h2>
-              </div>
-
-              </f:if>
-
-              <f:for each="{elements}" as="element">
-                <v:content.render contentUids="{0: element.data.uid}" limit="1" render="1" as="content">
-                  {content.0 -> f:format.raw()}
-                </v:content.render>
-              </f:for>
-            </div>
-            <div class="col col-05 "> </div>
-            <div class="col col-35 trans"></div>
+          <div class="headline  rowborder-bottom">
+            <h2 class="text-bold">{data.header -> f:format.nl2br()}</h2>
           </div>
+
+          </f:if>
+
+          <f:for each="{elements}" as="element">
+            <v:content.render contentUids="{0: element.data.uid}" limit="1" render="1" as="content">
+              {content.0 -> f:format.raw()}
+            </v:content.render>
+          </f:for>
         </div>
+        <div class="col col-05 "> </div>
+        <div class="col col-35 trans"></div>
       </div>
     </div>
   </div>

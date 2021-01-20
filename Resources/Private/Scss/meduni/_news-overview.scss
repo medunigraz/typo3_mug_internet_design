@@ -1,7 +1,7 @@
 .news-img-wrap img {width:100%; display:block;}
 
 .sidebar-filterbox {
-  margin: -164px 0 0 0;
+  margin: -224px 0 0 0;
 }
 .filteritem {
   font-weight: 600;
@@ -50,10 +50,8 @@
     margin: 16px 0 0 0;
   }
   h3{
-    font-size: 18px;
     width: 100%;
     padding: 0 40px 0 0;
-    line-height: 22px;
     position: relative;
     margin:0px;
   }
@@ -133,10 +131,8 @@
       float: left;
       margin: 0px 0 0 0%;
 
-      h3 {
-        font-size: 18px;
-        line-height: 22px;
-        text-transform: uppercase;
+      h3, h5 {
+         text-transform: uppercase;
         position: absolute;
         top: 20px;
       }
@@ -167,6 +163,11 @@
 
 }
 
+
+
+.standard-leadin-newsoverview {
+  margin: 58px 0 0 0;
+}
 
 
 

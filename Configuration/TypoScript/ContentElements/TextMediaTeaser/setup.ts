@@ -4,6 +4,10 @@ tt_content {
     mugce_text_media_teaser {
         templateName = TextMediaTeaser
 
+        settings {
+            ceClasses = content-block-ce-text-media-teaser
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
@@ -22,6 +26,7 @@ tt_content {
                 where.dataWrap = mugce_quicklink_pid = |
                 as = quicklinks
             }
+            30 = MUG\ContentElements\DataProcessing\TextMediaTeaserCssProcessor
         }
     }
 }

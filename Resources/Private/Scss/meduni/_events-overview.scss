@@ -16,7 +16,7 @@
   .eventfilterbox {
     width: 30%;
     float: right;
-    margin: -36px 0 0 0;
+    margin: -33px 0 0 0;
     ::-webkit-input-placeholder {
       color: #000000;
       opacity: 1;
@@ -193,10 +193,8 @@ width:100%;
       }
     }
     h3 {
-      font-size: 18px;
       width: 100%;
       padding: 0 40px 0 0;
-      line-height: 22px;
       position: relative;
       margin: 0px;
 
@@ -224,4 +222,8 @@ width:100%;
   }
 
 
+}
+
+.content-block-eventsoverview {
+  margin: 58px 0 0 0;
 }

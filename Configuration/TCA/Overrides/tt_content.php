@@ -179,14 +179,6 @@ $additionalColumns = array(
             'max' => 255
         )
     ),
-    'mugce_show_marker' => array (
-        'exclude' => 0,
-        'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.show_marker',
-        'config' => array(
-            'type' => 'check',
-            'default' => '1',
-        )
-    ),
     'mugce_show_border' => array (
         'exclude' => 0,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.show_border',
@@ -719,7 +711,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.subheader,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.header,
                     mugce_display_type,
-                    mugce_show_marker,
                     bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.bodytext,
                     image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.image,
                     mugce_header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text_media_teaser.input.mugce_header,
@@ -801,7 +792,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     --palette--;;general,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_offers.input.header,
                     mugce_display_type,
-                    mugce_show_marker,
                     mugce_content_elements,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
@@ -931,7 +921,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     --palette--;;general,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_imagetiles.input.header,
                     subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_imagetiles.input.subheader,
-                    mugce_show_marker,
                     mugce_content_elements,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
                     --palette--;;language,
@@ -1192,7 +1181,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.subheader,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.header,
                     mugce_display_type,
-                    mugce_show_marker,
                     bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.bodytext,
                     mugce_subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_quote.input.mugce_subheader,
                     mugce_add_effect,
@@ -1273,11 +1261,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
     ',
     'columnsOverrides' => [
-        'header' => [
-            'config' => [
-                'eval' => 'required'
-            ]
-        ],
         'mugce_content_elements' => [
           'config' => [
               'minitems' => 1
@@ -1443,7 +1426,9 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
             'config' => array(
                 'items' => [
                     ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_button.input.display_type.white', 0],
-                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_button.input.display_type.grey', 1]
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_button.input.display_type.grey', 1],
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_button.input.display_type.white_no_space', 2],
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_link_button.input.display_type.grey_no_space', 3]
                 ],
             )
         ],
@@ -1520,5 +1505,48 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
         'mugce_event_entries' => [
             'displayCond'  => 'FIELD:mugce_display_type:=:0'
         ]
+    ]
+];
+
+$ceName = 'mugce_marker';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_marker.caption',
+        $ceName,
+        'mugce-icon-marker',
+    ],
+    'mugce_spotlight',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    mugce_display_type,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'mugce_display_type' => [
+            'onChange' => 'reload',
+            'config' => array(
+                'items' => [
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_marker.input.display_type.standard', 0],
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_marker.input.display_type.moved_up', 1],
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_marker.input.display_type.moved_down', 2],
+                ],
+            )
+        ],
     ]
 ];

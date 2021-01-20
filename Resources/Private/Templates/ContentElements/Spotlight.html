@@ -5,50 +5,47 @@
   <f:variable name="news" value="{ce:getNewsByRelation(uid: data.uid ,limit: 3)}" />
   <f:variable name="events" value="{ce:getEventsByRelation(uid: data.uid ,limit: 2)}" />
 
-  <div  class="row content-block content-block-spotlight">
-
-      <div class="container">
-
-        <div class="row  <f:if condition='{data.mugce_display_type} == 0'>rowborder-bottom</f:if>">
-          <div class="col-md-9 trans">
-            <f:if condition="{data.mugce_display_type} == 0">
-            <div class="headline headline-spotlight">
-              <h2 class="text-bold hl-big">{data.header}</h2>
-            </div>
-            </f:if>
-          </div>
-          <div class="col-md-3 text-right mt-auto trans">
-            <f:if condition="{data.mugce_display_type} == 0">
-            <div class="morelinkItem">
-              <f:link.action class="morelink text-bold animateAll" pageUid="{newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list">
-                {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
-                <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-              </f:link.action>
-            </div>
-            <div class="morelinkItem">
-              <f:link.action class="morelink text-bold animateAll" pageUid="{eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents">
-                {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
-                <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-              </f:link.action>
-            </div>
-            </f:if>
-          </div>
-
-        </div>
+  <div class="row  <f:if condition='{data.mugce_display_type} == 0'>rowborder-bottom</f:if>">
+    <div class="col-md-9 trans">
+      <f:if condition="{data.mugce_display_type} == 0">
+      <div class="headline headline-spotlight">
+        <h2 class="text-bold hl-big">{data.header}</h2>
+      </div>
+      </f:if>
+    </div>
+    <div class="col-md-3 text-right mt-auto trans">
+      <f:if condition="{data.mugce_display_type} == 0">
+      <div class="morelinkItem">
+        <f:link.action class="morelink text-bold animateAll" pageUid="{newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list">
+          {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
+          <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+        </f:link.action>
+      </div>
+      <div class="morelinkItem">
+        <f:link.action class="morelink text-bold animateAll" pageUid="{eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents">
+          {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
+          <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+        </f:link.action>
+      </div>
+      </f:if>
+    </div>
 
   </div>
+</f:section>
 
+
+<f:section name="AfterContainer">
   <div class="content-part content-part-newsevents <f:if condition='{data.mugce_display_type} == 1'>content-part-newsevents-spotlightonly</f:if>">
     <div class="container">
       <div class="row">
         <div class="news-list-view" id="news-container-{data.uid}">
           <f:if condition="{data.mugce_display_type} == 0">
-          <f:for each="{news}" as="newsItem" iteration="iterator">
-            <f:render partial="../News/List/Item" arguments="{newsItem: newsItem, settings: {newsDetailPid: newsDetailPid}, iterator:iterator}" />
-          </f:for>
+            <f:for each="{news}" as="newsItem" iteration="iterator">
+              <f:render partial="../News/List/Item" arguments="{newsItem: newsItem, settings: {newsDetailPid: newsDetailPid}, iterator:iterator}" />
+            </f:for>
           </f:if>
           <f:if condition="{data.mugce_display_type} == 1">
-          <div class="article article-news trans articletype-0"></div>
+            <div class="article article-news trans articletype-0"></div>
           </f:if>
           <div class="article spotlightslider trans">
             <div class="article spotlightsliderInner ">
@@ -95,16 +92,16 @@
           </div>
         </div>
         <f:if condition="{data.mugce_display_type} == 0">
-        <div class="events-list-view" id="news-container-{data.uid}">
-          <f:for each="{events}" as="eventItem" iteration="iterator">
-            <f:render partial="../News/List/ItemEvent" arguments="{eventItem: eventItem, settings: {eventsDetailPid: eventsDetailPid}, iterator:iterator}" />
-          </f:for>
-        </div>
+          <div class="events-list-view" id="news-container-{data.uid}">
+            <f:for each="{events}" as="eventItem" iteration="iterator">
+              <f:render partial="../News/List/ItemEvent" arguments="{eventItem: eventItem, settings: {eventsDetailPid: eventsDetailPid}, iterator:iterator}" />
+            </f:for>
+          </div>
         </f:if>
       </div>
     </div>
   </div>
-  </div>
 </f:section>
+
 </html>
 

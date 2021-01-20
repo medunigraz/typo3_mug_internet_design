@@ -54,3 +54,21 @@
     top: 15px;
   }
 }
+
+.breadcrumb-newsover {
+  float: left;
+  position: relative;
+  width: 100%;
+  .container {max-width:1200px; width:1200px;}
+  .breadcrumbline {margin-top:0px;}
+  .breadcrumbline .breadcrumbbox {
+         top: 0px;
+      margin: 28px 0 0 -13px;
+
+  }
+
+}
+
+.page-event-overview  {
+  .breadcrumbline {margin-top:0px;}
+}

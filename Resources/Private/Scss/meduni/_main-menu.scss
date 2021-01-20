@@ -32,6 +32,7 @@
     .nav-item-level-0 {
       margin: 0px 35px 0 153.5px;
     }
+
     .nav-item-level-0:after {
       content: "";
       position: relative;
@@ -45,9 +46,7 @@
       float: right;
     }
 
-    .nav-item-level-0:first-child {
-      margin-left:0px;
-    }
+
 
     .nav-item.nav-item-level-1 {
       width: 100%;
@@ -248,3 +247,5 @@
 
 
 }
+
+.main-menu .hero-menu .navpos-0 {margin-left:0px !important}

@@ -19,6 +19,76 @@ input:invalid {
   height: 1px;
   clear: both;
 }
+.contenttable, .table-bordered, .table-primary, .table-secondary, .table-striped  {
+  width: 100%;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  background:none;
+  background-color:transparent;
+}
+.table-secondary {
+  background-color:$grey-light;
+}
+.contenttable td {
+  border: 0px;
+  margin: 0px;
+  padding: 10px 10px 10px 0px;
+  vertical-align:top;
+}
+.table-bordered td {
+  border: 1px solid $grey-middle;
+  margin: 0px;
+  padding: 10px;
+  vertical-align:top;
+}
+.table-primary td {
+  border: 1px solid $primary;
+  margin: 0px;
+  padding: 10px;
+  vertical-align:top;
+}
+.table-secondary td {
+  border: 3px solid $withe;
+  margin: 0px;
+  padding: 10px;
+  vertical-align:top;
+}
+.table-striped td {
+  border: 3px solid $withe;
+  margin: 0px;
+  padding: 10px;
+  vertical-align:top;
+}
+.table-striped tbody tr:nth-of-type(2n+1) {
+  background-color:$grey-light;
+}
+
+.table-primary thead th {
+  border-color: $primary;
+  border: 1px solid $primary;
+  background: $primary;
+  color: #fff;
+  padding: 10px;
+}
+
+.table-bordered thead th {
+  border-color: $grey-middle;
+  border: 1px solid $grey-middle;
+  padding: 10px;
+}
+.table-secondary thead th {
+  border-color: $withe;
+  border: 3px solid $withe;
+  padding: 10px;
+}
+.table-striped thead th {
+  border-color: $withe;
+  border: 3px solid $withe;
+  padding: 10px;
+}
+
+
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-clear-button { display: none; }
 input[type=date]::-moz-inner-spin-button { display: none; }
@@ -34,7 +104,12 @@ input[type=date]::-moz-clear { display: none; }
   }
 
 }
-.content-part {position:relative; float:left; width:100%; }
+.content-part {position:relative; float:left; width:100%; margin-top:60px; }
+.content-part-morespace {margin-top:120px; margin-bottom:60px; }
+.content-part.no-space {margin-top:0px;}
+.content-part.ctype-mugce_marker {margin-top:0px; position:relative;}
+p {margin-bottom:12px;}
+p:last-child {margin-bottom:0px;}
 a {color:$black; text-decoration:none;}
 a:hover {color:#333333; text-decoration:none;}
 img {border:0px; max-width:100%; height:auto;}
@@ -72,7 +147,7 @@ img {border:0px; max-width:100%; height:auto;}
   text-transform: none;
   font-weight:600;
 }
-.rowborder-bottom {border-bottom:2px solid $black;}
+.rowborder-bottom {border-bottom:2px solid $black; padding-bottom:5px;}
 .rowborder-top {border-top:2px solid $black;}
 .rowborder-toplight {border-top:0.75px solid $grey;}
 .rowborder-bottomlight {border-bottom:0.75px solid $grey;}
@@ -117,30 +192,68 @@ a:hover .morelink-arrow {
 .box-balken {
   width: 100%;
   position: absolute;
-  left: 1%;
+  left: 0.85%;
   z-index: 99;
   pointer-events: none;
   text-align: center;
-  top: -110px;
-  margin: 0 0 0 0;
+  top: 0px;
+  margin: -102px 0 0 0;
 
   img {
-    position:relative;
-    width: 44px;
+    position: relative;
+    width: 38px;
     margin: 0 auto;
-    display:inline;
-    height: 94px;
+    display: inline;
+    height: 80px;
   }
 
 }
-.box-balken.box-balken-hl {
-  top: -90px;
+
+.ce-box-balken {
+  width: 100%;
+  position: relative;
+  left: 0.85%;
+  z-index: 99;
+  pointer-events: none;
+  text-align: center;
+  top: 0px;
+  margin: 60px 0 0 0;
+
+  img {
+    position: relative;
+    width: 38px;
+    margin: 0 auto;
+    display: inline;
+    height: 80px;
+  }
 }
+
+.content-part.box-balken-down {
+  .ce-box-balken {
+    margin-top: 0px;
+    position: relative;
+    top: 20px;
+    height: 0px;
+  }
+}
+.content-part.box-balken-up {
+  .ce-box-balken {
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 0px;
+    height: 0px;
+    top: -40px;
+  }
+}
+
+
+
+
 .bgbox {
   position: absolute;
   width: 75%;
-  height: 110%;
-  top: -5%;
+  height: calc(100% + 120px);
+  top: -60px;
   z-index: -1;
 }
 
@@ -211,5 +324,27 @@ a:hover .morelink-arrow {
 
   }
 
+}
+.headline.rowborder-bottom {
+  margin-bottom: 10px;
+}
+.ce-accordion-box .headline.rowborder-bottom {
+  margin-bottom: 0px;
+  h2, .h2 {
+    margin: 0px 0 10px 0;
+  }
+}
+
+.ctype-mugce_text.standard .rowborder-bottom {
+  padding-bottom: 15px;
+}
+
+.headline-imageteaseritem {
+  padding-bottom: 15px;
+}
+
+
+.ce-linklist .headline {
+  margin-bottom: 30px;
 }
 

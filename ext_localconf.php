@@ -27,6 +27,7 @@ defined('TYPO3_MODE') or die();
       'mugce-icon-default' => 'mugce-icon-default.svg',
       'mugce-icon-link-button' => 'mugce-icon-link-button.svg',
       'mugce-icon-spotlight' => 'mugce-icon-spotlight.svg',
+      'mugce-icon-marker' => 'mugce-icon-marker.svg',
     ];
 
   $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
@@ -295,6 +296,15 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Spotlight/setup.ts">'
+  );
+
+  // Content Element: Marker
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/Marker.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Marker/setup.ts">'
   );
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(

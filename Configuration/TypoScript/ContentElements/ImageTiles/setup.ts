@@ -4,6 +4,10 @@ tt_content {
     mugce_imagetiles {
         templateName = ImageTiles
 
+        settings {
+            ceClasses = ce-link-tile
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
             10 {

@@ -4,6 +4,10 @@ tt_content {
     mugce_quote {
         templateName = Quote
 
+        settings {
+            ceClasses = ce-quote
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
@@ -12,6 +16,7 @@ tt_content {
                 }
                 as = image
             }
+            20 = MUG\ContentElements\DataProcessing\QuoteCssProcessor
         }
     }
 }

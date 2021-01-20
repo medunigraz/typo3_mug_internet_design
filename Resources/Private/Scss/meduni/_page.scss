@@ -24,6 +24,25 @@ html,body {
   min-height:100%;
   overflow:hidden;
 }
+.content-block {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+clear:both;
+}
+
+.content-block-3.C-Low, .content-block-4.C-Low, .content-block-5.C-Low {
+ .container > .row {
+  width:68%;
+
+   .col-md-9 {
+     -ms-flex: 0 0 100%;
+     flex: 0 0 100%;
+     max-width: 100%;
+   }
+
+}
+}
 #logo-page {
    float: left;
  }

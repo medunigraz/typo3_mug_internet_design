@@ -51,9 +51,6 @@
       <trans-unit id="CType.default.input.quicklinks" xml:space="preserve">
         <source>Quicklinks</source>
       </trans-unit>
-      <trans-unit id="CType.default.input.show_marker" xml:space="preserve">
-        <source>Show Section Marker</source>
-      </trans-unit>
       <trans-unit id="CType.default.input.show_border" xml:space="preserve">
         <source>Show Border</source>
       </trans-unit>
@@ -513,6 +510,12 @@
       <trans-unit id="CType.mugce_link_button.input.display_type.grey" xml:space="preserve">
         <source>Grey</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_link_button.input.display_type.white_no_space" xml:space="preserve">
+        <source>White - No space to previous</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_link_button.input.display_type.grey_no_space" xml:space="preserve">
+        <source>Grey - No space to previous</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_spotlight.caption" xml:space="preserve">
         <source>Spotlight</source>
       </trans-unit>
@@ -533,6 +536,21 @@
       </trans-unit>
       <trans-unit id="CType.mugce_spotlight.input.display_type.plain" xml:space="preserve">
         <source>Spotlight only</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_marker.caption" xml:space="preserve">
+        <source>Marker</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_marker.description" xml:space="preserve">
+        <source>Displays the green marker</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_marker.input.display_type.standard" xml:space="preserve">
+        <source>Standard</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_marker.input.display_type.moved_up" xml:space="preserve">
+        <source>Moved up</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_marker.input.display_type.moved_down" xml:space="preserve">
+        <source>Moved down</source>
       </trans-unit>
     </body>
   </file>

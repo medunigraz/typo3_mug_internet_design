@@ -41,9 +41,14 @@
 
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
+  html, body {
+    font-size: 16px;
+    line-height: 26px;
+  }
   .content-block {
     width: 95%;
   }
+
   .col {
     min-width: 100%;
     max-width: 100%;
@@ -59,5 +64,18 @@
   .button {
     margin: 30px 0 0px 0;
 
+  }
+  .content-block-marker {
+    display:none ;
+  }
+  .content-part {
+    margin-top: 20px;
+  }
+  .content-part-morespace {
+    margin-top: 90px !important;
+    margin-bottom: 65px !important;
+  }
+  .morelink-arrow {
+    margin: 0 0 0 18px;
   }
 }

@@ -4,6 +4,10 @@ tt_content {
     mugce_header_simple {
         templateName = HeaderSimple
 
+        settings {
+            ceClasses = content-header-default
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {

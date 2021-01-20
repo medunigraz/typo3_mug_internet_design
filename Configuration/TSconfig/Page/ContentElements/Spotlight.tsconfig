@@ -3,7 +3,7 @@ mod.wizards.newContentElement.wizardItems.common {
         mugce_spotlight {
             iconIdentifier = mugce-icon-spotlight
             title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.caption
-            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlightdescription
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.description
             tt_content_defValues {
                 CType = mugce_spotlight
             }

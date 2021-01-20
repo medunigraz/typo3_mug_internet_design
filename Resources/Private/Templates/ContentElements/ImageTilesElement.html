@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<f:layout name="Inner" />
 <f:section name="Main">
   <div class="col-6 trans{f:if(condition: '{data.bodytext}', then: ' has-text')}">
     <f:link.typolink  parameter="{data.header_link}">
@@ -8,9 +8,9 @@
           <div class="hover-part-text animateAll">
             <div class="headline animateAll">
               <f:if condition="{data.subheader}">
-                <div class="subheader text-bold text-mega">{data.subheader}</div>
+                <h2 class="text-bold uppercase">{data.subheader}</h2>
               </f:if>
-              <h2 class="text-bold uppercase">{data.header}</h2>
+              <h3 class="text-bold nonecase">{data.header}</h3>
             </div>
             <f:if condition="{data.bodytext}">
               <div class="text  animateAll">

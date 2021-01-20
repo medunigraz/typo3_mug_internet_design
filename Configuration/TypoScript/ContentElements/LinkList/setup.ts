@@ -4,6 +4,10 @@ tt_content {
     mugce_link_list {
         templateName = LinkList
 
+        settings {
+            ceClasses = ce-linklist trans
+        }
+
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
             10 {

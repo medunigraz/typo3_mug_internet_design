@@ -291,7 +291,21 @@
 
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
-.main-menu {
-  margin: 55px 0 0 0;
-}
+  .main-menu {
+    margin: 70px 0 0 0;
+  }
+  .burgerBTN {
+    top: 63px;
+  }
+  .main-menu .menu-link.menu-link-level1 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .main-menu .hero-menu .nav-item.nav-item-level-2:last-child a {
+    border-bottom: 0px solid #007934;
+    padding-bottom: 8px;
+  }
+
+
 }

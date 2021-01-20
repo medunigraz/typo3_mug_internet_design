@@ -5,11 +5,11 @@
     <n:excludeDisplayedNews newsItem="{eventItem}"/>
     <!-- header -->
     <div class="header">
-        <h3 class="text-bold">
+        <h5 class="text-bold">
             <f:link.action pageUid="{settings.eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:eventItem.uid}">
                 <span itemprop="headline">{eventItem.title}</span>
             </f:link.action>
-        </h3>
+        </h5>
         <span class="news-list-date text-bold">
             <time itemprop="datePublished" datetime="{f:format.date(date:eventItem.datetime, format:'Y-m-d')}">
                <f:format.date format="d.m.Y">{eventItem.datetime}</f:format.date>

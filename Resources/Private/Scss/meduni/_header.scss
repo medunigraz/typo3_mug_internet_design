@@ -174,11 +174,16 @@ overflow:hidden;
 
 .standard-leadin {
   .ce-text {
-    margin: 52px 0 0 0;
+    margin: 0px 0 -40px 0;
   }
 
 }
 
+.standard-leadin.content-part-nobottomspace {
+  .ce-text {
+    margin: 0px 0 -60px 0;
+  }
+}
 .iam-nav-On .sidebar-icons  {
   z-index:99;
 opacity:0;
