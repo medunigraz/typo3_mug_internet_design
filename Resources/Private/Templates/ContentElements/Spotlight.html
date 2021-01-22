@@ -4,14 +4,9 @@
 <f:section name="Main">
   <f:variable name="news" value="{ce:getNewsByRelation(uid: data.uid ,limit: 3)}" />
   <f:variable name="events" value="{ce:getEventsByRelation(uid: data.uid ,limit: 2)}" />
-
   <f:render partial="SpotlightMain" arguments="{news: news, events: events, data:data, display_type: data.mugce_display_type, newsOverviewPid: newsOverviewPid, eventsOverviewPid: eventsOverviewPid}" />
 </f:section>
-
-
 <f:section name="AfterContainer">
   <f:render partial="SpotlightAfter" arguments="{news: news, events: events, data:data, assets: assets, display_type: data.mugce_display_type, newsDetailPid: newsDetailPid, eventsDetailPid: eventsDetailPid}" />
 </f:section>
-
 </html>
-
