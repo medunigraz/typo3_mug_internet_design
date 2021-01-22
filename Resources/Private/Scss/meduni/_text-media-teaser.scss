@@ -42,7 +42,7 @@
       position: absolute;
       width: 13px;
       height: 30px;
-      background-image: url("img/icon-arrow-black-right.svg");
+      background-image: url("#{$icon-path}/icon-arrow-black-right.svg");
       background-repeat: no-repeat;
       right: -20%;
       top: 0px;
@@ -62,3 +62,6 @@
 }
 
 
+.content-block-ce-text-media-teaser.bg-grey-light .ce-text-media-teaser .headline-imageteaseritem {
+  margin-top: 30px;
+}

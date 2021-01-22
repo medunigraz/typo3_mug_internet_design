@@ -1,0 +1,67 @@
+<div class="article spotlightslider trans">
+    <div class="article spotlightsliderInner ">
+        <div class="spotlightsliderbox">
+
+                <h3 class="text-bold"><f:if condition="{socialCaption}">{socialCaption}</f:if></h3>
+
+            <div class="cycle-slideshow cycle-slideshow-spolights"
+                 data-cycle-fx="fade"
+                 data-cycle-timeout="0"
+                 data-cycle-slides="> div.spolightItem"
+                 data-cycle-pager=".spotslider-pager"
+                 data-cycle-swipe="true"
+                 data-cycle-auto-height="container"
+                 data-cycle-swipe-fx="scrollHorz"
+            >
+
+                <f:for each="{social}" as="item" >
+                    <div class="spolightItem">
+                        <div class="spolightItem-inner">
+                            <f:if condition="{item.type} == 4">
+                                <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/play-btn.svg')}" alt="" class="videoplayBtn">
+                            </f:if>
+
+
+                            <f:media file="{item}" />
+                            <div class="spolightItem-desc">
+                                <f:if condition="{item.title}">
+                                    <f:then>
+                                        {item.title}
+                                    </f:then>
+                                    <f:else>
+                                        {item.name}
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+            <div class="spotslider-pager"></div>
+        </div>
+        <div class="socialsidebar trans">
+            <div class="socialsidebar-inner">
+                <div class="socialsidebar-icons">
+                    <div class="socialsidebar-label">
+                        Follow us
+                    </div>
+                    <a href="https://www.instagram.com/medunigraz/"  target="_blank"  class="iconlink">
+                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-instagram-light.svg')}" alt="" class="socialicon">
+                    </a>
+                    <a href="https://www.facebook.com/medunigraz/" target="_blank" class="iconlink">
+                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-facebook-light.svg')}" alt="" class="socialicon">
+                    </a>
+                    <a href="https://at.linkedin.com/school/medizinische-universit%C3%A4t-graz/"  target="_blank"  class="iconlink">
+                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-linkedin-light.svg')}" alt="" class="socialicon">
+                    </a>
+                    <a href="https://twitter.com/medunigraz"  target="_blank"  class="iconlink">
+                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-twitter-light.svg')}" alt="" class="socialicon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="spotlightsliderInner-after">
+        </div>
+    </div>
+</div>
+

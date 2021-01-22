@@ -1,0 +1,70 @@
+<div id="c{data.uid}" class="row content-block {f:if(condition: '{data.mugce_display_type} == 0', then: 'standard', else: 'headline-left')}">
+    <f:if condition="{data.mugce_display_type} == '0'">
+        <f:then>
+            <div class="content-part ce-text">
+                <f:if condition="{data.subheader}">
+                    <div class="section-name text-bold trans"><div class="section-name-Inner"><span class="section-line-top"></span>{data.subheader}<span class="section-line-bottom"></span></div></div>
+                </f:if>
+                <div class="container">
+                    <div class="row  <f:if condition='{data.mugce_show_border}'>rowborder-bottom</f:if>">
+
+
+
+                        <div class="col-md-9 trans">
+                            <div class="headline">
+                                <h2 class="text-bold">{data.header -> f:format.nl2br()}</h2>
+                            </div>
+                            <div class="text text-leadin">
+                                {data.bodytext -> f:format.html()}
+                            </div>
+                        </div>
+                        <f:if condition="{data.header_link}">
+                            <div class="col-md-3 text-right mt-auto trans">
+                                <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
+                                {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
+                                                       <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
+                              </f:link.typolink>
+                            </div>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="content-part ce-text-columns headline-left">
+                <f:if condition="{data.subheader}">
+                    <div class="section-name text-bold trans">
+                        <div class="section-name-Inner"><span class="section-line-top"></span>{data.subheader}<span class="section-line-bottom"></span></div>
+                    </div>
+                </f:if>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-55 trans">
+                            <div class="headline  rowborder-bottom">
+                                <h2 class="text-bold">{data.header -> f:format.nl2br()}</h2>
+                            </div>
+
+
+                        </div>
+                        <div class="col col-05 "> </div>
+                        <div class="col col-55 trans">
+
+                            <div class="text text-leadin">
+                                {data.bodytext -> f:format.html()}
+                            </div>
+                            <f:if condition="{data.header_link}">
+                                <div class="col text-right mt-auto trans">
+                                    <f:link.typolink parameter="{data.header_link}" class="morelink text-bold animateAll">
+                                        {f:if(condition: '{data.mugce_link_label}', then: '{data.mugce_link_label}', else: '{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}')}
+                                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-arrow-black-right.svg')}" alt="" class="animateAll morelink-arrow">
+                                    </f:link.typolink>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+</div>
+

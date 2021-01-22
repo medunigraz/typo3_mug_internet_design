@@ -18,13 +18,13 @@
       <div class="morelinkItem">
         <f:link.action class="morelink text-bold animateAll" pageUid="{newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list">
           {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
-          <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+          <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
         </f:link.action>
       </div>
       <div class="morelinkItem">
         <f:link.action class="morelink text-bold animateAll" pageUid="{eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents">
           {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
-          <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+          <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
         </f:link.action>
       </div>
       </f:if>
@@ -66,7 +66,7 @@
                     <div class="spolightItem <f:if condition='{data.mugce_display_type} == 0'>spolightItemAll</f:if><f:if condition='{data.mugce_display_type} == 1'>spolightItemSOnly</f:if>">
                       <div class="spolightItem-inner">
                         <f:if condition="{item.type} == 4">
-                          <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/play-btn.svg')}" alt="" class="videoplayBtn">
+                          <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/play-btn.svg')}" alt="" class="videoplayBtn">
                         </f:if>
                         <f:media file="{item}" />
                         <div class="spolightItem-desc">
