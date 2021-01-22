@@ -79,15 +79,6 @@ page.includeJSFooter {
 }
 
 tmp.mugceDefaults {
-    templateRootPaths {
-        10 = EXT:mug_ce/Resources/Private/Templates/ContentElements/
-    }
-    partialRootPaths {
-        10 = EXT:mug_ce/Resources/Private/Partials/ContentElements/
-    }
-    layoutRootPaths {
-        10 = EXT:mug_ce/Resources/Private/Layouts/ContentElements/
-    }
     dataProcessing {
         100 = MUG\ContentElements\DataProcessing\DefaultValuesProcessor
     }

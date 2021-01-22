@@ -39,6 +39,12 @@ defined('TYPO3_MODE') or die();
     );
   }
 
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
+      'mugce_constants',
+      'constants',
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/constants.ts">',
+      'defaultContentRendering'
+  );
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/setup.ts">'
   );
