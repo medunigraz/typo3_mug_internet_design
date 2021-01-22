@@ -61,18 +61,18 @@
                             <f:for each="{newsItem.relatedLinks}" as="relatedLink">
                               <f:link.typolink parameter="{relatedLink.uri}" class="morelink text-bold animateAll">
                                 {relatedLink.title}
-                                <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                                <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                               </f:link.typolink>
                             </f:for>
                           </f:if>
                           <f:comment>
                           <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list" class="morelink text-bold animateAll">
                               {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreinfos", default: "Weitere Informationen")}
-                            <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                            <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                           </f:link.action>
                           <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents" class="morelink text-bold animateAll">
                              {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:website", default: "Website")}
-                            <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                            <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                           </f:link.action>
                           </f:comment>
                         </div>
@@ -80,7 +80,6 @@
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>

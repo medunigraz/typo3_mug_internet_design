@@ -1,0 +1,22 @@
+<div id="c{data.uid}" class="row content-block content-block-ce-offers
+<f:if condition='{data.mugce_display_type} == 1'><f:then> bg-no </f:then><f:else> bg-grey-light </f:else> </f:if>
+">
+  <div class="container">
+    <div class="content-part ce-offers">
+      <f:if condition="{data.mugce_show_marker}">
+        <div class="box-balken blend"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/balken-green-dark.svg')}" alt="" class="blend"></div>
+      </f:if>
+      <div class="headline text-center trans">
+        <h2 class="text-bold hl-big">{data.header -> f:format.nl2br()}</h2>
+      </div>
+      <div class="elements row">
+        <f:for each="{elements}" as="element">
+          <v:content.render contentUids="{0: element.data.uid}" limit="1" render="1" as="content">
+            {content.0 -> f:format.raw()}
+          </v:content.render>
+        </f:for>
+      </div>
+    </div>
+  </div>
+</div>
+

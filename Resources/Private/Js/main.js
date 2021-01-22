@@ -516,12 +516,12 @@ $(document).ready(function ()
 
     var oCSS = document.createElement('link');
     oCSS.type='text/css'; oCSS.rel='stylesheet';
-    oCSS.href='/typo3conf/ext/mug_ce/Resources/Public/css/jquery-ui.css';
+    oCSS.href='/typo3conf/ext/mug_ce/Resources/Public/Css/jquery-ui.css';
     oCSS.onload=function()
     {
       var oJS = document.createElement('script');
       oJS.type='text/javascript';
-      oJS.src='/typo3conf/ext/mug_ce/Resources/Public/js/jquery-ui.min.js';
+      oJS.src='/typo3conf/ext/mug_ce/Resources/Public/Js/jquery-ui.min.js';
       oJS.onload=function()
       {
         $(dateClass).datepicker();
