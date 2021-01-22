@@ -37,7 +37,7 @@
       position: relative;
       top: 9px;
       right: -30px;
-      background-image: url("img/icon-nav-down.svg");
+      background-image: url("#{$icon-path}/icon-nav-down.svg");
       width: 20px;
       height: 20px;
       background-size: 100%;
@@ -207,7 +207,7 @@
   }
   .menu-link-level1:after {
     content: "";
-    background-image: url("img/icon-navactivearrow-green.svg");
+    background-image: url("#{$icon-path}/icon-navactivearrow-green.svg");
     position: absolute;
     right: -28%;
     height: 40px;
@@ -246,5 +246,4 @@
 
 
 }
-
 .main-menu .hero-menu .navpos-0 {margin-left:0px !important}

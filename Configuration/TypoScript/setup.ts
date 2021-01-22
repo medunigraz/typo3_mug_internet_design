@@ -61,20 +61,15 @@ page.10 {
     }
 }
 
-page.includeCSSLibs {
-    bootstrap4 = EXT:mug_ce/Resources/Public/css/bootstrap.min.css
-}
-
 page.includeCSS {
-    file11 = EXT:mug_ce/Resources/Public/css/styles.css
+    styles = EXT:mug_ce/Resources/Public/Css/styles.min.css
 }
 page.includeJS {
-    //file10 = EXT:mug_ce/Resources/Public/js/fastfonts-4c2272bf-4d6f-4865-a659-3036c896f4bd.js
-    file11 = EXT:mug_ce/Resources/Public/js/jquery.min.js
+    jquery = EXT:mug_ce/Resources/Public/Js/jquery.min.js
+    bootstrap = EXT:mug_ce/Resources/Public/Js/bootstrap.min.js
 }
 page.includeJSFooter {
-    file10 = EXT:mug_ce/Resources/Public/js/stuff.js
-    file11 = EXT:mug_ce/Resources/Public/js/main.js
+    main = EXT:mug_ce/Resources/Public/Js/main.min.js
 }
 
 tmp.mugceDefaults {
