@@ -8,12 +8,13 @@
   </f:if>
   <div class="link-list-box-wrapper  <f:if condition="{data.mugce_show_border}"> rowborder-bottom </f:if>">
     <div class="link-list-box">
-    <div class="link-list-items animateAll">
+      <div class="link-list-items animateAll">
       <f:for each="{linklist}" as="link">
         <v:content.render contentUids="{0: link.data.uid}" limit="1" render="1" as="content">
           {content.0 -> f:format.raw()}
         </v:content.render>
       </f:for>
+      </div>
     </div>
   </div>
 </f:section>

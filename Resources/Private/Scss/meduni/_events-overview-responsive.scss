@@ -26,4 +26,43 @@
     width: 100%;
     margin: 0 0 20px 0;
   }
+
+  .frame-type-list .row.content-block-eventsoverview {
+    display: block;
+    width: 95%;
+     .row { width:100%; }
+  }
+
+  .page-event-overview .content-block-eventsoverview {
+    margin: 0px auto;
+  }
+  .content-block-eventsoverview .article-eventcalendar:first-child ,
+  .content-block-eventsoverview .article-eventcalendar:nth-child(4)
+
+  {
+    margin-left: 0;
+  }
+
+  .page-news .content-block-eventsdetail {
+    width: 95%;
+    margin: 0 auto;
+    .row {
+      width: 100%;
+    }
+    .sidebar-default {
+      margin: 0 0 20px 0;
+      float: left;
+      width: 100%;
+    }
+  }
+
+  .content-block-eventsdetail .eventmeta-row {
+    font-size: 16px;
+  }
+  .content-block-eventsdetail .sidebar-default .news-item-inner {
+    width: 95%;
+  }
+  .content-block-eventsdetail .sidebar-default .linktoall .morelink {
+    font-size: 16px;
+  }
 }

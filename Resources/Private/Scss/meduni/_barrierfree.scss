@@ -83,15 +83,25 @@ body.fontsize-bigger {
 body.contrast-greenblack {
   padding-bottom: 80px;
   color: #ffffff;
-  background: $green-light;
+  background: $green-dark;
    .meta-nav li a,.meta-nav li a:hover,.metasettings a,.barrier-free-box ,    .metasettings b,
    .barrier-free-box .fontsizeBTN-on, .barrier-free-box .fontsizeBTN:hover, .metasettings,.barrier-free-box .barrierspace, a,
    .main-menu .menu-link:hover, .ce-newsletter .checkbox span, .ce-newsletter .submit .btn, .content-block-ce-text-media-teaser .medialinks-box .link
-
    {
     color: #ffffff;
   }
-
+  .link-list a {
+    color: #ffffff !important;
+  }
+  .link-list a::after {
+    background-color: #fff;
+    padding: 0px;
+    display: block;
+    width: 20px;
+    height: 26px;
+    background-size: 12px;
+    background-position: center;
+  }
   .main-menu .hero-menu .nav-item-level-0::after {
     top: 6px;
     width: 20px;
@@ -108,7 +118,7 @@ body.contrast-greenblack {
   }
   .morelink-arrow {
     background-color: #fff;
-    padding: 0 5px 0 5px;
+    padding: 0 0px 0 0px;
   }
   .bg-grey-light, .bgbox.bg-grey-light::before {
     background: $black;
@@ -172,7 +182,7 @@ body.contrast-greenblack {
     background: #000;
   }
   .iamlinksitelist {
-    background: $orange;
+    background: #000000;
   }
   .iamlinksitelist a {
     opacity: 1;

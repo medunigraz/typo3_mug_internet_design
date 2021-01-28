@@ -43,6 +43,7 @@
             <f:for each="{news}" as="newsItem" iteration="iterator">
               <f:render partial="../News/List/Item" arguments="{newsItem: newsItem, settings: {newsDetailPid: newsDetailPid}, iterator:iterator}" />
             </f:for>
+            <div class="break"></div>
           </f:if>
           <f:if condition="{data.mugce_display_type} == 1">
             <div class="article article-news trans articletype-0"></div>
@@ -68,7 +69,7 @@
                         <f:if condition="{item.type} == 4">
                           <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/play-btn.svg')}" alt="" class="videoplayBtn">
                         </f:if>
-                        <f:media file="{item}" />
+                        <f:media file="{item}" class="spolightslider-img"/>
                         <div class="spolightItem-desc">
                           <f:if condition="{item.title}">
                             <f:then>

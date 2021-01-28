@@ -409,8 +409,17 @@ content:"";
 }
 
 
+.content-part-newsevents .break {
+  display:none;
 
-
+}
+.content-part-newsevents.onenews .break {
+  display:block;
+  width: 42%;
+  float: left;
+  min-height: 250px;
+  margin: 0 8% 85px 0;
+}
 
 
 

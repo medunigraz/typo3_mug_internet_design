@@ -23,16 +23,16 @@
   .submenu-box {
   display:none;
   }
-  .submenburgerBTN { display: block;}
-
+  .submenburgerBTN { display: none;}
+  .submenuOnpage .submenburgerBTN { display: block;}
   .submenburgerBTN , .submenburgerBTN-x {
        background: $grey-light;
     width: 40px;
     height: 40px;
     position: absolute;
     z-index: 99;
-    top: -22px;
-    right: 2%;
+    top: 0px;
+    right: 0%;
     cursor:pointer;
   }
   .burgerbtnline {
@@ -66,5 +66,7 @@
   }
   .submenu-box .nav-item-level-0 > a {
      width: 90%;
+    font-size: 16px;
+    line-height: 16px;
   }
 }

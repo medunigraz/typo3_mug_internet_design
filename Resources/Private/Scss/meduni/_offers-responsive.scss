@@ -40,4 +40,15 @@
   .ce-offers .headline-section {
     margin-bottom: 20px;
   }
+  .ce-offers .elements .ce-offer:nth-child(2n) .col-text .col-text-inner {
+    width: 100%;
+    float: left;
+    margin: 20px 0 0 0%;
+  }
+
+  .content-block-ce-offers.bg-grey-light .ce-offer .col-text .col-text-inner,  .content-block-ce-offers.bg-grey-light .ce-offer:nth-child(2n) .col-text .col-text-inner {
+    width: 90%;
+    float: left;
+    margin: 20px auto 0 5%;
+  }
 }

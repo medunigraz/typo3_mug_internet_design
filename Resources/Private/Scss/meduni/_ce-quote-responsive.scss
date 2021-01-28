@@ -28,7 +28,7 @@
   }
   .ce-quote .quote-text {
     margin: 0px auto 10px auto;
-    width: 90%;
+    width: 100%;
   }
   .ce-quote .quote-by {
     text-align: left;
@@ -43,8 +43,14 @@
   }
   .ce-quote .morelink {
     float: none;
-    width: 90%;
+    width: 100%;
     margin: 0 auto 10px auto;
     display: block;
+  }
+
+  .ce-quote.bg-grey-light .quote-text,
+  .ce-quote.bg-grey-light .morelink
+  {
+    width: 95%;
   }
 }

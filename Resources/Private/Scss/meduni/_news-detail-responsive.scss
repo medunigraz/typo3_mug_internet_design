@@ -2,3 +2,21 @@
 @media screen and (max-width: 1720px) {
 
 }
+
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+.news-single .sidebar-default {
+  top: 0;
+}
+
+  .news-single .sidebar-default .linktoall .morelink {
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin: 5px 0% 0px 0;
+  }
+  .news-single  .ce-text .text-leadin {
+    margin: 0 0 20px 0;
+  }
+
+}

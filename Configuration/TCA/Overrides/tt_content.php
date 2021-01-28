@@ -551,6 +551,11 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
               ],
           )
         ],
+        'mugce_show_border' => [
+            'config' => array(
+                'default' => '0'
+            )
+        ],
         'bodytext' => [
             'config' => [
                 'eval' => 'required',

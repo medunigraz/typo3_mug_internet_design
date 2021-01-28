@@ -74,7 +74,7 @@
     margin: 0 0 0 -120px;
   }
   .infobox-headline, .quicklinks-headline {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
   .text-leadin {
@@ -106,7 +106,7 @@
   }
   .infobox-text {
     padding-top: 3px;
-    line-height: 18px;
+    line-height: 20px;
   }
   .infobox-headline {
     margin: 20px auto 7px auto;
@@ -203,9 +203,7 @@
     float: left;
   }
 
-  .quicklinks-headline {
-    font-size: 13px;
-  }
+
   .ce-header-slider-element .headline  {
     top: 13%;
   }
@@ -288,5 +286,11 @@ display:none;
     -moz-transition-delay: 1000ms !important;
     -o-transition-delay: 1000ms !important;
     transition-delay: 1000ms !important;
+  }
+
+  div.cycle-slideshow .ce-homesliderelement-first .headline {
+    top: 64px !important;
+
+
   }
 }

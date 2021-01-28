@@ -25,6 +25,9 @@
 
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
+  .sidebar-default {
+    top: 0;
+  }
   .sidebar-default .greenbox {
     position: relative;
     top: inherit;
@@ -38,6 +41,9 @@
     position: relative;
     top: inherit;
     width: 100%;
+  }
+  .sidebar-default .linktoall {
+    padding: 5px 0 12px 0;
   }
   .sidebar-default .linktoall .morelink {
     width: 40%;

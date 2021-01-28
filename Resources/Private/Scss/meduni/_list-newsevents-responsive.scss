@@ -39,7 +39,32 @@ display:none;
 
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
+  .content-part-newsevents {
+    margin: 20px auto 0 auto;
+  }
 
+  .spotlightslider h3 {
+    width: 90%;
+    margin: 0px 0 10px 5%;
+  }
+  .spotlightslider .spotlightsliderInner::before {
+    display: none;
+  }
+  .spotlightslider {
+    height:auto !important;
+  }
+  .content-part-newsevents-spotlightonly {
+    margin: 0px auto;
+  }
+  .content-part.content-block-spotlight {
+  margin-top: 20px;
+    .content-part-newsevents-spotlightonly {
+      margin-top: 0px;
+    }
+    .spotlightslider {
+       margin: 0 0 0px 0;
+    }
+  }
 .frame-type-list header h2 {
   font-size: 22px;
   line-height: 32px;
@@ -71,7 +96,8 @@ display:none;
 
   .content-part-newsevents .news-list-view .article-news {
     width: 100%;
-    margin: 0 0 45px 0;
+    margin: 0 0 0px 0;
+    min-height: 0px;
   }
   .content-part-newsevents .news-list-view {
     float: left;
@@ -106,6 +132,7 @@ display:none;
   }
   .spotlightslider .spotlightsliderbox {
     width: 100%;
+    margin: 15px 0 0 0;
   }
   .spotlightslider .spotslider-pager {
     position: relative;
@@ -124,5 +151,23 @@ display:none;
   .spotlightsliderInner-after
   {
     display:none;
+  }
+
+  .content-block-spotlight .morelinkItem {
+    width: auto;
+    margin: 12px 0 10px 0;
+    float: left;
+  }
+  .content-block-spotlight .headline-spotlight h2 {
+    width: 100%;
+  }
+  .content-part-newsevents.onenews .break {
+    width: 100%;
+    float: left;
+    min-height: 1px;
+    margin: 0 8% 0px 0;
+  }
+  .content-part-newsevents  .teaser-text {
+   margin-bottom:40px;
   }
 }

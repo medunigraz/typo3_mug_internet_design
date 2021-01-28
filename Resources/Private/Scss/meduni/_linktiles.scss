@@ -38,11 +38,11 @@
   z-index: 99;
   left: 5%;
   width: 90%;
-  height:130px;
-  min-height:130px;
+  height:auto;
+  min-height:auto;
 }
 .hover-part-text  .headline {border-bottom:2px solid $withe; width:100%; margin-bottom: 12px;}
-.hover-part-text .text {opacity:0;}
+.hover-part-text .text {opacity:0; display:none;}
 .hoverimage-item .blend {opacity:0;}
 .hoverimage-item .bg-darken {
   position:absolute;
@@ -55,5 +55,5 @@
 
 .hoverimage-item:hover  .bg-darken  {opacity:0}
 .hoverimage-item:hover   .blend {opacity:1;}
-.hoverimage-item:hover  .hover-part-text .text {opacity:1;}
+.hoverimage-item:hover  .hover-part-text .text {opacity:1; display:block;}
 .hoverimage-item:hover  .hover-part-text {bottom: 15%; height:auto; }

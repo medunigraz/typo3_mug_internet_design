@@ -19,6 +19,6 @@ class RenderAcademicDegreeViewHelper extends AbstractViewHelper {
   }
 
   public static function renderStatic(array $arguments, \Closure $renderChildrenClosure,  RenderingContextInterface $renderingContext) {
-    return str_replace('.in', '<sup>in</sup>', str_replace('.a','<sup>a</sup>',$arguments['degree']));
+    return str_replace('.in', '.<sup>in</sup>', str_replace('.a','.<sup>a</sup>',$arguments['degree']));
   }
 }

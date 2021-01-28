@@ -37,6 +37,9 @@
   width: 15px;
   height: 35px;
 }
+  .datepicker {
+    display:none !important;
+  }
 }
 
 /* ...........................................................................  767 px */
@@ -72,10 +75,43 @@
     margin-top: 20px;
   }
   .content-part-morespace {
-    margin-top: 90px !important;
+    margin-top: 50px !important;
     margin-bottom: 65px !important;
   }
   .morelink-arrow {
     margin: 0 0 0 18px;
+  }
+
+  .bgbox {
+    top: -20px;
+  }
+  .content-block-3.C-Low .container > .row, .content-block-4.C-Low .container > .row, .content-block-5.C-Low .container > .row {
+    width: 100%;
+  }
+  .standard-leadin.content-part-nobottomspace .ce-text {
+    margin: 0px 0 0px 0;
+  }
+  .text ul li, .text ol li, .accordion-text ul li, .accordion-text ol li {
+    width: 95%;
+
+  }
+  .contenttable, .table-bordered, .table-primary, .table-secondary, .table-striped {
+    width: 100%;
+    overflow: auto;
+    display: block;
+    td {
+      min-width: 160px;
+    }
+  }
+
+
+  .text-right .linktext {
+    text-align: left !important;
+  }
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+  input[type="date"]::-webkit-input-placeholder {
+    visibility: hidden !important;
   }
 }

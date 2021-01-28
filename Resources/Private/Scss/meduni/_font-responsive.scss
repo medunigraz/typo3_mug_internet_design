@@ -17,6 +17,7 @@
   }
   h3, .h3 {
     font-size: 16px;
+    line-height: 20px;
   }
   .text-mega {
     font-size: 26px;
@@ -36,7 +37,10 @@ blockquote {
 
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
-  .hoverimage-item h2, .hoverimage-item .h2,
+  .hoverimage-item h2, .hoverimage-item .h2 {
+    font-size: 20px;
+    line-height: 22px;
+  }
   .hoverimage-item h3, .hoverimage-item .h3 {
     font-size: 16px;
     line-height: 20px;
@@ -44,6 +48,15 @@ blockquote {
   }
   .hoverimage-item h2, .hoverimage-item .h2 {
     min-height: 10px;
+  }
+
+  h4, .h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  h5, .h5 {
+    font-size: 16px;
+    line-height: 20px;
   }
 
 }

@@ -26,3 +26,32 @@
   flex: 0 0 61.333333%;
   max-width: 61.333333%;
 }
+.form-control {
+  border-radius: 0px !important;
+}
+.form-control:focus {
+  border-color: $green-dark;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(0,123,255,0);
+}
+.page-item:first-child .page-link {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.page-link {
+  color: $green-dark;
+  border: 1px solid $grey
+}
+.page-item:last-child .page-link {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.page-item.active .page-link {
+  background-color: $green-dark;
+  border-color: $green-dark;
+}
+.page-link:hover {
+  color: #fff;
+  background-color:$green-dark;
+  border-color: $green-dark;
+}
