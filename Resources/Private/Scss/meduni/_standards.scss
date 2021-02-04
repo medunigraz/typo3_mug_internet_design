@@ -148,6 +148,7 @@ img {border:0px; max-width:100%; height:auto;}
   font-weight:600;
 }
 .rowborder-bottom {border-bottom:2px solid $black; padding-bottom:5px;}
+.ce-text-media-teaser .text.rowborder-bottom { padding-bottom:20px;}
 .rowborder-top {border-top:2px solid $black;}
 .rowborder-toplight {border-top:0.75px solid $grey;}
 .rowborder-bottomlight {border-bottom:0.75px solid $grey;}
@@ -339,9 +340,7 @@ a:hover .morelink-arrow {
   padding-bottom: 15px;
 }
 
-.headline-imageteaseritem {
-  padding-bottom: 15px;
-}
+
 
 
 .ce-linklist .headline {

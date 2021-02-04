@@ -1,6 +1,170 @@
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
-.barrier-free-box {
-  display: none;
-}
+  .barrier-free-box {
+    position: absolute;
+    margin: 0px 20px 0 0px;
+    background: none;
+    left: 149px;
+    top:0px;
+  }
+  .barrier-free-box .barrierspace {
+    display:none;
+  }
+  .fontsize {
+    background: #eee;
+    position: absolute;
+    top: 0px;
+    margin: 0px;
+  }
+  .barrier-free-box {
+    position: absolute;
+    margin: 0px 20px 0 0px;
+    background: none;
+    left: inherit;
+    right: 116px;
+    top: -30px;
+    height: 49px;
+    overflow: hidden;
+    width: 88px;
+  }
+
+  .barrier-open   .barrier-free-box {
+    height: 140px;
+  }
+  .fontsizeBTN {
+    position: relative;
+    margin: 46px 0 0 0 !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 37px;
+    background: #eee;
+    width: 38px;
+    padding: 0 0 0px 0;
+  }
+  .fontsizeBTN.fontsizeBTN-on {
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    background: #eee;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    display: block;
+    padding: 0px;
+    margin: 0px !important;
+  }
+  .barrierdown {
+    display:block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    z-index: 9;
+    width: 100%;
+    height: 48px;
+    overflow: hidden;
+    padding: 23px 0 0 0;
+    text-align: center;
+   .arrow {
+      width: 15px;
+    }
+  }
+  .barrier-open .barrierdown {
+    top: 82px;
+    margin: 0px;
+    height: 21px;
+    padding: 0px 0 0 0;
+    background: #eee;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+  .barrier-free-box .contrast {
+    margin: 0px 0 0 0px;
+    cursor: pointer;
+    position: absolute;
+    left: 40px;
+    background: #eee;
+    height: 50px;
+    width: 38px;
+    top: 0;
+  }
+  .barrier-free-box .contrast-on {
+    position: absolute;
+    width: 24px;
+    left: 7px;
+    top: 14px;
+  }
+  .barrier-free-box .fontsizeBTN-bigger {
+    font-size: 20px;
+  }
+  .metasettings a,   .barrier-free-box .fontsizeBTN {
+    color: #000000 !important;
+  }
+  .metasettings b,  .barrier-free-box  .fontsizeBTN-on {
+    color: #007934 !important;
+  }
+  .contrast-greenblack .barrier-free-box .contrast {
+    background: $green-light;
+
+  }
+  .contrast-greenblack .burgerBTN {
+    top: 30px;
+    background: #fff;
+    padding: 5px 10px 7px 10px;
+    width: 43px;
+    right: 0px;
+  }
+  .mobnavOn .metaline .meta-nav {
+    background: #eeeeee;
+    padding: 9px 0 9px 0;
+    border:0px;
+
+  }
+  .mobnavOn  .contrast-greenblack .metaline .meta-nav {
+    background: #000000;
+
+
+  }
+  body.contrast-greenblack .main-menu .hero-menu .nav-item-level-0::after {
+    top: 19px;
+
+  }
+  body.contrast-greenblack .main-menu .hero-menu .nav-item-level-0.open0::after {
+    height: 23px;
+    background-size: 12px;
+    background-position: center;
+  }
+
+  body.contrast-greenblack .main-menu .hero-menu .nav-item-level-0.open0 a.menu-link-level0 {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  body.contrast-greenblack  .main-menu .hero-menu .nav-item .dropdown-wrap.dropdown-wrap-level1 {
+
+    background: #000;
+
+  }
+  body.contrast-greenblack  .main-menu .menu-link-level2, body.contrast-greenblack  .main-menu .menu-link-level2:hover {
+    color: #fff;
+  }
+
+  body.contrast-greenblack .main-menu .hero-menu .nav-item.nav-item-level-1 {
+     border-bottom: 0.5px solid $green-light;
+
+  }
+  body.fontsize-bigger {
+      font-size: 17px;
+      line-height: 28px;
+    .i-am-nav .caption {
+      font-size: 15px;
+      top: 20px;
+      left: 51px;
+    }
+  .main-menu .hero-menu .nav-item-level-0 {
+      margin: 0px 35.7px 0 0;
+    }
+
+  }
 }

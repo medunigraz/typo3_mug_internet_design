@@ -17,22 +17,30 @@
           <f:then>
             <f:for each="{menu}" key="idx" as="item">
               <f:if condition="{idx} > 0">
-                |
+
+                <span class="langsep">|</span>
               </f:if>
               <f:if condition="{item.current} == 0">
                 <f:then>
+                    <span class="langLink">
                   <a href="{item.url}">
                     {item.label}
                   </a>
+</span>
                 </f:then>
                 <f:else>
+                    <span class="langLink langLink-active">
                   <b>{item.label}</b>
+                        </span>
+                    <div class="langdown"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-down.svg')}" alt="" class="arrow"></div>
                 </f:else>
               </f:if>
             </f:for>
           </f:then>
           <f:else>
+             <span class="langLink langLink-active">
             <b>{menu.0.label}</b>
+                  </span>
           </f:else>
         </f:if>
       </v:page.languageMenu>
@@ -41,6 +49,7 @@
           <div class="barrier-free-box">
               <span class="barrierspace">|</span>
               <div class="fontsize">
+                  <div class="barrierdown"><img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/icon-arrow-black-down.svg')}" alt="" class="arrow"></div>
                   <span class="fontsizeBTN fontsizeBTN-standard fontsizeBTN-on">A</span>
                   <span class="fontsizeBTN fontsizeBTN-bigger">A+</span>
 

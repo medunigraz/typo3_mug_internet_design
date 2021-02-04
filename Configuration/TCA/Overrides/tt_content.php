@@ -1547,9 +1547,9 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
             'onChange' => 'reload',
             'config' => array(
                 'items' => [
+                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_marker.input.display_type.moved_down', 2],
                     ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_marker.input.display_type.standard', 0],
                     ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_marker.input.display_type.moved_up', 1],
-                    ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_marker.input.display_type.moved_down', 2],
                 ],
             )
         ],

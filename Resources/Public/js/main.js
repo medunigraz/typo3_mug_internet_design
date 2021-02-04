@@ -384,12 +384,27 @@ $('.iambgbtn-close').click(function(){
 //quicksearch
 $('.QuicksearchOpen').click(function(){
   $('html').addClass("box-quicksearch-on");
+  $('.tx-indexedsearch-form input').focus();
   return false;
 });
 $('.quicksearchclose').click(function(){
   $('html').removeClass("box-quicksearch-on");
   return false;
 });
+
+//langmobileswitch
+
+
+$(".langdown").click(function(){
+  $("body").toggleClass("langswitch-open");
+});
+$(".barrierdown").click(function(){
+  $("body").toggleClass("barrier-open");
+});
+$(".fontsizeBTN").click(function(){
+  $("body").toggleClass("barrier-open");
+});
+
 
 
 
@@ -479,7 +494,6 @@ $('.ce-offers .elements').each(function(){
 
 
 
-
 //fallbacks
 $(window).on("load", function() {
   var $grid = $('.grid').imagesLoaded( function() {
@@ -497,14 +511,11 @@ $(window).on("load", function() {
   var sliderimgHeight = $('.ce-homesliderelement:first .slider-img').height();
   $('.ce-header-slider').css({"max-height": sliderimgHeight -2 +"px"}); $('.ce-header-slider').css({"min-height": sliderimgHeight -2  +"px"});
 });
-
-//fallback safari datepicker
-if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+//datepicker
 var dateClass='.datechk';
 $(document).ready(function ()
 {
-  if (document.querySelector(dateClass).type !== 'date')
-  {
+
     var oCSS = document.createElement('link');
     oCSS.type='text/css'; oCSS.rel='stylesheet';
     oCSS.href='/typo3conf/ext/mug_ce/Resources/Public/css/jquery-ui.css';
@@ -520,9 +531,9 @@ $(document).ready(function ()
       document.body.appendChild(oJS);
     }
     document.body.appendChild(oCSS);
-  }
+
 });
-}
+
 
 setTimeout(function(){ $(window).trigger('resize'); }, 2000);
 

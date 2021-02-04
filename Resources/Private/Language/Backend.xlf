@@ -544,7 +544,7 @@
         <source>Displays the green marker</source>
       </trans-unit>
       <trans-unit id="CType.mugce_marker.input.display_type.standard" xml:space="preserve">
-        <source>Standard</source>
+        <source>Center</source>
       </trans-unit>
       <trans-unit id="CType.mugce_marker.input.display_type.moved_up" xml:space="preserve">
         <source>Moved up</source>

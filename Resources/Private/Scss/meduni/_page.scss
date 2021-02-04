@@ -46,7 +46,13 @@ clear:both;
 #logo-page {
    float: left;
  }
-.header-line {position:relative; width:100%; float:left; margin:30px 0; z-index:9999999;}
+.header-line {
+  position:relative;
+  width:100%;
+  float:left;
+  margin: 30px 0 36px 0;
+  z-index:9999999;
+}
 a.textlink:hover {text-decoration:underline;}
 
 td {
