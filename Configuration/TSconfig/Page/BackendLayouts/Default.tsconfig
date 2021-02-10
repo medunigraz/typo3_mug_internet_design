@@ -24,7 +24,12 @@ mod.web_layout.BackendLayouts {
                                 name = Main
                                 colPos = 0
                                 allowed {
-                                    CType = header,textmedia,shortcut,html,mugce_text,mugce_text_columns,mugce_text_media,mugce_text_media_teaser,mugce_offers,mugce_imagetiles,mugce_contact,mugce_accordion,mugce_quote,mugce_link_list,mugce_gallery,list,mugce_link_button,mugce_spotlight,mugce_marker,mugxslt_contentelement
+                                    // core
+                                    CType = header,textmedia,shortcut,html,list
+                                    // EXT:mug_ce
+                                    CType := addToList(mugce_text,mugce_text_columns,mugce_text_media,mugce_text_media_teaser,mugce_offers,mugce_imagetiles,mugce_contact,mugce_accordion,mugce_quote,mugce_link_list,mugce_gallery,mugce_link_button,mugce_spotlight,mugce_marker)
+                                    // EXT:*
+                                    CType := addToList(mugxslt_contentelement)
                                     list_type = ods_osm_pi1
                                 }
                             }
