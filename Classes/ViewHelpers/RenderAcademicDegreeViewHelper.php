@@ -8,6 +8,16 @@ class RenderAcademicDegreeViewHelper extends AbstractViewHelper {
 
   protected $escapeOutput = false;
 
+  /**
+   * @var string[]
+   */
+  protected static $replacements = [
+    '.a' => '.<sup>a</sup>',
+    '.in' => '.<sup>in</sup>',
+    'DIin' => 'DI<sup>in</sup>',
+    'PDin' => 'PD<sup>in</sup>',
+  ];
+
   public function initializeArguments() {
     parent::initializeArguments();
     $this->registerArgument(
@@ -19,6 +29,6 @@ class RenderAcademicDegreeViewHelper extends AbstractViewHelper {
   }
 
   public static function renderStatic(array $arguments, \Closure $renderChildrenClosure,  RenderingContextInterface $renderingContext) {
-    return str_replace('.in', '.<sup>in</sup>', str_replace('.a','.<sup>a</sup>',$arguments['degree']));
+    return str_replace(array_keys(static::$replacements), array_values(static::$replacements),$arguments['degree']);
   }
 }
