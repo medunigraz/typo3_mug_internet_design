@@ -138,6 +138,24 @@ $additionalColumns = array(
             'max' => 255
         )
     ),
+    'mugce_text_3' => array (
+        'exclude' => 0,
+        'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.text_3',
+        'config' => array(
+            'type' => 'input',
+            'size' => 50,
+            'max' => 255
+        )
+    ),
+    'mugce_text_4' => array (
+        'exclude' => 0,
+        'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.text_4',
+        'config' => array(
+            'type' => 'input',
+            'size' => 50,
+            'max' => 255
+        )
+    ),
     'mugce_bodytext' => array (
         'exclude' => 0,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.bodytext',
@@ -1031,6 +1049,8 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.header,
                     bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.bodytext,
                     mugce_header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_header,
+                    mugce_text_3;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_text_3,
+                    mugce_text_4;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_text_4,
                     subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.subheader,
                     mugce_text;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_text,
                     mugce_text_2;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_contact.input.mugce_text_2,

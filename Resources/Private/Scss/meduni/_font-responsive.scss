@@ -31,8 +31,18 @@ blockquote {
   font-size: 20px;
   line-height: 30px;
 }
+}
 
-
+/* ....................................................................................... 1023 */
+@media screen and (max-width: 1023px) {
+  .h2-bigger {
+    font-size: 25px;
+  }
+  .hoverimage-item h2, .hoverimage-item .h2 {
+    font-size: 25px;
+    line-height: 25px;
+    min-height: auto;
+  }
 }
 
 /* ....................................................................................... 767 */

@@ -43,6 +43,11 @@ clear:both;
 
 }
 }
+.page-news-overview .content-block-3.C-Low, .page-news-overview .content-block-4.C-Low, .page-news-overview .content-block-5.C-Low {
+  .container > .row {
+    width:100%;
+  }
+}
 #logo-page {
    float: left;
  }

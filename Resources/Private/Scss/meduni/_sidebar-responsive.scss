@@ -22,7 +22,12 @@
 
 
 }
-
+/* ...........................................................................  1023 px */
+@media screen and (max-width: 1023px) {
+.page-news-overview .sidebar-default .info-box {
+  top: -127px;
+}
+}
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
   .sidebar-default {

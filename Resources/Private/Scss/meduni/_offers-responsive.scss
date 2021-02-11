@@ -17,6 +17,18 @@
   top: -14px;
 }
 }
+
+/* ....................................................................................... 1023 */
+@media screen and (max-width: 1023px) {
+  .content-block-ce-offers.bg-grey-light .headline-section {
+    margin-top: 20px;
+  }
+  .ce-offers .headline-section {
+    margin-bottom: 20px;
+  }
+}
+
+
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
   .ce-offers .headline {

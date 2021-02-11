@@ -1,3 +1,38 @@
+/* ...........................................................................  768 px */
+@media screen and (max-width: 768px) {
+  body.fontsize-bigger {
+    font-size: 18px;
+    .i-am-nav .caption {
+      font-size: 15px;
+      left: 28px;
+    }
+
+  .i-am-nav {
+    width: 100px;
+    float: right;
+  }
+    .meta-nav {
+      margin: -8px -20px 0 0px;
+    }
+    .meta-nav li {
+      margin: 0 15px 0 0;
+      font-size: 18px;
+    }
+    .metasettings {
+      font-size: 16px;
+      margin: -7px 25px 0 14px;
+    }
+    .logoimg {
+      width: 107px;
+    }
+    .main-menu .hero-menu .nav-item-level-0 {
+      margin: 0;
+    }
+    .text-leadin {
+      font-size: 18px;
+    }
+  }
+}
 /* ...........................................................................  767 px */
 @media screen and (max-width: 767px) {
   .barrier-free-box {

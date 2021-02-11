@@ -43,7 +43,13 @@
         <source>Text</source>
       </trans-unit>
       <trans-unit id="CType.default.input.text_2" xml:space="preserve">
-        <source>Text</source>
+        <source>Text 2</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.text_3" xml:space="preserve">
+        <source>Text 3</source>
+      </trans-unit>
+      <trans-unit id="CType.default.input.text_4" xml:space="preserve">
+        <source>Text 4</source>
       </trans-unit>
       <trans-unit id="CType.default.input.captiom" xml:space="preserve">
         <source>Caption</source>
@@ -377,6 +383,12 @@
       </trans-unit>
       <trans-unit id="CType.mugce_contact.input.mugce_header" xml:space="preserve">
         <source>Title (post)</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_text_3" xml:space="preserve">
+        <source>Address 1</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_contact.input.mugce_text_4" xml:space="preserve">
+        <source>Address 2</source>
       </trans-unit>
       <trans-unit id="CType.mugce_contact.input.subheader" xml:space="preserve">
         <source>Phone</source>

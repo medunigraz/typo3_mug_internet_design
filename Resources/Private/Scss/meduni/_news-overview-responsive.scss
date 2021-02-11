@@ -8,8 +8,15 @@
     margin: 30px 0 30px 0;
   }
 }
-
-
+/* ....................................................................................... 1023 */
+@media screen and (max-width: 1023px) {
+  .news-overview-list {
+    margin: 0px 0 0 0;
+  }
+  .news-overview-list .article-news:nth-child(2), .news-overview-list .spotnewsbox {
+    margin-top: 30px;
+  }
+}
 /* ....................................................................................... 767 */
 @media screen and (max-width: 767px) {
 .spotnewsbox .news-img-wrap {
