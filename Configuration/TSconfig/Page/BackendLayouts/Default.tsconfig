@@ -30,7 +30,7 @@ mod.web_layout.BackendLayouts {
                                     CType := addToList(mugce_text,mugce_text_columns,mugce_text_media,mugce_text_media_teaser,mugce_offers,mugce_imagetiles,mugce_contact,mugce_accordion,mugce_quote,mugce_link_list,mugce_gallery,mugce_link_button,mugce_spotlight,mugce_marker)
                                     // EXT:*
                                     CType := addToList(mugxslt_contentelement)
-                                    list_type = ods_osm_pi1
+                                    list_type = mugevent_event,ods_osm_pi1
                                 }
                             }
                         }
