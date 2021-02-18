@@ -61,11 +61,35 @@
   background: $green-dark !important;
   color: #fff;
 }
-
+.ui-state-active, .ui-widget-content .ui-state-active {
+  border: 1px solid $grey-light !important;
+  background:  $grey-light !important;
+  color: #000000 !important;
+}
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-  border: 1px solid $green-light !important;
+  border: 1px solid $grey-light !important;
+  background:  $grey-light !important;
+  color: #000000 !important;
+}
+.ui-datepicker-calendar {
+
+.hasEvent a{
+  border: 1px solid$green-light !important;
   background: $green-light !important;
   color: #ffffff !important;
+}
+  .noEvent { pointer-events:none !important;}
+  .noEvent a {
+    opacity:0.3 !important;
+    pointer-events:none !important;
+  }
+
+  .ui-datepicker-today {
+    a {
+      opacity:1 !important;
+    }
+  }
+
 }
 .ui-widget {
   font-family: "Ubuntu", sans-serif !important;

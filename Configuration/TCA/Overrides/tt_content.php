@@ -1533,6 +1533,51 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
     ]
 ];
 
+$ceName = 'mugce_spotlight_cat_news_events';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight_cat_news_events.caption',
+        $ceName,
+        'mugce-icon-spotlight',
+    ],
+    'mugce_spotlight',
+    'after'
+);
+
+$GLOBALS['TCA']['tt_content']['types'][$ceName] = [
+    'showitem' => '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight_cat_news_events.input.header,
+                    subheader;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.input.subheader,
+                    assets;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight.input.assets,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ',
+    'columnsOverrides' => [
+        'header' => [
+            'config' => [
+                'eval' => 'required'
+            ]
+        ],
+        'assets' => [
+            'config' => [
+                'minitems' => 1
+            ]
+        ]
+    ]
+];
+
 $ceName = 'mugce_marker';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
@@ -1542,7 +1587,7 @@ $ceName = 'mugce_marker';
         $ceName,
         'mugce-icon-marker',
     ],
-    'mugce_spotlight',
+    'mugce_spotlight_cat_news_events',
     'after'
 );
 

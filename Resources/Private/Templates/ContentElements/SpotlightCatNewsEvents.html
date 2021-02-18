@@ -1,0 +1,17 @@
+{namespace ce=MUG\ContentElements\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+  <f:variable name="news" value="{ce:getNewsByCategory(uid: data.uid ,limit: 3)}" />
+  <f:variable name="events" value="{ce:getEventsByCategory(uid: data.uid ,limit: 2)}" />
+
+  <f:render partial="SpotlightMain" arguments="{news: news, events: events, data:data, display_type: 0, newsOverviewPid: newsOverviewPid, eventsOverviewPid: eventsOverviewPid}" />
+</f:section>
+
+
+<f:section name="AfterContainer">
+  <f:render partial="SpotlightAfter" arguments="{news: news, events: events, data:data, assets: assets, display_type: 0, newsDetailPid: newsDetailPid, eventsDetailPid: eventsDetailPid}" />
+</f:section>
+
+</html>
+

@@ -167,22 +167,51 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController {
     if ($this->settings['disableOverrideDemand'] != 1 && $overwriteDemand !== null) {
       $demand = $this->overwriteDemandObject($demand, $overwriteDemand);
     }
-    if (!$demand->getMonth()) {
-      $demand->setMonth(date('n'));
+
+    if ($demand->getMonth() && $demand->getYear()) {
+      $prevMonth = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()))->modify('-1 month');;
+      $nextMonth = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()))->modify('+1 month');;
+      $viewType = 1;
+      if ($demand->getDay()) {
+        $date = \DateTime::createFromFormat('d.m.Y', sprintf('%s.%s.%s', $demand->getDay(), $demand->getMonth(), $demand->getYear()));
+        $demand->setRespectDay(true);
+        $viewType = 2;
+      } else {
+        $date = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()));
+      }
+    } else {
+      $prevMonth = (new \DateTime())->modify('-1 month');
+      $nextMonth = (new \DateTime())->modify('+1 month');
+      $date = new \DateTime();
+      $dateTo = (new \DateTime())->modify('+' . ($this->settings['eventsSearchDays'] ?: '365') . ' days');;
+      $viewType = 0;
+
+      $demand->setSearchDateFrom($date->format('Y/m/d'));
+      $demand->setSearchDateTo($dateTo->format('Y/m/d'));
     }
-    if (!$demand->getYear()) {
-      $demand->setYear(date('Y'));
-    }
+
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_ONLY_EVENTS);
     $eventsRecords = $this->newsRepository->findDemanded($demand);
 
-    $date = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()));
-    $prevMonth = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()))->modify('-1 month');;
-    $nextMonth = \DateTime::createFromFormat('d.m.Y', sprintf('1.%s.%s', $demand->getMonth(), $demand->getYear()))->modify('+1 month');;
+    /** @var \GeorgRinger\Eventnews\Domain\Model\Dto\Demand $demand */
+    $demandAvailable = $this->createDemandObjectFromSettings($this->settings, 'GeorgRinger\\Eventnews\\Domain\\Model\\Dto\\Demand');
+    $demandAvailable->setEventRestriction(Demand::EVENT_RESTRICTION_ONLY_EVENTS);
+    $dateFromAvailable = new \DateTime();
+    $dateToAvailable = (new \DateTime())->modify('+' . ($this->settings['eventsSearchDays'] ?: '365') . ' days');;
+    $demandAvailable->setSearchDateFrom($dateFromAvailable->format('Y/m/d'));
+    $demandAvailable->setSearchDateTo($dateToAvailable->format('Y/m/d'));
+    $availableEventsRecords = $this->newsRepository->findDemanded($demandAvailable);
+
+    $availableDates = array();
+    foreach ($availableEventsRecords as $availableEvent) {
+      $availableDates[] = $availableEvent->getDatetime();
+    }
 
     $assignedValues = [
         'news' => $newsRecords,
         'events' => $eventsRecords,
+        'availableEvents' => $availableDates,
+        'viewType' => $viewType,
         'date' => $date,
         'nextMonth' => $nextMonth,
         'prevMonth' => $prevMonth,

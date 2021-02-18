@@ -27,6 +27,7 @@ defined('TYPO3_MODE') or die();
       'mugce-icon-default' => 'mugce-icon-default.svg',
       'mugce-icon-link-button' => 'mugce-icon-link-button.svg',
       'mugce-icon-spotlight' => 'mugce-icon-spotlight.svg',
+      'mugce-icon-spotlight-cat-news-events' => 'mugce-icon-spotlight-cat-news-events.svg',
       'mugce-icon-marker' => 'mugce-icon-marker.svg',
     ];
 
@@ -302,6 +303,15 @@ defined('TYPO3_MODE') or die();
 
   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
       '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/Spotlight/setup.ts">'
+  );
+
+  // Content Element: SpotlightCatNewsEvents
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page/ContentElements/SpotlightCatNewsEvents.tsconfig">'
+  );
+
+  \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+      '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/ContentElements/SpotlightCatNewsEvents/setup.ts">'
   );
 
   // Content Element: Marker

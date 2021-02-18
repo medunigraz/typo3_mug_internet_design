@@ -1,0 +1,26 @@
+<div class="row  <f:if condition='{display_type} == 0'>rowborder-bottom</f:if>">
+  <div class="col-md-9 trans">
+    <f:if condition="{display_type} == 0">
+      <div class="headline headline-spotlight">
+        <h2 class="text-bold hl-big">{data.header}</h2>
+      </div>
+    </f:if>
+  </div>
+  <div class="col-md-3 text-right mt-auto trans">
+    <f:if condition="{display_type} == 0">
+      <div class="morelinkItem">
+        <f:link.action class="morelink text-bold animateAll" pageUid="{newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list">
+          {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allNews", default: "Alle News")}
+          <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+        </f:link.action>
+      </div>
+      <div class="morelinkItem">
+        <f:link.action class="morelink text-bold animateAll" pageUid="{eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents">
+          {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEvents", default: "Alle Events")}
+          <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+        </f:link.action>
+      </div>
+    </f:if>
+  </div>
+
+</div>

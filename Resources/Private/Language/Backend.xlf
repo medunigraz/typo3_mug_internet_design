@@ -549,6 +549,21 @@
       <trans-unit id="CType.mugce_spotlight.input.display_type.plain" xml:space="preserve">
         <source>Spotlight only</source>
       </trans-unit>
+      <trans-unit id="CType.mugce_spotlight_cat_news_events.caption" xml:space="preserve">
+        <source>Spotlight Category</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight_cat_news_events.description" xml:space="preserve">
+        <source>Spotlight element with category news, category events and social media content</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight_cat_news_events.input.header" xml:space="preserve">
+        <source>Headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight_cat_news_events.input.subheader" xml:space="preserve">
+        <source>Spotlight headline</source>
+      </trans-unit>
+      <trans-unit id="CType.mugce_spotlight_cat_news_events.input.assets" xml:space="preserve">
+        <source>Media</source>
+      </trans-unit>
       <trans-unit id="CType.mugce_marker.caption" xml:space="preserve">
         <source>Marker</source>
       </trans-unit>

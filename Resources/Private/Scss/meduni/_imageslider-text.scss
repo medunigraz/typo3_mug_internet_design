@@ -110,6 +110,7 @@
   position: relative;
   z-index: 10;
 }
+.quicklinks-box-emty {opacity:0 !important; pointer-events:none !important}
 .infobox-headline, .quicklinks-headline {
   font-size: 18px;
   width: 85%;

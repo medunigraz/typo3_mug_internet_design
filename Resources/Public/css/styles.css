@@ -1,3 +1,47 @@
+/* ubuntu-300 - latin-ext_latin */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("font/ubuntu-v15-latin-ext_latin-300.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("font/ubuntu-v15-latin-ext_latin-300.eot?#iefix") format("embedded-opentype"), url("font/ubuntu-v15-latin-ext_latin-300.woff2") format("woff2"), url("font/ubuntu-v15-latin-ext_latin-300.woff") format("woff"), url("font/ubuntu-v15-latin-ext_latin-300.ttf") format("truetype"), url("font/ubuntu-v15-latin-ext_latin-300.svg#Ubuntu") format("svg");
+  /* Legacy iOS */
+}
+/* ubuntu-regular - latin-ext_latin */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("font/ubuntu-v15-latin-ext_latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("font/ubuntu-v15-latin-ext_latin-regular.eot?#iefix") format("embedded-opentype"), url("font/ubuntu-v15-latin-ext_latin-regular.woff2") format("woff2"), url("font/ubuntu-v15-latin-ext_latin-regular.woff") format("woff"), url("font/ubuntu-v15-latin-ext_latin-regular.ttf") format("truetype"), url("font/ubuntu-v15-latin-ext_latin-regular.svg#Ubuntu") format("svg");
+  /* Legacy iOS */
+}
+/* ubuntu-500 - latin-ext_latin */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("font/ubuntu-v15-latin-ext_latin-500.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("font/ubuntu-v15-latin-ext_latin-500.eot?#iefix") format("embedded-opentype"), url("font/ubuntu-v15-latin-ext_latin-500.woff2") format("woff2"), url("font/ubuntu-v15-latin-ext_latin-500.woff") format("woff"), url("font/ubuntu-v15-latin-ext_latin-500.ttf") format("truetype"), url("font/ubuntu-v15-latin-ext_latin-500.svg#Ubuntu") format("svg");
+  /* Legacy iOS */
+}
+/* ubuntu-700 - latin-ext_latin */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("font/ubuntu-v15-latin-ext_latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("font/ubuntu-v15-latin-ext_latin-700.eot?#iefix") format("embedded-opentype"), url("font/ubuntu-v15-latin-ext_latin-700.woff2") format("woff2"), url("font/ubuntu-v15-latin-ext_latin-700.woff") format("woff"), url("font/ubuntu-v15-latin-ext_latin-700.ttf") format("truetype"), url("font/ubuntu-v15-latin-ext_latin-700.svg#Ubuntu") format("svg");
+  /* Legacy iOS */
+}
 .bg-green-dark {
   background: #007934;
 }
@@ -181,10 +225,32 @@ blockquote {
   color: #fff;
 }
 
+.ui-state-active, .ui-widget-content .ui-state-active {
+  border: 1px solid #eeeeee !important;
+  background: #eeeeee !important;
+  color: #000000 !important;
+}
+
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  border: 1px solid #eeeeee !important;
+  background: #eeeeee !important;
+  color: #000000 !important;
+}
+
+.ui-datepicker-calendar .hasEvent a {
   border: 1px solid #34b233 !important;
   background: #34b233 !important;
   color: #ffffff !important;
+}
+.ui-datepicker-calendar .noEvent {
+  pointer-events: none !important;
+}
+.ui-datepicker-calendar .noEvent a {
+  opacity: 0.3 !important;
+  pointer-events: none !important;
+}
+.ui-datepicker-calendar .ui-datepicker-today a {
+  opacity: 1 !important;
 }
 
 .ui-widget {
@@ -761,6 +827,20 @@ td {
 .text ol li, .accordion-text ol li {
   padding-left: 10px;
   margin-left: 20px;
+}
+
+.text ol li li, .accordion-text ol li li, .text ul li li, .accordion-text ul li li {
+  padding-left: 25px;
+  margin-left: 0px;
+}
+
+.text ol li ol, .accordion-text ol li ol, .text ul li ol li, .accordion-text ul li ol {
+  margin-left: 20px;
+}
+
+.text ol li ol li, .accordion-text ol li ol li, .text ul li ol li, .accordion-text ul li ol li {
+  padding-left: 8px;
+  margin-left: 0px;
 }
 
 .text ul li::before, .accordion-text ul li::before {
@@ -2006,7 +2086,7 @@ td {
   top: 25%;
   width: 1200px;
   left: 50%;
-  margin: 0 0 0 -600px;
+  margin: -40px 0 0 -600px;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0px 0px 43px #333;
@@ -2140,6 +2220,24 @@ td {
   background: #eeeeee;
   position: relative;
   z-index: 10;
+  opacity: 0;
+}
+
+.cycle-slide-active .quicklinks-box {
+  opacity: 1;
+  -webkit-transition: opacity 550ms;
+  -moz-transition: opacity 550ms;
+  -o-transition: opacity 550ms;
+  transition: opacity 550ms;
+  -webkit-transition-delay: 450ms;
+  -moz-transition-delay: 450ms;
+  -o-transition-delay: 450ms;
+  transition-delay: 450ms;
+}
+
+.quicklinks-box-emty {
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .infobox-headline, .quicklinks-headline {
@@ -5464,7 +5562,7 @@ td {
 .content-block-eventsoverview .eventfilterbox {
   width: 30%;
   float: right;
-  margin: -33px 0 0 0;
+  margin: -105px 0 0 0;
 }
 .content-block-eventsoverview .eventfilterbox ::-webkit-input-placeholder {
   color: #000000;
@@ -5650,10 +5748,6 @@ td {
   font-size: 16px;
   color: #000000;
 }
-.content-block-eventsoverview {
-  margin: 58px 0 0 0;
-}
-
 /* ....................................................................................... 1024 */
 @media screen and (max-width: 1024px) {
   .content-block-eventsoverview .eventfilterbox {
@@ -6501,8 +6595,8 @@ body.contrast-greenblack .hoverimage-item .hover-part-text .text {
     line-height: 20px;
   }
 }
-/* ...........................................................................  1720 px */
-@media screen and (max-width: 1720px) {
+/* ...........................................................................  1776 px */
+@media screen and (max-width: 1776px) {
   .content-block {
     width: 98%;
   }

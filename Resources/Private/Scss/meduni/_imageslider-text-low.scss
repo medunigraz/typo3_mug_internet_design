@@ -13,7 +13,7 @@
     top: 25%;
     width: $content-width;
     left: 50%;
-    margin: 0 0 0 -600px;
+    margin: -40px 0 0 -600px;
     text-align: center;
     text-transform:uppercase;
     text-shadow: 0px 0px 43px #333;
@@ -109,6 +109,7 @@
   bottom: -53px;
   width: 40%;
 }
+
 .infobox-inner{
   float:left; width:100%;  color: $withe;
   position:relative;
@@ -119,6 +120,21 @@
   background:$grey-light;
   position: relative;
   z-index: 10;
+  opacity:0;
+}
+.cycle-slide-active  .quicklinks-box { opacity:1;
+  -webkit-transition: opacity 550ms;
+  -moz-transition:opacity 550ms;
+  -o-transition:opacity 550ms;
+  transition: opacity 550ms;
+  -webkit-transition-delay: 450ms;
+  -moz-transition-delay: 450ms;
+  -o-transition-delay: 450ms;
+  transition-delay: 450ms;
+}
+.quicklinks-box-emty {
+  opacity:0 !important;
+  pointer-events:none !important
 }
 .infobox-headline, .quicklinks-headline {
   font-size: 18px;

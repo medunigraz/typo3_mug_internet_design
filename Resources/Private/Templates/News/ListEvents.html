@@ -7,7 +7,7 @@
     <div class="content-part ce-text">
       <div class="container">
         <div class="row  ">
-          <div class="col    trans">
+          <div class="col trans">
             <div class="row  breadcrumbline trans">
               <div class="content-part breadcrumbline">
                 <div class="container">
@@ -17,23 +17,58 @@
               </div>
             </div>
             <div class="headline">
-              <h1>
-                {f:format.date(date:date,format:'%B %Y')}
-                <span class="h1subline">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEventsIn", arguments: {0: '{f:format.date(date:date,format:"%B")}'}, default: "Alle Events")}</span>
+              <h1 class="eventlistHL" data-monthyear="{f:format.date(date:date,format:'%Y/%m/%d')}">
+                <f:switch expression="{viewType}">
+                  <f:case value="1">
+                    {f:format.date(date:date,format:'%B %Y')}
+                    <span class="h1subline">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:allEventsIn", arguments: {0: '{f:format.date(date:date,format:"%B")}'}, default: "Alle Events")}</span>
+                  </f:case>
+                  <f:case value="2">
+                    {f:format.date(date:date,format:'%e. %B %Y')}
+                  </f:case>
+                  <f:defaultCase>
+                    {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:currentEvents", default: "Aktuelle Events")}
+                  </f:defaultCase>
+                </f:switch>
               </h1>
-              <div class="eventfilterbox">
+              <div class="eventfilterbox" data-baseurl="<f:uri.page />">
                 <div class="eventfilterboxInner">
                   <input type="text"  id="eventday" name="eventday" value="" placeholder="{f:translate(key: 'LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:chooseDate', default: 'Datum auswählen')}" class="eventfilterbox-input eventfilterbox-date datechk">
 
                   <div class="monthpaging eventfilterbox-input">
-                    <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'n\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
+                    <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'m\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
                       {f:format.date(date:prevMonth,format:'%B')}
                     </f:link.page>
-                    <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'n\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
+                    <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'m\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
                       {f:format.date(date:nextMonth,format:'%B')}
                     </f:link.page>
                   </div>
                 </div>
+                <link rel="stylesheet" href="/typo3conf/ext/mug_ce/Resources/Public/css/jquery-ui.css" >
+                <script src="/typo3conf/ext/mug_ce/Resources/Public/js/jquery-ui.min.js"></script>
+                <script>
+                  var array=[];
+                  <f:for each="{availableEvents}" as="availableEvent">
+                    array.push("{f:format.date(date:availableEvent,format:'d-m-Y')}");
+                  </f:for>
+                  $('#eventday').datepicker({
+                    beforeShowDay: function(date){
+                      var string = jQuery.datepicker.formatDate('dd-mm-yy', date);
+                      if($.inArray(string, array) == -1){
+                        return [true,"noEvent"];
+                      }
+                      else{
+                        return [true,"hasEvent"];
+                      }
+                    }
+                  });
+                  $(window).on("load", function() {
+                    var monthyear = $('.eventlistHL').attr("data-monthyear")
+                    $('#eventday').datepicker('setDate', monthyear);
+
+                  });
+
+                     </script>
               </div>
             </div>
             <div class="text monthpagingpart">
@@ -52,10 +87,10 @@
               </div>
               </f:if>
               <div class="monthpaging monthpaging-bottom eventfilterbox-input">
-                <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'n\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
+                <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'m\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
                   {f:format.date(date:prevMonth,format:'%B')}
                 </f:link.page>
-                <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'n\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
+                <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'m\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
                   {f:format.date(date:nextMonth,format:'%B')}
                 </f:link.page>
               </div>

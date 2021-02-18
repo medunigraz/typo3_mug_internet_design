@@ -96,6 +96,17 @@ td {
   padding-left: 10px;
   margin-left: 20px;
 }
+.text ol li li, .accordion-text ol li li, .text ul li li, .accordion-text ul li li {
+  padding-left: 25px;
+  margin-left: 0px;
+}
+.text ol li ol , .accordion-text ol li ol , .text ul li ol li, .accordion-text ul li ol  {
+  margin-left: 20px;
+}
+.text ol li ol li, .accordion-text ol li ol li, .text ul li ol li, .accordion-text ul li ol li {
+  padding-left: 8px;
+  margin-left: 0px;
+}
 .text ul li::before, .accordion-text ul li::before {
   position: absolute;
   content: "";

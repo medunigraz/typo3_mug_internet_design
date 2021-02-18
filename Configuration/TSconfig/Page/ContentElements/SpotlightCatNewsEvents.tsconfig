@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        mugce_spotlight {
+            iconIdentifier = mugce-icon-spotlight-cat-news-events
+            title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight_cat_news_events.caption
+            description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight_cat_news_events.description
+            tt_content_defValues {
+                CType = mugce_spotlight_cat_news_events
+            }
+        }
+    }
+    show := addToList(mugce_spotlight_cat_news_events)
+}
