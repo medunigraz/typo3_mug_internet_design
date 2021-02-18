@@ -63,6 +63,9 @@
          <trans-unit id="chooseDate" xml:space="preserve">
             <source>Datum auswählen</source>
          </trans-unit>
+         <trans-unit id="sidebarIcons.search" xml:space="preserve">
+            <source>Search</source>
+         </trans-unit>
       </body>
    </file>
 </xliff>
