@@ -385,7 +385,7 @@ $(function () {
 
 
 //newsboxen
-$(".news" ).closest('.frame-type-list').addClass('newsteaserpart');
+$(".news" ).closest('.frame').addClass('newsteaserpart');
 $(".greenbox-news" ).appendTo( ".sidebar-default" );
 if($(".submenu-box").length > 0) {
   $(".linktoall" ).appendTo( ".greenbox-news" );
