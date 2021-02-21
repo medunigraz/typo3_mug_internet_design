@@ -72,6 +72,8 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
     $demand->setCategoryConjunction('OR');
     $demand->setLimit($this->arguments['limit'] ?: 3);
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_NO_EVENTS);
+    $demand->setOrder('datetime DESC');
+    $demand->setOrderByAllowed('datetime');
 
     return $this->newsRepository->findDemanded($demand);
   }

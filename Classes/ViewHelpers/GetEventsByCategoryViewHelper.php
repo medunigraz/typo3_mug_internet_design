@@ -72,6 +72,9 @@ class GetEventsByCategoryViewHelper extends AbstractViewHelper {
     $demand->setCategoryConjunction('OR');
     $demand->setLimit($this->arguments['limit'] ?: 3);
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_ONLY_EVENTS);
+    $demand->setTimeRestriction('now');
+    $demand->setOrder('datetime ASC,event_end ASC');
+    $demand->setOrderByAllowed('datetime,event_end');
 
     return $this->newsRepository->findDemanded($demand);
   }
