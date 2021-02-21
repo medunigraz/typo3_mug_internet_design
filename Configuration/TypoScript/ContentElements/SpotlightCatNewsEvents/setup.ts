@@ -18,6 +18,10 @@ tt_content {
             }
         }
         variables {
+            newsStoragePage = TEXT
+            newsStoragePage.value = {$const.newsStoragePage}
+            eventsStoragePage = TEXT
+            eventsStoragePage.value = {$const.eventsStoragePage}
             newsDetailPid = TEXT
             newsDetailPid.value = {$const.newsDetailPid}
             eventsDetailPid = TEXT

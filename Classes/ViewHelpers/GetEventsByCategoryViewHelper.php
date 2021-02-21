@@ -22,6 +22,13 @@ class GetEventsByCategoryViewHelper extends AbstractViewHelper {
         'Optional page to use'
     );
     $this->registerArgument(
+        'storagePage',
+        'string',
+        'Optional storage pages',
+        false,
+        null
+    );
+    $this->registerArgument(
         'uid',
         'int',
         'Uid of the content element.'
@@ -60,6 +67,7 @@ class GetEventsByCategoryViewHelper extends AbstractViewHelper {
     }
 
     $demand = GeneralUtility::makeInstance(Demand::class);
+    $demand->setStoragePage($this->arguments['storagePage']);
     $demand->setCategories($catIds);
     $demand->setCategoryConjunction('OR');
     $demand->setLimit($this->arguments['limit'] ?: 3);
