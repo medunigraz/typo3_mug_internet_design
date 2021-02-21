@@ -35,3 +35,26 @@ mod.web_layout.BackendLayouts {
         }
     }
 }
+
+[backend.user.isAdmin]
+    mod.web_layout.BackendLayouts {
+        news_detail {
+            config {
+                backend_layout {
+                    rows {
+                        2 {
+                            columns {
+                                1 {
+                                    allowed {
+                                        // EXT:*
+                                        CType := addToList(typoscriptcode_content)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+[global]
