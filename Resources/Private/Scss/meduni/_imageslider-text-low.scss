@@ -120,8 +120,9 @@
   background:$grey-light;
   position: relative;
   z-index: 10;
-  opacity:0;
+
 }
+.ce-homesliderelement .quicklinks-box { opacity:0; }
 .cycle-slide-active  .quicklinks-box { opacity:1;
   -webkit-transition: opacity 550ms;
   -moz-transition:opacity 550ms;

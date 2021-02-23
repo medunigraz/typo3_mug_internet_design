@@ -415,9 +415,19 @@ $('.content-part-newsevents').each(function(){
     $(this).find('.events-list-view').addClass( "sliderbottom" );
     var eventsboxH =  $(this).find('.events-list-view').height();
     $(this).find('.spotlightslider').css({"margin-top": eventsboxH +80 +"px"});
-
+  } else {
+    //events height
+    var eventsboxH =  $(this).find('.events-list-view').height();
+    var newsitemH =  $(this).find('.articletype-0').height();
+    if (eventsboxH > newsitemH ) {
+      $(this).find('.article-news').css({"margin-bottom": (eventsboxH-newsitemH) +80 +"px"});
+    }
 
   }
+
+
+
+
 });
 
 

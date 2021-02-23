@@ -81,3 +81,18 @@
     margin-top: 50px;
   }
 }
+
+.page-event .news-single .breadcrumbline,
+.page-news  .news-single .breadcrumbline
+
+{
+  display:none;
+}
+
+.page-event .sidebar-default .greenbox {
+  top: -201px;
+}
+
+.page-news .sidebar-default .info-box {
+  top: -111px;
+}
