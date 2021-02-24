@@ -61,6 +61,10 @@ page.10 {
     }
 }
 
+page.meta {
+    viewport = width=device-width, initial-scale=1, shrink-to-fit=no
+}
+
 page.includeCSSLibs {
     bootstrap4 = EXT:mug_ce/Resources/Public/css/bootstrap.min.css
 }
