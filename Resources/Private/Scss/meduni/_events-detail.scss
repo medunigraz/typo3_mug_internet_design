@@ -90,9 +90,16 @@
 }
 
 .page-event .sidebar-default .greenbox {
-  top: -201px;
+  top: -270px;
 }
 
 .page-news .sidebar-default .info-box {
   top: -111px;
+}
+.noheader .page-news .sidebar-default  {
+  top: 135px;
+}
+
+.page-event.noheader .sidebar-default {
+  top: 186px;
 }

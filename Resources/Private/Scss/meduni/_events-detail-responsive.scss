@@ -29,7 +29,18 @@
  .frame-type-list  .content-block-eventsdetail  .row {
     width: 95%;
   }
+  .page-event .morelink.backlink {
+    float: left;
+  }
+  .page-news .sidebar-default .info-box {
+    top: inherit;
+  }
+  .noheader .page-news .sidebar-default  {
+    top: inherit;
+  }
 
-
+  .page-event.noheader .sidebar-default {
+    top: inherit;
+  }
 
 }

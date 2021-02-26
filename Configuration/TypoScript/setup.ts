@@ -71,6 +71,10 @@ page.includeCSSLibs {
 
 page.includeCSS {
     file11 = EXT:mug_ce/Resources/Public/css/styles.css
+    file12 = EXT:mug_ce/Resources/Public/css/print.css
+    file12 {
+        media = print
+    }
 }
 page.includeJS {
     //file10 = EXT:mug_ce/Resources/Public/js/fastfonts-4c2272bf-4d6f-4865-a659-3036c896f4bd.js

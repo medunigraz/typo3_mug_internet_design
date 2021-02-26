@@ -1320,7 +1320,7 @@ td {
   .mobnavOn .metaline .meta-nav {
     display: block;
     position: absolute;
-    top: 125px;
+    top: 96px;
     background: #F8F8F8;
     border-top: 0.5px solid #cccccc;
     border-tbottom: 0.5px solid #cccccc;
@@ -1353,7 +1353,7 @@ td {
     left: inherit;
     overflow: hidden;
     width: 38px;
-    right: 226px;
+    right: 221px;
   }
 
   .langswitch-open .metasettings {
@@ -1400,7 +1400,7 @@ td {
   .sidebar-icons {
     display: block;
     top: 0px;
-    right: 115px;
+    right: 111px;
     width: 40px;
     -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0);
     -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0);
@@ -1424,8 +1424,8 @@ td {
   }
 
   .logoimg {
-    width: 82px;
-    margin: -12px 0 18px 0;
+    width: 77px;
+    margin: -20px 0 18px 0;
   }
 
   .box-quicksearch-on .box-quicksearch {
@@ -2064,7 +2064,7 @@ td {
   }
 
   .burgerBTN {
-    top: 45px;
+    top: 38px;
   }
 
   .main-menu .menu-link.menu-link-level1 {
@@ -2701,6 +2701,20 @@ td {
   div.cycle-slideshow .ce-homesliderelement-first .headline {
     top: 64px !important;
   }
+
+  .ce-homesliderelement .infobox-headline-BTN {
+    top: 0;
+    margin: -13px 0 0 0;
+  }
+
+  .ce-homesliderelement .infobox-inner {
+    min-height: 20px;
+    height: auto;
+  }
+
+  .ce-homesliderelement .quicklinks-box-emty {
+    position: absolute;
+  }
 }
 .ce-text {
   margin: 0px 0 0px 0;
@@ -3170,6 +3184,10 @@ td {
 
   .content-block-ce-text-media-teaser .box-balken {
     top: -14px;
+  }
+
+  .ce-text-columns .morelink {
+    float: left;
   }
 }
 .ce-contact-box {
@@ -4541,24 +4559,6 @@ td {
   display: none;
 }
 
-/* ....................................................................................... 1720 */
-/* ....................................................................................... 767 */
-@media screen and (max-width: 767px) {
-  .news-single .sidebar-default {
-    top: 0;
-  }
-
-  .news-single .sidebar-default .linktoall .morelink {
-    width: 100%;
-    float: left;
-    text-align: left;
-    margin: 5px 0% 0px 0;
-  }
-
-  .news-single .ce-text .text-leadin {
-    margin: 0 0 20px 0;
-  }
-}
 .content-block-eventsdetail .sidebar-default .greenbox .infobox-headline {
   width: 80%;
 }
@@ -4644,42 +4644,21 @@ td {
 }
 
 .page-event .sidebar-default .greenbox {
-  top: -201px;
+  top: -270px;
 }
 
 .page-news .sidebar-default .info-box {
   top: -111px;
 }
 
-/* ....................................................................................... 1240 */
-@media screen and (max-width: 1240px) {
-  .content-block-eventsdetail .eventmeta-row {
-    font-size: 14px;
-  }
+.noheader .page-news .sidebar-default {
+  top: 135px;
 }
-/* ....................................................................................... 1023 */
-@media screen and (max-width: 1023px) {
-  .content-block-eventsdetail .sidebar-default .linktoall .morelink {
-    font-size: 11px;
-  }
-}
-/* ....................................................................................... 767 */
-@media screen and (max-width: 767px) {
-  .content-block-eventsdetail .Day {
-    font-size: 45px;
-    margin: 5px 0 0 0;
-  }
 
-  .content-block-eventsdetail .Month {
-    margin: 20px 0 0 0;
-    font-size: 20px;
-    padding: 10px 0 0 0;
-  }
-
-  .frame-type-list .content-block-eventsdetail .row {
-    width: 95%;
-  }
+.page-event.noheader .sidebar-default {
+  top: 186px;
 }
+
 .ce-linklist .morelink {
   color: #007934;
 }
@@ -5342,6 +5321,7 @@ td {
 }
 .news-img-wrap img {
   width: 100%;
+  min-height: 112px;
   display: block;
 }
 
@@ -6747,7 +6727,7 @@ body.contrast-greenblack .hoverimage-item .hover-part-text .text {
     left: 28px;
   }
   body.fontsize-bigger .i-am-nav {
-    width: 100px;
+    width: 121px;
     float: right;
   }
   body.fontsize-bigger .meta-nav {
@@ -6759,10 +6739,10 @@ body.contrast-greenblack .hoverimage-item .hover-part-text .text {
   }
   body.fontsize-bigger .metasettings {
     font-size: 16px;
-    margin: -7px 25px 0 14px;
+    margin: -30px 0px 0 14px;
   }
   body.fontsize-bigger .logoimg {
-    width: 107px;
+    width: 77px;
   }
   body.fontsize-bigger .main-menu .hero-menu .nav-item-level-0 {
     margin: 0;
@@ -6790,6 +6770,7 @@ body.contrast-greenblack .hoverimage-item .hover-part-text .text {
     position: absolute;
     top: 0px;
     margin: 0px;
+    left: 4px;
   }
 
   .barrier-free-box {
@@ -6864,7 +6845,7 @@ body.contrast-greenblack .hoverimage-item .hover-part-text .text {
     margin: 0px 0 0 0px;
     cursor: pointer;
     position: absolute;
-    left: 40px;
+    left: 43px;
     background: #eee;
     height: 50px;
     width: 38px;
@@ -6950,6 +6931,73 @@ body.contrast-greenblack .hoverimage-item .hover-part-text .text {
   }
   body.fontsize-bigger .main-menu .hero-menu .nav-item-level-0 {
     margin: 0px 35.7px 0 0;
+  }
+}
+/* ....................................................................................... 1720 */
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .news-single .sidebar-default {
+    top: 0;
+  }
+
+  .news-single .sidebar-default .linktoall .morelink {
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin: 5px 0% 0px 0;
+  }
+
+  .news-single .ce-text .text-leadin {
+    margin: 0 0 20px 0;
+  }
+
+  .page-news .sidebar-default .info-box {
+    top: 0;
+  }
+}
+/* ....................................................................................... 1240 */
+@media screen and (max-width: 1240px) {
+  .content-block-eventsdetail .eventmeta-row {
+    font-size: 14px;
+  }
+}
+/* ....................................................................................... 1023 */
+@media screen and (max-width: 1023px) {
+  .content-block-eventsdetail .sidebar-default .linktoall .morelink {
+    font-size: 11px;
+  }
+}
+/* ....................................................................................... 767 */
+@media screen and (max-width: 767px) {
+  .content-block-eventsdetail .Day {
+    font-size: 45px;
+    margin: 5px 0 0 0;
+  }
+
+  .content-block-eventsdetail .Month {
+    margin: 20px 0 0 0;
+    font-size: 20px;
+    padding: 10px 0 0 0;
+  }
+
+  .frame-type-list .content-block-eventsdetail .row {
+    width: 95%;
+  }
+
+  .page-event .morelink.backlink {
+    float: left;
+  }
+
+  .page-news .sidebar-default .info-box {
+    top: inherit;
+  }
+
+  .noheader .page-news .sidebar-default {
+    top: inherit;
+  }
+
+  .page-event.noheader .sidebar-default {
+    top: inherit;
   }
 }
 

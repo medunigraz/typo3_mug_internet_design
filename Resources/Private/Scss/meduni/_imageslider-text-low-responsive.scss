@@ -293,7 +293,17 @@ display:none;
 
   div.cycle-slideshow .ce-homesliderelement-first .headline {
     top: 64px !important;
+  }
+  .ce-homesliderelement .infobox-headline-BTN {
+    top: 0;
+    margin: -13px 0 0 0;
+  }
+  .ce-homesliderelement .infobox-inner {
+    min-height: 20px;
+    height: auto;
+  }
 
-
+  .ce-homesliderelement .quicklinks-box-emty {
+    position:absolute;
   }
 }
