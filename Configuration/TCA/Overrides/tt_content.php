@@ -273,7 +273,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                         ],
                     ],
                 ],
-                'maxitems' => 5,
                 'minitems' => 1,
             ],
         ],

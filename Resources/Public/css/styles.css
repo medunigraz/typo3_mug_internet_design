@@ -2071,6 +2071,15 @@ td {
     font-size: 18px;
     line-height: 22px;
   }
+
+  .meta-nav li {
+    font-size: 14px;
+  }
+
+  .meta-nav li a:before {
+    top: -1px;
+    position: relative;
+  }
 }
 .ce-header-slider, .ce-homeslider {
   position: relative;
