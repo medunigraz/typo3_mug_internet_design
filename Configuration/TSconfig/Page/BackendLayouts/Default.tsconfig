@@ -106,6 +106,8 @@ mod.web_layout.BackendLayouts {
                             columns {
                                 1 {
                                     allowed {
+                                        // EXT:mug_ce
+                                        CType := addToList(mugce_spotlight_cat_news_events)
                                         // EXT:*
                                         CType := addToList(typoscriptcode_content)
                                     }
