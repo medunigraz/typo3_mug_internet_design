@@ -45,6 +45,9 @@
                 </div>
               </div>
             </f:if>
+            <f:if condition="{data.mugce_display_type} == 0 && {organisationNavPid}">
+              <f:render partial="OrganisationSubmenu" arguments="{rootId: organisationNavPid}" />
+            </f:if>
             <f:if condition="{data.mugce_display_type} == 2 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 5">
               <f:render partial="OrganisationSubmenu" arguments="{rootId: data.pid}" />
             </f:if>

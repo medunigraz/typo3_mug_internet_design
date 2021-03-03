@@ -18,6 +18,8 @@ tt_content {
             }
         }
         variables {
+            organisationNavPid = TEXT
+            organisationNavPid.value = {$const.organisationNavPid}
             newsDetailPid = TEXT
             newsDetailPid.value = {$const.newsDetailPid}
             eventsDetailPid = TEXT
