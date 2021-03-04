@@ -51,50 +51,80 @@
                     <div class="news-box-inner">
                       <div class="news-item  greybox-news bg-grey-light entry-1">
                         <div class="news-item-inner text-bold">
-
+                          <f:if condition="{eventItem.locationSimple}">
+                            <div class="eventmeta-row">
+                              <span class="eventmeta-label">Ort:</span><span class="eventmeta-info">{eventItem.locationSimple}</span>
+                            </div>
+                          </f:if>
                           <div class="eventmeta-row">
-                            <span class="eventmeta-label">Ort:</span><span class="eventmeta-info">MED CAMPUS Graz</span>
+                            <span class="eventmeta-label">Beginn:</span><span class="eventmeta-info">{eventItem.datetime -> f:format.date(format: 'H:i')}</span>
                           </div>
-                          <div class="eventmeta-row">
-                            <span class="eventmeta-label">Beginn:</span><span class="eventmeta-info">17:30</span>
-                          </div>
-                          <div class="eventmeta-row">
-                            <span class="eventmeta-label">Ende:</span><span class="eventmeta-info">20:00</span>
-                          </div>
+                          <f:if condition="{eventItem.eventEnd}">
+                            <div class="eventmeta-row">
+                              <span class="eventmeta-label">Ende:</span><span class="eventmeta-info"><f:if condition="{eventItem.datetime -> f:format.date(format: 'Ymd')} != {eventItem.eventEnd -> f:format.date(format: 'Ymd')}">{eventItem.eventEnd -> f:format.date(format: 'd.m.Y')} </f:if>{eventItem.eventEnd -> f:format.date(format: 'H:i')}</span>
+                            </div>
+                          </f:if>
                           <div class="eventmeta-row eventmeta-row-trenner"></div>
                           <div class="eventmeta-row">
-                            <span class="eventmeta-label">Kostenpflichtig:</span><span class="eventmeta-info">Nein</span>
+                            <span class="eventmeta-label">Anmeldepflichtig:</span><span class="eventmeta-info">{f:translate(key: 'LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:label.{f:if(condition: eventItem.register, then: \'yes\', else: \'no\')}')}</span>
                           </div>
-                          <div class="eventmeta-row eventmeta-row-trenner"></div>
+                          <f:if condition="{eventItem.registrationEnd}">
+                            <div class="eventmeta-row">
+                              <span class="eventmeta-label">Anmeldung bis:</span><span class="eventmeta-info">{eventItem.registrationEnd -> f:format.date(format: 'd.m.Y H:i')}</span>
+                            </div>
+                          </f:if>
                           <div class="eventmeta-row">
-                            <span class="eventmeta-label">Veranstalter:</span><span class="eventmeta-info">ÖH Med Graz </span>
+                            <span class="eventmeta-label">Kostenpflichtig:</span><span class="eventmeta-info">{f:translate(key: 'LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:label.{f:if(condition: eventItem.attendingfees, then: \'yes\', else: \'no\')}')}</span>
                           </div>
+                          <f:if condition="{eventItem.dfppoints}">
+                            <div class="eventmeta-row eventmeta-row-trenner"></div>
+                            <div class="eventmeta-row">
+                              <span class="eventmeta-label">{f:translate(key: 'LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:label.dfppoints')}:</span><span class="eventmeta-info">{eventItem.dfppoints}</span>
+                            </div>
+                          </f:if>
+                          <f:if condition="{eventItem.organizerSimple}">
+                            <div class="eventmeta-row eventmeta-row-trenner"></div>
+                            <div class="eventmeta-row">
+                              <span class="eventmeta-label">Veranstalter:</span><span class="eventmeta-info">{eventItem.organizerSimple}</span>
+                            </div>
+                          </f:if>
+                          <f:comment>
                           <div class="eventmeta-row">
                             <span class="eventmeta-label">TeilnehmerInnenzahl:</span><span class="eventmeta-info">50</span>
                           </div>
-                          <div class="eventmeta-row eventmeta-row-trenner"></div>
-                          <div class="eventmeta-row">
-                            <span class="eventmeta-label">Kontaktperson:</span><span class="eventmeta-info">Max Mustermann<br>+433161234321<br><a href="mailto:m.mustermann@meduni-graz.at">m.mustermann@meduni-graz.at</a></span>
-                          </div>
-                          <div class="eventmeta-row eventmeta-row-trenner"></div>
-                          <div class="eventmeta-row">
-                            <span class="eventmeta-label">Website:</span><span class="eventmeta-info"><a href="https://www.oehmedgraz.at" target="_blank">www.oehmedgraz.at</a></span>
-                          </div>
-
-
-
+                          </f:comment>
+                          <f:if condition="{eventItem.contactName} || {eventItem.contactEmail}">
+                            <div class="eventmeta-row eventmeta-row-trenner"></div>
+                            <div class="eventmeta-row">
+                              <span class="eventmeta-label">Kontaktperson:</span><span class="eventmeta-info">{eventItem.contactName}<f:if condition="{eventItem.contactPhone}"><br>{eventItem.contactPhone}</f:if><f:if condition="{eventItem.contactEmail}"><br><f:link.email email="{eventItem.contactEmail}">{eventItem.contactEmail}</f:link.email></f:if></span>
+                            </div>
+                          </f:if>
+                          <f:if condition="{eventItem.www}">
+                            <div class="eventmeta-row eventmeta-row-trenner"></div>
+                            <div class="eventmeta-row">
+                              <span class="eventmeta-label">Website:</span><span class="eventmeta-info"><f:link.typolink target="_blank" parameter="{eventItem.www}">{eventItem.www}</f:link.typolink></span>
+                            </div>
+                          </f:if>
                         </div>
                       </div>
 
-                      <div class="linktoall bg-grey-light">
-                        <div class="news-item-inner">
-                          <div class="border-bottom"></div>
-                          <a href="#" target="_blank" class="morelink text-bold animateAll">
-                              {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:program", default: "DOWNLOAD PROGRAMM")}
-                            <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-                          </a>
+                      <f:if condition="{eventItem.falRelatedFiles -> f:count()}">
+                        <div class="linktoall bg-grey-light">
+                          <div class="news-item-inner">
+                            <div class="border-bottom"></div>
+                            <f:for each="{eventItem.falRelatedFiles}" as="fileItem" iteration="filesIterator">
+                              <a href="{f:uri.typolink(parameter: fileItem.originalResource.publicUrl)}" target="_blank" class="morelink text-bold animateAll">
+                                <f:if condition="{fileItem.title}">
+                                  <f:then>{fileItem.title}</f:then>
+                                  <f:else>{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:program", default: "DOWNLOAD PROGRAMM")}</f:else>
+                                </f:if>
+                                <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                              </a>
+                              <f:if condition="{filesIterator.isLast}"><f:else><br/></f:else></f:if>
+                            </f:for>
+                          </div>
                         </div>
-                      </div>
+                      </f:if>
                     </div>
                   </div>
                 </div>

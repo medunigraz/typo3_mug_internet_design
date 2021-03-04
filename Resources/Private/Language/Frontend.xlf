@@ -66,6 +66,15 @@
          <trans-unit id="sidebarIcons.search" xml:space="preserve">
             <source>Search</source>
          </trans-unit>
+         <trans-unit id="label.dfppoints" xml:space="preserve">
+             <source>DFP points</source>
+         </trans-unit>
+         <trans-unit id="label.no" xml:space="preserve">
+             <source>No</source>
+         </trans-unit>
+         <trans-unit id="label.yes" xml:space="preserve">
+             <source>Yes</source>
+         </trans-unit>
       </body>
    </file>
 </xliff>

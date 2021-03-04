@@ -5,7 +5,16 @@
     <body>
         <trans-unit id="sidebarIcons.search" xml:space="preserve">
             <target>Suche</target>
-         </trans-unit>
+        </trans-unit>
+        <trans-unit id="label.dfppoints" xml:space="preserve">
+            <target>DFP Punkte</target>
+        </trans-unit>
+        <trans-unit id="label.no" xml:space="preserve">
+            <target>Nein</target>
+        </trans-unit>
+        <trans-unit id="label.yes" xml:space="preserve">
+            <target>Ja</target>
+        </trans-unit>
     </body>
 </file>
 </xliff>
