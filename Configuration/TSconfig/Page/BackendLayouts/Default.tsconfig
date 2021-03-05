@@ -27,7 +27,7 @@ mod.web_layout.BackendLayouts {
                                     // core
                                     CType = header,textmedia,shortcut,html,list
                                     // EXT:mug_ce
-                                    CType := addToList(mugce_text,mugce_text_columns,mugce_text_media,mugce_text_media_teaser,mugce_offers,mugce_imagetiles,mugce_contact,mugce_accordion,mugce_quote,mugce_link_list,mugce_gallery,mugce_link_button,mugce_spotlight,mugce_marker)
+                                    CType := addToList(mugce_text,mugce_text_columns,mugce_text_media,mugce_text_media_teaser,mugce_offers,mugce_imagetiles,mugce_contact,mugce_accordion,mugce_quote,mugce_link_list,mugce_gallery,mugce_link_button,mugce_spotlight,mugce_spotlight_cat_news_events,mugce_marker)
                                     // EXT:*
                                     CType := addToList(mugxslt_contentelement)
                                     list_type = mugevent_event,ods_osm_pi1
@@ -106,8 +106,6 @@ mod.web_layout.BackendLayouts {
                             columns {
                                 1 {
                                     allowed {
-                                        // EXT:mug_ce
-                                        CType := addToList(mugce_spotlight_cat_news_events)
                                         // EXT:*
                                         CType := addToList(typoscriptcode_content)
                                     }
