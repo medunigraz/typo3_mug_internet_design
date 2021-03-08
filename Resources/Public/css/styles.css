@@ -2189,8 +2189,8 @@ td {
   width: 150px;
   text-align: center;
   left: 50%;
-  bottom: 10%;
-  margin: 0 0 0 -84px;
+  bottom: 8%;
+  margin: 0 0 0 -81px;
 }
 .slider-pager span {
   text-indent: -99999px;
@@ -2198,7 +2198,7 @@ td {
   background: #ffffff;
   width: 20px;
   height: 20px;
-  margin: 0 5px 0 5px;
+  margin: 0px 5px 7px 5px;
   -webkit-border-radius: 250px;
   -moz-border-radius: 250px;
   border-radius: 250px;
@@ -4594,7 +4594,7 @@ td {
 .content-block-eventsdetail .greybox-news {
   background: #eeeeee;
   float: left;
-  padding: 20px 0 0 0;
+  padding: 20px 0 20px 0;
 }
 .content-block-eventsdetail .sidebar-default .news-item-inner {
   width: 80%;
@@ -4634,6 +4634,9 @@ td {
 
 .page-event .standardCE6 {
   margin-top: 0px;
+}
+.page-event .standardCE6 .content-block-eventsdetail.standard-leadin {
+  min-height: 350px;
 }
 .page-event .ce-text-columns {
   margin: 50px 0 50px 0;
@@ -5598,6 +5601,7 @@ td {
   background-image: url("img/icon-calendar.svg");
   background-position: right;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 .content-block-eventsoverview .eventfilterbox .eventfilterbox-select {
   appearance: none;

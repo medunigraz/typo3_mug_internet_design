@@ -26,7 +26,7 @@
   .greybox-news {
     background: #eeeeee;
     float: left;
-    padding: 20px 0 0 0;
+    padding: 20px 0 20px 0;
   }
   .sidebar-default .news-item-inner {
     width: 80%;
@@ -39,6 +39,7 @@
    font-size: 16px;
    a:hover {text-decoration: underline;}
   }
+
   .eventmeta-row-trenner {
     margin: 5px 0 5px 0;
   }
@@ -66,6 +67,9 @@
 .page-event {
  .standardCE6 {
   margin-top: 0px;
+ .content-block-eventsdetail.standard-leadin {
+   min-height:350px;
+ }
 }
 
 
@@ -103,3 +107,4 @@
 .page-event.noheader .sidebar-default {
   top: 186px;
 }
+
