@@ -56,7 +56,7 @@
                 <f:then>
                     <div itemprop="description">
                         {eventItem.teaser -> f:format.crop(maxCharacters: 100, respectWordBoundaries:'1') -> f:format.html()}
-                        <f:link.action pageUid="{settings.detailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:eventItem.uid}">
+                        <f:link.action pageUid="{settings.eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:eventItem.uid}">
                         <span class="morelink">
                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}
                         </span>
@@ -66,7 +66,7 @@
                 <f:else>
                     <div itemprop="description">
                         {eventItem.bodytext -> f:format.crop(maxCharacters: 100, respectWordBoundaries:'1') -> f:format.html()}
-                        <f:link.action pageUid="{settings.detailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:eventItem.uid}">
+                        <f:link.action pageUid="{settings.eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:eventItem.uid}">
                         <span class="morelink">
                            {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}
                         </span>
