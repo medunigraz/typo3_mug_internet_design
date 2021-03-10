@@ -6,31 +6,18 @@
 <div id="tx-solr-search" class="container">
 
   <div class="row">
-    <div class="tx-solr-search-form col-lg-8">
+    <div class="tx-solr-search-form col-lg-12">
       <f:render partial="Search/Form" section="Form" arguments="{search:search, additionalFilters:additionalFilters, pluginNamespace: pluginNamespace, resultSet: resultSet}" />
     </div>
-
-    <div class="tx-solr-search-form col-lg-2 hidden-xs">&nbsp;</div>
-    <div class="col-lg-2 hidden-xs">
-      <f:if condition="{resultSet.hasSearched}">
-        <f:if condition="{resultSet.usedSearchRequest.contextTypoScriptConfiguration.searchSorting}">
-          <f:render partial="Result/Sorting" section="Sorting" arguments="{resultSet:resultSet}" />
-        </f:if>
-      </f:if>
-    </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <f:render partial="Result/FacetsActive" section="FacetsActive" arguments="{resultSet:resultSet}" />
-    </div>
-  </div>
   <div class="row">
     <div class="hidden-xs col-md-12 query-debug">
       <s:debug.query />
     </div>
   </div>
 
+  <!--
   <div class="row searchinfo">
     <div class="col-md-12">
 
@@ -79,6 +66,7 @@
       </f:if>
     </div>
   </div>
+  -->
 
   <div class="row">
     <div class="col-md-12">
