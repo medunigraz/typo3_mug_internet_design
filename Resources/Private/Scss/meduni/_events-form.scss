@@ -1,0 +1,61 @@
+.tx_mugevent {
+  /*.form-group {
+    margin-left: -(@grid-gutter-width / 2);
+    margin-right: -(@grid-gutter-width / 2);
+  }
+  .form-control {
+    .placeholder(@placeholderText);
+  }*/
+  .data {
+    border-left: 3px solid;
+    padding: ($grid-gutter-width / 4);
+
+    &.optional {
+      .optional-info {
+        display: initial;
+      }
+
+      [data-toggle="collapse"] {
+        cursor: pointer;
+
+        > i.fa {
+          float: right;
+
+          &:before {
+            //content: @fa-var-angle-up;
+          }
+        }
+
+        &.collapsed > i.fa:before {
+          //content: @fa-var-angle-down;
+        }
+      }
+    }
+
+    .optional-info {
+      display: none;
+    }
+  }
+
+  .help-block {
+    padding-left: 20px;
+
+    strong {
+      font-weight: normal;
+    }
+  }
+
+  .badge {
+    margin-left: $badge-padding-x;
+  }
+
+  @each $color, $value in $event-form-colors {
+    .data-#{$color} {
+      border-color: $value;
+    }
+
+    .badge-#{$color} {
+      @include badge-variant($value);
+    }
+  }
+}
