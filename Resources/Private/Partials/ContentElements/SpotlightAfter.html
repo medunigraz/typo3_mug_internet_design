@@ -1,3 +1,11 @@
+<f:variable name="topnewsRendering">
+  <f:for each="{topnews}" as="newsItem">
+    <div class="spolightItem <f:if condition='{display_type} == 0'>spolightItemAll</f:if><f:if condition='{display_type} == 1'>spolightItemSOnly</f:if>">
+      <f:render partial="../News/List/SpotlightItem" arguments="{newsItem: newsItem, settings: {newsDetailPid: newsDetailPid}, iterator:iterator}" />
+    </div>
+  </f:for>
+</f:variable>
+
 <div class="content-part content-part-newsevents <f:if condition='{display_type} == 1'>content-part-newsevents-spotlightonly</f:if>">
   <div class="container">
     <div class="row">
@@ -26,26 +34,33 @@
                    data-cycle-auto-height="container"
                    data-cycle-swipe-fx="scrollHorz"
               >
-                <f:for each="{assets}" as="item" >
-                  <div class="spolightItem <f:if condition='{display_type} == 0'>spolightItemAll</f:if><f:if condition='{display_type} == 1'>spolightItemSOnly</f:if>">
-                    <div class="spolightItem-inner">
-                      <f:if condition="{item.type} == 4">
-                        <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/play-btn.svg')}" alt="" class="videoplayBtn">
-                      </f:if>
-                      <f:media file="{item}" class="spolightslider-img"/>
-                      <div class="spolightItem-desc">
-                        <f:if condition="{item.title}">
-                          <f:then>
-                            {item.title}
-                          </f:then>
-                          <f:else>
-                            {item.name}
-                          </f:else>
-                        </f:if>
+                <f:if condition="{topnews}">
+                  <f:then>
+                    <f:format.raw>{topnewsRendering}</f:format.raw>
+                  </f:then>
+                  <f:else>
+                    <f:for each="{assets}" as="item" >
+                      <div class="spolightItem <f:if condition='{display_type} == 0'>spolightItemAll</f:if><f:if condition='{display_type} == 1'>spolightItemSOnly</f:if>">
+                        <div class="spolightItem-inner">
+                          <f:if condition="{item.type} == 4">
+                            <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/css/img/play-btn.svg')}" alt="" class="videoplayBtn">
+                          </f:if>
+                          <f:media file="{item}" class="spolightslider-img"/>
+                          <div class="spolightItem-desc">
+                            <f:if condition="{item.title}">
+                              <f:then>
+                                {item.title}
+                              </f:then>
+                              <f:else>
+                                {item.name}
+                              </f:else>
+                            </f:if>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </f:for>
+                    </f:for>
+                  </f:else>
+                </f:if>
               </div>
               <div class="spotslider-pager <f:if condition='{display_type} == 0'>spolightItemAllpager</f:if><f:if condition='{display_type} == 1'>spolightItemSOnlypager</f:if>"></div>
             </div>

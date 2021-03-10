@@ -36,7 +36,16 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
     $this->registerArgument(
         'limit',
         'int',
-        'Optinal maximum news entries to return. Default is 3.'
+        'Optional maximum news entries to return. Default is 3.',
+        false,
+        3
+    );
+    $this->registerArgument(
+        'topNewsRestriction',
+        'int',
+        'Optional top news restriction. Default is not set.',
+        false,
+        null
     );
   }
 
@@ -70,10 +79,11 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
     $demand->setStoragePage($this->arguments['storagePage']);
     $demand->setCategories($catIds);
     $demand->setCategoryConjunction('OR');
-    $demand->setLimit($this->arguments['limit'] ?: 3);
+    $demand->setLimit($this->arguments['limit']);
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_NO_EVENTS);
     $demand->setOrder('datetime DESC');
     $demand->setOrderByAllowed('datetime');
+    $demand->setTopNewsRestriction($this->arguments['topNewsRestriction']);
 
     return $this->newsRepository->findDemanded($demand);
   }
