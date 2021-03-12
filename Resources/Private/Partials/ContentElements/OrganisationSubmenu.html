@@ -15,7 +15,7 @@
     <f:for each="{menu}" as="item" iteration="iterator">
       <f:if condition="{item.doktype}!=42">
         {v:variable.set(name:'hasSub',value:'{v:condition.page.hasSubpages(then: "TRUE", else: "FALSE", pageUid: "{item.uid}", includeHidden: 0, showHiddenInMenu: 0)}')}
-        <li class="nav-item animateAll nav-item-level-0  <f:if condition='{hasSub} == "TRUE"'> subsubinside</f:if> {f:if(condition:'{item.active}',then:' active')}{f:if(condition:'{item.doktype}==4 && {item.shortcut} == {currentPid}',then:' active')}">
+        <li class="nav-item animateAll nav-item-level-0{f:if(condition: hasSub, then: ' subsubinside')}">
           <a href="{item.link}" class="menu-link menu-link-level0 animateAll{f:if(condition: item.class, then: ' {item.class}')}"{f:if(condition: item.target, then: ' target="{item.target}"')}>
             {item.linktext}<span class="subnavopenBTN">
               <img src="/typo3conf/ext/mug_ce/Resources/Public/css/img/icon-arrow-black-right.svg" alt="" class="animateAll subnavbox-arrow subnavbox-noarrowplus">
