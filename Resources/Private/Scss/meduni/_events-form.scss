@@ -8,6 +8,7 @@
   }*/
   .data {
     border-left: 3px solid;
+    margin-bottom: $grid-gutter-width;
     padding: ($grid-gutter-width / 4);
 
     &.optional {
