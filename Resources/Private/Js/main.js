@@ -132,12 +132,23 @@ $('footer').removeClass('C-Low');
   });
   $(".spotlightslider").each(function() {
     var maxHeight = 0;
+    var maxElementHeight = 0;
     $(this).find('.spolightslider-img').each(function(){
       var thisH = $(this).height();
       if (thisH > maxHeight) { maxHeight = thisH; }
     });
-    $(this).css({"height": maxHeight + 50 +"px"});
-    $(this).find('.spolightItem-inner').css({"height": maxHeight -60 +"px"});
+    $(this).find('.spolightslider-height').each(function(){
+      var thisH = $(this).height();
+      if (thisH > maxElementHeight) { maxElementHeight = thisH; }
+    });
+    if (maxHeight > 0) {
+      $(this).css({"height": maxHeight + 50 +"px"});
+      $(this).find('.spolightItem-inner').css({"height": maxHeight -60 +"px"});
+    }
+    if (maxElementHeight > 0) {
+      $(this).css({"height": maxElementHeight + 90 +"px"});
+      $(this).find('.spolightItem-inner').css({"height": maxElementHeight + 50 +"px"});
+    }
   });
 
   //same HL height text colums
