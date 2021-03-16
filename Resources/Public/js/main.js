@@ -139,6 +139,20 @@ $('footer').removeClass('C-Low');
     $(this).css({"height": maxHeight + 50 +"px"});
     $(this).find('.spolightItem-inner').css({"height": maxHeight -60 +"px"});
   });
+
+  //same HL height text colums
+  $(".ce-text-columns").each(function() {
+  var hl1 = $(this).find('.headline-textcolum-1 h2').height();
+  var hl2 = $(this).find('.headline-textcolum-2 h2').height();
+    if (hl1 > hl2) {
+      $(this).find('.headline-textcolum-1 h2,.headline-textcolum-2 h2').css({"min-height": hl1  +"px"});
+    }
+    if (hl1 < hl2) {
+      $(this).find('.headline-textcolum-1 h2,.headline-textcolum-2 h2').css({"min-height": hl2  +"px"});
+    }
+
+
+  });
 });
 $(window).trigger('resize');
 

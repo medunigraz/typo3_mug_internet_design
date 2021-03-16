@@ -4,10 +4,10 @@
       <header/>
       <body>
          <trans-unit id="moreLabel" xml:space="preserve">
-            <source>Mehr</source>
+            <source>More</source>
          </trans-unit>
          <trans-unit id="iAmNavCaption" xml:space="preserve">
-            <source>Ich bin</source>
+            <source>I am</source>
          </trans-unit>
          <trans-unit id="quicklinks" xml:space="preserve">
             <source>Quicklinks</source>
@@ -25,43 +25,43 @@
             <source>F:</source>
          </trans-unit>
          <trans-unit id="allNews" xml:space="preserve">
-            <source>Alle News</source>
+            <source>All news</source>
          </trans-unit>
          <trans-unit id="showAll" xml:space="preserve">
-            <source>Alle zeigen</source>
+            <source>Show all</source>
          </trans-unit>
          <trans-unit id="allEvents" xml:space="preserve">
-            <source>Alle Events</source>
+            <source>All events</source>
          </trans-unit>
          <trans-unit id="galleryDownload" xml:space="preserve">
             <source>Download</source>
          </trans-unit>
          <trans-unit id="galleryImageSize" xml:space="preserve">
-            <source>Bildgröße</source>
+            <source>Image size</source>
          </trans-unit>
          <trans-unit id="galleryFileSize" xml:space="preserve">
-            <source>Dateigröße</source>
+            <source>File size</source>
          </trans-unit>
          <trans-unit id="eventback" xml:space="preserve">
-            <source>Zurück zum Eventkalender</source>
+            <source>Back to the calendar of events</source>
          </trans-unit>
          <trans-unit id="newsheadline" xml:space="preserve">
-            <source>Neues und Aktuelles</source>
+            <source>News</source>
          </trans-unit>
          <trans-unit id="moreinfos" xml:space="preserve">
-            <source>Weitere Informationen</source>
+            <source>More Information</source>
          </trans-unit>
          <trans-unit id="website" xml:space="preserve">
             <source>Website</source>
          </trans-unit>
          <trans-unit id="program" xml:space="preserve">
-            <source>DOWNLOAD PROGRAMM</source>
+            <source>Download programme </source>
          </trans-unit>
          <trans-unit id="allEventsIn" xml:space="preserve">
-            <source>Alle Events im %s</source>
+            <source>All Events in %s</source>
          </trans-unit>
          <trans-unit id="chooseDate" xml:space="preserve">
-            <source>Datum auswählen</source>
+            <source>Select date</source>
          </trans-unit>
          <trans-unit id="sidebarIcons.search" xml:space="preserve">
             <source>Search</source>
