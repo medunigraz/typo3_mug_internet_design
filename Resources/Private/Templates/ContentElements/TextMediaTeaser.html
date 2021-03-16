@@ -4,7 +4,7 @@
   <div class="content-part ce-text-media-teaser">
     <f:if condition="{data.header} || {data.bodytext}">
       <div class="headline text-center trans">
-        <h2 class="text-bold hl-big">{data.header -> f:format.nl2br()}</h2>
+        <h2 class="hl-big">{data.header -> f:format.nl2br()}</h2>
         <div class="text text-leadin">
           {data.bodytext -> f:format.html()}
         </div>
