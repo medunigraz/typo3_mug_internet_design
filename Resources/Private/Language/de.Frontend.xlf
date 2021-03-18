@@ -3,6 +3,66 @@
 <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-03-19T15:15:42Z" product-name="general">
     <header/>
     <body>
+        <trans-unit id="moreLabel" xml:space="preserve">
+            <target>Mehr</target>
+         </trans-unit>
+        <trans-unit id="iAmNavCaption" xml:space="preserve">
+            <target>Ich bin</target>
+         </trans-unit>
+        <trans-unit id="quicklinks" xml:space="preserve">
+            <target>Quicklinks</target>
+         </trans-unit>
+        <trans-unit id="phone" xml:space="preserve">
+            <target>T:</target>
+         </trans-unit>
+        <trans-unit id="mail" xml:space="preserve">
+            <target>E:</target>
+         </trans-unit>
+        <trans-unit id="phone2" xml:space="preserve">
+            <target>T:</target>
+         </trans-unit>
+        <trans-unit id="fax" xml:space="preserve">
+            <target>F:</target>
+         </trans-unit>
+        <trans-unit id="allNews" xml:space="preserve">
+            <target>Alle News</target>
+         </trans-unit>
+        <trans-unit id="showAll" xml:space="preserve">
+            <target>Alle zeigen</target>
+         </trans-unit>
+        <trans-unit id="allEvents" xml:space="preserve">
+            <target>Alle Events</target>
+         </trans-unit>
+        <trans-unit id="galleryDownload" xml:space="preserve">
+            <target>Download</target>
+         </trans-unit>
+        <trans-unit id="galleryImageSize" xml:space="preserve">
+            <target>Bildgröße</target>
+         </trans-unit>
+        <trans-unit id="galleryFileSize" xml:space="preserve">
+            <target>Dateigröße</target>
+         </trans-unit>
+        <trans-unit id="eventback" xml:space="preserve">
+            <target>Zurück zum Eventkalender</target>
+         </trans-unit>
+        <trans-unit id="newsheadline" xml:space="preserve">
+            <target>Neues und Aktuelles</target>
+         </trans-unit>
+        <trans-unit id="moreinfos" xml:space="preserve">
+            <target>Weitere Informationen</target>
+         </trans-unit>
+        <trans-unit id="website" xml:space="preserve">
+            <target>Website</target>
+         </trans-unit>
+        <trans-unit id="program" xml:space="preserve">
+            <target>Download Programm</target>
+         </trans-unit>
+        <trans-unit id="allEventsIn" xml:space="preserve">
+            <target>Alle Events im %s</target>
+         </trans-unit>
+        <trans-unit id="chooseDate" xml:space="preserve">
+            <target>Datum auswählen</target>
+         </trans-unit>
         <trans-unit id="sidebarIcons.search" xml:space="preserve">
             <target>Suche</target>
         </trans-unit>
