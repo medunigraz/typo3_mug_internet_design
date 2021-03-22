@@ -153,7 +153,7 @@ li:before {
    top: 0px;
    width: 13px;
    height: 30px;
-   background-image: url("img/icon-arrow-black-right.svg");
+   background-image: url("#{$icon-path}/icon-arrow-black-right.svg");
    background-repeat: no-repeat;
    -webkit-transition: all 350ms;
    -moz-transition:all 350ms;

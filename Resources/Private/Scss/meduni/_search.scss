@@ -73,7 +73,7 @@
   position: absolute;
   right: 0%;
   top: -5px;
-  background-image: url("img/icon-lupe.svg");
+  background-image: url("#{$icon-path}/icon-lupe.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -118,7 +118,7 @@
       &:before {display:none}
       &:last-child {
         text-indent: -9999px;
-        background-image: url("img/arrow-left-green.svg");
+        background-image: url("#{$icon-path}/arrow-left-green.svg");
         background-position: center;
         background-repeat: no-repeat;
         width: 20px;

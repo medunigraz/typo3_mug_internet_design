@@ -115,7 +115,7 @@
 }
 
 #lbPrevLink {
-  background: transparent url("img/prevlabel.svg") no-repeat 0 45%;
+  background: transparent url("#{$icon-path}/prevlabel.svg") no-repeat 0 45%;
 }
 
 #lbNextLink {
@@ -123,7 +123,7 @@
 }
 
 #lbNextLink {
-  background: transparent url("img/nextlabel.svg") no-repeat 100% 45%;
+  background: transparent url("#{$icon-path}/nextlabel.svg") no-repeat 100% 45%;
 }
 
 #lbBottom {
@@ -140,7 +140,7 @@
   float: right;
   width: 50px;
   height: 50px;
-  background: transparent url("img/closelabel.svg") no-repeat center;
+  background: transparent url("#{$icon-path}/closelabel.svg") no-repeat center;
   background-size: auto;
   margin: 5px 0;
   outline: none;
