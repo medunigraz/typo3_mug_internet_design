@@ -113,12 +113,11 @@
                           <div class="news-item-inner">
                             <div class="border-bottom"></div>
                             <f:for each="{eventItem.falRelatedFiles}" as="fileItem" iteration="filesIterator">
-                              <a href="{f:uri.typolink(parameter: fileItem.originalResource.publicUrl)}" target="_blank" class="morelink text-bold animateAll">
+                              <a href="{f:uri.typolink(parameter: fileItem.originalResource.publicUrl)}" target="_blank" class="morelink morelink-arrow-right text-bold animateAll">
                                 <f:if condition="{fileItem.title}">
                                   <f:then>{fileItem.title}</f:then>
                                   <f:else>{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:program", default: "DOWNLOAD PROGRAMM")}</f:else>
                                 </f:if>
-                                <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                               </a>
                               <f:if condition="{filesIterator.isLast}"><f:else><br/></f:else></f:if>
                             </f:for>
@@ -159,9 +158,8 @@
           <div class="content-part content-part-backlink">
             <div class="container">
 
-                <a href="{f:uri.page(pageUid: settings.eventsOverviewPid)}" class="morelink backlink text-bold animateAll">
+                <a href="{f:uri.page(pageUid: settings.eventsOverviewPid)}" class="morelink morelink-arrow-right backlink text-bold animateAll">
                   {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:eventback", default: "Zurück zum Eventkalender")}
-                  <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                 </a>
 
             </div>

@@ -59,9 +59,8 @@
                           <div class="border-bottom"></div>
                           <f:if condition="{newsItem.relatedLinks}">
                             <f:for each="{newsItem.relatedLinks}" as="relatedLink">
-                              <f:link.typolink parameter="{relatedLink.uri}" class="morelink text-bold animateAll">
+                              <f:link.typolink parameter="{relatedLink.uri}" class="morelink morelink-arrow-right text-bold animateAll">
                                 {relatedLink.title}
-                                <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
                               </f:link.typolink>
                             </f:for>
                           </f:if>
