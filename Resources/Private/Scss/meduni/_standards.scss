@@ -347,3 +347,33 @@ a:hover .morelink-arrow {
   margin-bottom: 30px;
 }
 
+.morelink {
+  &.morelink-arrow-right {
+    padding: 0 33px 0 0;
+    position: relative;
+    display: block;
+
+    &::after {
+      content: "";
+      display: block;
+      float: left;
+      position: absolute;
+      width: 13px;
+      height: 24px;
+      background-image: url("#{$icon-path}/icon-arrow-black-right.svg");
+      background-repeat: no-repeat;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      -webkit-transition: all 350ms;
+      -moz-transition: all 350ms;
+      -o-transition: all 350ms;
+      transition: all 350ms;
+    }
+
+    &:hover::after {
+      margin: 0 -10px 0 0;
+    }
+  }
+}
