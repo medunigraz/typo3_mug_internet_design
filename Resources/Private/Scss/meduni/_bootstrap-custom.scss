@@ -109,8 +109,8 @@ $theme-colors: (
 }
 
 .ui-widget-header .ui-datepicker-next .ui-icon {
-  background-image: url(img/arrow-left-green.svg);
+  background-image: url("#{$icon-path}/arrow-left-green.svg");
 }
 .ui-widget-header .ui-datepicker-prev .ui-icon {
-  background-image: url(img/arrow-right-green.svg);
+  background-image: url("#{$icon-path}/arrow-right-green.svg");
 }
