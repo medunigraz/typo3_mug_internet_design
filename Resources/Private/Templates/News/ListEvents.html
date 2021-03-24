@@ -36,10 +36,10 @@
                   <input type="text"  id="eventday" name="eventday" value="" placeholder="{f:translate(key: 'LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:chooseDate', default: 'Datum auswählen')}" class="eventfilterbox-input eventfilterbox-date datechk">
 
                   <div class="monthpaging eventfilterbox-input">
-                    <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'m\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
+                    <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{action: 'listEvents', controller: 'News', overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'m\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
                       {f:format.date(date:prevMonth,format:'%B')}
                     </f:link.page>
-                    <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'m\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
+                    <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{action: 'listEvents', controller: 'News', overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'m\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
                       {f:format.date(date:nextMonth,format:'%B')}
                     </f:link.page>
                   </div>
@@ -87,10 +87,10 @@
               </div>
               </f:if>
               <div class="monthpaging monthpaging-bottom eventfilterbox-input">
-                <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'m\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
+                <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{action: 'listEvents', controller: 'News', overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'m\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
                   {f:format.date(date:prevMonth,format:'%B')}
                 </f:link.page>
-                <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'m\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
+                <f:link.page class="monthpagingLink-next" title="{f:format.date(date:nextMonth,format:'%B')}" additionalParams="{tx_news_pi1:{action: 'listEvents', controller: 'News', overwriteDemand: {month:'{f:format.date(date:nextMonth,format:\'m\')}', year:'{f:format.date(date:nextMonth,format:\'Y\')}'}}}">
                   {f:format.date(date:nextMonth,format:'%B')}
                 </f:link.page>
               </div>

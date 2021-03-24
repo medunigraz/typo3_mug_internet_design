@@ -31,7 +31,7 @@
                                                         </div>
                                                         <f:for as="category" each="{allCategories}">
                                                             <div class="filteritem{f:if(condition: '{categories -> f:count()} == 1 && {category.uid} == {categories.0.uid}' , then: ' filteritem-active', else: '')}">
-                                                                <f:link.page title="{category.title}" additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.uid}}}">
+                                                                <f:link.page title="{category.title}" additionalParams="{tx_news_pi1:{action: 'list', controller: 'News', overwriteDemand:{categories: category.uid}}}">
                                                                     {category.title}
                                                                 </f:link.page>
                                                             </div>
