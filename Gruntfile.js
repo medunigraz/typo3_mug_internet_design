@@ -60,7 +60,7 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'node_modules/jquery-ui/dis/jquery-ui.css',
+              'node_modules/jquery-ui/dist/jquery-ui.css',
             ],
             dest: 'Resources/Public/Css/',
             filter: 'isFile',
