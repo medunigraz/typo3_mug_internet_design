@@ -47,28 +47,26 @@
                 <link rel="stylesheet" href="/typo3conf/ext/mug_ce/Resources/Public/Css/jquery-ui.css" >
                 <script src="/typo3conf/ext/mug_ce/Resources/Public/Js/jquery-ui.min.js"></script>
                 <script>
-                  var array=[];
-                  <f:for each="{availableEvents}" as="availableEvent">
-                    array.push("{f:format.date(date:availableEvent,format:'d-m-Y')}");
-                  </f:for>
-                  $('#eventday').datepicker({
-                    beforeShowDay: function(date){
-                      var string = jQuery.datepicker.formatDate('dd-mm-yy', date);
-                      if($.inArray(string, array) == -1){
-                        return [true,"noEvent"];
-                      }
-                      else{
-                        return [true,"hasEvent"];
-                      }
-                    }
-                  });
-                  $(window).on("load", function() {
+                  $(document).ready(function() {
+                    var array=[];
+                    <f:for each="{availableEvents}" as="availableEvent">
+                    array.push("{f:format.date(date:availableEvent,format:'Y-m-d')}");
+                    </f:for>
+                    $('#eventday').datepicker({
+                      beforeShowDay: function(date){
+                        var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+                        if($.inArray(string, array) == -1){
+                          return [true,"noEvent"];
+                        } else{
+                          return [true,"hasEvent"];
+                        }
+                      },
+                      dateFormat: "yy/mm/dd"
+                    });
                     var monthyear = $('.eventlistHL').attr("data-monthyear");
                     $('#eventday').datepicker('setDate', monthyear);
-
                   });
-
-                     </script>
+                </script>
               </div>
             </div>
             <div class="text monthpagingpart">
