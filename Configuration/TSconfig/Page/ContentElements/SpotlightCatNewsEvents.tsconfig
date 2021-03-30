@@ -1,6 +1,6 @@
 mod.wizards.newContentElement.wizardItems.common {
     elements {
-        mugce_spotlight {
+        mugce_spotlight_cat_news_events {
             iconIdentifier = mugce-icon-spotlight-cat-news-events
             title = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight_cat_news_events.caption
             description = LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_spotlight_cat_news_events.description
