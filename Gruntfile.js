@@ -71,6 +71,7 @@ module.exports = function(grunt) {
             src: [
               'node_modules/fontsource-ubuntu/files/*.woff',
               'node_modules/fontsource-ubuntu/files/*.woff2',
+              'node_modules/fork-awesome/fonts/forkawesome-webfont.*',
             ],
             dest: 'Resources/Public/Fonts/',
             filter: 'isFile',
