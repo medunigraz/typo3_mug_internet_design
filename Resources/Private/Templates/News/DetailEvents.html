@@ -126,6 +126,11 @@
                       </f:if>
                     </div>
                   </div>
+                  <div class="backlink-box">
+                    <a href="{f:uri.page(pageUid: settings.eventsOverviewPid)}" class="morelink morelink-arrow-right backlink text-bold animateAll">
+                      {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:eventback", default: "Zurück zum Eventkalender")}
+                    </a>
+                  </div>
                 </div>
                 <div class="greenbox greenbox-news">
                   <div class="infobox-inner">
@@ -152,20 +157,6 @@
       <f:if condition="{eventItem.contentElements}">
         <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{eventItem.contentElementIdList}</f:cObject>
       </f:if>
-
-      <div class="row content-block ">
-        <div class="container">
-          <div class="content-part content-part-backlink">
-            <div class="container">
-
-                <a href="{f:uri.page(pageUid: settings.eventsOverviewPid)}" class="morelink morelink-arrow-right backlink text-bold animateAll">
-                  {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:eventback", default: "Zurück zum Eventkalender")}
-                </a>
-
-            </div>
-          </div>
-        </div>
-      </div>
     </f:then>
     <f:else>
 
