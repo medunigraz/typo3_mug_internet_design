@@ -39,6 +39,12 @@
   #logo-page {
     margin: 0px 0 0 0;
     width: 120px;
+    height: 60px;
+
+    a {
+      position: absolute;
+      z-index: 1;
+    }
   }
   .header-line {
     margin: 30px 0 0 0;
