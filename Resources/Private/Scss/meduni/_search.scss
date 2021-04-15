@@ -161,3 +161,19 @@ input[type="checkbox"]:checked + label::before {
   background-color: $green-dark;
   border: 1px solid $green-dark;
 }
+
+.tx-solr-search-form {
+  .search-selectbox {
+    margin: 15px 0 25px 0;
+  }
+
+  .search-selectbox-item {
+    float: left;
+    width: auto;
+    margin: 0 10px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

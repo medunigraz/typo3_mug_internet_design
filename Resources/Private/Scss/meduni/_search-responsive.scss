@@ -1,0 +1,17 @@
+/* ...........................................................................  767 px */
+@media screen and (max-width: 767px) {
+  .tx-solr-search-form .search-selectbox-item {
+    width: 46%;
+    margin: 0 10px 8px 0;
+    text-align: left;
+
+    label {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
+    input[type="checkbox"] + label::before {
+      margin: 5px 10px 0 0;
+    }
+  }
+}
