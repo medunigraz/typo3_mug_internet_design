@@ -3,6 +3,13 @@
 <f:layout name="Default" />
 <f:section name="Main">
   <f:variable name="topnews" value="{ce:getNewsByCategory(uid: data.uid, storagePage: newsStoragePage, topNewsRestriction: 1, limit: 1)}" />
+  <f:variable name="topnewsRendering">
+    <f:for each="{topnews}" as="newsItem">
+      <div class="spolightItem spolightItemAll">
+        <f:render partial="../News/List/SpotlightItem" arguments="{newsItem: newsItem, settings: {newsDetailPid: newsDetailPid}, iterator:iterator}" />
+      </div>
+    </f:for>
+  </f:variable>
   <f:variable name="news" value="{ce:getNewsByCategory(uid: data.uid, storagePage: newsStoragePage, limit: 3)}" />
   <f:variable name="events" value="{ce:getEventsByCategory(uid: data.uid, storagePage: eventsStoragePage, limit: 2)}" />
 
@@ -11,7 +18,7 @@
 
 
 <f:section name="AfterContainer">
-  <f:render partial="SpotlightAfter" arguments="{topnews: topnews, news: news, events: events, data:data, assets: assets, display_type: 0, newsDetailPid: newsDetailPid, eventsDetailPid: eventsDetailPid}" />
+  <f:render partial="SpotlightAfter" arguments="{topnewsRendering: topnewsRendering, news: news, events: events, data:data, assets: assets, display_type: 0, newsDetailPid: newsDetailPid, eventsDetailPid: eventsDetailPid}" />
 </f:section>
 
 </html>

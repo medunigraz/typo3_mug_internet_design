@@ -75,6 +75,7 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
       return array();
     }
 
+    /** @var Demand $demand */
     $demand = GeneralUtility::makeInstance(Demand::class);
     $demand->setStoragePage($this->arguments['storagePage']);
     $demand->setCategories($catIds);
@@ -84,6 +85,7 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
     $demand->setOrder('datetime DESC');
     $demand->setOrderByAllowed('datetime');
     $demand->setTopNewsRestriction($this->arguments['topNewsRestriction']);
+    $demand->setExcludeAlreadyDisplayedNews(true);
 
     return $this->newsRepository->findDemanded($demand);
   }

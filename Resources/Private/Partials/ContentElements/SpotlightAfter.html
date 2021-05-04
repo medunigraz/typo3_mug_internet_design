@@ -1,11 +1,3 @@
-<f:variable name="topnewsRendering">
-  <f:for each="{topnews}" as="newsItem">
-    <div class="spolightItem <f:if condition='{display_type} == 0'>spolightItemAll</f:if><f:if condition='{display_type} == 1'>spolightItemSOnly</f:if>">
-      <f:render partial="../News/List/SpotlightItem" arguments="{newsItem: newsItem, settings: {newsDetailPid: newsDetailPid}, iterator:iterator}" />
-    </div>
-  </f:for>
-</f:variable>
-
 <div class="content-part content-part-newsevents <f:if condition='{display_type} == 1'>content-part-newsevents-spotlightonly</f:if>">
   <div class="container">
     <div class="row">
@@ -34,7 +26,7 @@
                    data-cycle-auto-height="container"
                    data-cycle-swipe-fx="scrollHorz"
               >
-                <f:if condition="{topnews}">
+                <f:if condition="{topnewsRendering}">
                   <f:then>
                     <f:format.raw>{topnewsRendering}</f:format.raw>
                   </f:then>
