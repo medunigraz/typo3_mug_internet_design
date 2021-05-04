@@ -102,7 +102,12 @@
                           <f:if condition="{eventItem.www}">
                             <div class="eventmeta-row eventmeta-row-trenner"></div>
                             <div class="eventmeta-row">
-                              <span class="eventmeta-label">Website:</span><span class="eventmeta-info"><f:link.typolink target="_blank" parameter="{eventItem.www}">{eventItem.www}</f:link.typolink></span>
+                              <span class="eventmeta-label">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:website", default: "Website")}:</span><br/>
+                              <span class="eventmeta-info">
+                                <f:link.typolink target="_blank" parameter="{eventItem.www}" class="morelink morelink-arrow-right animateAll">
+                                  {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:website", default: "Website")}
+                                </f:link.typolink>
+                              </span>
                             </div>
                           </f:if>
                         </div>
