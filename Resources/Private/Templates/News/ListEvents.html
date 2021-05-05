@@ -69,20 +69,21 @@
                 </script>
               </div>
             </div>
-            <div class="text monthpagingpart">
+            <div class="monthpagingpart">
               <div class="neventlist-overview" id="news-container-{contentObjectData.uid}">
                 <f:if condition="{events}">
-                  <f:for each="{events}" as="eventItem" iteration="iterator">
-                    <f:if condition="!{currentDay} || {f:format.date(date:currentDay.datetime, format:'Y-m-d')} != {f:format.date(date:eventItem.datetime, format:'Y-m-d')}">
-                      <f:if condition="{currentDay}">
-              </div>
-              </f:if>
-              {eventItem -> f:variable(name: 'currentDay')}
-              <div class="dayrow">
-                </f:if>
-                <f:render partial="List/ItemEventCalendar" arguments="{eventItem: eventItem,settings:settings,iterator:iterator}" />
-                </f:for>
-              </div>
+                  <f:if condition="{demand.month}">
+                    <f:then>
+                      <f:alias map="{paginatedEvents: events}">
+                        <f:render section="Event" arguments="{_all}"/>
+                      </f:alias>
+                    </f:then>
+                    <f:else>
+                      <n:widget.paginate objects="{events}" as="paginatedEvents" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
+                        <f:render section="Event" arguments="{_all}"/>
+                      </n:widget.paginate>
+                    </f:else>
+                  </f:if>
               </f:if>
               <div class="monthpaging monthpaging-bottom eventfilterbox-input">
                 <f:link.page class="monthpagingLink-prev" title="{f:format.date(date:prevMonth,format:'%B')}" additionalParams="{tx_news_pi1:{action: 'listEvents', controller: 'News', overwriteDemand: {month:'{f:format.date(date:prevMonth,format:\'m\')}', year:'{f:format.date(date:prevMonth,format:\'Y\')}'}}}">
@@ -100,6 +101,20 @@
       </div>
     </div>
   </div>
+  </div>
+</f:section>
+
+<f:section name="Event">
+  <f:for each="{paginatedEvents}" as="eventItem" iteration="iterator">
+    <f:if condition="!{currentDay} || {f:format.date(date:currentDay.datetime, format:'Y-m-d')} != {f:format.date(date:eventItem.datetime, format:'Y-m-d')}">
+      <f:if condition="{currentDay}">
+        </div>
+      </f:if>
+      {eventItem -> f:variable(name: 'currentDay')}
+      <div class="dayrow">
+    </f:if>
+    <f:render partial="List/ItemEventCalendar" arguments="{eventItem: eventItem,settings:settings,iterator:iterator}" />
+  </f:for>
   </div>
 </f:section>
 </html>
