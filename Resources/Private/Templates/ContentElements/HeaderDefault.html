@@ -41,6 +41,9 @@
                   <div class="blend blend-full bg-green-dark"></div>
                   <div class="infobox-headline text-bold">
                     {data.mugce_header}
+                    <f:if condition="{data.mugce_display_type} == 3">
+                      {data.bodytext -> f:format.html()}
+                    </f:if>
                   </div>
                 </div>
               </div>

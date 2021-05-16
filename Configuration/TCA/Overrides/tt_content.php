@@ -359,6 +359,7 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                     image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.image,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.header,
                     mugce_header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.mugce_header,
+                    bodytext;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_text.input.bodytext,
                     mugce_news_entries;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.mugce_news_entries,
                     mugce_event_entries;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.mugce_event_entries,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
@@ -408,6 +409,17 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
                   'FIELD:mugce_display_type:=:5',
                   'FIELD:mugce_display_type:=:6'
               ]
+          ]
+      ],
+      'bodytext' => [
+          'displayCond'  => [
+              'OR' => [
+                  'FIELD:mugce_display_type:=:3',
+              ]
+          ],
+          'config' => [
+              'enableRichtext' => true,
+              'richtextConfiguration' => 'mug_ce'
           ]
       ],
       'mugce_news_entries' => [
