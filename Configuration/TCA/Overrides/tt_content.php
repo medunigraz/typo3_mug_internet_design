@@ -1,8 +1,12 @@
 <?php
 
+$GLOBALS['TCA']['tt_content']['columns']['header']['exclude'] = true;
+$GLOBALS['TCA']['tt_content']['columns']['image']['exclude'] = true;
+$GLOBALS['TCA']['tt_content']['columns']['media']['exclude'] = true;
+
 $additionalColumns = array(
     'mugce_content_elements' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.content_elements',
         'config' => array(
             'type' => 'inline',
@@ -29,7 +33,7 @@ $additionalColumns = array(
         ),
     ),
     'mugce_quicklinks' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.quicklinks',
         'config' => array(
             'type' => 'inline',
@@ -61,7 +65,7 @@ $additionalColumns = array(
         ),
     ),
     'mugce_news_entries' => array(
-        'exclude' => 1,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.news_entries',
         'config' => array(
             'type' => 'select',
@@ -73,7 +77,7 @@ $additionalColumns = array(
         ),
     ),
     'mugce_event_entries' => array(
-        'exclude' => 1,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.event_entries',
         'config' => array(
             'type' => 'select',
@@ -85,7 +89,7 @@ $additionalColumns = array(
         ),
     ),
     'mugce_link_label' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.link_label',
         'config' => array(
             'type' => 'input',
@@ -94,7 +98,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_link_label_2' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.link_label_2',
         'config' => array(
             'type' => 'input',
@@ -103,7 +107,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_header' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.header',
         'config' => array(
             'type' => 'input',
@@ -112,7 +116,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_subheader' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.subheader',
         'config' => array(
             'type' => 'input',
@@ -121,7 +125,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_text' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.text',
         'config' => array(
             'type' => 'input',
@@ -130,7 +134,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_text_2' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.text_2',
         'config' => array(
             'type' => 'input',
@@ -139,7 +143,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_text_3' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.text_3',
         'config' => array(
             'type' => 'input',
@@ -148,7 +152,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_text_4' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.text_4',
         'config' => array(
             'type' => 'input',
@@ -157,7 +161,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_bodytext' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.bodytext',
         'config' => [
             'type' => 'text',
@@ -170,7 +174,7 @@ $additionalColumns = array(
         ]
     ),
     'mugce_link' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.link',
         'config' => [
             'type' => 'input',
@@ -189,7 +193,7 @@ $additionalColumns = array(
         ]
     ),
     'mugce_caption' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.caption',
         'config' => array(
             'type' => 'input',
@@ -198,7 +202,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_show_border' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.show_border',
         'config' => array(
             'type' => 'check',
@@ -206,7 +210,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_add_effect' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.add_effect',
         'config' => array(
             'type' => 'check',
@@ -214,7 +218,7 @@ $additionalColumns = array(
         )
     ),
     'mugce_display_type' => array (
-        'exclude' => 0,
+        'exclude' => true,
         'label' => 'LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.default.input.display_type',
         'config' => array(
             'type' => 'select',
