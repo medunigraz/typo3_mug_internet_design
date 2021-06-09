@@ -1,6 +1,7 @@
 <?php
 
 $GLOBALS['TCA']['tt_content']['columns']['header']['exclude'] = true;
+$GLOBALS['TCA']['tt_content']['columns']['assets']['exclude'] = true;
 $GLOBALS['TCA']['tt_content']['columns']['image']['exclude'] = true;
 $GLOBALS['TCA']['tt_content']['columns']['media']['exclude'] = true;
 
