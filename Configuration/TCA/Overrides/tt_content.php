@@ -542,8 +542,8 @@ $ceName = 'mugce_text';
         $ceName,
         'mugce-icon-text',
     ],
-    'mugce_link',
-    'after'
+    'textmedia',
+    'before'
 );
 
 $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
@@ -821,7 +821,7 @@ $ceName = 'mugce_offers';
         $ceName,
         'mugce-icon-offers',
     ],
-    'mugce_text_media_teaser',
+    'textmedia',
     'after'
 );
 
