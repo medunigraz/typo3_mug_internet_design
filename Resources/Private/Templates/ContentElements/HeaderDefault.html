@@ -35,13 +35,13 @@
           </div>
           <div class="col col-05 "> </div>
           <div class="col col-35 sidebar-default">
-            <f:if condition="{data.mugce_display_type} == 3 || {data.mugce_display_type} == 5 || {data.mugce_display_type} == 6">
+            <f:if condition="{data.mugce_display_type} == 3 || {data.mugce_display_type} == 5 || {data.mugce_display_type} == 6 || {data.mugce_display_type} == 10">
               <div class="greenbox">
                 <div class="infobox-inner">
                   <div class="blend blend-full bg-green-dark"></div>
                   <div class="infobox-headline text-bold">
                     {data.mugce_header}
-                    <f:if condition="{data.mugce_display_type} == 3">
+                    <f:if condition="{data.bodytext}">
                       {data.bodytext -> f:format.html()}
                     </f:if>
                   </div>

@@ -412,7 +412,8 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
               'OR' => [
                   'FIELD:mugce_display_type:=:3',
                   'FIELD:mugce_display_type:=:5',
-                  'FIELD:mugce_display_type:=:6'
+                  'FIELD:mugce_display_type:=:6',
+                  'FIELD:mugce_display_type:=:10',
               ]
           ]
       ],
@@ -420,6 +421,9 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
           'displayCond'  => [
               'OR' => [
                   'FIELD:mugce_display_type:=:3',
+                  'FIELD:mugce_display_type:=:5',
+                  'FIELD:mugce_display_type:=:6',
+                  'FIELD:mugce_display_type:=:10',
               ]
           ],
           'config' => [
