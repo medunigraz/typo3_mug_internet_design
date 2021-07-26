@@ -165,7 +165,8 @@ li:before {
 
 
 .text a, .accordion-text a {
- color:$grey-dark;
+  color:$grey-dark;
+  text-decoration: underline dotted;
 }
 .text a:hover, .accordion-text a:hover {
   text-decoration:underline;

@@ -55,7 +55,7 @@
 
     a {
       color: #fff;
-      text-decoration: underline;
+      text-decoration: underline dotted;
 
       &:hover,
       &:focus {
@@ -66,6 +66,10 @@
     .infobox-inner {
       height: 160px;
       overflow:hidden;
+    }
+    .blend,
+    .text-bold {
+      font-weight: 400;
     }
     .infobox-headline {
       width: 90%;
