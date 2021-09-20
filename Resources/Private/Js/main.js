@@ -425,9 +425,12 @@ if($(".newsheaderSRC").length < 1) {
   $('.ce-homeslider-newsheader').remove();
 
 } else {
-  var newsheaderSRC = $('.newsheaderSRC').attr('src');
-  $('.newsheader-img').attr('src',newsheaderSRC);
-  $('.newsheaderSRC').remove();
+  var newsheaderSRC = $('.newsheaderSRC');
+  var newsheaderImg = $('.newsheader-img');
+  newsheaderImg.attr('alt',newsheaderSRC.attr('alt'));
+  newsheaderImg.attr('src',newsheaderSRC.attr('src'));
+  newsheaderImg.attr('title',newsheaderSRC.attr('title'));
+  newsheaderSRC.remove();
 }
 
 
