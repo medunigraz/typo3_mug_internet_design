@@ -15,6 +15,8 @@ editor:
       - { name: "Grün", element: "table", attributes: { class: "table-primary" }}
       - { name: "Grau", element: "table", attributes: { class: "table-secondary" }}
       - { name: "Zebra", element: "table", attributes: { class: "table-striped" }}
+      # Inline styles
+      - { name: "Small", element: "small", attributes: { class: "text-small-pct85" } }
 
     format_tags: "p;h1;h2;h3;h4;h5;pre"
 
