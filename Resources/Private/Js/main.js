@@ -131,20 +131,25 @@ $('footer').removeClass('C-Low');
     }
   });
   $(".spotlightslider").each(function() {
+    // regular spotlight element
     var maxHeight = 0;
-    var maxElementHeight = 0;
     $(this).find('.spolightslider-img').each(function(){
       var thisH = $(this).height();
+      if ($(this)[0].tagName === 'VIDEO') {
+        thisH += 100;
+      }
       if (thisH > maxHeight) { maxHeight = thisH; }
-    });
-    $(this).find('.spolightslider-height').each(function(){
-      var thisH = $(this).height();
-      if (thisH > maxElementHeight) { maxElementHeight = thisH; }
     });
     if (maxHeight > 0) {
       $(this).css({"height": maxHeight + 50 +"px"});
       $(this).find('.spolightItem-inner').css({"height": maxHeight -60 +"px"});
     }
+    // spotlight in EXT:news
+    var maxElementHeight = 0;
+    $(this).find('.spolightslider-height').each(function(){
+      var thisH = $(this).height();
+      if (thisH > maxElementHeight) { maxElementHeight = thisH; }
+    });
     if (maxElementHeight > 0) {
       $(this).css({"height": maxElementHeight + 90 +"px"});
       $(this).find('.spolightItem-inner').css({"height": maxElementHeight + 50 +"px"});
