@@ -35,7 +35,7 @@
           </div>
           <div class="col col-05 "> </div>
           <div class="col col-35 sidebar-default">
-            <f:if condition="{data.mugce_display_type} == 3 || {data.mugce_display_type} == 5 || {data.mugce_display_type} == 6 || {data.mugce_display_type} == 10">
+            <f:if condition="{data.mugce_header} || {data.bodytext}">
               <div class="greenbox">
                 <div class="infobox-inner">
                   <div class="blend blend-full bg-green-dark"></div>
@@ -48,107 +48,26 @@
                 </div>
               </div>
             </f:if>
-            <f:if condition="{data.mugce_display_type} == 0 && {organisationNavPid}">
+            <f:if condition="{organisationNavPid}">
               <f:render partial="OrganisationSubmenu" arguments="{rootId: organisationNavPid}" />
             </f:if>
-            <f:if condition="{data.mugce_display_type} == 2 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 5 || {data.mugce_display_type} == 9">
-              <f:render partial="OrganisationSubmenu" arguments="{rootId: data.pid}" />
+            <f:variable name="news" value="{ce:getNewsByRelation(uid: data.uid ,limit: 3)}" />
+            <f:if condition="{news -> f:count()} == 0">
+              <f:variable name="news" value="{ce:getNewsByCategory(uid: data.uid ,limit: 3)}" />
             </f:if>
-            <f:if condition="{data.mugce_display_type} == 1 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 6  || {data.mugce_display_type} == 7 || {data.mugce_display_type} == 8 || {data.mugce_display_type} == 9 || {data.mugce_display_type} == 10">
-              <f:switch expression="{data.mugce_display_type}">
-                <f:case value="1">
-                  <f:variable name="newscount" value="3" />
-                </f:case>
-                <f:case value="4">
-                  <f:variable name="newscount" value="1" />
-                </f:case>
-                <f:case value="6">
-                  <f:variable name="newscount" value="2" />
-                </f:case>
-                <f:case value="7">
-                  <f:variable name="newscount" value="1" />
-                </f:case>
-                <f:case value="8">
-                  <f:variable name="newscount" value="3" />
-                </f:case>
-                <f:case value="9">
-                  <f:variable name="newscount" value="1" />
-                </f:case>
-                <f:case value="10">
-                  <f:variable name="newscount" value="2" />
-                </f:case>
-              </f:switch>
-              <f:if condition="{data.mugce_display_type} == 1 || {data.mugce_display_type} == 4 || {data.mugce_display_type} == 6  || {data.mugce_display_type} == 7">
-                <f:then>
-                  <f:variable name="news" value="{ce:getNewsByRelation(uid: data.uid ,limit: newscount)}" />
-                  <f:if condition="{news -> f:count()} == 0">
-                    <f:variable name="news" value="{ce:getNewsByCategory(uid: data.uid ,limit: newscount)}" />
-                  </f:if>
-                </f:then>
-                <f:else>
-                  <f:variable name="news" value="{ce:getEventsByRelation(uid: data.uid ,limit: newscount)}" />
-                  <f:if condition="{news -> f:count()} == 0">
-                    <f:variable name="news" value="{ce:getEventsByCategory(uid: data.uid ,limit: newscount)}" />
-                  </f:if>
-                </f:else>
-              </f:if>
+            <f:variable name="events" value="{ce:getEventsByRelation(uid: data.uid ,limit: 3)}" />
+            <f:if condition="{events -> f:count()} == 0">
+              <f:variable name="events" value="{ce:getEventsByCategory(uid: data.uid ,limit: 3)}" />
+            </f:if>
+            <f:if condition="{news} || {events}">
               <div class="info-box">
                 <div class="quicklinks-box">
                   <div class="news-box-inner">
-                    <f:for as="newsItem" key="idx" each="{news}">
-                      <f:if condition="{data.mugce_display_type} != 6 && {idx} == 0">
-                        <f:then>
-                          <f:comment>Green block</f:comment>
-
-                          <div class="greenbox greenbox-news">
-                            <div class="infobox-inner">
-                              <div class="blend blend-full bg-green-dark"></div>
-                              <div class="infobox-headline text-bold">
-                                {newsItem.title}
-                                <f:if condition="{newsItem.isEvent}">
-                                  <f:then>
-                                    <f:link.action pageUid="{eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:newsItem.uid}">
-                                      <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
-                                    </f:link.action>
-                                  </f:then>
-                                  <f:else>
-                                    <f:link.action pageUid="{newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
-                                      <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
-                                    </f:link.action>
-                                  </f:else>
-                                </f:if>
-                              </div>
-                            </div>
-                          </div>
-
-
-
-
-                        </f:then>
-                        <f:else>
-                          <f:comment>Grey block</f:comment>
-                          <div class="news-item  greybox-news bg-grey-light entry-{idx}">
-                            <div class="news-item-inner">
-                              <div class="quicklinks-headline text-bold">{newsItem.title}</div>
-                              <div class="teaser">
-                                {newsItem.teaser}
-                                <f:if condition="{newsItem.isEvent}">
-                                  <f:then>
-                                    <f:link.action pageUid="{eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:newsItem.uid}">
-                                      <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
-                                    </f:link.action>
-                                  </f:then>
-                                  <f:else>
-                                    <f:link.action pageUid="{newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
-                                      <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
-                                    </f:link.action>
-                                  </f:else>
-                                </f:if>
-                              </div>
-                            </div>
-                          </div>
-                        </f:else>
-                      </f:if>
+                    <f:for each="{news}" as="newsItem" key="idx">
+                      <f:render section="NewsItem" arguments="{_all}"/>
+                    </f:for>
+                    <f:for each="{events}" as="newsItem" key="idx">
+                      <f:render section="NewsItem" arguments="{_all}"/>
                     </f:for>
                     <div class="linktoall bg-grey-light">
                       <div class="news-item-inner">
@@ -172,5 +91,56 @@
       </div>
     </div>
   </div>
+</f:section>
+
+<f:section name="NewsItem">
+  <f:if condition="{idx} == 0">
+    <f:then>
+      <f:comment>Green block</f:comment>
+      <div class="greenbox greenbox-news">
+        <div class="infobox-inner">
+          <div class="blend blend-full bg-green-dark"></div>
+          <div class="infobox-headline text-bold">
+            {newsItem.title}
+            <f:if condition="{newsItem.isEvent}">
+              <f:then>
+                <f:link.action pageUid="{eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:newsItem.uid}">
+                  <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
+                </f:link.action>
+              </f:then>
+              <f:else>
+                <f:link.action pageUid="{newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
+                  <div class="infobox-headline-BTN animateAll"><img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-withe-right.svg" alt="" class="arrow"></div>
+                </f:link.action>
+              </f:else>
+            </f:if>
+          </div>
+        </div>
+      </div>
+    </f:then>
+    <f:else>
+      <f:comment>Grey block</f:comment>
+      <div class="news-item  greybox-news bg-grey-light entry-{idx}">
+        <div class="news-item-inner">
+          <div class="quicklinks-headline text-bold">{newsItem.title}</div>
+          <div class="teaser">
+            {newsItem.teaser}
+            <f:if condition="{newsItem.isEvent}">
+              <f:then>
+                <f:link.action pageUid="{eventsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detailEvents" arguments="{event:newsItem.uid}">
+                  <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                </f:link.action>
+              </f:then>
+              <f:else>
+                <f:link.action pageUid="{newsDetailPid}" extensionName="News" pluginName="pi1" controller="News"  action="detail" arguments="{news:newsItem.uid}">
+                  <span class="morelinknews">{f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreLabel", default: "Mehr")}</span>
+                </f:link.action>
+              </f:else>
+            </f:if>
+          </div>
+        </div>
+      </div>
+    </f:else>
+  </f:if>
 </f:section>
 </html>

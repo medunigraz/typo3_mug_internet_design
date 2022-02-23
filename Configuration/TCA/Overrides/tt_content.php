@@ -360,7 +360,6 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
     'showitem' => '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
-                    mugce_display_type,
                     image;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.image,
                     header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.header,
                     mugce_header;LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.mugce_header,
@@ -390,66 +389,12 @@ $GLOBALS['TCA']['tt_content']['types'][$ceName] = [
               'eval' => 'required'
           ]
       ],
-      'mugce_display_type' => [
-          'onChange' => 'reload',
-          'config' => array(
-              'items' => [
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.plain', 0],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.news', 1],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.events', 8],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.submenu', 2],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.text', 3],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.news_submenu', 4],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.event_submenu', 9],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.text_submenu', 5],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.text_news', 6],
-                  ['LLL:EXT:mug_ce/Resources/Private/Language/Backend.xlf:CType.mugce_header_default.input.display_type.text_events', 10]
-              ],
-          )
-      ],
-      'mugce_header' => [
-          'displayCond'  => [
-              'OR' => [
-                  'FIELD:mugce_display_type:=:3',
-                  'FIELD:mugce_display_type:=:5',
-                  'FIELD:mugce_display_type:=:6',
-                  'FIELD:mugce_display_type:=:10',
-              ]
-          ]
-      ],
       'bodytext' => [
-          'displayCond'  => [
-              'OR' => [
-                  'FIELD:mugce_display_type:=:3',
-                  'FIELD:mugce_display_type:=:5',
-                  'FIELD:mugce_display_type:=:6',
-                  'FIELD:mugce_display_type:=:10',
-              ]
-          ],
           'config' => [
               'enableRichtext' => true,
               'richtextConfiguration' => 'mug_ce'
           ]
       ],
-      'mugce_news_entries' => [
-          'displayCond'  => [
-              'OR' => [
-                  'FIELD:mugce_display_type:=:1',
-                  'FIELD:mugce_display_type:=:4',
-                  'FIELD:mugce_display_type:=:6',
-                  'FIELD:mugce_display_type:=:7'
-              ]
-          ]
-      ],
-      'mugce_event_entries' => [
-          'displayCond'  => [
-              'OR' => [
-                  'FIELD:mugce_display_type:=:8',
-                  'FIELD:mugce_display_type:=:9',
-                  'FIELD:mugce_display_type:=:10'
-              ]
-          ]
-      ]
     ]
 ];
 
