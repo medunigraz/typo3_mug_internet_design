@@ -50,35 +50,34 @@
               </div>
               <div class="col col-05 "> </div>
               <div class="col col-35 sidebar-default">
-                <div class="info-box">
-                  <div class="quicklinks-box">
-                    <div class="news-box-inner">
-
-                      <div class="linktoall bg-grey-light">
-                        <div class="news-item-inner">
-                          <div class="border-bottom"></div>
-                          <f:if condition="{newsItem.relatedLinks}">
+                <f:if condition="{newsItem.relatedLinks}">
+                  <div class="info-box">
+                    <div class="quicklinks-box">
+                      <div class="news-box-inner">
+                        <div class="linktoall bg-grey-light">
+                          <div class="news-item-inner">
+                            <div class="border-bottom"></div>
                             <f:for each="{newsItem.relatedLinks}" as="relatedLink">
                               <f:link.typolink parameter="{relatedLink.uri}" class="morelink morelink-arrow-right text-bold animateAll">
                                 {relatedLink.title}
                               </f:link.typolink>
                             </f:for>
-                          </f:if>
-                          <f:comment>
-                          <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list" class="morelink text-bold animateAll">
-                              {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreinfos", default: "Weitere Informationen")}
-                            <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-                          </f:link.action>
-                          <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents" class="morelink text-bold animateAll">
-                             {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:website", default: "Website")}
-                            <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
-                          </f:link.action>
-                          </f:comment>
+                            <f:comment>
+                            <f:link.action pageUid="{settings.newsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="list" class="morelink text-bold animateAll">
+                                {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:moreinfos", default: "Weitere Informationen")}
+                              <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                            </f:link.action>
+                            <f:link.action pageUid="{settings.eventsOverviewPid}" extensionName="News" pluginName="pi1" controller="News" action="listEvents" class="morelink text-bold animateAll">
+                               {f:translate(key: "LLL:EXT:mug_ce/Resources/Private/Language/Frontend.xlf:website", default: "Website")}
+                              <img src="/typo3conf/ext/mug_ce/Resources/Public/Images/icon-arrow-black-right.svg" alt="" class="animateAll morelink-arrow">
+                            </f:link.action>
+                            </f:comment>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </f:if>
               </div>
             </div>
           </div>
