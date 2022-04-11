@@ -9,7 +9,7 @@ tt_content {
         }
 
         dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            10 = MUG\ContentElements\DataProcessing\AccordionDatabaseQueryProcessor
             10 {
                 table = tt_content
                 orderBy = sorting

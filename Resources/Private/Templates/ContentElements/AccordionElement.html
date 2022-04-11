@@ -3,10 +3,10 @@
 <f:section name="Main">
     <div class="accordion-item rowborder-bottom">
         <div class="accordion-title">
-            <h4>{data.header}</h4>
+            <h4>{data.data.header}</h4>
             <img src="{f:uri.image(src:'EXT:mug_ce/Resources/Public/Images/icon-arrow-black-down.svg')}" alt="" class="arrow">
         </div>
-        <div class="accordion-text">{data.bodytext -> f:format.html()}</div>
+        <div class="accordion-text">{data.data.bodytext -> f:format.html()}</div>
     </div>
 </f:section>
 </html>
