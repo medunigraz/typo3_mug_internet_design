@@ -65,6 +65,7 @@ class AccordionDatabaseQueryProcessor extends DatabaseQueryProcessor
       ->select('*')
       ->from($tableName)
       ->where(
+          $queryBuilder->expr()->neq('pid', $queryBuilder->createNamedParameter(-1, \PDO::PARAM_INT)),
         $queryBuilder->expr()->eq('mugce_content_element_pid', $queryBuilder->createNamedParameter($cObj->data['uid'], \PDO::PARAM_INT)),
         $queryBuilder->expr()->eq('t3ver_wsid', $queryBuilder->createNamedParameter($cObj->data['t3ver_wsid'], \PDO::PARAM_INT)),
         $queryBuilder->expr()->lte('t3ver_state', $queryBuilder->createNamedParameter(VersionState::DEFAULT_STATE, \PDO::PARAM_INT))
