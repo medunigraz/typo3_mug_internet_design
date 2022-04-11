@@ -103,7 +103,8 @@ display:none;
     float: left;
     width: 100%;
   }
-  .content-part-newsevents .events-list-view {
+  .content-part-newsevents .events-list-view,
+  .content-part-newsevents .events-fallback-list-view {
     float: left;
     width: 100%;
   }

@@ -12,13 +12,17 @@
   </f:variable>
   <f:variable name="news" value="{ce:getNewsByCategory(uid: data.uid, storagePage: newsStoragePage, limit: 3)}" />
   <f:variable name="events" value="{ce:getEventsByCategory(uid: data.uid, storagePage: eventsStoragePage, limit: 2)}" />
-
+  <f:if condition="{events -> f:count()}">
+    <f:else>
+      <f:variable name="eventsFallback" value="{ce:getNewsByCategory(uid: data.uid, storagePage: newsStoragePage, offset: '{news -> f:count()}', limit: 1)}" />
+    </f:else>
+  </f:if>
   <f:render partial="SpotlightMain" arguments="{news: news, events: events, data:data, display_type: 0, newsOverviewPid: newsOverviewPid, eventsOverviewPid: eventsOverviewPid}" />
 </f:section>
 
 
 <f:section name="AfterContainer">
-  <f:render partial="SpotlightAfter" arguments="{topnewsRendering: topnewsRendering, news: news, events: events, data:data, assets: assets, display_type: 0, newsDetailPid: newsDetailPid, eventsDetailPid: eventsDetailPid}" />
+  <f:render partial="SpotlightAfter" arguments="{topnewsRendering: topnewsRendering, news: news, events: events, eventsFallback: eventsFallback, data:data, assets: assets, display_type: 0, newsDetailPid: newsDetailPid, eventsDetailPid: eventsDetailPid}" />
 </f:section>
 
 </html>

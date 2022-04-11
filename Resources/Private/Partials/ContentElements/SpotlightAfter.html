@@ -63,11 +63,24 @@
         </div>
       </div>
       <f:if condition="{display_type} == 0">
-        <div class="events-list-view" id="news-container-{data.uid}">
-          <f:for each="{events}" as="eventItem" iteration="iterator">
-            <f:render partial="../News/List/ItemEvent" arguments="{eventItem: eventItem, settings: {eventsDetailPid: eventsDetailPid}, iterator:iterator}" />
-          </f:for>
-        </div>
+        <f:if condition="{events}">
+          <f:then>
+            <div class="events-list-view" id="news-container-{data.uid}">
+              <f:for each="{events}" as="eventItem" iteration="iterator">
+                <f:render partial="../News/List/ItemEvent" arguments="{eventItem: eventItem, settings: {eventsDetailPid: eventsDetailPid}, iterator:iterator}" />
+              </f:for>
+            </div>
+          </f:then>
+          <f:else>
+            <f:if condition="{eventsFallback}">
+              <div class="events-fallback-list-view" id="news-container-{data.uid}">
+                <f:for each="{eventsFallback}" as="newsItem" iteration="iterator">
+                  <f:render partial="../News/List/Item" arguments="{newsItem: newsItem, settings: {newsDetailPid: newsDetailPid}, iterator:iterator}" />
+                </f:for>
+              </div>
+            </f:if>
+          </f:else>
+        </f:if>
       </f:if>
     </div>
   </div>

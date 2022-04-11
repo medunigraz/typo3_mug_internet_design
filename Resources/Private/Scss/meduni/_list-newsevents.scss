@@ -192,6 +192,11 @@
     }
   }
 
+  .events-fallback-list-view {
+    float: right;
+    width: 30%;
+  }
+
 }
 
 
@@ -402,6 +407,11 @@ content:"";
        h3 {
          padding: 0 0px 0 0;
        }
+    }
+
+    .events-fallback-list-view {
+      height: max-content;
+      padding-bottom:30px;
     }
 
   }

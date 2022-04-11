@@ -34,6 +34,13 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
         'Uid of the content element.'
     );
     $this->registerArgument(
+      'offset',
+      'int',
+      'Optional offset. Default is 0.',
+      false,
+      0
+    );
+    $this->registerArgument(
         'limit',
         'int',
         'Optional maximum news entries to return. Default is 3.',
@@ -80,6 +87,7 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
     $demand->setStoragePage($this->arguments['storagePage']);
     $demand->setCategories($catIds);
     $demand->setCategoryConjunction('OR');
+    $demand->setOffset($this->arguments['offset']);
     $demand->setLimit($this->arguments['limit']);
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_NO_EVENTS);
     $demand->setOrder('datetime DESC');
