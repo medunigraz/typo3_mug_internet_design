@@ -16,12 +16,15 @@ namespace MUG\ContentElements\DataProcessing;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Core\Context\Context;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Versioning\VersionState;
+use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor;
+use TYPO3\CMS\Frontend\Page\PageRepository;
 
 class AccordionDatabaseQueryProcessor extends DatabaseQueryProcessor
 {
@@ -59,6 +62,10 @@ class AccordionDatabaseQueryProcessor extends DatabaseQueryProcessor
     // Execute a SQL statement to fetch the records
     // BEGIN OF CODECHANGE
     //$records = $cObj->getRecords($tableName, $processorConfiguration);
+
+    // @see \TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbBackend::doLanguageAndWorkspaceOverlay()
+
+    // workspace overlay
     /** @var QueryBuilder $queryBuilder */
     $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable($tableName)->createQueryBuilder();
     $result = $queryBuilder
@@ -73,9 +80,19 @@ class AccordionDatabaseQueryProcessor extends DatabaseQueryProcessor
       ->orderBy('sorting')
       ->execute();
     $records = $result->fetchAll();
+
+    // language overlay
+    $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
+    $context = $objectManager->get(Context::class);
+    $pageRepository = $objectManager->get(PageRepository::class, $context);
+    $languageUid = (int)$GLOBALS['TSFE']->sys_language_uid;
+    $overlayMode = $GLOBALS['TSFE']->sys_language_mode === 'strict' ? 'hideNonTranslated' : '';
     // END OF CODECHANGE
     $processedRecordVariables = [];
     foreach ($records as $key => $record) {
+      // BEGIN OF CODECHANGE
+      $record = $pageRepository->getRecordOverlay($tableName, $record, $languageUid, $overlayMode);
+      // END OF CODECHANGE
       /** @var ContentObjectRenderer $recordContentObjectRenderer */
       $recordContentObjectRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
       $recordContentObjectRenderer->start($record, $tableName);
