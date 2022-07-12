@@ -27,4 +27,4 @@ defined('TYPO3_MODE') or die();
 
   $GLOBALS['TBE_STYLES']['skins'][$_EXTKEY]['stylesheetDirectories'][] = 'EXT:mug_ce/Resources/Public/css/backend/';
 
-})($_EXTKEY);
+})('mug_ce');
