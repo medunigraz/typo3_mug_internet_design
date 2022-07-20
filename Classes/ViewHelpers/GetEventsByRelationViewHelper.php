@@ -10,9 +10,17 @@ class GetEventsByRelationViewHelper extends AbstractViewHelper {
 
   /**
    * @var \GeorgRinger\News\Domain\Repository\NewsRepository
-   * @inject
    */
   protected $newsRepository = null;
+
+  /**
+   * @param \GeorgRinger\News\Domain\Repository\NewsRepository $newsRepository
+   * @return void
+   */
+  public function injectNewsRepository(\GeorgRinger\News\Domain\Repository\NewsRepository $newsRepository)
+  {
+      $this->newsRepository = $newsRepository;
+  }
 
   public function initializeArguments() {
     parent::initializeArguments();
