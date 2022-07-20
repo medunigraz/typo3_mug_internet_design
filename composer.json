@@ -8,6 +8,9 @@
       "extension-key": "mug_ce"
     }
   },
+  "require": {
+    "typo3/cms-core": "^11.5"
+  },
   "autoload": {
     "psr-4": {
       "MUG\\ContentElements\\": "Classes"
