@@ -92,7 +92,7 @@ class GetEventsByCategoryViewHelper extends AbstractViewHelper {
     $demand->setTimeRestriction('now');
     $demand->setOrder('datetime ASC,event_end ASC');
     $demand->setOrderByAllowed('datetime,event_end');
-    $demand->setTopNewsRestriction($this->arguments['topNewsRestriction']);
+    $demand->setTopNewsRestriction((int)$this->arguments['topNewsRestriction']);
 
     return $this->newsRepository->findDemanded($demand);
   }

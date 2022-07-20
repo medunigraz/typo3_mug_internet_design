@@ -100,7 +100,7 @@ class GetNewsByCategoryViewHelper extends AbstractViewHelper {
     $demand->setEventRestriction(Demand::EVENT_RESTRICTION_NO_EVENTS);
     $demand->setOrder('datetime DESC');
     $demand->setOrderByAllowed('datetime');
-    $demand->setTopNewsRestriction($this->arguments['topNewsRestriction']);
+    $demand->setTopNewsRestriction((int)$this->arguments['topNewsRestriction']);
     $demand->setExcludeAlreadyDisplayedNews(true);
 
     return $this->newsRepository->findDemanded($demand);
